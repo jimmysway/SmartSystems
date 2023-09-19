@@ -1,2 +1,2 @@
-# TeamX-LastName1-LastName2-LastName3
-Quests repository for Team X
+# Team7-Lee-Li-Slobodchikov-Sui
+Quests repository for Team 7!
