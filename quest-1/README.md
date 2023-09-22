@@ -5,6 +5,8 @@ Authors: Jake Lee, Jason Li,  Maxim Slobodchikov, JiaLin Sui
 Date: 2023-09-22
 
 ### Summary
+Our goal was to create a Mission Impossible inspired alarm system
+Our device is designed to sense movement, increase in room temperature, and floor contact
 
 
 ### Self-Assessment 
