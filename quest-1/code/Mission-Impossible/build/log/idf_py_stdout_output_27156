@@ -1,0 +1,2831 @@
+5e0-dirty�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 21 2023 20:02:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab10h ( 43792) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=0001ab38 vaddr=3ffb0000 size=02148h (  8520) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0001cc88 vaddr=40080000 size=03390h ( 13200) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=169f4h ( 92660) map[0m
+[0;32mI (170) esp_image: segment 4: paddr=00036a1c vaddr=40083390 size=08f24h ( 36644) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu up.[0m
+[0;32mI (204) cpu_start: Starting app cpu, entry point is 0x40081044[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (221) cpu_start: Pro cpu start user code[0m
+[0;32mI (222) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (222) cpu_start: Application information:[0m
+[0;32mI (226) cpu_start: Project name:     continuous_read[0m
+[0;32mI (232) cpu_start: App version:      ae4342d-dirty[0m
+[0;32mI (237) cpu_start: Compile time:     Sep 22 2023 13:12:59[0m
+[0;32mI (244) cpu_start: ELF file SHA256:  087b08903...[0m
+[0;32mI (249) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (256) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (261) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (265) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (270) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (278) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (283) heap_init: At 3FFB29D0 len 0002D630 (181 KiB): DRAM[0m
+[0;32mI (290) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (296) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (303) heap_init: At 4008C2B4 len 00013D4C (79 KiB): IRAM[0m
+[0;32mI (310) spi_flash: detected chip: generic[0m
+[0;32mI (313) spi_flash: flash io: dio[0m
+[0;33mW (317) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (330) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (339) app_start: Starting scheduler on CPU0[0m
+[0;32mI (344) app_start: Starting scheduler on CPU1[0m
+[0;32mI (344) main_task: Started on CPU0[0m
+[0;32mI (354) main_task: Calling app_main()[0m
+[0;32mI (354) RTOS Task: Configured GPIO LED![0m
+[0;32mI (354) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (374) gpio: GPIO[33]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (384) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (394) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (404) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:1 [0m
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+Characterized using eFuse Vref
+Time: 0.50
+Temperature Reading: 20.05C
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+Characterized using eFuse Vref
+Light Voltage Reading: 1638mV
+
+Time: 1.00
+Temperature Reading: 20.29C
+Light Voltage Reading: 1457mV
+
+Time: 1.50
+Temperature Reading: 20.08C
+Light Voltage Reading: 1653mV
+
+Time: 2.00
+Temperature Reading: 20.14C
+Light Voltage Reading: 1642mV
+
+Time: 2.50
+Temperature Reading: 20.14C
+Light Voltage Reading: 1639mV
+
+Time: 3.00
+Temperature Reading: 20.14C
+Light Voltage Reading: 1633mV
+
+Time: 3.50
+Temperature Reading: 20.05C
+Light Voltage Reading: 1632mV
+
+Time: 4.00
+Temperature Reading: 20.11C
+Light Voltage Reading: 1632mV
+
+Time: 4.50
+Temperature Reading: 20.17C
+Light Voltage Reading: 1630mV
+
+Time: 5.00
+Temperature Reading: 19.90C
+Light Voltage Reading: 1636mV
+
+Time: 5.50
+Temperature Reading: 20.05C
+Light Voltage Reading: 1646mV
+
+Time: 6.00
+Temperature Reading: 20.08C
+Light Voltage Reading: 1649mV
+
+Time: 6.50
+Temperature Reading: 19.96C
+Light Voltage Reading: 1644mV
+
+Time: 7.00
+Temperature Reading: 20.17C
+Light Voltage Reading: 1638mV
+
+Time: 7.50
+Temperature Reading: 19.82C
+Light Voltage Reading: 1630mV
+
+Time: 8.00
+Temperature Reading: 19.99C
+Light Voltage Reading: 1626mV
+
+Time: 8.50
+Temperature Reading: 19.79C
+Light Voltage Reading: 1653mV
+
+Time: 9.00
+Temperature Reading: 19.93C
+Light Voltage Reading: 1654mV
+
+Time: 9.50
+Temperature Reading: 20.05C
+Light Voltage Reading: 1652mV
+
+Time: 10.00
+Temperature Reading: 20.02C
+Light Voltage Reading: 1655mV
+
+Time: 10.50
+Temperature Reading: 20.11C
+Light Voltage Reading: 1653mV
+
+Time: 11.00
+Temperature Reading: 20.05C
+Light Voltage Reading: 1655mV
+
+Time: 11.50
+Temperature Reading: 20.11C
+Light Voltage Reading: 1654mV
+
+Time: 12.00
+Temperature Reading: 19.99C
+Light Voltage Reading: 1652mV
+
+Time: 12.50
+Temperature Reading: 20.08C
+Light Voltage Reading: 1651mV
+
+Time: 13.00
+Temperature Reading: 20.05C
+Light Voltage Reading: 1650mV
+
+Time: 13.50
+Temperature Reading: 20.08C
+Light Voltage Reading: 1650mV
+
+Time: 14.00
+Temperature Reading: 19.99C
+Light Voltage Reading: 1650mV
+
+Time: 14.50
+Temperature Reading: 20.17C
+Light Voltage Reading: 1649mV
+
+Time: 15.00
+Temperature Reading: 20.14C
+Light Voltage Reading: 1651mV
+
+Time: 15.50
+Temperature Reading: 20.20C
+Light Voltage Reading: 1643mV
+
+Time: 16.00
+Temperature Reading: 20.17C
+Light Voltage Reading: 1645mV
+
+Time: 16.50
+Temperature Reading: 20.17C
+Light Voltage Reading: 1647mV
+
+Time: 17.00
+Temperature Reading: 20.11C
+Light Voltage Reading: 1647mV
+
+Time: 17.50
+Temperature Reading: 20.17C
+Light Voltage Reading: 1645mV
+
+Time: 18.00
+Temperature Reading: 20.17C
+Light Voltage Reading: 1644mV
+
+Time: 18.50
+Temperature Reading: 20.14C
+Light Voltage Reading: 1644mV
+
+Time: 19.00
+Temperature Reading: 20.05C
+Light Voltage Reading: 1649mV
+
+Time: 19.50
+Temperature Reading: 20.08C
+Light Voltage Reading: 1652mV
+
+Time: 20.00
+Temperature Reading: 20.14C
+Light Voltage Reading: 1647mV
+
+Time: 20.50
+Temperature Reading: 20.11C
+Light Voltage Reading: 1652mV
+
+Time: 21.00
+Temperature Reading: 20.05C
+Light Voltage Reading: 1625mV
+
+Time: 21.50
+Temperature Reading: 20.08C
+Light Voltage Reading: 1612mV
+
+Time: 22.00
+Temperature Reading: 19.85C
+Light Voltage Reading: 1598mV
+
+Time: 22.50
+Temperature Reading: 19.90C
+Light Voltage Reading: 1273mV
+
+Time: 23.00
+Temperature Reading: 19.79C
+Light Voltage Reading: 1121mV
+
+Time: 23.50
+Temperature Reading: 19.67C
+Light Voltage Reading: 1600mV
+
+Time: 24.00
+Temperature Reading: 19.67C
+Light Voltage Reading: 1602mV
+
+Time: 24.50
+Temperature Reading: 19.67C
+Light Voltage Reading: 1596mV
+
+Time: 25.00
+Temperature Reading: 19.61C
+Light Voltage Reading: 1600mV
+
+Time: 25.50
+Temperature Reading: 19.64C
+Light Voltage Reading: 1451mV
+
+Time: 26.00
+Temperature Reading: 19.58C
+Light Voltage Reading: 905mV
+
+Time: 26.50
+Temperature Reading: 19.73C
+Light Voltage Reading: 1505mV
+
+Time: 27.00
+Temperature Reading: 19.70C
+Light Voltage Reading: 1605mV
+
+Time: 27.50
+Temperature Reading: 19.64C
+Light Voltage Reading: 1613mV
+
+Time: 28.00
+Temperature Reading: 19.49C
+Light Voltage Reading: 1620mV
+
+Time: 28.50
+Temperature Reading: 19.35C
+Light Voltage Reading: 1617mV
+
+Time: 29.00
+Temperature Reading: 19.20C
+Light Voltage Reading: 1617mV
+
+Time: 29.50
+Temperature Reading: 19.11C
+Light Voltage Reading: 1616mV
+
+Time: 30.00
+Temperature Reading: 18.85C
+Light Voltage Reading: 1611mV
+
+Time: 30.50
+Temperature Reading: 18.82C
+Light Voltage Reading: 1589mV
+
+Time: 31.00
+Temperature Reading: 19.52C
+Light Voltage Reading: 1340mV
+
+Time: 31.50
+Temperature Reading: 19.55C
+Light Voltage Reading: 1608mV
+
+Time: 32.00
+Temperature Reading: 19.58C
+Light Voltage Reading: 1611mV
+
+Time: 32.50
+Temperature Reading: 19.58C
+Light Voltage Reading: 1615mV
+
+Time: 33.00
+Temperature Reading: 19.64C
+Light Voltage Reading: 1085mV
+
+Time: 33.50
+Temperature Reading: 19.64C
+Light Voltage Reading: 1603mV
+
+Time: 34.00
+Temperature Reading: 19.58C
+Light Voltage Reading: 1609mV
+
+Time: 34.50
+Temperature Reading: 19.67C
+Light Voltage Reading: 1610mV
+
+Time: 35.00
+Temperature Reading: 19.61C
+Light Voltage Reading: 1614mV
+
+Time: 35.50
+Temperature Reading: 19.64C
+Light Voltage Reading: 1610mV
+
+Time: 36.00
+Temperature Reading: 19.58C
+Light Voltage Reading: 1607mV
+
+Time: 36.50
+Temperature Reading: 19.67C
+Light Voltage Reading: 1604mV
+
+Time: 37.00
+Temperature Reading: 19.93C
+Light Voltage Reading: 1597mV
+
+Time: 37.50
+Temperature Reading: 19.93C
+Light Voltage Reading: 1598mV
+
+Time: 38.00
+Temperature Reading: 20.08C
+Light Voltage Reading: 1571mV
+
+Time: 38.50
+Temperature Reading: 19.96C
+Light Voltage Reading: 1562mV
+
+Time: 39.00
+Temperature Reading: 19.96C
+Light Voltage Reading: 1600mV
+
+Time: 39.50
+Temperature Reading: 20.02C
+Light Voltage Reading: 1607mV
+
+Time: 40.00
+Temperature Reading: 19.88C
+Light Voltage Reading: 1578mV
+
+Time: 40.50
+Temperature Reading: 19.99C
+Light Voltage Reading: 1530mV
+
+Time: 41.00
+Temperature Reading: 19.88C
+Light Voltage Reading: 1385mV
+
+Time: 41.50
+Temperature Reading: 19.96C
+Light Voltage Reading: 1430mV
+
+Time: 42.00
+Temperature Reading: 19.96C
+Light Voltage Reading: 1604mV
+
+Time: 42.50
+Temperature Reading: 19.93C
+Light Voltage Reading: 1605mV
+
+Time: 43.00
+Temperature Reading: 19.93C
+Light Voltage Reading: 1606mV
+
+Time: 43.50
+Temperature Reading: 20.05C
+Light Voltage Reading: 1417mV
+
+Time: 44.00
+Temperature Reading: 19.96C
+Light Voltage Reading: 1193mV
+
+Time: 44.50
+Temperature Reading: 19.96C
+Light Voltage Reading: 1039mV
+
+Time: 45.00
+Temperature Reading: 19.29C
+Light Voltage Reading: 1130mV
+
+Time: 45.50
+Temperature Reading: 19.90C
+Light Voltage Reading: 1120mV
+
+Time: 46.00
+Temperature Reading: 19.93C
+Light Voltage Reading: 1075mV
+
+Time: 46.50
+Temperature Reading: 19.90C
+Light Voltage Reading: 1359mV
+
+Time: 47.00
+Temperature Reading: 19.93C
+Light Voltage Reading: 1277mV
+
+Time: 47.50
+Temperature Reading: 19.79C
+Light Voltage Reading: 1599mV
+
+Time: 48.00
+Temperature Reading: 19.99C
+Light Voltage Reading: 1601mV
+
+Time: 48.50
+Temperature Reading: 19.88C
+Light Voltage Reading: 1605mV
+
+Time: 49.00
+Temperature Reading: 20.05C
+Light Voltage Reading: 1608mV
+
+Time: 49.50
+Temperature Reading: 19.76C
+Light Voltage Reading: 1604mV
+
+Time: 50.00
+Temperature Reading: 19.90C
+Light Voltage Reading: 1607mV
+
+Time: 50.50
+Temperature Reading: 19.76C
+Light Voltage Reading: 1606mV
+
+Time: 51.00
+Temperature Reading: 20.05C
+Light Voltage Reading: 1604mV
+
+Time: 51.50
+Temperature Reading: 20.49C
+Light Voltage Reading: 1603mV
+
+Time: 52.00
+Temperature Reading: 20.82C
+Light Voltage Reading: 1605mV
+
+Time: 52.50
+Temperature Reading: 20.93C
+Light Voltage Reading: 1607mV
+
+Time: 53.00
+Temperature Reading: 21.26C
+Light Voltage Reading: 1605mV
+
+Time: 53.50
+Temperature Reading: 21.55C
+Light Voltage Reading: 1604mV
+
+Time: 54.00
+Temperature Reading: 21.94C
+Light Voltage Reading: 1604mV
+
+Time: 54.50
+Temperature Reading: 22.20C
+Light Voltage Reading: 1607mV
+
+Time: 55.00
+Temperature Reading: 22.20C
+Light Voltage Reading: 1606mV
+
+Time: 55.50
+Temperature Reading: 22.53C
+Light Voltage Reading: 1607mV
+
+Time: 56.00
+Temperature Reading: 22.88C
+Light Voltage Reading: 1604mV
+
+Time: 56.50
+Temperature Reading: 22.91C
+Light Voltage Reading: 1603mV
+
+Time: 57.00
+Temperature Reading: 23.18C
+Light Voltage Reading: 1603mV
+
+Time: 57.50
+Temperature Reading: 23.42C
+Light Voltage Reading: 1607mV
+
+Time: 58.00
+Temperature Reading: 23.57C
+Light Voltage Reading: 1603mV
+
+Time: 58.50
+Temperature Reading: 23.63C
+Light Voltage Reading: 1603mV
+
+Time: 59.00
+Temperature Reading: 23.80C
+Light Voltage Reading: 1603mV
+
+Time: 59.50
+Temperature Reading: 23.77C
+Light Voltage Reading: 1601mV
+
+Time: 60.00
+Temperature Reading: 23.92C
+Light Voltage Reading: 1597mV
+
+Time: 60.50
+Temperature Reading: 23.83C
+Light Voltage Reading: 1596mV
+
+Time: 61.00
+Temperature Reading: 23.83C
+Light Voltage Reading: 1609mV
+
+Time: 61.50
+Temperature Reading: 23.77C
+Light Voltage Reading: 1626mV
+
+Time: 62.00
+Temperature Reading: 23.83C
+Light Voltage Reading: 1615mV
+
+Time: 62.50
+Temperature Reading: 23.74C
+Light Voltage Reading: 1603mV
+
+Time: 63.00
+Temperature Reading: 23.74C
+Light Voltage Reading: 1614mV
+
+Time: 63.50
+Temperature Reading: 23.69C
+Light Voltage Reading: 1612mV
+
+Time: 64.00
+Temperature Reading: 23.63C
+Light Voltage Reading: 1616mV
+
+Time: 64.50
+Temperature Reading: 23.69C
+Light Voltage Reading: 1617mV
+
+Time: 65.00
+Temperature Reading: 23.48C
+Light Voltage Reading: 1617mV
+
+Time: 65.50
+Temperature Reading: 23.71C
+Light Voltage Reading: 1618mV
+
+Time: 66.00
+Temperature Reading: 23.60C
+Light Voltage Reading: 1617mV
+
+Time: 66.50
+Temperature Reading: 23.51C
+Light Voltage Reading: 1617mV
+
+Time: 67.00
+Temperature Reading: 23.57C
+Light Voltage Reading: 1615mV
+
+Time: 67.50
+Temperature Reading: 23.54C
+Light Voltage Reading: 1610mV
+
+Time: 68.00
+Temperature Reading: 23.45C
+Light Voltage Reading: 1621mV
+
+Time: 68.50
+Temperature Reading: 23.30C
+Light Voltage Reading: 1644mV
+
+Time: 69.00
+Temperature Reading: 23.39C
+Light Voltage Reading: 1650mV
+
+Time: 69.50
+Temperature Reading: 23.30C
+Light Voltage Reading: 1641mV
+
+Time: 70.00
+Temperature Reading: 23.33C
+Light Voltage Reading: 1634mV
+
+Time: 70.50
+Temperature Reading: 23.27C
+Light Voltage Reading: 1635mV
+
+Time: 71.00
+Temperature Reading: 23.30C
+Light Voltage Reading: 1633mV
+
+Time: 71.50
+Temperature Reading: 23.33C
+Light Voltage Reading: 1637mV
+
+Time: 72.00
+Temperature Reading: 23.42C
+Light Voltage Reading: 1642mV
+
+Time: 72.50
+Temperature Reading: 23.21C
+Light Voltage Reading: 1644mV
+
+Time: 73.00
+Temperature Reading: 23.30C
+Light Voltage Reading: 1640mV
+
+Time: 73.50
+Temperature Reading: 23.24C
+Light Voltage Reading: 1640mV
+
+Time: 74.00
+Temperature Reading: 23.18C
+Light Voltage Reading: 1612mV
+
+Time: 74.50
+Temperature Reading: 23.09C
+Light Voltage Reading: 1642mV
+
+Time: 75.00
+Temperature Reading: 23.30C
+Light Voltage Reading: 1647mV
+
+Time: 75.50
+Temperature Reading: 23.27C
+Light Voltage Reading: 1649mV
+
+Time: 76.00
+Temperature Reading: 23.30C
+Light Voltage Reading: 1644mV
+
+Time: 76.50
+Temperature Reading: 23.09C
+Light Voltage Reading: 1653mV
+
+Time: 77.00
+Temperature Reading: 23.30C
+Light Voltage Reading: 1654mV
+
+Time: 77.50
+Temperature Reading: 23.06C
+Light Voltage Reading: 1652mV
+
+Time: 78.00
+Temperature Reading: 23.15C
+Light Voltage Reading: 1654mV
+
+Time: 78.50
+Temperature Reading: 23.06C
+Light Voltage Reading: 1654mV
+
+Time: 79.00
+Temperature Reading: 23.15C
+Light Voltage Reading: 1653mV
+
+Time: 79.50
+Temperature Reading: 23.06C
+Light Voltage Reading: 1653mV
+
+Time: 80.00
+Temperature Reading: 22.97C
+Light Voltage Reading: 1653mV
+
+Time: 80.50
+Temperature Reading: 23.12C
+Light Voltage Reading: 1644mV
+
+Time: 81.00
+Temperature Reading: 22.88C
+Light Voltage Reading: 1632mV
+
+Time: 81.50
+Temperature Reading: 22.91C
+Light Voltage Reading: 1633mV
+
+Time: 82.00
+Temperature Reading: 22.88C
+Light Voltage Reading: 1633mV
+
+Time: 82.50
+Temperature Reading: 22.94C
+Light Voltage Reading: 1635mV
+
+Time: 83.00
+Temperature Reading: 23.03C
+Light Voltage Reading: 1640mV
+
+Time: 83.50
+Temperature Reading: 22.91C
+Light Voltage Reading: 1634mV
+
+Time: 84.00
+Temperature Reading: 22.97C
+Light Voltage Reading: 1635mV
+
+Time: 84.50
+Temperature Reading: 22.88C
+Light Voltage Reading: 1637mV
+
+Time: 85.00
+Temperature Reading: 22.85C
+Light Voltage Reading: 1638mV
+
+Time: 85.50
+Temperature Reading: 22.88C
+Light Voltage Reading: 1637mV
+
+Time: 86.00
+Temperature Reading: 22.94C
+Light Voltage Reading: 1636mV
+
+Time: 86.50
+Temperature Reading: 22.91C
+Light Voltage Reading: 1634mV
+
+Time: 87.00
+Temperature Reading: 22.71C
+Light Voltage Reading: 1632mV
+
+Time: 87.50
+Temperature Reading: 22.73C
+Light Voltage Reading: 1632mV
+
+Time: 88.00
+Temperature Reading: 22.68C
+Light Voltage Reading: 1630mV
+
+Time: 88.50
+Temperature Reading: 22.76C
+Light Voltage Reading: 1634mV
+
+Time: 89.00
+Temperature Reading: 22.71C
+Light Voltage Reading: 1634mV
+
+Time: 89.50
+Temperature Reading: 22.73C
+Light Voltage Reading: 1633mV
+
+Time: 90.00
+Temperature Reading: 22.56C
+Light Voltage Reading: 1633mV
+
+Time: 90.50
+Temperature Reading: 22.65C
+Light Voltage Reading: 1631mV
+
+Time: 91.00
+Temperature Reading: 22.62C
+Light Voltage Reading: 1631mV
+
+Time: 91.50
+Temperature Reading: 22.62C
+Light Voltage Reading: 1640mV
+
+Time: 92.00
+Temperature Reading: 22.56C
+Light Voltage Reading: 1641mV
+
+Time: 92.50
+Temperature Reading: 22.82C
+Light Voltage Reading: 1641mV
+
+Time: 93.00
+Temperature Reading: 22.56C
+Light Voltage Reading: 1638mV
+
+Time: 93.50
+Temperature Reading: 22.59C
+Light Voltage Reading: 1640mV
+
+Time: 94.00
+Temperature Reading: 22.50C
+Light Voltage Reading: 1641mV
+
+Time: 94.50
+Temperature Reading: 22.47C
+Light Voltage Reading: 1635mV
+
+Time: 95.00
+Temperature Reading: 22.53C
+Light Voltage Reading: 1632mV
+
+Time: 95.50
+Temperature Reading: 22.56C
+Light Voltage Reading: 1640mV
+
+Time: 96.00
+Temperature Reading: 22.41C
+Light Voltage Reading: 1642mV
+
+Time: 96.50
+Temperature Reading: 22.53C
+Light Voltage Reading: 1645mV
+
+Time: 97.00
+Temperature Reading: 22.68C
+Light Voltage Reading: 1647mV
+
+Time: 97.50
+Temperature Reading: 22.76C
+Light Voltage Reading: 1646mV
+
+Time: 98.00
+Temperature Reading: 23.03C
+Light Voltage Reading: 1647mV
+
+Time: 98.50
+Temperature Reading: 23.03C
+Light Voltage Reading: 1646mV
+
+Time: 99.00
+Temperature Reading: 23.15C
+Light Voltage Reading: 1644mV
+
+Time: 99.50
+Temperature Reading: 23.03C
+Light Voltage Reading: 1646mV
+
+Time: 100.00
+Temperature Reading: 23.12C
+Light Voltage Reading: 1644mV
+
+Time: 100.50
+Temperature Reading: 23.18C
+Light Voltage Reading: 1646mV
+
+Time: 101.00
+Temperature Reading: 23.09C
+Light Voltage Reading: 1647mV
+
+Time: 101.50
+Temperature Reading: 23.03C
+Light Voltage Reading: 1647mV
+
+Time: 102.00
+Temperature Reading: 23.15C
+Light Voltage Reading: 1645mV
+
+Time: 102.50
+Temperature Reading: 23.15C
+Light Voltage Reading: 1647mV
+
+Time: 103.00
+Temperature Reading: 23.15C
+Light Voltage Reading: 1646mV
+
+Time: 103.50
+Temperature Reading: 23.18C
+Light Voltage Reading: 1654mV
+
+Time: 104.00
+Temperature Reading: 23.09C
+Light Voltage Reading: 1638mV
+
+Time: 104.50
+Temperature Reading: 23.15C
+Light Voltage Reading: 1626mV
+
+Time: 105.00
+Temperature Reading: 23.12C
+Light Voltage Reading: 1623mV
+
+Time: 105.50
+Temperature Reading: 23.03C
+Light Voltage Reading: 1625mV
+
+Time: 106.00
+Temperature Reading: 23.06C
+Light Voltage Reading: 1626mV
+
+Time: 106.50
+Temperature Reading: 23.21C
+Light Voltage Reading: 1630mV
+
+Time: 107.00
+Temperature Reading: 22.88C
+Light Voltage Reading: 1639mV
+
+Time: 107.50
+Temperature Reading: 22.91C
+Light Voltage Reading: 1635mV
+
+Time: 108.00
+Temperature Reading: 22.97C
+Light Voltage Reading: 1640mV
+
+Time: 108.50
+Temperature Reading: 22.97C
+Light Voltage Reading: 1639mV
+
+Time: 109.00
+Temperature Reading: 23.03C
+Light Voltage Reading: 1640mV
+
+Time: 109.50
+Temperature Reading: 22.88C
+Light Voltage Reading: 1640mV
+
+Time: 110.00
+Temperature Reading: 22.94C
+Light Voltage Reading: 1641mV
+
+Time: 110.50
+Temperature Reading: 22.82C
+Light Voltage Reading: 1641mV
+
+Time: 111.00
+Temperature Reading: 22.91C
+Light Voltage Reading: 1639mV
+
+Time: 111.50
+Temperature Reading: 22.91C
+Light Voltage Reading: 1640mV
+
+Time: 112.00
+Temperature Reading: 22.79C
+Light Voltage Reading: 1648mV
+
+Time: 112.50
+Temperature Reading: 23.00C
+Light Voltage Reading: 1649mV
+
+Time: 113.00
+Temperature Reading: 22.94C
+Light Voltage Reading: 1644mV
+
+Time: 113.50
+Temperature Reading: 22.85C
+Light Voltage Reading: 1642mV
+
+Time: 114.00
+Temperature Reading: 22.97C
+Light Voltage Reading: 1643mV
+
+Time: 114.50
+Temperature Reading: 22.85C
+Light Voltage Reading: 1633mV
+
+Time: 115.00
+Temperature Reading: 22.82C
+Light Voltage Reading: 1627mV
+
+Time: 115.50
+Temperature Reading: 22.68C
+Light Voltage Reading: 1626mV
+
+Time: 116.00
+Temperature Reading: 22.85C
+Light Voltage Reading: 1631mV
+
+Time: 116.50
+Temperature Reading: 22.76C
+Light Voltage Reading: 1640mV
+
+Time: 117.00
+Temperature Reading: 22.79C
+Light Voltage Reading: 1627mV
+
+Time: 117.50
+Temperature Reading: 22.56C
+Light Voltage Reading: 1617mV
+
+Time: 118.00
+Temperature Reading: 22.71C
+Light Voltage Reading: 1553mV
+
+Time: 118.50
+Temperature Reading: 22.76C
+Light Voltage Reading: 1586mV
+
+Time: 119.00
+Temperature Reading: 22.71C
+Light Voltage Reading: 1553mV
+
+Time: 119.50
+Temperature Reading: 22.73C
+Light Voltage Reading: 1548mV
+
+Time: 120.00
+Temperature Reading: 22.65C
+Light Voltage Reading: 1547mV
+
+Time: 120.50
+Temperature Reading: 22.50C
+Light Voltage Reading: 1533mV
+
+Time: 121.00
+Temperature Reading: 22.59C
+Light Voltage Reading: 1533mV
+
+Time: 121.50
+Temperature Reading: 22.71C
+Light Voltage Reading: 1534mV
+
+Time: 122.00
+Temperature Reading: 22.62C
+Light Voltage Reading: 1543mV
+
+Time: 122.50
+Temperature Reading: 22.59C
+Light Voltage Reading: 1548mV
+
+Time: 123.00
+Temperature Reading: 22.59C
+Light Voltage Reading: 1554mV
+
+Time: 123.50
+Temperature Reading: 22.50C
+Light Voltage Reading: 1559mV
+
+Time: 124.00
+Temperature Reading: 22.26C
+Light Voltage Reading: 1561mV
+
+Time: 124.50
+Temperature Reading: 22.47C
+Light Voltage Reading: 1557mV
+
+Time: 125.00
+Temperature Reading: 22.47C
+Light Voltage Reading: 1465mV
+
+Time: 125.50
+Temperature Reading: 22.56C
+Light Voltage Reading: 1580mV
+
+Time: 126.00
+Temperature Reading: 22.41C
+Light Voltage Reading: 1593mV
+
+Time: 126.50
+Temperature Reading: 22.38C
+Light Voltage Reading: 1596mV
+
+Time: 127.00
+Temperature Reading: 22.35C
+Light Voltage Reading: 1599mV
+
+Time: 127.50
+Temperature Reading: 22.32C
+Light Voltage Reading: 1604mV
+
+Time: 128.00
+Temperature Reading: 22.38C
+Light Voltage Reading: 1604mV
+
+Time: 128.50
+Temperature Reading: 22.35C
+Light Voltage Reading: 1603mV
+
+Time: 129.00
+Temperature Reading: 22.38C
+Light Voltage Reading: 1603mV
+
+Time: 129.50
+Temperature Reading: 22.35C
+Light Voltage Reading: 1605mV
+
+Time: 130.00
+Temperature Reading: 22.32C
+Light Voltage Reading: 1603mV
+
+Time: 130.50
+Temperature Reading: 22.47C
+Light Voltage Reading: 1603mV
+
+Time: 131.00
+Temperature Reading: 22.35C
+Light Voltage Reading: 1603mV
+
+Time: 131.50
+Temperature Reading: 22.44C
+Light Voltage Reading: 1603mV
+
+Time: 132.00
+Temperature Reading: 22.26C
+Light Voltage Reading: 1603mV
+
+Time: 132.50
+Temperature Reading: 22.38C
+Light Voltage Reading: 1606mV
+
+Time: 133.00
+Temperature Reading: 22.26C
+Light Voltage Reading: 1603mV
+
+Time: 133.50
+Temperature Reading: 22.14C
+Light Voltage Reading: 1603mV
+
+Time: 134.00
+Temperature Reading: 22.32C
+Light Voltage Reading: 1602mV
+
+Time: 134.50
+Temperature Reading: 22.35C
+Light Voltage Reading: 1602mV
+
+Time: 135.00
+Temperature Reading: 22.23C
+Light Voltage Reading: 1601mV
+
+Time: 135.50
+Temperature Reading: 22.14C
+Light Voltage Reading: 1601mV
+
+Time: 136.00
+Temperature Reading: 22.35C
+Light Voltage Reading: 1600mV
+
+Time: 136.50
+Temperature Reading: 22.20C
+Light Voltage Reading: 1602mV
+
+Time: 137.00
+Temperature Reading: 22.05C
+Light Voltage Reading: 1599mV
+
+Time: 137.50
+Temperature Reading: 22.08C
+Light Voltage Reading: 1597mV
+
+Time: 138.00
+Temperature Reading: 22.14C
+Light Voltage Reading: 1598mV
+
+Time: 138.50
+Temperature Reading: 22.11C
+Light Voltage Reading: 1596mV
+
+Time: 139.00
+Temperature Reading: 22.20C
+Light Voltage Reading: 1598mV
+
+Time: 139.50
+Temperature Reading: 22.17C
+Light Voltage Reading: 1588mV
+
+Time: 140.00
+Temperature Reading: 22.14C
+Light Voltage Reading: 1594mV
+
+Time: 140.50
+Temperature Reading: 22.00C
+Light Voltage Reading: 1526mV
+
+Time: 141.00
+Temperature Reading: 22.14C
+Light Voltage Reading: 1557mV
+
+Time: 141.50
+Temperature Reading: 22.02C
+Light Voltage Reading: 1556mV
+
+Time: 142.00
+Temperature Reading: 21.88C
+Light Voltage Reading: 1559mV
+
+Time: 142.50
+Temperature Reading: 22.00C
+Light Voltage Reading: 1559mV
+
+Time: 143.00
+Temperature Reading: 22.05C
+Light Voltage Reading: 1557mV
+
+Time: 143.50
+Temperature Reading: 22.11C
+Light Voltage Reading: 1563mV
+
+Time: 144.00
+Temperature Reading: 22.00C
+Light Voltage Reading: 1571mV
+
+Time: 144.50
+Temperature Reading: 21.91C
+Light Voltage Reading: 1593mV
+
+Time: 145.00
+Temperature Reading: 22.02C
+Light Voltage Reading: 1588mV
+
+Time: 145.50
+Temperature Reading: 22.11C
+Light Voltage Reading: 1607mV
+
+Time: 146.00
+Temperature Reading: 21.94C
+Light Voltage Reading: 1628mV
+
+Time: 146.50
+Temperature Reading: 21.97C
+Light Voltage Reading: 1625mV
+
+Time: 147.00
+Temperature Reading: 22.05C
+Light Voltage Reading: 1630mV
+
+Time: 147.50
+Temperature Reading: 21.94C
+Light Voltage Reading: 1628mV
+
+Time: 148.00
+Temperature Reading: 21.97C
+Light Voltage Reading: 1624mV
+
+Time: 148.50
+Temperature Reading: 21.94C
+Light Voltage Reading: 1619mV
+
+Time: 149.00
+Temperature Reading: 22.02C
+Light Voltage Reading: 1614mV
+
+Time: 149.50
+Temperature Reading: 21.88C
+Light Voltage Reading: 1613mV
+
+Time: 150.00
+Temperature Reading: 22.02C
+Light Voltage Reading: 1603mV
+
+Time: 150.50
+Temperature Reading: 21.82C
+Light Voltage Reading: 1608mV
+
+Time: 151.00
+Temperature Reading: 21.85C
+Light Voltage Reading: 1605mV
+
+Time: 151.50
+Temperature Reading: 21.85C
+Light Voltage Reading: 1608mV
+
+Time: 152.00
+Temperature Reading: 21.94C
+Light Voltage Reading: 1602mV
+
+Time: 152.50
+Temperature Reading: 21.94C
+Light Voltage Reading: 1593mV
+
+Time: 153.00
+Temperature Reading: 21.79C
+Light Voltage Reading: 1600mV
+
+Time: 153.50
+Temperature Reading: 21.91C
+Light Voltage Reading: 1608mV
+
+Time: 154.00
+Temperature Reading: 21.88C
+Light Voltage Reading: 1600mV
+
+Time: 154.50
+Temperature Reading: 21.76C
+Light Voltage Reading: 1600mV
+
+Time: 155.00
+Temperature Reading: 21.67C
+Light Voltage Reading: 1595mV
+
+Time: 155.50
+Temperature Reading: 21.82C
+Light Voltage Reading: 1595mV
+
+Time: 156.00
+Temperature Reading: 21.79C
+Light Voltage Reading: 1594mV
+
+Time: 156.50
+Temperature Reading: 21.85C
+Light Voltage Reading: 1595mV
+
+Time: 157.00
+Temperature Reading: 21.76C
+Light Voltage Reading: 1590mV
+
+Time: 157.50
+Temperature Reading: 21.79C
+Light Voltage Reading: 1593mV
+
+Time: 158.00
+Temperature Reading: 21.76C
+Light Voltage Reading: 1591mV
+
+Time: 158.50
+Temperature Reading: 21.88C
+Light Voltage Reading: 1590mV
+
+Time: 159.00
+Temperature Reading: 21.67C
+Light Voltage Reading: 1593mV
+
+Time: 159.50
+Temperature Reading: 21.76C
+Light Voltage Reading: 1596mV
+
+Time: 160.00
+Temperature Reading: 21.79C
+Light Voltage Reading: 1602mV
+
+Time: 160.50
+Temperature Reading: 21.73C
+Light Voltage Reading: 1594mV
+
+Time: 161.00
+Temperature Reading: 21.82C
+Light Voltage Reading: 1588mV
+
+Time: 161.50
+Temperature Reading: 21.85C
+Light Voltage Reading: 1575mV
+
+Time: 162.00
+Temperature Reading: 21.67C
+Light Voltage Reading: 1582mV
+
+Time: 162.50
+Temperature Reading: 21.85C
+Light Voltage Reading: 1590mV
+
+Time: 163.00
+Temperature Reading: 21.64C
+Light Voltage Reading: 1594mV
+
+Time: 163.50
+Temperature Reading: 21.73C
+Light Voltage Reading: 1591mV
+
+Time: 164.00
+Temperature Reading: 21.67C
+Light Voltage Reading: 1579mV
+
+Time: 164.50
+Temperature Reading: 21.79C
+Light Voltage Reading: 1564mV
+
+Time: 165.00
+Temperature Reading: 21.79C
+Light Voltage Reading: 1517mV
+
+Time: 165.50
+Temperature Reading: 21.67C
+Light Voltage Reading: 332mV
+
+Time: 166.00
+Temperature Reading: 21.67C
+Light Voltage Reading: 348mV
+
+Time: 166.50
+Temperature Reading: 21.67C
+Light Voltage Reading: 351mV
+
+Time: 167.00
+Temperature Reading: 21.64C
+Light Voltage Reading: 355mV
+
+Time: 167.50
+Temperature Reading: 21.61C
+Light Voltage Reading: 355mV
+
+Time: 168.00
+Temperature Reading: 21.67C
+Light Voltage Reading: 360mV
+
+Time: 168.50
+Temperature Reading: 21.52C
+Light Voltage Reading: 365mV
+
+Time: 169.00
+Temperature Reading: 21.52C
+Light Voltage Reading: 365mV
+
+Time: 169.50
+Temperature Reading: 21.61C
+Light Voltage Reading: 363mV
+
+Time: 170.00
+Temperature Reading: 21.61C
+Light Voltage Reading: 365mV
+
+Time: 170.50
+Temperature Reading: 21.67C
+Light Voltage Reading: 1575mV
+
+Time: 171.00
+Temperature Reading: 21.46C
+Light Voltage Reading: 1621mV
+
+Time: 171.50
+Temperature Reading: 21.67C
+Light Voltage Reading: 1625mV
+
+Time: 172.00
+Temperature Reading: 21.61C
+Light Voltage Reading: 1627mV
+
+Time: 172.50
+Temperature Reading: 21.43C
+Light Voltage Reading: 1623mV
+
+Time: 173.00
+Temperature Reading: 21.55C
+Light Voltage Reading: 1627mV
+
+Time: 173.50
+Temperature Reading: 21.55C
+Light Voltage Reading: 1633mV
+
+Time: 174.00
+Temperature Reading: 21.55C
+Light Voltage Reading: 1632mV
+
+Time: 174.50
+Temperature Reading: 21.46C
+Light Voltage Reading: 1647mV
+
+Time: 175.00
+Temperature Reading: 21.49C
+Light Voltage Reading: 1640mV
+
+Time: 175.50
+Temperature Reading: 21.52C
+Light Voltage Reading: 1636mV
+
+Time: 176.00
+Temperature Reading: 21.52C
+Light Voltage Reading: 1630mV
+
+Time: 176.50
+Temperature Reading: 21.52C
+Light Voltage Reading: 1638mV
+
+Time: 177.00
+Temperature Reading: 21.52C
+Light Voltage Reading: 1640mV
+
+Time: 177.50
+Temperature Reading: 21.46C
+Light Voltage Reading: 1650mV
+
+Time: 178.00
+Temperature Reading: 21.38C
+Light Voltage Reading: 1649mV
+
+Time: 178.50
+Temperature Reading: 21.52C
+Light Voltage Reading: 1640mV
+
+Time: 179.00
+Temperature Reading: 21.41C
+Light Voltage Reading: 1632mV
+
+Time: 179.50
+Temperature Reading: 21.35C
+Light Voltage Reading: 1509mV
+
+Time: 180.00
+Temperature Reading: 21.35C
+Light Voltage Reading: 1641mV
+
+Time: 180.50
+Temperature Reading: 21.38C
+Light Voltage Reading: 1637mV
+
+Time: 181.00
+Temperature Reading: 21.41C
+Light Voltage Reading: 1635mV
+
+Time: 181.50
+Temperature Reading: 21.35C
+Light Voltage Reading: 1636mV
+
+Time: 182.00
+Temperature Reading: 21.41C
+Light Voltage Reading: 1636mV
+
+Time: 182.50
+Temperature Reading: 21.43C
+Light Voltage Reading: 1635mV
+
+Time: 183.00
+Temperature Reading: 21.41C
+Light Voltage Reading: 1636mV
+
+Time: 183.50
+Temperature Reading: 21.38C
+Light Voltage Reading: 1621mV
+
+Time: 184.00
+Temperature Reading: 21.41C
+Light Voltage Reading: 1626mV
+
+Time: 184.50
+Temperature Reading: 21.41C
+Light Voltage Reading: 1629mV
+
+Time: 185.00
+Temperature Reading: 21.41C
+Light Voltage Reading: 1627mV
+
+Time: 185.50
+Temperature Reading: 21.52C
+Light Voltage Reading: 1627mV
+
+Time: 186.00
+Temperature Reading: 21.32C
+Light Voltage Reading: 1627mV
+
+Time: 186.50
+Temperature Reading: 21.43C
+Light Voltage Reading: 1626mV
+
+Time: 187.00
+Temperature Reading: 21.32C
+Light Voltage Reading: 1622mV
+
+Time: 187.50
+Temperature Reading: 21.41C
+Light Voltage Reading: 1621mV
+
+Time: 188.00
+Temperature Reading: 21.41C
+Light Voltage Reading: 1625mV
+
+Time: 188.50
+Temperature Reading: 21.41C
+Light Voltage Reading: 1621mV
+
+Time: 189.00
+Temperature Reading: 21.20C
+Light Voltage Reading: 1617mV
+
+Time: 189.50
+Temperature Reading: 21.26C
+Light Voltage Reading: 1617mV
+
+Time: 190.00
+Temperature Reading: 21.26C
+Light Voltage Reading: 1615mV
+
+Time: 190.50
+Temperature Reading: 21.20C
+Light Voltage Reading: 1615mV
+
+Time: 191.00
+Temperature Reading: 21.14C
+Light Voltage Reading: 1615mV
+
+Time: 191.50
+Temperature Reading: 21.08C
+Light Voltage Reading: 1620mV
+
+Time: 192.00
+Temperature Reading: 21.38C
+Light Voltage Reading: 1624mV
+
+Time: 192.50
+Temperature Reading: 21.29C
+Light Voltage Reading: 1623mV
+
+Time: 193.00
+Temperature Reading: 21.17C
+Light Voltage Reading: 1624mV
+
+Time: 193.50
+Temperature Reading: 21.11C
+Light Voltage Reading: 1625mV
+
+Time: 194.00
+Temperature Reading: 21.08C
+Light Voltage Reading: 1630mV
+
+Time: 194.50
+Temperature Reading: 21.20C
+Light Voltage Reading: 1632mV
+
+Time: 195.00
+Temperature Reading: 21.29C
+Light Voltage Reading: 1634mV
+
+Time: 195.50
+Temperature Reading: 21.17C
+Light Voltage Reading: 1634mV
+
+Time: 196.00
+Temperature Reading: 21.29C
+Light Voltage Reading: 1630mV
+
+Time: 196.50
+Temperature Reading: 21.20C
+Light Voltage Reading: 1631mV
+
+Time: 197.00
+Temperature Reading: 21.11C
+Light Voltage Reading: 1633mV
+
+Time: 197.50
+Temperature Reading: 21.05C
+Light Voltage Reading: 1631mV
+
+Time: 198.00
+Temperature Reading: 21.02C
+Light Voltage Reading: 1631mV
+
+Time: 198.50
+Temperature Reading: 21.14C
+Light Voltage Reading: 1632mV
+
+Time: 199.00
+Temperature Reading: 21.14C
+Light Voltage Reading: 1634mV
+
+Time: 199.50
+Temperature Reading: 21.35C
+Light Voltage Reading: 1635mV
+
+Time: 200.00
+Temperature Reading: 21.23C
+Light Voltage Reading: 1630mV
+
+Time: 200.50
+Temperature Reading: 21.05C
+Light Voltage Reading: 1630mV
+
+Time: 201.00
+Temperature Reading: 21.14C
+Light Voltage Reading: 1631mV
+
+Time: 201.50
+Temperature Reading: 21.14C
+Light Voltage Reading: 1630mV
+
+Time: 202.00
+Temperature Reading: 21.26C
+Light Voltage Reading: 1628mV
+
+Time: 202.50
+Temperature Reading: 20.90C
+Light Voltage Reading: 1627mV
+
+Time: 203.00
+Temperature Reading: 20.99C
+Light Voltage Reading: 1629mV
+
+Time: 203.50
+Temperature Reading: 21.29C
+Light Voltage Reading: 1627mV
+
+Time: 204.00
+Temperature Reading: 21.14C
+Light Voltage Reading: 1628mV
+
+Time: 204.50
+Temperature Reading: 21.20C
+Light Voltage Reading: 1630mV
+
+Time: 205.00
+Temperature Reading: 21.17C
+Light Voltage Reading: 1630mV
+
+Time: 205.50
+Temperature Reading: 20.99C
+Light Voltage Reading: 1629mV
+
+Time: 206.00
+Temperature Reading: 21.11C
+Light Voltage Reading: 1632mV
+
+Time: 206.50
+Temperature Reading: 21.05C
+Light Voltage Reading: 1630mV
+
+Time: 207.00
+Temperature Reading: 20.96C
+Light Voltage Reading: 1629mV
+
+Time: 207.50
+Temperature Reading: 21.05C
+Light Voltage Reading: 1630mV
+
+Time: 208.00
+Temperature Reading: 21.05C
+Light Voltage Reading: 1630mV
+
+Time: 208.50
+Temperature Reading: 21.05C
+Light Voltage Reading: 1631mV
+
+Time: 209.00
+Temperature Reading: 21.02C
+Light Voltage Reading: 1628mV
+
+Time: 209.50
+Temperature Reading: 21.11C
+Light Voltage Reading: 1635mV
+
+Time: 210.00
+Temperature Reading: 21.14C
+Light Voltage Reading: 1631mV
+
+Time: 210.50
+Temperature Reading: 20.99C
+Light Voltage Reading: 1628mV
+
+Time: 211.00
+Temperature Reading: 21.11C
+Light Voltage Reading: 1630mV
+
+Time: 211.50
+Temperature Reading: 20.88C
+Light Voltage Reading: 1630mV
+
+Time: 212.00
+Temperature Reading: 21.05C
+Light Voltage Reading: 1630mV
+
+Time: 212.50
+Temperature Reading: 21.05C
+Light Voltage Reading: 1633mV
+
+Time: 213.00
+Temperature Reading: 20.85C
+Light Voltage Reading: 1635mV
+
+Time: 213.50
+Temperature Reading: 20.99C
+Light Voltage Reading: 1634mV
+
+Time: 214.00
+Temperature Reading: 20.96C
+Light Voltage Reading: 1632mV
+
+Time: 214.50
+Temperature Reading: 20.99C
+Light Voltage Reading: 1630mV
+
+Time: 215.00
+Temperature Reading: 21.17C
+Light Voltage Reading: 1630mV
+
+Time: 215.50
+Temperature Reading: 21.08C
+Light Voltage Reading: 1630mV
+
+Time: 216.00
+Temperature Reading: 21.08C
+Light Voltage Reading: 1630mV
+
+Time: 216.50
+Temperature Reading: 20.96C
+Light Voltage Reading: 1630mV
+
+Time: 217.00
+Temperature Reading: 20.85C
+Light Voltage Reading: 1630mV
+
+Time: 217.50
+Temperature Reading: 20.90C
+Light Voltage Reading: 1630mV
+
+Time: 218.00
+Temperature Reading: 21.02C
+Light Voltage Reading: 1628mV
+
+Time: 218.50
+Temperature Reading: 20.76C
+Light Voltage Reading: 1631mV
+
+Time: 219.00
+Temperature Reading: 21.02C
+Light Voltage Reading: 1632mV
+
+Time: 219.50
+Temperature Reading: 20.99C
+Light Voltage Reading: 1637mV
+
+Time: 220.00
+Temperature Reading: 20.88C
+Light Voltage Reading: 1633mV
+
+Time: 220.50
+Temperature Reading: 20.90C
+Light Voltage Reading: 1635mV
+
+Time: 221.00
+Temperature Reading: 20.99C
+Light Voltage Reading: 1633mV
+
+Time: 221.50
+Temperature Reading: 20.90C
+Light Voltage Reading: 1631mV
+
+Time: 222.00
+Temperature Reading: 20.88C
+Light Voltage Reading: 1633mV
+
+Time: 222.50
+Temperature Reading: 20.99C
+Light Voltage Reading: 1635mV
+
+Time: 223.00
+Temperature Reading: 20.93C
+Light Voltage Reading: 1631mV
+
+Time: 223.50
+Temperature Reading: 20.99C
+Light Voltage Reading: 1635mV
+
+Time: 224.00
+Temperature Reading: 20.79C
+Light Voltage Reading: 1632mV
+
+Time: 224.50
+Temperature Reading: 20.93C
+Light Voltage Reading: 1632mV
+
+Time: 225.00
+Temperature Reading: 20.88C
+Light Voltage Reading: 1631mV
+
+Time: 225.50
+Temperature Reading: 20.99C
+Light Voltage Reading: 1630mV
+
+Time: 226.00
+Temperature Reading: 20.85C
+Light Voltage Reading: 1632mV
+
+Time: 226.50
+Temperature Reading: 20.88C
+Light Voltage Reading: 1630mV
+
+Time: 227.00
+Temperature Reading: 20.85C
+Light Voltage Reading: 1630mV
+
+Time: 227.50
+Temperature Reading: 20.70C
+Light Voltage Reading: 1632mV
+
+Time: 228.00
+Temperature Reading: 20.85C
+Light Voltage Reading: 1629mV
+
+Time: 228.50
+Temperature Reading: 20.82C
+Light Voltage Reading: 1630mV
+
+Time: 229.00
+Temperature Reading: 20.85C
+Light Voltage Reading: 1634mV
+
+Time: 229.50
+Temperature Reading: 20.82C
+Light Voltage Reading: 1627mV
+
+Time: 230.00
+Temperature Reading: 20.85C
+Light Voltage Reading: 1627mV
+
+Time: 230.50
+Temperature Reading: 20.85C
+Light Voltage Reading: 1624mV
+
+Time: 231.00
+Temperature Reading: 20.88C
+Light Voltage Reading: 1625mV
+
+Time: 231.50
+Temperature Reading: 20.76C
+Light Voltage Reading: 1627mV
+
+Time: 232.00
+Temperature Reading: 20.85C
+Light Voltage Reading: 1627mV
+
+Time: 232.50
+Temperature Reading: 20.82C
+Light Voltage Reading: 1627mV
+
+Time: 233.00
+Temperature Reading: 20.88C
+Light Voltage Reading: 1626mV
+
+Time: 233.50
+Temperature Reading: 20.79C
+Light Voltage Reading: 1628mV
+
+Time: 234.00
+Temperature Reading: 20.73C
+Light Voltage Reading: 1630mV
+
+Time: 234.50
+Temperature Reading: 20.76C
+Light Voltage Reading: 1626mV
+
+Time: 235.00
+Temperature Reading: 20.70C
+Light Voltage Reading: 1626mV
+
+Time: 235.50
+Temperature Reading: 20.79C
+Light Voltage Reading: 1626mV
+
+Time: 236.00
+Temperature Reading: 20.82C
+Light Voltage Reading: 1625mV
+
+Time: 236.50
+Temperature Reading: 20.73C
+Light Voltage Reading: 1623mV
+
+Time: 237.00
+Temperature Reading: 20.73C
+Light Voltage Reading: 1626mV
+
+Time: 237.50
+Temperature Reading: 20.64C
+Light Voltage Reading: 1623mV
+
+Time: 238.00
+Temperature Reading: 20.73C
+Light Voltage Reading: 1625mV
+
+Time: 238.50
+Temperature Reading: 20.55C
+Light Voltage Reading: 1625mV
+
+Time: 239.00
+Temperature Reading: 20.82C
+Light Voltage Reading: 1623mV
+
+Time: 239.50
+Temperature Reading: 20.76C
+Light Voltage Reading: 1623mV
+
+Time: 240.00
+Temperature Reading: 20.82C
+Light Voltage Reading: 1622mV
+
+Time: 240.50
+Temperature Reading: 20.73C
+Light Voltage Reading: 1623mV
+
+Time: 241.00
+Temperature Reading: 20.73C
+Light Voltage Reading: 1621mV
+
+Time: 241.50
+Temperature Reading: 20.73C
+Light Voltage Reading: 1624mV
+
+Time: 242.00
+Temperature Reading: 20.73C
+Light Voltage Reading: 1626mV
+
+Time: 242.50
+Temperature Reading: 20.79C
+Light Voltage Reading: 1630mV
+
+Time: 243.00
+Temperature Reading: 20.85C
+Light Voltage Reading: 1626mV
+
+Time: 243.50
+Temperature Reading: 20.58C
+Light Voltage Reading: 1619mV
+
+Time: 244.00
+Temperature Reading: 20.73C
+Light Voltage Reading: 1625mV
+
+Time: 244.50
+Temperature Reading: 20.73C
+Light Voltage Reading: 1623mV
+
+Time: 245.00
+Temperature Reading: 20.76C
+Light Voltage Reading: 1625mV
+
+Time: 245.50
+Temperature Reading: 20.67C
+Light Voltage Reading: 1625mV
+
+Time: 246.00
+Temperature Reading: 20.61C
+Light Voltage Reading: 1629mV
+
+Time: 246.50
+Temperature Reading: 20.76C
+Light Voltage Reading: 1616mV
+
+Time: 247.00
+Temperature Reading: 20.73C
+Light Voltage Reading: 1622mV
+
+Time: 247.50
+Temperature Reading: 20.67C
+Light Voltage Reading: 1623mV
+
+Time: 248.00
+Temperature Reading: 20.61C
+Light Voltage Reading: 1625mV
+
+Time: 248.50
+Temperature Reading: 20.61C
+Light Voltage Reading: 1625mV
+
+Time: 249.00
+Temperature Reading: 20.70C
+Light Voltage Reading: 1627mV
+
+Time: 249.50
+Temperature Reading: 20.61C
+Light Voltage Reading: 1628mV
+
+Time: 250.00
+Temperature Reading: 20.58C
+Light Voltage Reading: 1627mV
+
+Time: 250.50
+Temperature Reading: 20.58C
+Light Voltage Reading: 1626mV
+
+Time: 251.00
+Temperature Reading: 20.70C
+Light Voltage Reading: 1629mV
+
+Time: 251.50
+Temperature Reading: 20.67C
+Light Voltage Reading: 1632mV
+
+Time: 252.00
+Temperature Reading: 20.61C
+Light Voltage Reading: 1630mV
+
+Time: 252.50
+Temperature Reading: 20.70C
+Light Voltage Reading: 1629mV
+
+Time: 253.00
+Temperature Reading: 20.73C
+Light Voltage Reading: 1629mV
+
+Time: 253.50
+Temperature Reading: 20.67C
+Light Voltage Reading: 1631mV
+
+Time: 254.00
+Temperature Reading: 20.79C
+Light Voltage Reading: 1627mV
+
+Time: 254.50
+Temperature Reading: 20.64C
+Light Voltage Reading: 1626mV
+
+Time: 255.00
+Temperature Reading: 20.58C
+Light Voltage Reading: 1626mV
+
+Time: 255.50
+Temperature Reading: 20.70C
+Light Voltage Reading: 1626mV
+
+Time: 256.00
+Temperature Reading: 20.58C
+Light Voltage Reading: 1627mV
+
+Time: 256.50
+Temperature Reading: 20.64C
+Light Voltage Reading: 1628mV
+
+Time: 257.00
+Temperature Reading: 20.61C
+Light Voltage Reading: 1627mV
+
+Time: 257.50
+Temperature Reading: 20.64C
+Light Voltage Reading: 1626mV
+
+Time: 258.00
+Temperature Reading: 20.61C
+Light Voltage Reading: 1626mV
+
+Time: 258.50
+Temperature Reading: 20.55C
+Light Voltage Reading: 1626mV
+
+Time: 259.00
+Temperature Reading: 20.55C
+Light Voltage Reading: 1626mV
+
+Time: 259.50
+Temperature Reading: 20.58C
+Light Voltage Reading: 1624mV
+
+Time: 260.00
+Temperature Reading: 20.52C
+Light Voltage Reading: 1627mV
+
+Time: 260.50
+Temperature Reading: 20.52C
+Light Voltage Reading: 1630mV
+
+Time: 261.00
+Temperature Reading: 20.67C
+Light Voltage Reading: 1626mV
+
+Time: 261.50
+Temperature Reading: 20.55C
+Light Voltage Reading: 1630mV
+
+Time: 262.00
+Temperature Reading: 20.35C
+Light Voltage Reading: 1632mV
+
+Time: 262.50
+Temperature Reading: 20.58C
+Light Voltage Reading: 1633mV
+
+Time: 263.00
+Temperature Reading: 20.58C
+Light Voltage Reading: 1632mV
+
+Time: 263.50
+Temperature Reading: 20.46C
+Light Voltage Reading: 1633mV
+
+Time: 264.00
+Temperature Reading: 20.58C
+Light Voltage Reading: 1632mV
+
+Time: 264.50
+Temperature Reading: 20.58C
+Light Voltage Reading: 1635mV
+
+Time: 265.00
+Temperature Reading: 20.61C
+Light Voltage Reading: 1663mV
+
+Time: 265.50
+Temperature Reading: 20.58C
+Light Voltage Reading: 1636mV
+
+Time: 266.00
+Temperature Reading: 20.43C
+Light Voltage Reading: 1633mV
+
+Time: 266.50
+Temperature Reading: 20.43C
+Light Voltage Reading: 1630mV
+
+Time: 267.00
+Temperature Reading: 20.37C
+Light Voltage Reading: 1626mV
+
+Time: 267.50
+Temperature Reading: 20.35C
+Light Voltage Reading: 1625mV
+
+Time: 268.00
+Temperature Reading: 20.40C
+Light Voltage Reading: 1622mV
+
+Time: 268.50
+Temperature Reading: 20.46C
+Light Voltage Reading: 1619mV
+
+Time: 269.00
+Temperature Reading: 20.55C
+Light Voltage Reading: 1621mV
+
+Time: 269.50
+Temperature Reading: 20.46C
+Light Voltage Reading: 1625mV
+
+Time: 270.00
+Temperature Reading: 20.46C
+Light Voltage Reading: 1628mV
+
+Time: 270.50
+Temperature Reading: 20.43C
+Light Voltage Reading: 1626mV
+
+Time: 271.00
+Temperature Reading: 20.55C
+Light Voltage Reading: 1641mV
+
+Time: 271.50
+Temperature Reading: 20.67C
+Light Voltage Reading: 1630mV
+
+Time: 272.00
+Temperature Reading: 20.43C
+Light Voltage Reading: 1629mV
+
+Time: 272.50
+Temperature Reading: 20.85C
+Light Voltage Reading: 1630mV
+
+Time: 273.00
+Temperature Reading: 20.58C
+Light Voltage Reading: 1635mV
+
+Time: 273.50
+Temperature Reading: 20.67C
+Light Voltage Reading: 1635mV
+
+Time: 274.00
+Temperature Reading: 20.88C
+Light Voltage Reading: 1635mV
+
+Time: 274.50
+Temperature Reading: 20.99C
+Light Voltage Reading: 1637mV
+
+Time: 275.00
+Temperature Reading: 20.99C
+Light Voltage Reading: 1635mV
+
+Time: 275.50
+Temperature Reading: 20.90C
+Light Voltage Reading: 1634mV
+
+Time: 276.00
+Temperature Reading: 20.96C
+Light Voltage Reading: 1636mV
+
+Time: 276.50
+Temperature Reading: 20.96C
+Light Voltage Reading: 1632mV
+
+Time: 277.00
+Temperature Reading: 20.93C
+Light Voltage Reading: 1630mV
+
+Time: 277.50
+Temperature Reading: 20.85C
+Light Voltage Reading: 1629mV
+
+Time: 278.00
+Temperature Reading: 20.99C
+Light Voltage Reading: 1629mV
+
+Time: 278.50
+Temperature Reading: 20.93C
+Light Voltage Reading: 1631mV
+
+Time: 279.00
+Temperature Reading: 21.05C
+Light Voltage Reading: 1630mV
+
+Time: 279.50
+Temperature Reading: 20.99C
+Light Voltage Reading: 1630mV
+
+Time: 280.00
+Temperature Reading: 20.88C
+Light Voltage Reading: 1633mV
+
+Time: 280.50
+Temperature Reading: 20.85C
+Light Voltage Reading: 1632mV
+
+Time: 281.00
+Temperature Reading: 20.88C
+Light Voltage Reading: 1630mV
+
+Time: 281.50
+Temperature Reading: 20.99C
+Light Voltage Reading: 1630mV
+
+Time: 282.00
+Temperature Reading: 20.93C
+Light Voltage Reading: 1633mV
+
+Time: 282.50
+Temperature Reading: 20.93C
+Light Voltage Reading: 1632mV
+
+Time: 283.00
+Temperature Reading: 20.96C
+Light Voltage Reading: 1630mV
+
+Time: 283.50
+Temperature Reading: 20.90C
+Light Voltage Reading: 1630mV
+
+Time: 284.00
+Temperature Reading: 20.85C
+Light Voltage Reading: 1630mV
+
+Time: 284.50
+Temperature Reading: 20.79C
+Light Voltage Reading: 1622mV
+
+Time: 285.00
+Temperature Reading: 20.93C
+Light Voltage Reading: 1621mV
+
+Time: 285.50
+Temperature Reading: 20.76C
+Light Voltage Reading: 1630mV
+
+Time: 286.00
+Temperature Reading: 20.85C
+Light Voltage Reading: 1630mV
+
+Time: 286.50
+Temperature Reading: 20.76C
+Light Voltage Reading: 1629mV
+
+Time: 287.00
+Temperature Reading: 20.79C
+Light Voltage Reading: 1629mV
+
+Time: 287.50
+Temperature Reading: 20.73C
+Light Voltage Reading: 1628mV
+
+Time: 288.00
+Temperature Reading: 20.85C
+Light Voltage Reading: 1627mV
+
+Time: 288.50
+Temperature Reading: 20.70C
+Light Voltage Reading: 1628mV
+
+Time: 289.00
+Temperature Reading: 20.64C
+Light Voltage Reading: 1626mV
+
+Time: 289.50
+Temperature Reading: 20.79C
+Light Voltage Reading: 1626mV
+
+Time: 290.00
+Temperature Reading: 20.85C
+Light Voltage Reading: 1625mV
+
+Time: 290.50
+Temperature Reading: 20.61C
+Light Voltage Reading: 1626mV
+
+Time: 291.00
+Temperature Reading: 20.73C
+Light Voltage Reading: 1626mV
+
+Time: 291.50
+Temperature Reading: 20.67C
+Light Voltage Reading: 1625mV
+
+Time: 292.00
+Temperature Reading: 20.70C
+Light Voltage Reading: 1626mV
+
+Time: 292.50
+Temperature Reading: 20.58C
+Light Voltage Reading: 1626mV
+
+Time: 293.00
+Temperature Reading: 20.67C
+Light Voltage Reading: 1627mV
+
+Time: 293.50
+Temperature Reading: 20.73C
+Light Voltage Reading: 1628mV
+
+Time: 294.00
+Temperature Reading: 20.61C
+Light Voltage Reading: 1626mV
+
+Time: 294.50
+Temperature Reading: 20.58C
+Light Voltage Reading: 1625mV
+
+Time: 295.00
+Temperature Reading: 20.73C
+Light Voltage Reading: 1626mV
+
+Time: 295.50
+Temperature Reading: 20.58C
+Light Voltage Reading: 1626mV
+
+Time: 296.00
+Temperature Reading: 20.43C
+Light Voltage Reading: 1625mV
+
+Time: 296.50
+Temperature Reading: 20.58C
+Light Voltage Reading: 1622mV
+
+Time: 297.00
+Temperature Reading: 20.61C
+Light Voltage Reading: 1625mV
+
+Time: 297.50
+Temperature Reading: 20.67C
+Light Voltage Reading: 1624mV
+
+Time: 298.00
+Temperature Reading: 20.49C
+Light Voltage Reading: 1626mV
+
+Time: 298.50
+Temperature Reading: 20.55C
+Light Voltage Reading: 1642mV
+
+Time: 299.00
+Temperature Reading: 20.61C
+Light Voltage Reading: 1624mV
+
+Time: 299.50
+Temperature Reading: 20.70C
+Light Voltage Reading: 1628mV
+
+Time: 300.00
+Temperature Reading: 20.67C
+Light Voltage Reading: 1625mV
+
+Time: 300.50
+Temperature Reading: 20.58C
+Light Voltage Reading: 1625mV
+
+Time: 301.00
+Temperature Reading: 20.58C
+Light Voltage Reading: 1626mV
+
+Time: 301.50
+Temperature Reading: 20.46C
+Light Voltage Reading: 1624mV
+
+Time: 302.00
+Temperature Reading: 20.49C
+Light Voltage Reading: 1621mV
+
+Time: 302.50
+Temperature Reading: 20.40C
+Light Voltage Reading: 1619mV
+
+Time: 303.00
+Temperature Reading: 20.58C
+Light Voltage Reading: 1618mV
+
+Time: 303.50
+Temperature Reading: 20.58C
+Light Voltage Reading: 1617mV
+
+Time: 304.00
+Temperature Reading: 20.58C
+Light Voltage Reading: 1628mV
+
+Time: 304.50
+Temperature Reading: 20.58C
+Light Voltage Reading: 1620mV
+
+Time: 305.00
+Temperature Reading: 20.49C
+Light Voltage Reading: 1617mV
+
+Time: 305.50
+Temperature Reading: 20.58C
+Light Voltage Reading: 1616mV
+
+Time: 306.00
+Temperature Reading: 20.49C
+Light Voltage Reading: 1617mV
+
+Time: 306.50
+Temperature Reading: 20.55C
+Light Voltage Reading: 1617mV
+
+Time: 307.00
+Temperature Reading: 20.40C
+Light Voltage Reading: 1613mV
+
+Time: 307.50
+Temperature Reading: 20.49C
+Light Voltage Reading: 1615mV
+
+Time: 308.00
+Temperature Reading: 20.35C
+Light Voltage Reading: 1617mV
+
+Time: 308.50
+Temperature Reading: 20.46C
+Light Voltage Reading: 1617mV
+
+Time: 309.00
+Temperature Reading: 20.49C
+Light Voltage Reading: 1617mV
+
+Time: 309.50
+Temperature Reading: 20.52C
+Light Voltage Reading: 1617mV
+
+Time: 310.00
+Temperature Reading: 20.43C
+Light Voltage Reading: 1618mV
+
+Time: 310.50
+Temperature Reading: 20.29C
+Light Voltage Reading: 1622mV
+
+Time: 311.00
+Temperature Reading: 20.49C
+Light Voltage Reading: 1621mV
+
+Time: 311.50
+Temperature Reading: 20.37C
+Light Voltage Reading: 1620mV
+
+Time: 312.00
+Temperature Reading: 20.35C
+Light Voltage Reading: 1617mV
+
+Time: 312.50
+Temperature Reading: 20.40C
+Light Voltage Reading: 1617mV
+
+Time: 313.00
+Temperature Reading: 20.49C
+Light Voltage Reading: 1617mV
+
+Time: 313.50
+Temperature Reading: 20.58C
+Light Voltage Reading: 1617mV
+
+Time: 314.00
+Temperature Reading: 20.35C
+Light Voltage Reading: 1617mV
+
+Time: 314.50
+Temperature Reading: 20.35C
+Light Voltage Reading: 1620mV
+
+Time: 315.00
+Temperature Reading: 20.37C
+Light Voltage Reading: 1621mV
+
+Time: 315.50
+Temperature Reading: 20.40C
+Light Voltage Reading: 1621mV
+
+Time: 316.00
+Temperature Reading: 20.46C
+Light Voltage Reading: 1620mV
+
+Time: 316.50
+Temperature Reading: 20.40C
+Light Voltage Reading: 1620mV
+
+Time: 317.00
+Temperature Reading: 20.35C
+Light Voltage Reading: 1619mV
+
+Time: 317.50
+Temperature Reading: 20.43C
+Light Voltage Reading: 1618mV
+
+Time: 318.00
+Temperature Reading: 20.46C
+Light Voltage Reading: 1623mV
+
+Time: 318.50
+Temperature Reading: 20.32C
+Light Voltage Reading: 1623mV
+
+Time: 319.00
+Temperature Reading: 20.35C
+Light Voltage Reading: 1626mV
+
+Time: 319.50
+Temperature Reading: 20.35C
+Light Voltage Reading: 1629mV
+
+Time: 320.00
+Temperature Reading: 20.32C
+Light Voltage Reading: 1614mV
+
+Time: 320.50
+Temperature Reading: 20.32C
+Light Voltage Reading: 1616mV
+
+Time: 321.00
+Temperature Reading: 20.29C
+Light Voltage Reading: 1619mV
+
+Time: 321.50
+Temperature Reading: 20.32C
+Light Voltage Reading: 1621mV
+
+Time: 322.00
+Temperature Reading: 20.26C
+Light Voltage Reading: 1623mV
+
+Time: 322.50
+Temperature Reading: 20.29C
+Light Voltage Reading: 1624mV
+
+Time: 323.00
+Temperature Reading: 20.23C
+Light Voltage Reading: 1623mV
+
+Time: 323.50
+Temperature Reading: 20.35C
+Light Voltage Reading: 1624mV
+
+Time: 324.00
+Temperature Reading: 20.29C
+Light Voltage Reading: 1625mV
+
+Time: 324.50
+Temperature Reading: 20.29C
+Light Voltage Reading: 1624mV
+
+Time: 325.00
+Temperature Reading: 20.32C
+Light Voltage Reading: 1619mV
+
+Time: 325.50
+Temperature Reading: 20.26C
+Light Voltage Reading: 1618mV
+
+Time: 326.00
+Temperature Reading: 20.29C
+Light Voltage Reading: 1624mV
+
+Time: 326.50
+Temperature Reading: 20.32C
+Light Voltage Reading: 1627mV
+
+Time: 327.00
+Temperature Reading: 20.26C
+Light Voltage Reading: 1621mV
+
+Time: 327.50
+Temperature Reading: 20.37C
+Light Voltage Reading: 1617mV
+
+Time: 328.00
+Temperature Reading: 20.20C
+Light Voltage Reading: 1621mV
+
+Time: 328.50
+Temperature Reading: 20.32C
+Light Voltage Reading: 1621mV
+
+Time: 329.00
+Temperature Reading: 20.32C
+Light Voltage Reading: 1623mV
+
+Time: 329.50
+Temperature Reading: 20.26C
+Light Voltage Reading: 1619mV
+
+Time: 330.00
+Temperature Reading: 20.32C
+Light Voltage Reading: 1622mV
+
+Time: 330.50
+Temperature Reading: 20.23C
+Light Voltage Reading: 1621mV
+
+Time: 331.00
+Temperature Reading: 20.29C
+Light Voltage Reading: 1623mV
+
+Time: 331.50
+Temperature Reading: 20.14C
+Light Voltage Reading: 1626mV
+
+Time: 332.00
+Temperature Reading: 20.26C
+Light Voltage Reading: 1625mV
+
+Time: 332.50
+Temperature Reading: 20.23C
+Light Voltage Reading: 1624mV
+
+Time: 333.00
+Temperature Reading: 20.20C
+Light Voltage Reading: 1618mV
+
+Time: 333.50
+Temperature Reading: 20.11C
+Light Voltage Reading: 1622mV
+
+Time: 334.00
+Temperature Reading: 20.32C
+Light Voltage Reading: 1621mV
+
+Time: 334.50
+Temperature Reading: 20.17C
+Light Voltage Reading: 1621mV
+
+Time: 335.00
+Temperature Reading: 20.17C
+Light Voltage Reading: 1620mV
+
+Time: 335.50
+Temperature Reading: 20.32C
+Light Voltage Reading: 1623mV
+
+Time: 336.00
+Temperature Reading: 20.14C
+Light Voltage Reading: 1621mV
+
+Time: 336.50
+Temperature Reading: 20.17C
+Light Voltage Reading: 1622mV
+
+Time: 337.00
+Temperature Reading: 20.05C
+Light Voltage Reading: 1623mV
+
+Time: 337.50
+Temperature Reading: 20.05C
+Light Voltage Reading: 1623mV
+
+Time: 338.00
+Temperature Reading: 19.99C
+Light Voltage Reading: 1621mV
+
+Time: 338.50
+Temperature Reading: 20.11C
+Light Voltage Reading: 1621mV
+
+Time: 339.00
+Temperature Reading: 20.37C
+Light Voltage Reading: 1620mV
+
+Time: 339.50
+Temperature Reading: 20.14C
+Light Voltage Reading: 1618mV
+
+Time: 340.00
+Temperature Reading: 20.02C
+Light Voltage Reading: 1620mV
+
+Time: 340.50
+Temperature Reading: 20.20C
+Light Voltage Reading: 1620mV
+
+Time: 341.00
+Temperature Reading: 20.05C
+Light Voltage Reading: 1621mV
+
+Time: 341.50
+Temperature Reading: 20.05C
+Light Voltage Reading: 1618mV
+
+Time: 342.00
+Temperature Reading: 20.02C
+Light Voltage Reading: 1617mV
+
+Time: 342.50
+Temperature Reading: 20.02C
+Light Voltage Reading: 1621mV
+
+Time: 343.00
+Temperature Reading: 20.17C
+Light Voltage Reading: 1619mV
+
+Time: 343.50
+Temperature Reading: 20.02C
+Light Voltage Reading: 1621mV
+
+Time: 344.00
+Temperature Reading: 20.08C
+Light Voltage Reading: 1621mV
+
+Time: 344.50
+Temperature Reading: 19.46C
+Light Voltage Reading: 1636mV
+

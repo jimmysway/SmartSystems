@@ -1,0 +1,171 @@
+ected chip: generic�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 21 2023 20:02:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab10h ( 43792) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=0001ab38 vaddr=3ffb0000 size=02148h (  8520) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0001cc88 vaddr=40080000 size=03390h ( 13200) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=169f4h ( 92660) map[0m
+[0;32mI (170) esp_image: segment 4: paddr=00036a1c vaddr=40083390 size=08f24h ( 36644) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu up.[0m
+[0;32mI (204) cpu_start: Starting app cpu, entry point is 0x40081044[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (221) cpu_start: Pro cpu start user code[0m
+[0;32mI (222) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (222) cpu_start: Application information:[0m
+[0;32mI (226) cpu_start: Project name:     continuous_read[0m
+[0;32mI (232) cpu_start: App version:      ae4342d-dirty[0m
+[0;32mI (237) cpu_start: Compile time:     Sep 22 2023 13:12:59[0m
+[0;32mI (244) cpu_start: ELF file SHA256:  087b08903...[0m
+[0;32mI (249) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (256) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (261) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (265) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (270) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (278) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (283) heap_init: At 3FFB29D0 len 0002D630 (181 KiB): DRAM[0m
+[0;32mI (290) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (296) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (303) heap_init: At 4008C2B4 len 00013D4C (79 KiB): IRAM[0m
+[0;32mI (310) spi_flash: detected chip: generic[0m
+[0;32mI (313) spi_flash: flash io: dio[0m
+[0;33mW (317) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (330) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (339) app_start: Starting scheduler on CPU0[0m
+[0;32mI (344) app_start: Starting scheduler on CPU1[0m
+[0;32mI (344) main_task: Started on CPU0[0m
+[0;32mI (354) main_task: Calling app_main()[0m
+[0;32mI (354) RTOS Task: Configured GPIO LED![0m
+[0;32mI (354) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (374) gpio: GPIO[33]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (384) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (394) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (404) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:1 [0m
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+Characterized using eFuse Vref
+Time: 0.50
+Temperature Reading: 15.79C
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+Characterized using eFuse Vref
+Light Voltage Reading: 1130mV
+
+Time: 1.00
+Temperature Reading: 15.47C
+Light Voltage Reading: 1127mV
+
+Time: 1.50
+Temperature Reading: 15.67C
+Light Voltage Reading: 1126mV
+
+Time: 2.00
+Temperature Reading: 15.59C
+Light Voltage Reading: 1109mV
+
+Time: 2.50
+Temperature Reading: 15.73C
+Light Voltage Reading: 1102mV
+
+Time: 3.00
+Temperature Reading: 15.59C
+Light Voltage Reading: 1098mV
+
+Time: 3.50
+Temperature Reading: 15.79C
+Light Voltage Reading: 1113mV
+
+Time: 4.00
+Temperature Reading: 15.67C
+Light Voltage Reading: 1124mV
+
+Time: 4.50
+Temperature Reading: 15.73C
+Light Voltage Reading: 1126mV
+
+Time: 5.00
+Temperature Reading: 15.70C
+Light Voltage Reading: 1127mV
+
+Time: 5.50
+Temperature Reading: 15.53C
+Light Voltage Reading: 1126mV
+
+Time: 6.00
+Temperature Reading: 15.62C
+Light Voltage Reading: 1121mV
+
+Time: 6.50
+Temperature Reading: 15.62C
+Light Voltage Reading: 1090mV
+
+Time: 7.00
+Temperature Reading: 15.70C
+Light Voltage Reading: 1062mV
+
+Time: 7.50
+Temperature Reading: 15.59C
+Light Voltage Reading: 1048mV
+
+Time: 8.00
+Temperature Reading: 15.70C
+Light Voltage Reading: 1022mV
+
+Time: 8.50
+Temperature Reading: 15.70C
+Light Voltage Reading: 1019mV
+
+Time: 9.00
+Temperature Reading: 15.62C
+Light Voltage Reading: 1009mV
+
+Time: 9.50
+Temperature Reading: 15.50C
+Light Voltage Reading: 1027mV
+
+Time: 10.00
+Temperature Reading: 15.73C
+Light Voltage Reading: 970mV
+
+Time: 10.50
+Temperature Reading: 15.56C
+Light Voltage Reading: 1028mV
+
+Time: 11.00
+Temperature Reading: 15.67C
+Light Voltage Reading: 993mV
+
+Time: 11.50
+Temperature Reading: 15.62C
+Light Voltage Reading: 991mV
+
+Time: 12.00
+Temperature Reading: 15.59C
+Light Voltage Reading: 1030mV
+
