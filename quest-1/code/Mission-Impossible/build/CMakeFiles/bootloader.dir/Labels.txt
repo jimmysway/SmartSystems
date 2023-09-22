@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-1/code/Mission-Impossible/build/CMakeFiles/bootloader
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-1/code/Mission-Impossible/build/CMakeFiles/bootloader.rule
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-1/code/Mission-Impossible/build/CMakeFiles/bootloader-complete.rule
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-1/code/Mission-Impossible/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-1/code/Mission-Impossible/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-1/code/Mission-Impossible/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-1/code/Mission-Impossible/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-1/code/Mission-Impossible/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-1/code/Mission-Impossible/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-1/code/Mission-Impossible/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

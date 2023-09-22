@@ -1,0 +1,256 @@
+pu_start: �ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 21 2023 20:02:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab10h ( 43792) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=0001ab38 vaddr=3ffb0000 size=02148h (  8520) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0001cc88 vaddr=40080000 size=03390h ( 13200) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1693ch ( 92476) map[0m
+[0;32mI (170) esp_image: segment 4: paddr=00036964 vaddr=40083390 size=08f2ch ( 36652) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu up.[0m
+[0;32mI (204) cpu_start: Starting app cpu, entry point is 0x40081044[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (221) cpu_start: Pro cpu start user code[0m
+[0;32mI (221) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (222) cpu_start: Application information:[0m
+[0;32mI (226) cpu_start: Project name:     continuous_read[0m
+[0;32mI (232) cpu_start: App version:      bc02d36-dirty[0m
+[0;32mI (237) cpu_start: Compile time:     Sep 21 2023 20:02:10[0m
+[0;32mI (243) cpu_start: ELF file SHA256:  00e3c3bcb...[0m
+[0;32mI (249) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (256) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (261) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (265) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (270) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (277) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (283) heap_init: At 3FFB29D0 len 0002D630 (181 KiB): DRAM[0m
+[0;32mI (290) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (296) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (302) heap_init: At 4008C2BC len 00013D44 (79 KiB): IRAM[0m
+[0;32mI (310) spi_flash: detected chip: generic[0m
+[0;32mI (313) spi_flash: flash io: dio[0m
+[0;33mW (317) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (330) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (339) app_start: Starting scheduler on CPU0[0m
+[0;32mI (344) app_start: Starting scheduler on CPU1[0m
+[0;32mI (344) main_task: Started on CPU0[0m
+[0;32mI (354) main_task: Calling app_main()[0m
+[0;32mI (354) RTOS Task: Configured GPIO LED![0m
+[0;32mI (354) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (374) gpio: GPIO[33]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (384) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (394) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (404) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:1 [0m
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+Characterized using eFuse Vref
+Raw: 1975	Temperature: 17.204315F
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+Characterized using eFuse Vref
+Raw: 933	Voltage: 908mV
+[0;32mI (434) main_task: Returned from app_main()[0m
+Raw: 1974	Temperature: 17.233682F
+Raw: 932	Voltage: 907mV
+Raw: 1974	Temperature: 17.233682F
+Raw: 933	Voltage: 908mV
+Raw: 1977	Temperature: 17.174947F
+Raw: 933	Voltage: 908mV
+Raw: 1973	Temperature: 17.263048F
+Raw: 932	Voltage: 907mV
+Raw: 1976	Temperature: 17.204315F
+Raw: 932	Voltage: 907mV
+Raw: 1974	Temperature: 17.233682F
+Raw: 933	Voltage: 908mV
+Raw: 1977	Temperature: 17.174947F
+Raw: 933	Voltage: 908mV
+Raw: 1975	Temperature: 17.204315F
+Raw: 929	Voltage: 905mV
+Raw: 1968	Temperature: 17.380499F
+Raw: 931	Voltage: 906mV
+Raw: 1970	Temperature: 17.351138F
+Raw: 932	Voltage: 907mV
+Raw: 1977	Temperature: 17.174947F
+Raw: 932	Voltage: 907mV
+Raw: 1974	Temperature: 17.233682F
+Raw: 928	Voltage: 904mV
+Raw: 1968	Temperature: 17.380499F
+Raw: 931	Voltage: 906mV
+Raw: 1971	Temperature: 17.321775F
+Raw: 929	Voltage: 905mV
+Raw: 1976	Temperature: 17.204315F
+Raw: 931	Voltage: 906mV
+Raw: 1969	Temperature: 17.351138F
+Raw: 931	Voltage: 906mV
+Raw: 1964	Temperature: 17.497934F
+Raw: 933	Voltage: 908mV
+Raw: 1966	Temperature: 17.439218F
+Raw: 930	Voltage: 906mV
+Raw: 1966	Temperature: 17.439218F
+Raw: 929	Voltage: 905mV
+Raw: 1967	Temperature: 17.409859F
+Raw: 930	Voltage: 906mV
+Raw: 1971	Temperature: 17.321775F
+Raw: 933	Voltage: 908mV
+Raw: 1970	Temperature: 17.351138F
+Raw: 933	Voltage: 908mV
+Raw: 1968	Temperature: 17.380499F
+Raw: 929	Voltage: 905mV
+Raw: 1977	Temperature: 17.174947F
+Raw: 929	Voltage: 905mV
+Raw: 1965	Temperature: 17.468577F
+Raw: 931	Voltage: 906mV
+Raw: 1975	Temperature: 17.204315F
+Raw: 935	Voltage: 910mV
+Raw: 1971	Temperature: 17.321775F
+Raw: 934	Voltage: 909mV
+Raw: 1972	Temperature: 17.292412F
+Raw: 930	Voltage: 906mV
+Raw: 1976	Temperature: 17.204315F
+Raw: 932	Voltage: 907mV
+Raw: 1973	Temperature: 17.263048F
+Raw: 930	Voltage: 906mV
+Raw: 1972	Temperature: 17.292412F
+Raw: 929	Voltage: 905mV
+Raw: 1973	Temperature: 17.263048F
+Raw: 933	Voltage: 908mV
+Raw: 1968	Temperature: 17.380499F
+Raw: 928	Voltage: 904mV
+Raw: 1973	Temperature: 17.263048F
+Raw: 928	Voltage: 904mV
+Raw: 1967	Temperature: 17.409859F
+Raw: 886	Voltage: 869mV
+Button pressed.
+Raw: 1975	Temperature: 17.204315F
+Raw: 838	Voltage: 830mV
+Raw: 1970	Temperature: 17.351138F
+Raw: 877	Voltage: 862mV
+Raw: 1973	Temperature: 17.263048F
+Raw: 864	Voltage: 851mV
+Button pressed.
+Button pressed.
+Button pressed.
+Raw: 1974	Temperature: 17.233682F
+Raw: 890	Voltage: 873mV
+Button pressed.
+Button pressed.
+Raw: 1972	Temperature: 17.292412F
+Raw: 891	Voltage: 874mV
+Button pressed.
+Raw: 1969	Temperature: 17.351138F
+Raw: 894	Voltage: 876mV
+Button pressed.
+Button pressed.
+Raw: 1971	Temperature: 17.321775F
+Raw: 892	Voltage: 874mV
+Button pressed.
+Button pressed.
+Raw: 1978	Temperature: 17.145578F
+Raw: 896	Voltage: 878mV
+Button pressed.
+Raw: 1973	Temperature: 17.263048F
+Raw: 892	Voltage: 874mV
+Raw: 1967	Temperature: 17.409859F
+Raw: 889	Voltage: 872mV
+Button pressed.
+Raw: 1974	Temperature: 17.233682F
+Raw: 893	Voltage: 875mV
+Button pressed.
+Raw: 1973	Temperature: 17.263048F
+Raw: 904	Voltage: 884mV
+Raw: 1974	Temperature: 17.233682F
+Raw: 906	Voltage: 886mV
+Raw: 1976	Temperature: 17.204315F
+Raw: 907	Voltage: 887mV
+Raw: 1974	Temperature: 17.233682F
+Raw: 909	Voltage: 888mV
+Raw: 1972	Temperature: 17.292412F
+Raw: 913	Voltage: 892mV
+Raw: 1966	Temperature: 17.439218F
+Raw: 913	Voltage: 892mV
+Raw: 1971	Temperature: 17.321775F
+Raw: 913	Voltage: 892mV
+Raw: 1968	Temperature: 17.380499F
+Raw: 914	Voltage: 892mV
+Raw: 1966	Temperature: 17.439218F
+Raw: 914	Voltage: 892mV
+Raw: 1970	Temperature: 17.351138F
+Raw: 916	Voltage: 894mV
+Raw: 1970	Temperature: 17.351138F
+Raw: 913	Voltage: 892mV
+Raw: 1974	Temperature: 17.233682F
+Raw: 913	Voltage: 892mV
+Raw: 1976	Temperature: 17.204315F
+Raw: 913	Voltage: 892mV
+Raw: 1972	Temperature: 17.292412F
+Raw: 913	Voltage: 892mV
+Raw: 1971	Temperature: 17.321775F
+Raw: 913	Voltage: 892mV
+Raw: 1968	Temperature: 17.380499F
+Raw: 912	Voltage: 891mV
+Raw: 1969	Temperature: 17.351138F
+Raw: 915	Voltage: 893mV
+Raw: 1969	Temperature: 17.351138F
+Raw: 915	Voltage: 893mV
+Raw: 1968	Temperature: 17.380499F
+Raw: 915	Voltage: 893mV
+Raw: 1970	Temperature: 17.351138F
+Raw: 911	Voltage: 890mV
+Raw: 1969	Temperature: 17.351138F
+Raw: 913	Voltage: 892mV
+Raw: 1976	Temperature: 17.204315F
+Raw: 914	Voltage: 892mV
+Raw: 1970	Temperature: 17.351138F
+Raw: 913	Voltage: 892mV
+Raw: 1971	Temperature: 17.321775F
+Raw: 914	Voltage: 892mV
+Raw: 1971	Temperature: 17.321775F
+Raw: 915	Voltage: 893mV
+Raw: 1969	Temperature: 17.351138F
+Raw: 912	Voltage: 891mV
+Raw: 1967	Temperature: 17.409859F
+Raw: 912	Voltage: 891mV
+Raw: 1966	Temperature: 17.439218F
+Raw: 911	Voltage: 890mV
+Raw: 1979	Temperature: 17.116208F
+Raw: 912	Voltage: 891mV
+Raw: 1969	Temperature: 17.351138F
+Raw: 913	Voltage: 892mV
+Raw: 1971	Temperature: 17.321775F
+Raw: 914	Voltage: 892mV
+Raw: 1972	Temperature: 17.292412F
+Raw: 912	Voltage: 891mV
+Raw: 1967	Temperature: 17.409859F
+Raw: 913	Voltage: 892mV
+Raw: 1971	Temperature: 17.321775F
+Raw: 916	Voltage: 894mV
+Raw: 1973	Temperature: 17.263048F
+Raw: 914	Voltage: 892mV
+Raw: 1978	Temperature: 17.145578F
+Raw: 917	Voltage: 895mV

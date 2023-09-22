@@ -1,0 +1,212 @@
+ spi_flas�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 21 2023 20:02:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a950h ( 43344) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=0001a978 vaddr=3ffb0000 size=02148h (  8520) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0001cac8 vaddr=40080000 size=03550h ( 13648) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=162c8h ( 90824) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=000362f0 vaddr=40083550 size=08bb8h ( 35768) load[0m
+[0;32mI (190) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (202) cpu_start: Pro cpu up.[0m
+[0;32mI (202) cpu_start: Starting app cpu, entry point is 0x4008103c[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (220) cpu_start: Pro cpu start user code[0m
+[0;32mI (220) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (220) cpu_start: Application information:[0m
+[0;32mI (225) cpu_start: Project name:     continuous_read[0m
+[0;32mI (231) cpu_start: App version:      bc02d36-dirty[0m
+[0;32mI (236) cpu_start: Compile time:     Sep 21 2023 20:02:10[0m
+[0;32mI (242) cpu_start: ELF file SHA256:  e31b6c885...[0m
+[0;32mI (248) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (255) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (259) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (264) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (269) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (276) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (282) heap_init: At 3FFB29C8 len 0002D638 (181 KiB): DRAM[0m
+[0;32mI (288) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (295) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (301) heap_init: At 4008C108 len 00013EF8 (79 KiB): IRAM[0m
+[0;32mI (309) spi_flash: detected chip: generic[0m
+[0;32mI (312) spi_flash: flash io: dio[0m
+[0;33mW (316) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (329) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (338) app_start: Starting scheduler on CPU0[0m
+[0;32mI (343) app_start: Starting scheduler on CPU1[0m
+[0;32mI (343) main_task: Started on CPU0[0m
+[0;32mI (353) main_task: Calling app_main()[0m
+[0;32mI (353) RTOS Task: Configured GPIO LED![0m
+[0;32mI (353) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (363) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (373) gpio: GPIO[33]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (383) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (393) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+Characterized using eFuse Vref
+Raw: 1597	Temperature: 26.417461F
+[0;32mI (413) main_task: Returned from app_main()[0m
+Raw: 1601	Temperature: 26.326528F
+Raw: 1606	Temperature: 26.175120F
+Raw: 1605	Temperature: 26.205387F
+Raw: 1604	Temperature: 26.235661F
+Raw: 1607	Temperature: 26.175120F
+Raw: 1597	Temperature: 26.417461F
+Raw: 1583	Temperature: 26.751458F
+Raw: 1558	Temperature: 27.391720F
+Raw: 1541	Temperature: 27.820596F
+Raw: 1550	Temperature: 27.575318F
+Raw: 1554	Temperature: 27.483481F
+Raw: 1563	Temperature: 27.269489F
+Raw: 1563	Temperature: 27.269489F
+Raw: 1576	Temperature: 26.934029F
+Raw: 1577	Temperature: 26.903581F
+Raw: 1589	Temperature: 26.599527F
+Raw: 1599	Temperature: 26.356832F
+Raw: 1605	Temperature: 26.205387F
+Raw: 1601	Temperature: 26.326528F
+Raw: 1615	Temperature: 25.963448F
+Raw: 1623	Temperature: 25.752117F
+Raw: 1617	Temperature: 25.903033F
+Raw: 1579	Temperature: 26.873141F
+Raw: 1553	Temperature: 27.514085F
+Raw: 1518	Temperature: 28.405420F
+Raw: 1507	Temperature: 28.683614F
+Raw: 1494	Temperature: 28.993641F
+Raw: 1483	Temperature: 29.273522F
+Raw: 1486	Temperature: 29.211254F
+Raw: 1492	Temperature: 29.055766F
+Raw: 1500	Temperature: 28.838504F
+Raw: 1507	Temperature: 28.683614F
+Raw: 1503	Temperature: 28.776519F
+Raw: 1505	Temperature: 28.714572F
+Raw: 1515	Temperature: 28.467174F
+Raw: 1534	Temperature: 28.004923F
+Raw: 1552	Temperature: 27.544697F
+Raw: 1570	Temperature: 27.086390F
+Raw: 1583	Temperature: 26.751458F
+Raw: 1587	Temperature: 26.660276F
+Raw: 1601	Temperature: 26.326528F
+Raw: 1605	Temperature: 26.205387F
+Raw: 1618	Temperature: 25.903033F
+Raw: 1631	Temperature: 25.571241F
+Raw: 1635	Temperature: 25.480892F
+Raw: 1633	Temperature: 25.511002F
+Raw: 1646	Temperature: 25.210193F
+Raw: 1651	Temperature: 25.090046F
+Raw: 1660	Temperature: 24.850044F
+Raw: 1658	Temperature: 24.910008F
+Raw: 1663	Temperature: 24.790103F
+Raw: 1664	Temperature: 24.760141F
+Raw: 1667	Temperature: 24.670291F
+Raw: 1679	Temperature: 24.401046F
+Raw: 1683	Temperature: 24.281525F
+Raw: 1684	Temperature: 24.251658F
+Raw: 1693	Temperature: 24.042739F
+Raw: 1703	Temperature: 23.804281F
+Raw: 1701	Temperature: 23.834071F
+Raw: 1709	Temperature: 23.655406F
+Raw: 1719	Temperature: 23.417453F
+Raw: 1711	Temperature: 23.595890F
+Raw: 1672	Temperature: 24.550570F
+Raw: 1657	Temperature: 24.940000F
+Raw: 1655	Temperature: 24.969997F
+Raw: 1653	Temperature: 25.030009F
+Raw: 1651	Temperature: 25.090046F
+Raw: 1658	Temperature: 24.910008F
+Raw: 1650	Temperature: 25.090046F
+Raw: 1658	Temperature: 24.910008F
+Raw: 1663	Temperature: 24.790103F
+Raw: 1666	Temperature: 24.700235F
+Raw: 1661	Temperature: 24.820070F
+Raw: 1668	Temperature: 24.670291F
+Raw: 1667	Temperature: 24.670291F
+Raw: 1673	Temperature: 24.520654F
+Raw: 1674	Temperature: 24.520654F
+Raw: 1675	Temperature: 24.490744F
+Raw: 1687	Temperature: 24.191941F
+Raw: 1696	Temperature: 23.983094F
+Raw: 1690	Temperature: 24.102404F
+Raw: 1689	Temperature: 24.132244F
+Raw: 1699	Temperature: 23.893665F
+Raw: 1704	Temperature: 23.774497F
+Raw: 1706	Temperature: 23.714942F
+Raw: 1713	Temperature: 23.566139F
+Raw: 1720	Temperature: 23.387730F
+Raw: 1715	Temperature: 23.506650F
+Raw: 1717	Temperature: 23.447181F
+Raw: 1728	Temperature: 23.179791F
+Raw: 1731	Temperature: 23.120420F
+Raw: 1725	Temperature: 23.268881F
+Raw: 1733	Temperature: 23.061065F
+Raw: 1735	Temperature: 23.031395F
+Raw: 1736	Temperature: 23.001728F
+Raw: 1738	Temperature: 22.942407F
+Raw: 1745	Temperature: 22.764543F
+Raw: 1747	Temperature: 22.734913F
+Raw: 1747	Temperature: 22.734913F
+Raw: 1755	Temperature: 22.527611F
+Raw: 1762	Temperature: 22.350070F
+Raw: 1762	Temperature: 22.350070F
+Raw: 1769	Temperature: 22.202217F
+Raw: 1778	Temperature: 21.965830F
+Raw: 1773	Temperature: 22.083997F
+Raw: 1777	Temperature: 21.995367F
+Raw: 1781	Temperature: 21.906766F
+Raw: 1788	Temperature: 21.729650F
+Raw: 1792	Temperature: 21.641132F
+Raw: 1794	Temperature: 21.582135F
+Raw: 1797	Temperature: 21.523150F
+Raw: 1802	Temperature: 21.405213F
+Raw: 1806	Temperature: 21.287319F
+Raw: 1806	Temperature: 21.287319F
+Raw: 1781	Temperature: 21.906766F
+Raw: 1756	Temperature: 22.498012F
+Raw: 1735	Temperature: 23.031395F
+Raw: 1745	Temperature: 22.764543F
+Raw: 1742	Temperature: 22.853457F
+Raw: 1747	Temperature: 22.734913F
+Raw: 1744	Temperature: 22.794177F
+Raw: 1750	Temperature: 22.646046F
+Raw: 1753	Temperature: 22.586821F
+Raw: 1746	Temperature: 22.764543F
+Raw: 1759	Temperature: 22.438824F
+Raw: 1764	Temperature: 22.320492F
+Raw: 1775	Temperature: 22.054450F
+Raw: 1776	Temperature: 22.024907F
+Raw: 1786	Temperature: 21.788676F
+Raw: 1784	Temperature: 21.818194F
+Raw: 1785	Temperature: 21.788676F
+Raw: 1787	Temperature: 21.759161F
+Raw: 1791	Temperature: 21.670635F
+Raw: 1786	Temperature: 21.788676F
+Raw: 1799	Temperature: 21.464176F
+Raw: 1793	Temperature: 21.611632F
+Raw: 1793	Temperature: 21.611632F
+Raw: 1803	Temperature: 21.375735F
+Raw: 1801	Temperature: 21.405213F

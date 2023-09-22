@@ -1,0 +1,753 @@
+ DRAM[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 21 2023 20:02:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab10h ( 43792) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=0001ab38 vaddr=3ffb0000 size=02148h (  8520) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0001cc88 vaddr=40080000 size=03390h ( 13200) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=169d8h ( 92632) map[0m
+[0;32mI (170) esp_image: segment 4: paddr=00036a00 vaddr=40083390 size=08f24h ( 36644) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu up.[0m
+[0;32mI (204) cpu_start: Starting app cpu, entry point is 0x40081044[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (221) cpu_start: Pro cpu start user code[0m
+[0;32mI (221) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (222) cpu_start: Application information:[0m
+[0;32mI (226) cpu_start: Project name:     continuous_read[0m
+[0;32mI (232) cpu_start: App version:      bc02d36-dirty[0m
+[0;32mI (237) cpu_start: Compile time:     Sep 21 2023 20:02:10[0m
+[0;32mI (243) cpu_start: ELF file SHA256:  acfbf9830...[0m
+[0;32mI (249) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (256) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (261) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (265) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (270) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (278) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (283) heap_init: At 3FFB29D0 len 0002D630 (181 KiB): DRAM[0m
+[0;32mI (290) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (296) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (302) heap_init: At 4008C2B4 len 00013D4C (79 KiB): IRAM[0m
+[0;32mI (310) spi_flash: detected chip: generic[0m
+[0;32mI (313) spi_flash: flash io: dio[0m
+[0;33mW (317) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (330) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (339) app_start: Starting scheduler on CPU0[0m
+[0;32mI (344) app_start: Starting scheduler on CPU1[0m
+[0;32mI (344) main_task: Started on CPU0[0m
+[0;32mI (354) main_task: Calling app_main()[0m
+[0;32mI (354) RTOS Task: Configured GPIO LED![0m
+[0;32mI (354) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (374) gpio: GPIO[33]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (384) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (394) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (404) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:1 [0m
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+Characterized using eFuse Vref
+Raw: 1873	Temperature: 19.669756F
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+Characterized using eFuse Vref
+Raw: 1001	Voltage: 964mV
+Raw: 1874	Temperature: 19.640391F
+Raw: 1006	Voltage: 968mV
+Raw: 1882	Temperature: 19.464222F
+Raw: 1008	Voltage: 970mV
+Raw: 1877	Temperature: 19.581664F
+Raw: 1011	Voltage: 972mV
+Raw: 1872	Temperature: 19.699123F
+Raw: 1009	Voltage: 970mV
+Raw: 1877	Temperature: 19.581664F
+Raw: 1012	Voltage: 973mV
+Raw: 1878	Temperature: 19.552302F
+Raw: 1011	Voltage: 972mV
+Raw: 1872	Temperature: 19.699123F
+Raw: 1010	Voltage: 971mV
+Raw: 1882	Temperature: 19.464222F
+Raw: 1014	Voltage: 975mV
+Raw: 1882	Temperature: 19.464222F
+Raw: 1014	Voltage: 975mV
+Raw: 1879	Temperature: 19.522941F
+Raw: 1003	Voltage: 965mV
+Raw: 1874	Temperature: 19.640391F
+Raw: 898	Voltage: 879mV
+Raw: 1879	Temperature: 19.522941F
+Raw: 771	Voltage: 775mV
+Raw: 1879	Temperature: 19.522941F
+Raw: 1003	Voltage: 965mV
+Raw: 1877	Temperature: 19.581664F
+Raw: 1017	Voltage: 977mV
+Raw: 1888	Temperature: 19.317440F
+Raw: 1019	Voltage: 979mV
+Raw: 1889	Temperature: 19.288086F
+Raw: 1019	Voltage: 979mV
+Raw: 1882	Temperature: 19.464222F
+Raw: 1010	Voltage: 971mV
+Raw: 1882	Temperature: 19.464222F
+Raw: 794	Voltage: 794mV
+Raw: 1874	Temperature: 19.640391F
+Raw: 879	Voltage: 864mV
+Raw: 1888	Temperature: 19.317440F
+Raw: 1015	Voltage: 975mV
+Raw: 1882	Temperature: 19.464222F
+Raw: 1020	Voltage: 979mV
+Raw: 1877	Temperature: 19.581664F
+Raw: 1019	Voltage: 979mV
+Raw: 1886	Temperature: 19.376150F
+Raw: 1021	Voltage: 980mV
+Raw: 1880	Temperature: 19.493581F
+Raw: 1019	Voltage: 979mV
+Raw: 1881	Temperature: 19.493581F
+Raw: 1017	Voltage: 977mV
+Raw: 1883	Temperature: 19.434864F
+Raw: 1014	Voltage: 975mV
+Raw: 1888	Temperature: 19.317440F
+Raw: 1008	Voltage: 970mV
+Raw: 1888	Temperature: 19.317440F
+Raw: 909	Voltage: 888mV
+Raw: 1886	Temperature: 19.376150F
+Raw: 920	Voltage: 897mV
+Raw: 1872	Temperature: 19.699123F
+Raw: 955	Voltage: 926mV
+Raw: 1880	Temperature: 19.493581F
+Raw: 993	Voltage: 957mV
+Raw: 1881	Temperature: 19.493581F
+Raw: 986	Voltage: 952mV
+Raw: 1866	Temperature: 19.845972F
+Raw: 1002	Voltage: 965mV
+Raw: 1842	Temperature: 20.433725F
+Raw: 998	Voltage: 961mV
+Raw: 1826	Temperature: 20.816142F
+Raw: 991	Voltage: 956mV
+Raw: 1802	Temperature: 21.405213F
+Raw: 991	Voltage: 956mV
+Raw: 1787	Temperature: 21.759161F
+Raw: 990	Voltage: 955mV
+Raw: 1773	Temperature: 22.083997F
+Raw: 992	Voltage: 956mV
+Raw: 1757	Temperature: 22.468416F
+Raw: 989	Voltage: 954mV
+Raw: 1750	Temperature: 22.646046F
+Raw: 990	Voltage: 955mV
+Raw: 1730	Temperature: 23.150103F
+Raw: 991	Voltage: 956mV
+Raw: 1721	Temperature: 23.358011F
+Raw: 989	Voltage: 954mV
+Raw: 1713	Temperature: 23.566139F
+Raw: 992	Voltage: 956mV
+Raw: 1699	Temperature: 23.893665F
+Raw: 990	Voltage: 955mV
+Raw: 1697	Temperature: 23.953279F
+Raw: 989	Voltage: 954mV
+Raw: 1680	Temperature: 24.371157F
+Raw: 992	Voltage: 956mV
+Raw: 1674	Temperature: 24.520654F
+Raw: 991	Voltage: 956mV
+Raw: 1667	Temperature: 24.670291F
+Raw: 989	Voltage: 954mV
+Raw: 1668	Temperature: 24.670291F
+Raw: 994	Voltage: 958mV
+Raw: 1653	Temperature: 25.030009F
+Raw: 1000	Voltage: 963mV
+Raw: 1647	Temperature: 25.180147F
+Raw: 1004	Voltage: 966mV
+Raw: 1647	Temperature: 25.180147F
+Raw: 1007	Voltage: 969mV
+Raw: 1636	Temperature: 25.450789F
+Raw: 1004	Voltage: 966mV
+Raw: 1643	Temperature: 25.270304F
+Raw: 1014	Voltage: 975mV
+Raw: 1640	Temperature: 25.360518F
+Raw: 1025	Voltage: 984mV
+Raw: 1641	Temperature: 25.330440F
+Raw: 1026	Voltage: 984mV
+Raw: 1649	Temperature: 25.120073F
+Raw: 1027	Voltage: 985mV
+Raw: 1646	Temperature: 25.210193F
+Raw: 1026	Voltage: 984mV
+Raw: 1649	Temperature: 25.120073F
+Raw: 1023	Voltage: 982mV
+Raw: 1650	Temperature: 25.090046F
+Raw: 1022	Voltage: 981mV
+Raw: 1660	Temperature: 24.850044F
+Raw: 1022	Voltage: 981mV
+Raw: 1652	Temperature: 25.060025F
+Raw: 1021	Voltage: 980mV
+Raw: 1657	Temperature: 24.940000F
+Raw: 1023	Voltage: 982mV
+Raw: 1660	Temperature: 24.850044F
+Raw: 1025	Voltage: 984mV
+Raw: 1655	Temperature: 24.969997F
+Raw: 1026	Voltage: 984mV
+Raw: 1661	Temperature: 24.820070F
+Raw: 1026	Voltage: 984mV
+Raw: 1658	Temperature: 24.910008F
+Raw: 1024	Voltage: 983mV
+Raw: 1658	Temperature: 24.910008F
+Raw: 1027	Voltage: 985mV
+Raw: 1667	Temperature: 24.670291F
+Raw: 1023	Voltage: 982mV
+Raw: 1660	Temperature: 24.850044F
+Raw: 1028	Voltage: 986mV
+Raw: 1665	Temperature: 24.730185F
+Raw: 1033	Voltage: 990mV
+Raw: 1665	Temperature: 24.730185F
+Raw: 1025	Voltage: 984mV
+Raw: 1662	Temperature: 24.790103F
+Raw: 1027	Voltage: 985mV
+Raw: 1669	Temperature: 24.640352F
+Raw: 1028	Voltage: 986mV
+Raw: 1667	Temperature: 24.670291F
+Raw: 1030	Voltage: 988mV
+Raw: 1669	Temperature: 24.640352F
+Raw: 1030	Voltage: 988mV
+Raw: 1675	Temperature: 24.490744F
+Raw: 1030	Voltage: 988mV
+Raw: 1673	Temperature: 24.520654F
+Raw: 1027	Voltage: 985mV
+Raw: 1679	Temperature: 24.401046F
+Raw: 1029	Voltage: 987mV
+Raw: 1680	Temperature: 24.371157F
+Raw: 1031	Voltage: 988mV
+Raw: 1680	Temperature: 24.371157F
+Raw: 1029	Voltage: 987mV
+Raw: 1675	Temperature: 24.490744F
+Raw: 1030	Voltage: 988mV
+Raw: 1679	Temperature: 24.401046F
+Raw: 1030	Voltage: 988mV
+Raw: 1687	Temperature: 24.191941F
+Raw: 1029	Voltage: 987mV
+Raw: 1678	Temperature: 24.401046F
+Raw: 1030	Voltage: 988mV
+Raw: 1682	Temperature: 24.311397F
+Raw: 1030	Voltage: 988mV
+Raw: 1689	Temperature: 24.132244F
+Raw: 1030	Voltage: 988mV
+Raw: 1688	Temperature: 24.162090F
+Raw: 1028	Voltage: 986mV
+Raw: 1679	Temperature: 24.401046F
+Raw: 1025	Voltage: 984mV
+Raw: 1686	Temperature: 24.221797F
+Raw: 1028	Voltage: 986mV
+Raw: 1681	Temperature: 24.341274F
+Raw: 1030	Voltage: 988mV
+Raw: 1693	Temperature: 24.042739F
+Raw: 1031	Voltage: 988mV
+Raw: 1689	Temperature: 24.132244F
+Raw: 1031	Voltage: 988mV
+Raw: 1693	Temperature: 24.042739F
+Raw: 1029	Voltage: 987mV
+Raw: 1692	Temperature: 24.072569F
+Raw: 1029	Voltage: 987mV
+Raw: 1694	Temperature: 24.012914F
+Raw: 1026	Voltage: 984mV
+Raw: 1689	Temperature: 24.132244F
+Raw: 1029	Voltage: 987mV
+Raw: 1693	Temperature: 24.042739F
+Raw: 1030	Voltage: 988mV
+Raw: 1692	Temperature: 24.072569F
+Raw: 1027	Voltage: 985mV
+Raw: 1694	Temperature: 24.012914F
+Raw: 1027	Voltage: 985mV
+Raw: 1694	Temperature: 24.012914F
+Raw: 1027	Voltage: 985mV
+Raw: 1698	Temperature: 23.923470F
+Raw: 1023	Voltage: 982mV
+Raw: 1700	Temperature: 23.863866F
+Raw: 1013	Voltage: 974mV
+Raw: 1698	Temperature: 23.923470F
+Raw: 1006	Voltage: 968mV
+Raw: 1700	Temperature: 23.863866F
+Raw: 1019	Voltage: 979mV
+Raw: 1701	Temperature: 23.834071F
+Raw: 1022	Voltage: 981mV
+Raw: 1700	Temperature: 23.863866F
+Raw: 1027	Voltage: 985mV
+Raw: 1702	Temperature: 23.834071F
+Raw: 1022	Voltage: 981mV
+Raw: 1706	Temperature: 23.714942F
+Raw: 1022	Voltage: 981mV
+Raw: 1705	Temperature: 23.744717F
+Raw: 1024	Voltage: 983mV
+Raw: 1705	Temperature: 23.744717F
+Raw: 1023	Voltage: 982mV
+Raw: 1701	Temperature: 23.834071F
+Raw: 1022	Voltage: 981mV
+Raw: 1702	Temperature: 23.834071F
+Raw: 1026	Voltage: 984mV
+Raw: 1707	Temperature: 23.714942F
+Raw: 1024	Voltage: 983mV
+Raw: 1705	Temperature: 23.744717F
+Raw: 1024	Voltage: 983mV
+Raw: 1705	Temperature: 23.744717F
+Raw: 1022	Voltage: 981mV
+Raw: 1702	Temperature: 23.834071F
+Raw: 1024	Voltage: 983mV
+Raw: 1706	Temperature: 23.714942F
+Raw: 1026	Voltage: 984mV
+Raw: 1709	Temperature: 23.655406F
+Raw: 1022	Voltage: 981mV
+Raw: 1715	Temperature: 23.506650F
+Raw: 1024	Voltage: 983mV
+Raw: 1712	Temperature: 23.566139F
+Raw: 1024	Voltage: 983mV
+Raw: 1713	Temperature: 23.566139F
+Raw: 1024	Voltage: 983mV
+Raw: 1715	Temperature: 23.506650F
+Raw: 1028	Voltage: 986mV
+Raw: 1711	Temperature: 23.595890F
+Raw: 1025	Voltage: 984mV
+Raw: 1716	Temperature: 23.476913F
+Raw: 1024	Voltage: 983mV
+Raw: 1716	Temperature: 23.476913F
+Raw: 1025	Voltage: 984mV
+Raw: 1717	Temperature: 23.447181F
+Raw: 1026	Voltage: 984mV
+Raw: 1717	Temperature: 23.447181F
+Raw: 1024	Voltage: 983mV
+Raw: 1714	Temperature: 23.536392F
+Raw: 1026	Voltage: 984mV
+Raw: 1717	Temperature: 23.447181F
+Raw: 1025	Voltage: 984mV
+Raw: 1717	Temperature: 23.447181F
+Raw: 1029	Voltage: 987mV
+Raw: 1718	Temperature: 23.417453F
+Raw: 1028	Voltage: 986mV
+Raw: 1711	Temperature: 23.595890F
+Raw: 1025	Voltage: 984mV
+Raw: 1720	Temperature: 23.387730F
+Raw: 1027	Voltage: 985mV
+Raw: 1722	Temperature: 23.328296F
+Raw: 1025	Voltage: 984mV
+Raw: 1724	Temperature: 23.298587F
+Raw: 1026	Voltage: 984mV
+Raw: 1727	Temperature: 23.209484F
+Raw: 1023	Voltage: 982mV
+Raw: 1717	Temperature: 23.447181F
+Raw: 1021	Voltage: 980mV
+Raw: 1724	Temperature: 23.298587F
+Raw: 1021	Voltage: 980mV
+Raw: 1732	Temperature: 23.090741F
+Raw: 1021	Voltage: 980mV
+Raw: 1727	Temperature: 23.209484F
+Raw: 1021	Voltage: 980mV
+Raw: 1732	Temperature: 23.090741F
+Raw: 1022	Voltage: 981mV
+Raw: 1725	Temperature: 23.268881F
+Raw: 1024	Voltage: 983mV
+Raw: 1733	Temperature: 23.061065F
+Raw: 1028	Voltage: 986mV
+Raw: 1724	Temperature: 23.298587F
+Raw: 1030	Voltage: 988mV
+Raw: 1731	Temperature: 23.120420F
+Raw: 1028	Voltage: 986mV
+Raw: 1722	Temperature: 23.328296F
+Raw: 1028	Voltage: 986mV
+Raw: 1729	Temperature: 23.150103F
+Raw: 1029	Voltage: 987mV
+Raw: 1734	Temperature: 23.031395F
+Raw: 1025	Voltage: 984mV
+Raw: 1728	Temperature: 23.179791F
+Raw: 1028	Voltage: 986mV
+Raw: 1727	Temperature: 23.209484F
+Raw: 1028	Voltage: 986mV
+Raw: 1733	Temperature: 23.061065F
+Raw: 1029	Voltage: 987mV
+Raw: 1731	Temperature: 23.120420F
+Raw: 1026	Voltage: 984mV
+Raw: 1726	Temperature: 23.239180F
+Raw: 1028	Voltage: 986mV
+Raw: 1727	Temperature: 23.209484F
+Raw: 1025	Voltage: 984mV
+Raw: 1722	Temperature: 23.328296F
+Raw: 1028	Voltage: 986mV
+Raw: 1730	Temperature: 23.150103F
+Raw: 1027	Voltage: 985mV
+Raw: 1729	Temperature: 23.150103F
+Raw: 1028	Voltage: 986mV
+Raw: 1723	Temperature: 23.298587F
+Raw: 1028	Voltage: 986mV
+Raw: 1729	Temperature: 23.150103F
+Raw: 1028	Voltage: 986mV
+Raw: 1725	Temperature: 23.268881F
+Raw: 1029	Voltage: 987mV
+Raw: 1732	Temperature: 23.090741F
+Raw: 1028	Voltage: 986mV
+Raw: 1732	Temperature: 23.090741F
+Raw: 1029	Voltage: 987mV
+Raw: 1737	Temperature: 22.972066F
+Raw: 1029	Voltage: 987mV
+Raw: 1734	Temperature: 23.031395F
+Raw: 1027	Voltage: 985mV
+Raw: 1737	Temperature: 22.972066F
+Raw: 1031	Voltage: 988mV
+Raw: 1732	Temperature: 23.090741F
+Raw: 1028	Voltage: 986mV
+Raw: 1728	Temperature: 23.179791F
+Raw: 1028	Voltage: 986mV
+Raw: 1731	Temperature: 23.120420F
+Raw: 1029	Voltage: 987mV
+Raw: 1724	Temperature: 23.298587F
+Raw: 1027	Voltage: 985mV
+Raw: 1730	Temperature: 23.150103F
+Raw: 1030	Voltage: 988mV
+Raw: 1731	Temperature: 23.120420F
+Raw: 1024	Voltage: 983mV
+Raw: 1727	Temperature: 23.209484F
+Raw: 1028	Voltage: 986mV
+Raw: 1728	Temperature: 23.179791F
+Raw: 1029	Voltage: 987mV
+Raw: 1735	Temperature: 23.031395F
+Raw: 1025	Voltage: 984mV
+Raw: 1731	Temperature: 23.120420F
+Raw: 1024	Voltage: 983mV
+Raw: 1723	Temperature: 23.298587F
+Raw: 1024	Voltage: 983mV
+Raw: 1723	Temperature: 23.298587F
+Raw: 1020	Voltage: 979mV
+Raw: 1728	Temperature: 23.179791F
+Raw: 1024	Voltage: 983mV
+Raw: 1728	Temperature: 23.179791F
+Raw: 1026	Voltage: 984mV
+Raw: 1727	Temperature: 23.209484F
+Raw: 1022	Voltage: 981mV
+Raw: 1724	Temperature: 23.298587F
+Raw: 1023	Voltage: 982mV
+Raw: 1720	Temperature: 23.387730F
+Raw: 1025	Voltage: 984mV
+Raw: 1735	Temperature: 23.031395F
+Raw: 1026	Voltage: 984mV
+Raw: 1723	Temperature: 23.298587F
+Raw: 1024	Voltage: 983mV
+Raw: 1730	Temperature: 23.150103F
+Raw: 1027	Voltage: 985mV
+Raw: 1729	Temperature: 23.150103F
+Raw: 1026	Voltage: 984mV
+Raw: 1724	Temperature: 23.298587F
+Raw: 1029	Voltage: 987mV
+Raw: 1732	Temperature: 23.090741F
+Raw: 1039	Voltage: 995mV
+Raw: 1721	Temperature: 23.358011F
+Raw: 1041	Voltage: 997mV
+Raw: 1733	Temperature: 23.061065F
+Raw: 1042	Voltage: 997mV
+Raw: 1725	Temperature: 23.268881F
+Raw: 1041	Voltage: 997mV
+Raw: 1730	Temperature: 23.150103F
+Raw: 1033	Voltage: 990mV
+Raw: 1729	Temperature: 23.150103F
+Raw: 1022	Voltage: 981mV
+Raw: 1729	Temperature: 23.150103F
+Raw: 1021	Voltage: 980mV
+Raw: 1734	Temperature: 23.031395F
+Raw: 1024	Voltage: 983mV
+Raw: 1732	Temperature: 23.090741F
+Raw: 1039	Voltage: 995mV
+Raw: 1734	Temperature: 23.031395F
+Raw: 1039	Voltage: 995mV
+Raw: 1736	Temperature: 23.001728F
+Raw: 1039	Voltage: 995mV
+Raw: 1733	Temperature: 23.061065F
+Raw: 1025	Voltage: 984mV
+Raw: 1736	Temperature: 23.001728F
+Raw: 1021	Voltage: 980mV
+Raw: 1743	Temperature: 22.823815F
+Raw: 1020	Voltage: 979mV
+Raw: 1733	Temperature: 23.061065F
+Raw: 1027	Voltage: 985mV
+Raw: 1742	Temperature: 22.853457F
+Raw: 1040	Voltage: 996mV
+Raw: 1736	Temperature: 23.001728F
+Raw: 1035	Voltage: 992mV
+Raw: 1737	Temperature: 22.972066F
+Raw: 1043	Voltage: 998mV
+Raw: 1737	Temperature: 22.972066F
+Raw: 1039	Voltage: 995mV
+Raw: 1743	Temperature: 22.823815F
+Raw: 1028	Voltage: 986mV
+Raw: 1741	Temperature: 22.883103F
+Raw: 1024	Voltage: 983mV
+Raw: 1743	Temperature: 22.823815F
+Raw: 1024	Voltage: 983mV
+Raw: 1742	Temperature: 22.853457F
+Raw: 1024	Voltage: 983mV
+Raw: 1742	Temperature: 22.853457F
+Raw: 1038	Voltage: 994mV
+Raw: 1748	Temperature: 22.705287F
+Raw: 1040	Voltage: 996mV
+Raw: 1735	Temperature: 23.031395F
+Raw: 1043	Voltage: 998mV
+Raw: 1735	Temperature: 23.031395F
+Raw: 1034	Voltage: 991mV
+Raw: 1740	Temperature: 22.883103F
+Raw: 1020	Voltage: 979mV
+Raw: 1735	Temperature: 23.031395F
+Raw: 1022	Voltage: 981mV
+Raw: 1737	Temperature: 22.972066F
+Raw: 1030	Voltage: 988mV
+Raw: 1734	Temperature: 23.031395F
+Raw: 1035	Voltage: 992mV
+Raw: 1735	Temperature: 23.031395F
+Raw: 1037	Voltage: 993mV
+Raw: 1737	Temperature: 22.972066F
+Raw: 1043	Voltage: 998mV
+Raw: 1736	Temperature: 23.001728F
+Raw: 1041	Voltage: 997mV
+Raw: 1731	Temperature: 23.120420F
+Raw: 1038	Voltage: 994mV
+Raw: 1736	Temperature: 23.001728F
+Raw: 1027	Voltage: 985mV
+Raw: 1734	Temperature: 23.031395F
+Raw: 1027	Voltage: 985mV
+Raw: 1730	Temperature: 23.150103F
+Raw: 1028	Voltage: 986mV
+Raw: 1738	Temperature: 22.942407F
+Raw: 1029	Voltage: 987mV
+Raw: 1740	Temperature: 22.883103F
+Raw: 1026	Voltage: 984mV
+Raw: 1734	Temperature: 23.031395F
+Raw: 1030	Voltage: 988mV
+Raw: 1736	Temperature: 23.001728F
+Raw: 1045	Voltage: 1000mV
+Raw: 1733	Temperature: 23.061065F
+Raw: 1039	Voltage: 995mV
+Raw: 1731	Temperature: 23.120420F
+Raw: 1040	Voltage: 996mV
+Raw: 1734	Temperature: 23.031395F
+Raw: 1043	Voltage: 998mV
+Raw: 1737	Temperature: 22.972066F
+Raw: 1035	Voltage: 992mV
+Raw: 1729	Temperature: 23.150103F
+Raw: 1022	Voltage: 981mV
+Raw: 1734	Temperature: 23.031395F
+Raw: 1022	Voltage: 981mV
+Raw: 1741	Temperature: 22.883103F
+Raw: 1019	Voltage: 979mV
+Raw: 1729	Temperature: 23.150103F
+Raw: 1023	Voltage: 982mV
+Raw: 1734	Temperature: 23.031395F
+Raw: 1030	Voltage: 988mV
+Raw: 1727	Temperature: 23.209484F
+Raw: 1035	Voltage: 992mV
+Raw: 1731	Temperature: 23.120420F
+Raw: 1034	Voltage: 991mV
+Raw: 1735	Temperature: 23.031395F
+Raw: 1025	Voltage: 984mV
+Raw: 1732	Temperature: 23.090741F
+Raw: 1024	Voltage: 983mV
+Raw: 1734	Temperature: 23.031395F
+Raw: 1024	Voltage: 983mV
+Raw: 1735	Temperature: 23.031395F
+Raw: 1036	Voltage: 993mV
+Raw: 1733	Temperature: 23.061065F
+Raw: 1037	Voltage: 993mV
+Raw: 1731	Temperature: 23.120420F
+Raw: 1035	Voltage: 992mV
+Raw: 1729	Temperature: 23.150103F
+Raw: 1036	Voltage: 993mV
+Raw: 1738	Temperature: 22.942407F
+Raw: 1035	Voltage: 992mV
+Raw: 1731	Temperature: 23.120420F
+Raw: 1037	Voltage: 993mV
+Raw: 1732	Temperature: 23.090741F
+Raw: 1036	Voltage: 993mV
+Raw: 1730	Temperature: 23.150103F
+Raw: 1035	Voltage: 992mV
+Raw: 1727	Temperature: 23.209484F
+Raw: 1034	Voltage: 991mV
+Raw: 1734	Temperature: 23.031395F
+Raw: 1039	Voltage: 995mV
+Raw: 1735	Temperature: 23.031395F
+Raw: 1038	Voltage: 994mV
+Raw: 1733	Temperature: 23.061065F
+Raw: 1036	Voltage: 993mV
+Raw: 1733	Temperature: 23.061065F
+Raw: 1036	Voltage: 993mV
+Raw: 1727	Temperature: 23.209484F
+Raw: 1035	Voltage: 992mV
+Raw: 1728	Temperature: 23.179791F
+Raw: 1033	Voltage: 990mV
+Raw: 1730	Temperature: 23.150103F
+Raw: 1031	Voltage: 988mV
+Raw: 1732	Temperature: 23.090741F
+Raw: 1028	Voltage: 986mV
+Raw: 1727	Temperature: 23.209484F
+Raw: 1026	Voltage: 984mV
+Raw: 1730	Temperature: 23.150103F
+Raw: 1031	Voltage: 988mV
+Raw: 1728	Temperature: 23.179791F
+Raw: 1032	Voltage: 989mV
+Raw: 1729	Temperature: 23.150103F
+Raw: 1032	Voltage: 989mV
+Raw: 1732	Temperature: 23.090741F
+Raw: 1032	Voltage: 989mV
+Raw: 1731	Temperature: 23.120420F
+Raw: 1032	Voltage: 989mV
+Raw: 1733	Temperature: 23.061065F
+Raw: 1032	Voltage: 989mV
+Raw: 1734	Temperature: 23.031395F
+Raw: 1032	Voltage: 989mV
+Raw: 1740	Temperature: 22.883103F
+Raw: 1031	Voltage: 988mV
+Raw: 1735	Temperature: 23.031395F
+Raw: 734	Voltage: 745mV
+Raw: 1738	Temperature: 22.942407F
+Raw: 1026	Voltage: 984mV
+Raw: 1734	Temperature: 23.031395F
+Raw: 1032	Voltage: 989mV
+Raw: 1737	Temperature: 22.972066F
+Raw: 1033	Voltage: 990mV
+Raw: 1733	Temperature: 23.061065F
+Raw: 1034	Voltage: 991mV
+Raw: 1734	Temperature: 23.031395F
+Raw: 1031	Voltage: 988mV
+Raw: 1730	Temperature: 23.150103F
+Raw: 1031	Voltage: 988mV
+Raw: 1744	Temperature: 22.794177F
+Raw: 1031	Voltage: 988mV
+Raw: 1741	Temperature: 22.883103F
+Raw: 1020	Voltage: 979mV
+Raw: 1737	Temperature: 22.972066F
+Raw: 952	Voltage: 924mV
+Raw: 1738	Temperature: 22.942407F
+Raw: 927	Voltage: 903mV
+Raw: 1742	Temperature: 22.853457F
+Raw: 928	Voltage: 904mV
+Raw: 1740	Temperature: 22.883103F
+Raw: 905	Voltage: 885mV
+Raw: 1742	Temperature: 22.853457F
+Raw: 871	Voltage: 857mV
+Raw: 1750	Temperature: 22.646046F
+Raw: 877	Voltage: 862mV
+Raw: 1739	Temperature: 22.912753F
+Raw: 944	Voltage: 917mV
+Raw: 1737	Temperature: 22.972066F
+Raw: 982	Voltage: 948mV
+Button pressed.
+Raw: 1740	Temperature: 22.883103F
+Raw: 967	Voltage: 936mV
+Raw: 1742	Temperature: 22.853457F
+Raw: 957	Voltage: 928mV
+Button pressed.
+Raw: 1744	Temperature: 22.794177F
+Raw: 956	Voltage: 927mV
+Raw: 1748	Temperature: 22.705287F
+Raw: 957	Voltage: 928mV
+Raw: 1750	Temperature: 22.646046F
+Raw: 928	Voltage: 904mV
+Raw: 1747	Temperature: 22.734913F
+Raw: 879	Voltage: 864mV
+Raw: 1744	Temperature: 22.794177F
+Raw: 813	Voltage: 809mV
+Raw: 1750	Temperature: 22.646046F
+Raw: 844	Voltage: 835mV
+Raw: 1748	Temperature: 22.705287F
+Raw: 920	Voltage: 897mV
+Raw: 1746	Temperature: 22.764543F
+Raw: 901	Voltage: 882mV
+Raw: 1743	Temperature: 22.823815F
+Raw: 909	Voltage: 888mV
+Button pressed.
+Raw: 1748	Temperature: 22.705287F
+Raw: 898	Voltage: 879mV
+Button pressed.
+Raw: 1749	Temperature: 22.675665F
+Raw: 911	Voltage: 890mV
+Raw: 1743	Temperature: 22.823815F
+Raw: 910	Voltage: 889mV
+Raw: 1750	Temperature: 22.646046F
+Raw: 909	Voltage: 888mV
+Button pressed.
+Raw: 1751	Temperature: 22.616432F
+Raw: 910	Voltage: 889mV
+Raw: 1751	Temperature: 22.616432F
+Raw: 914	Voltage: 892mV
+Button pressed.
+Raw: 1756	Temperature: 22.498012F
+Raw: 916	Voltage: 894mV
+Button pressed.
+Raw: 1754	Temperature: 22.557214F
+Raw: 914	Voltage: 892mV
+Raw: 1753	Temperature: 22.586821F
+Raw: 919	Voltage: 897mV
+Raw: 1758	Temperature: 22.468416F
+Raw: 995	Voltage: 959mV
+Raw: 1759	Temperature: 22.438824F
+Raw: 998	Voltage: 961mV
+Raw: 1758	Temperature: 22.468416F
+Raw: 992	Voltage: 956mV
+Raw: 1759	Temperature: 22.438824F
+Raw: 990	Voltage: 955mV
+Raw: 1767	Temperature: 22.231781F
+Raw: 990	Voltage: 955mV
+Raw: 1764	Temperature: 22.320492F
+Raw: 995	Voltage: 959mV
+Raw: 1761	Temperature: 22.379651F
+Raw: 990	Voltage: 955mV
+Raw: 1766	Temperature: 22.261348F
+Raw: 992	Voltage: 956mV
+Raw: 1764	Temperature: 22.320492F
+Raw: 991	Voltage: 956mV
+Raw: 1771	Temperature: 22.143100F
+Raw: 993	Voltage: 957mV
+Raw: 1767	Temperature: 22.231781F
+Raw: 989	Voltage: 954mV
+Raw: 1770	Temperature: 22.172657F
+Raw: 993	Voltage: 957mV
+Raw: 1774	Temperature: 22.083997F
+Raw: 993	Voltage: 957mV
+Raw: 1767	Temperature: 22.231781F
+Raw: 991	Voltage: 956mV
+Raw: 1777	Temperature: 21.995367F
+Raw: 993	Voltage: 957mV
+Raw: 1772	Temperature: 22.113547F
+Raw: 991	Voltage: 956mV
+Raw: 1775	Temperature: 22.054450F
+Raw: 992	Voltage: 956mV
+Raw: 1773	Temperature: 22.083997F
+Raw: 996	Voltage: 960mV
+Raw: 1777	Temperature: 21.995367F
+Raw: 993	Voltage: 957mV
+Raw: 1782	Temperature: 21.877239F
+Raw: 995	Voltage: 959mV
+Raw: 1776	Temperature: 22.024907F
+Raw: 990	Voltage: 955mV
+Raw: 1782	Temperature: 21.877239F
+Raw: 994	Voltage: 958mV
+Raw: 1775	Temperature: 22.054450F
+Raw: 991	Voltage: 956mV
+Raw: 1779	Temperature: 21.936297F
+Raw: 992	Voltage: 956mV
+Raw: 1775	Temperature: 22.054450F
+Raw: 993	Voltage: 957mV
+Raw: 1786	Temperature: 21.788676F
+Raw: 996	Voltage: 960mV
+Raw: 1785	Temperature: 21.788676F
+Raw: 993	Voltage: 957mV

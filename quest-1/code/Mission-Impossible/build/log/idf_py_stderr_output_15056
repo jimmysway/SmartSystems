@@ -1,0 +1,37 @@
+[0;33m--- idf_monitor on /dev/cu.usbserial-0264FEBE 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4008103c: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x400d7da7: task_wdt_timeout_handling at /Users/jakelee/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d7f2e: task_wdt_isr at /Users/jakelee/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082f8d: _xt_lowint1 at /Users/jakelee/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d52ba: floor_touch_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-1/code/Mission-Impossible/main/continuous_read_main.c:202
+[0m
+[0;33m0x40087c1d: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d7da7: task_wdt_timeout_handling at /Users/jakelee/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d7f2e: task_wdt_isr at /Users/jakelee/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082f8d: _xt_lowint1 at /Users/jakelee/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d52ba: floor_touch_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-1/code/Mission-Impossible/main/continuous_read_main.c:202
+[0m
+[0;33m0x40087c1d: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d7da7: task_wdt_timeout_handling at /Users/jakelee/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d7f2e: task_wdt_isr at /Users/jakelee/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082f8d: _xt_lowint1 at /Users/jakelee/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d52ba: floor_touch_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-1/code/Mission-Impossible/main/continuous_read_main.c:202
+[0m
+[0;33m0x40087c1d: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0m
