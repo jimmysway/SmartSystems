@@ -47,6 +47,13 @@ Cyclic Design
 
 ### Sketches/Diagrams
 <p align="center">
+<img src="images/Screenshot 2023-09-22 at 3.23.18 PM.png" width="50%">
+</p>
+<p align="center">
+<i>Sample Terminal Output</i>
+</p>
+
+<p align="center">
 <img src="https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/114517092/4dd08309-7938-4756-b913-5bef0a4c8636" width="50%">
 </p>
 <p align="center">
