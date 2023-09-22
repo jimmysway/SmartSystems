@@ -1,4 +1,4 @@
-// Authors: Jason Li, Jake Lee, Maxim Slobodchikov, Jialin Sui 
+// Authors: Jason Li, Jake Lee, Maxim Slobodchikov, Jialin Sui
 // Date: 09/22/2023
 #include <stdio.h>
 #include <string.h>
@@ -32,7 +32,7 @@
 
 static esp_adc_cal_characteristics_t *adc_chars;
 static const adc_channel_t channel = ADC_CHANNEL_6;
-static const adc_channel_t channel2 = ADC_CHANNEL_3;   
+static const adc_channel_t channel2 = ADC_CHANNEL_3;
 static const adc_atten_t atten = ADC_ATTEN_DB_11;
 static const adc_unit_t unit = ADC_UNIT_1;
 
@@ -88,18 +88,19 @@ static void init(void) // Iniialize pins and directions
 
     gpio_reset_pin(BUTTON);
 
+    // Assigning the input/output pins
     gpio_set_direction(ALL_CLEAR, GPIO_MODE_OUTPUT);
     gpio_set_direction(TEMPERATURE_CHANGE, GPIO_MODE_OUTPUT);
     gpio_set_direction(LIGHT_CHANGE, GPIO_MODE_OUTPUT);
     gpio_set_direction(FLOOR_TOUCH, GPIO_MODE_OUTPUT);
 
     gpio_set_direction(BUTTON, GPIO_MODE_INPUT);
-    
+
 }
 
 // Button interrupt init
 // Configuration code from: https://github.com/BU-EC444/04-Code-Examples/blob/main/button-timer/main/main_1.c
-static void button_init() 
+static void button_init()
 {
     gpio_config_t io_conf;
     //interrupt of rising edge
@@ -125,12 +126,12 @@ static void temperature_change_task(void *arg)
     check_efuse();
 
     //Configure ADC
-    if (unit == ADC_UNIT_1) 
+    if (unit == ADC_UNIT_1)
     {
         adc1_config_width(ADC_WIDTH_BIT_12);
         adc1_config_channel_atten(channel, atten);
-    } 
-    else 
+    }
+    else
     {
         adc2_config_channel_atten((adc2_channel_t)channel, atten);
     }
@@ -224,7 +225,7 @@ static void floor_touch_task(void *arg)
 {
     while(1)
     {                               // loop forever in this task
-        if(flag) 
+        if(flag)
         {
             //printf("Button pressed.\n");
             blue_floor_state = 1; // toggle the state of the blue LED
@@ -238,7 +239,7 @@ static void floor_touch_task(void *arg)
 
 static void led_task(void *arg)
 {
-    while(1) 
+    while(1)
     {
         if(red_temp_state == 1)
         {
@@ -287,11 +288,12 @@ void app_main()
     init();
     button_init();
 
+    //Initializing all the tasks
     xTaskCreate(led_task, "led_task",1024*2, NULL, configMAX_PRIORITIES, NULL);
     xTaskCreate(floor_touch_task, "floor_touch_task",1024*2, NULL, configMAX_PRIORITIES-1, NULL);
     xTaskCreate(temperature_change_task, "temperature_change_task",1024*2, NULL, configMAX_PRIORITIES-2, NULL);
     xTaskCreate(light_change_task, "light_change_task",1024*2, NULL, configMAX_PRIORITIES-3, NULL);
-    
+
     while(1) {
         vTaskDelay(100 / portTICK_PERIOD_MS);  // wait a bit
 
