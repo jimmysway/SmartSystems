@@ -27,7 +27,7 @@ Our device is designed to sense movement, increase in room temperature, and floo
 Floor contact
 - We employed a button that uses hardware interrupts triggered by a button press. This simulates someone triggering a pressure sensor on the floor of the room. 
 - When the button is pressed, a flag is triggered and our system lights up the blue LED to indicate that someone is standing in the room
-- 
+  
 Movement
 - simulates movement by measuring changes in ambient lighting using a photocell
 - The photocell sensor is connected to one the esp32’s adc channels
