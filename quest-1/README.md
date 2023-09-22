@@ -25,12 +25,8 @@ Date: 2023-09-22
 
 
 ### Sketches/Diagrams
-<p align="center">
-<img src="./images/ece444.png" width="50%">
-</p>
-<p align="center">
-Caption Here
-</p>
+![image](https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/114517092/4dd08309-7938-4756-b913-5bef0a4c8636)
+
 
 
 
