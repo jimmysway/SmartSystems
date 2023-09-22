@@ -1,8 +1,8 @@
 # Quest Name
 
-Authors: FirstName1 LastName1, FirstName2 LastName2, FirstName3 LastName 3
+Authors: Jake Lee, Jason Li,  Maxim Slobodchikov, JiaLin Sui
 
-Date: YYYY-MM-DD
+Date: 2023-09-22
 
 ### Summary
 
@@ -11,13 +11,13 @@ Date: YYYY-MM-DD
 
 | Objective Criterion | Rating | Max Value  | 
 |---------------------------------------------|:-----------:|:---------:|
-| Objective One |  |  1     | 
-| Objective Two |  |  1     | 
-| Objective Three |  |  1     | 
-| Objective Four |  |  1     | 
-| Objective Five |  |  1     | 
-| Objective Six |  |  1     | 
-| Objective Seven |  |  1     | 
+| Objective One | 1 |  1     | 
+| Objective Two | 1 |  1     | 
+| Objective Three | 1 |  1     | 
+| Objective Four | 1 |  1     | 
+| Objective Five | 1 |  1     | 
+| Objective Six | 1 |  1     | 
+| Objective Seven | 1 |  1     | 
 
 
 ### Solution Design
