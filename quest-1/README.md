@@ -11,13 +11,12 @@ Date: 2023-09-22
 
 | Objective Criterion | Rating | Max Value  | 
 |---------------------------------------------|:-----------:|:---------:|
-| Objective One | 1 |  1     | 
-| Objective Two | 1 |  1     | 
-| Objective Three | 1 |  1     | 
-| Objective Four | 1 |  1     | 
-| Objective Five | 1 |  1     | 
-| Objective Six | 1 |  1     | 
-| Objective Seven | 1 |  1     | 
+| 1. Reports time to console along with sensor readings  | 1 |  1     | 
+| 2. Measures input from photocell | 1 |  1     | 
+| 3. Measures and reports temperature in Engineering units  | 1 |  1     | 
+| 4. Cyclic behavior at design frequency  | 1 |  1     | 
+| 5. Uses hardware interrupt for button press   |  |  1     | 
+| 6. Lights up correct LEDs on alarms    | 1 |  1     | 
 
 
 ### Solution Design
