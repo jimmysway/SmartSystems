@@ -15,7 +15,7 @@ Date: 2023-09-22
 | 2. Measures input from photocell | 1 |  1     | 
 | 3. Measures and reports temperature in Engineering units  | 1 |  1     | 
 | 4. Cyclic behavior at design frequency  | 1 |  1     | 
-| 5. Uses hardware interrupt for button press   |  |  1     | 
+| 5. Uses hardware interrupt for button press   | 1 |  1     | 
 | 6. Lights up correct LEDs on alarms    | 1 |  1     | 
 
 
