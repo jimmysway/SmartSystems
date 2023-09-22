@@ -46,8 +46,6 @@ Cyclic Design
 
 
 ### Sketches/Diagrams
-![image](https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/114517092/4dd08309-7938-4756-b913-5bef0a4c8636)
-
 <p align="center">
 <img src="https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/114517092/4dd08309-7938-4756-b913-5bef0a4c8636" width="50%">
 </p>
