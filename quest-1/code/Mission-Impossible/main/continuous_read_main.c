@@ -1,4 +1,5 @@
-
+// Authors: Jason Li, Jake Lee, Maxim Slobodchikov, Jialin Sui 
+// Date: 09/22/2023
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
