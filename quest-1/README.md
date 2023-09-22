@@ -51,8 +51,15 @@ Cyclic Design
 
 
 ### Supporting Artifacts
-- Technical Presentation: [https://drive.google.com/file/d/1sA-NdzrXSkAvzMoL3JmllWtJ7GxPUjXM/view?usp=sharing]
-- Live Demo: 
+[![Technical Video](<./images/Screenshot 2023-09-22 at 3.51.22 PM.png>)](https://drive.google.com/file/d/1AKb4MOBwkUd8NBCEyzgFDFEzxutGBv41/view?usp=drive_link)
+<p align="center">
+<i>Technical Video</i>
+</p>
+
+[![Demo Video](<./images/Screenshot 2023-09-22 at 3.51.00 PM.png>)](https://drive.google.com/file/d/1OT7nLqu3c-im51rbB84WRpaeCsU0cNX_/view?usp=drive_link)
+<p align="center">
+<i>Demo Video</i>
+</p>
 
 
 ### Modules, Tools, Source Used Including Attribution
