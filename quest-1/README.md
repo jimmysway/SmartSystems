@@ -1,4 +1,4 @@
-# Quest Name
+# Mission Impossible
 
 Authors: Jake Lee, Jason Li,  Maxim Slobodchikov, JiaLin Sui
 
@@ -63,10 +63,8 @@ Cyclic Design
 
 
 ### Modules, Tools, Source Used Including Attribution
+https://www.e-tinkers.com/2019/10/using-a-thermistor-with-arduino-and-unexpected-esp32-adc-non-linearity/
 
-
-### AI Use
-
-None used
+https://github.com/BU-EC444/04-Code-Examples/blob/main/button-timer/main/main_1.c
 
 
