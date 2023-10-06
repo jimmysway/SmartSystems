@@ -733,7 +733,7 @@ void get_time_task()
     bool get_time = true; 
     strcpy(buff, "test");
     printf("Getting the time\n");
-    while(1) {
+    while(1) {  
         printf("Looking for time.. ");
         gets(buff);
         puts(buff);
