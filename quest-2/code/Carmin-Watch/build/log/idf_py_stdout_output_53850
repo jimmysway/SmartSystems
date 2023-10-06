@@ -1,0 +1,244 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader/esp-idf/esptool_py && /Users/jakelee/.espressif/python_env/idf5.2_py3.9_env/bin/python /Users/jakelee/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader/bootloader.bin
+Bootloader binary size 0x6910 bytes. 0x6f0 bytes (6%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/continuous_read_main.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/continuous_read_main.c.obj 
+/Users/jakelee/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.2-dev-2590-g62ee4135e0-dirty\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/config -I/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main -I/Users/jakelee/esp/esp-idf/components/newlib/platform_include -I/Users/jakelee/esp/esp-idf/components/freertos/config/include -I/Users/jakelee/esp/esp-idf/components/freertos/config/include/freertos -I/Users/jakelee/esp/esp-idf/components/freertos/config/xtensa/include -I/Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/Users/jakelee/esp/esp-idf/components/freertos/esp_additions/include -I/Users/jakelee/esp/esp-idf/components/esp_hw_support/include -I/Users/jakelee/esp/esp-idf/components/esp_hw_support/include/soc -I/Users/jakelee/esp/esp-idf/components/esp_hw_support/include/soc/esp32 -I/Users/jakelee/esp/esp-idf/components/esp_hw_support/port/esp32/. -I/Users/jakelee/esp/esp-idf/components/esp_hw_support/port/esp32/private_include -I/Users/jakelee/esp/esp-idf/components/heap/include -I/Users/jakelee/esp/esp-idf/components/log/include -I/Users/jakelee/esp/esp-idf/components/soc/include -I/Users/jakelee/esp/esp-idf/components/soc/esp32 -I/Users/jakelee/esp/esp-idf/components/soc/esp32/include -I/Users/jakelee/esp/esp-idf/components/hal/esp32/include -I/Users/jakelee/esp/esp-idf/components/hal/include -I/Users/jakelee/esp/esp-idf/components/hal/platform_port/include -I/Users/jakelee/esp/esp-idf/components/esp_rom/include -I/Users/jakelee/esp/esp-idf/components/esp_rom/include/esp32 -I/Users/jakelee/esp/esp-idf/components/esp_rom/esp32 -I/Users/jakelee/esp/esp-idf/components/esp_common/include -I/Users/jakelee/esp/esp-idf/components/esp_system/include -I/Users/jakelee/esp/esp-idf/components/esp_system/port/soc -I/Users/jakelee/esp/esp-idf/components/esp_system/port/include/private -I/Users/jakelee/esp/esp-idf/components/xtensa/esp32/include -I/Users/jakelee/esp/esp-idf/components/xtensa/include -I/Users/jakelee/esp/esp-idf/components/xtensa/deprecated_include -I/Users/jakelee/esp/esp-idf/components/lwip/include -I/Users/jakelee/esp/esp-idf/components/lwip/include/apps -I/Users/jakelee/esp/esp-idf/components/lwip/include/apps/sntp -I/Users/jakelee/esp/esp-idf/components/lwip/lwip/src/include -I/Users/jakelee/esp/esp-idf/components/lwip/port/include -I/Users/jakelee/esp/esp-idf/components/lwip/port/freertos/include -I/Users/jakelee/esp/esp-idf/components/lwip/port/esp32xx/include -I/Users/jakelee/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/Users/jakelee/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/Users/jakelee/esp/esp-idf/components/esp_ringbuf/include -I/Users/jakelee/esp/esp-idf/components/efuse/include -I/Users/jakelee/esp/esp-idf/components/efuse/esp32/include -I/Users/jakelee/esp/esp-idf/components/driver/include -I/Users/jakelee/esp/esp-idf/components/driver/deprecated -I/Users/jakelee/esp/esp-idf/components/driver/analog_comparator/include -I/Users/jakelee/esp/esp-idf/components/driver/dac/include -I/Users/jakelee/esp/esp-idf/components/driver/gpio/include -I/Users/jakelee/esp/esp-idf/components/driver/gptimer/include -I/Users/jakelee/esp/esp-idf/components/driver/i2c/include -I/Users/jakelee/esp/esp-idf/components/driver/i2s/include -I/Users/jakelee/esp/esp-idf/components/driver/ledc/include -I/Users/jakelee/esp/esp-idf/components/driver/mcpwm/include -I/Users/jakelee/esp/esp-idf/components/driver/parlio/include -I/Users/jakelee/esp/esp-idf/components/driver/pcnt/include -I/Users/jakelee/esp/esp-idf/components/driver/rmt/include -I/Users/jakelee/esp/esp-idf/components/driver/sdio_slave/include -I/Users/jakelee/esp/esp-idf/components/driver/sdmmc/include -I/Users/jakelee/esp/esp-idf/components/driver/sigma_delta/include -I/Users/jakelee/esp/esp-idf/components/driver/spi/include -I/Users/jakelee/esp/esp-idf/components/driver/temperature_sensor/include -I/Users/jakelee/esp/esp-idf/components/driver/touch_sensor/include -I/Users/jakelee/esp/esp-idf/components/driver/twai/include -I/Users/jakelee/esp/esp-idf/components/driver/uart/include -I/Users/jakelee/esp/esp-idf/components/driver/usb_serial_jtag/include -I/Users/jakelee/esp/esp-idf/components/driver/touch_sensor/esp32/include -I/Users/jakelee/esp/esp-idf/components/esp_pm/include -I/Users/jakelee/esp/esp-idf/components/mbedtls/port/include -I/Users/jakelee/esp/esp-idf/components/mbedtls/mbedtls/include -I/Users/jakelee/esp/esp-idf/components/mbedtls/mbedtls/library -I/Users/jakelee/esp/esp-idf/components/mbedtls/esp_crt_bundle/include -I/Users/jakelee/esp/esp-idf/components/esp_bootloader_format/include -I/Users/jakelee/esp/esp-idf/components/esp_app_format/include -I/Users/jakelee/esp/esp-idf/components/bootloader_support/include -I/Users/jakelee/esp/esp-idf/components/bootloader_support/bootloader_flash/include -I/Users/jakelee/esp/esp-idf/components/esp_partition/include -I/Users/jakelee/esp/esp-idf/components/app_update/include -I/Users/jakelee/esp/esp-idf/components/esp_mm/include -I/Users/jakelee/esp/esp-idf/components/spi_flash/include -I/Users/jakelee/esp/esp-idf/components/pthread/include -I/Users/jakelee/esp/esp-idf/components/esp_timer/include -I/Users/jakelee/esp/esp-idf/components/app_trace/include -I/Users/jakelee/esp/esp-idf/components/esp_event/include -I/Users/jakelee/esp/esp-idf/components/nvs_flash/include -I/Users/jakelee/esp/esp-idf/components/esp_phy/include -I/Users/jakelee/esp/esp-idf/components/esp_phy/esp32/include -I/Users/jakelee/esp/esp-idf/components/vfs/include -I/Users/jakelee/esp/esp-idf/components/esp_netif/include -I/Users/jakelee/esp/esp-idf/components/wpa_supplicant/include -I/Users/jakelee/esp/esp-idf/components/wpa_supplicant/port/include -I/Users/jakelee/esp/esp-idf/components/wpa_supplicant/esp_supplicant/include -I/Users/jakelee/esp/esp-idf/components/esp_coex/include -I/Users/jakelee/esp/esp-idf/components/esp_wifi/include -I/Users/jakelee/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/Users/jakelee/esp/esp-idf/components/unity/include -I/Users/jakelee/esp/esp-idf/components/unity/unity/src -I/Users/jakelee/esp/esp-idf/components/cmock/CMock/src -I/Users/jakelee/esp/esp-idf/components/console -I/Users/jakelee/esp/esp-idf/components/http_parser -I/Users/jakelee/esp/esp-idf/components/esp-tls -I/Users/jakelee/esp/esp-idf/components/esp-tls/esp-tls-crypto -I/Users/jakelee/esp/esp-idf/components/esp_adc/include -I/Users/jakelee/esp/esp-idf/components/esp_adc/interface -I/Users/jakelee/esp/esp-idf/components/esp_adc/esp32/include -I/Users/jakelee/esp/esp-idf/components/esp_adc/deprecated/include -I/Users/jakelee/esp/esp-idf/components/esp_eth/include -I/Users/jakelee/esp/esp-idf/components/esp_gdbstub/include -I/Users/jakelee/esp/esp-idf/components/esp_hid/include -I/Users/jakelee/esp/esp-idf/components/tcp_transport/include -I/Users/jakelee/esp/esp-idf/components/esp_http_client/include -I/Users/jakelee/esp/esp-idf/components/esp_http_server/include -I/Users/jakelee/esp/esp-idf/components/esp_https_ota/include -I/Users/jakelee/esp/esp-idf/components/esp_psram/include -I/Users/jakelee/esp/esp-idf/components/esp_lcd/include -I/Users/jakelee/esp/esp-idf/components/esp_lcd/interface -I/Users/jakelee/esp/esp-idf/components/protobuf-c/protobuf-c -I/Users/jakelee/esp/esp-idf/components/protocomm/include/common -I/Users/jakelee/esp/esp-idf/components/protocomm/include/security -I/Users/jakelee/esp/esp-idf/components/protocomm/include/transports -I/Users/jakelee/esp/esp-idf/components/esp_local_ctrl/include -I/Users/jakelee/esp/esp-idf/components/espcoredump/include -I/Users/jakelee/esp/esp-idf/components/espcoredump/include/port/xtensa -I/Users/jakelee/esp/esp-idf/components/wear_levelling/include -I/Users/jakelee/esp/esp-idf/components/sdmmc/include -I/Users/jakelee/esp/esp-idf/components/fatfs/diskio -I/Users/jakelee/esp/esp-idf/components/fatfs/src -I/Users/jakelee/esp/esp-idf/components/fatfs/vfs -I/Users/jakelee/esp/esp-idf/components/idf_test/include -I/Users/jakelee/esp/esp-idf/components/idf_test/include/esp32 -I/Users/jakelee/esp/esp-idf/components/ieee802154/include -I/Users/jakelee/esp/esp-idf/components/json/cJSON -I/Users/jakelee/esp/esp-idf/components/mqtt/esp-mqtt/include -I/Users/jakelee/esp/esp-idf/components/nvs_sec_provider/include -I/Users/jakelee/esp/esp-idf/components/perfmon/include -I/Users/jakelee/esp/esp-idf/components/spiffs/include -I/Users/jakelee/esp/esp-idf/components/wifi_provisioning/include -mlongcalls -Wno-frame-address  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fmacro-prefix-map=/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch=. -fmacro-prefix-map=/Users/jakelee/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/continuous_read_main.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/continuous_read_main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/continuous_read_main.c.obj -c /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:45:8: error: unknown type name 'esp_adc_cal_characteristics_t'
+   45 | static esp_adc_cal_characteristics_t *adc_chars;
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:46:14: error: unknown type name 'adc_channel_t'
+   46 | static const adc_channel_t channel = ADC_CHANNEL_6;     //GPIO34 if ADC1, GPIO14 if ADC2
+      |              ^~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:46:38: error: 'ADC_CHANNEL_6' undeclared here (not in a function); did you mean 'LEDC_CHANNEL_6'?
+   46 | static const adc_channel_t channel = ADC_CHANNEL_6;     //GPIO34 if ADC1, GPIO14 if ADC2
+      |                                      ^~~~~~~~~~~~~
+      |                                      LEDC_CHANNEL_6
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:47:14: error: unknown type name 'adc_atten_t'
+   47 | static const adc_atten_t atten = ADC_ATTEN_DB_11;
+      |              ^~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:47:34: error: 'ADC_ATTEN_DB_11' undeclared here (not in a function)
+   47 | static const adc_atten_t atten = ADC_ATTEN_DB_11;
+      |                                  ^~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:48:14: error: unknown type name 'adc_unit_t'
+   48 | static const adc_unit_t unit = ADC_UNIT_1;
+      |              ^~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:48:32: error: 'ADC_UNIT_1' undeclared here (not in a function)
+   48 | static const adc_unit_t unit = ADC_UNIT_1;
+      |                                ^~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c: In function 'check_efuse':
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:56:9: error: implicit declaration of function 'esp_adc_cal_check_efuse' [-Werror=implicit-function-declaration]
+   56 |     if (esp_adc_cal_check_efuse(ESP_ADC_CAL_VAL_EFUSE_TP) == ESP_OK) {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:56:33: error: 'ESP_ADC_CAL_VAL_EFUSE_TP' undeclared (first use in this function)
+   56 |     if (esp_adc_cal_check_efuse(ESP_ADC_CAL_VAL_EFUSE_TP) == ESP_OK) {
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:56:33: note: each undeclared identifier is reported only once for each function it appears in
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:63:33: error: 'ESP_ADC_CAL_VAL_EFUSE_VREF' undeclared (first use in this function)
+   63 |     if (esp_adc_cal_check_efuse(ESP_ADC_CAL_VAL_EFUSE_VREF) == ESP_OK) {
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c: At top level:
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:70:33: error: unknown type name 'esp_adc_cal_value_t'
+   70 | static void print_char_val_type(esp_adc_cal_value_t val_type)
+      |                                 ^~~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:98: warning: "SLAVE_ADDR" redefined
+   98 | #define SLAVE_ADDR                         ADXL343_ADDRESS // 0x53
+      | 
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:19: note: this is the location of the previous definition
+   19 | #define SLAVE_ADDR                         0x70 // alphanumeric address
+      | 
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c: In function 'getDeviceID':
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:98:44: error: 'ADXL343_ADDRESS' undeclared (first use in this function)
+   98 | #define SLAVE_ADDR                         ADXL343_ADDRESS // 0x53
+      |                                            ^~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:175:34: note: in expansion of macro 'SLAVE_ADDR'
+  175 |     i2c_master_write_byte(cmd, ( SLAVE_ADDR << 1 ) | WRITE_BIT, ACK_CHECK_EN);
+      |                                  ^~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:176:32: error: 'ADXL343_REG_DEVID' undeclared (first use in this function)
+  176 |     i2c_master_write_byte(cmd, ADXL343_REG_DEVID, ACK_CHECK_EN);
+      |                                ^~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c: In function 'writeRegister':
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:98:44: error: 'ADXL343_ADDRESS' undeclared (first use in this function)
+   98 | #define SLAVE_ADDR                         ADXL343_ADDRESS // 0x53
+      |                                            ^~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:194:33: note: in expansion of macro 'SLAVE_ADDR'
+  194 |     i2c_master_write_byte(cmd, (SLAVE_ADDR << 1) | WRITE_BIT, ACK_CHECK_EN);
+      |                                 ^~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c: In function 'readRegister':
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:98:44: error: 'ADXL343_ADDRESS' undeclared (first use in this function)
+   98 | #define SLAVE_ADDR                         ADXL343_ADDRESS // 0x53
+      |                                            ^~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:216:33: note: in expansion of macro 'SLAVE_ADDR'
+  216 |     i2c_master_write_byte(cmd, (SLAVE_ADDR << 1) | WRITE_BIT, ACK_CHECK_EN);
+      |                                 ^~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c: At top level:
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:256:15: error: unknown type name 'range_t'
+  256 | void setRange(range_t range) {
+      |               ^~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:272:1: error: unknown type name 'range_t'
+  272 | range_t getRange(void) {
+      | ^~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c: In function 'getRange':
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:274:13: error: 'range_t' undeclared (first use in this function)
+  274 |     return (range_t)(readRegister(ADXL343_REG_DATA_FORMAT) & 0x03);
+      |             ^~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:274:35: error: 'ADXL343_REG_DATA_FORMAT' undeclared (first use in this function)
+  274 |     return (range_t)(readRegister(ADXL343_REG_DATA_FORMAT) & 0x03);
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c: At top level:
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:277:1: error: unknown type name 'dataRate_t'
+  277 | dataRate_t getDataRate(void) {
+      | ^~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c: In function 'getDataRate':
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:278:13: error: 'dataRate_t' undeclared (first use in this function)
+  278 |     return (dataRate_t)(readRegister(ADXL343_REG_BW_RATE) & 0x0F);
+      |             ^~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:278:38: error: 'ADXL343_REG_BW_RATE' undeclared (first use in this function)
+  278 |     return (dataRate_t)(readRegister(ADXL343_REG_BW_RATE) & 0x0F);
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c: In function 'getAccel':
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:285:18: error: 'ADXL343_REG_DATAX0' undeclared (first use in this function)
+  285 |     *xp = read16(ADXL343_REG_DATAX0) * ADXL343_MG2G_MULTIPLIER * SENSORS_GRAVITY_STANDARD;
+      |                  ^~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:285:40: error: 'ADXL343_MG2G_MULTIPLIER' undeclared (first use in this function)
+  285 |     *xp = read16(ADXL343_REG_DATAX0) * ADXL343_MG2G_MULTIPLIER * SENSORS_GRAVITY_STANDARD;
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:285:66: error: 'SENSORS_GRAVITY_STANDARD' undeclared (first use in this function)
+  285 |     *xp = read16(ADXL343_REG_DATAX0) * ADXL343_MG2G_MULTIPLIER * SENSORS_GRAVITY_STANDARD;
+      |                                                                  ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:286:18: error: 'ADXL343_REG_DATAY0' undeclared (first use in this function)
+  286 |     *yp = read16(ADXL343_REG_DATAY0) * ADXL343_MG2G_MULTIPLIER * SENSORS_GRAVITY_STANDARD;
+      |                  ^~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:287:18: error: 'ADXL343_REG_DATAZ0' undeclared (first use in this function)
+  287 |     *zp = read16(ADXL343_REG_DATAZ0) * ADXL343_MG2G_MULTIPLIER * SENSORS_GRAVITY_STANDARD;
+      |                  ^~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c: In function 'calcRP':
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:300:19: error: implicit declaration of function 'atan2' [-Werror=implicit-function-declaration]
+  300 |     double roll = atan2(y , z) * 57.3;
+      |                   ^~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:16:1: note: include '<math.h>' or provide a declaration of 'atan2'
+   15 | #include "driver/i2c.h"
+  +++ |+#include <math.h>
+   16 | #include "sdkconfig.h"
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:300:19: warning: incompatible implicit declaration of built-in function 'atan2' [-Wbuiltin-declaration-mismatch]
+  300 |     double roll = atan2(y , z) * 57.3;
+      |                   ^~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:300:19: note: include '<math.h>' or provide a declaration of 'atan2'
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:302:34: error: implicit declaration of function 'sqrt' [-Werror=implicit-function-declaration]
+  302 |     double pitch = atan2((- x) , sqrt(y * y + z * z)) * 57.3;
+      |                                  ^~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:302:34: note: include '<math.h>' or provide a declaration of 'sqrt'
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:302:34: warning: incompatible implicit declaration of built-in function 'sqrt' [-Wbuiltin-declaration-mismatch]
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:302:34: note: include '<math.h>' or provide a declaration of 'sqrt'
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c: In function 'timer_task':
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:407:70: error: 'timer' undeclared (first use in this function); did you mean 'time'?
+  407 |         if (xQueueReceive(timer_queue, &ele, pdMS_TO_TICKS(2000)) && timer)
+      |                                                                      ^~~~~
+      |                                                                      time
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c: In function 'temperature_task':
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:444:34: error: 'esp_adc_cal_characteristics_t' undeclared (first use in this function)
+  444 |     adc_chars = calloc(1, sizeof(esp_adc_cal_characteristics_t));
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:445:5: error: unknown type name 'esp_adc_cal_value_t'
+  445 |     esp_adc_cal_value_t val_type = esp_adc_cal_characterize(unit, atten, ADC_WIDTH_BIT_12, DEFAULT_VREF, adc_chars);
+      |     ^~~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:445:36: error: implicit declaration of function 'esp_adc_cal_characterize' [-Werror=implicit-function-declaration]
+  445 |     esp_adc_cal_value_t val_type = esp_adc_cal_characterize(unit, atten, ADC_WIDTH_BIT_12, DEFAULT_VREF, adc_chars);
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:445:74: error: 'ADC_WIDTH_BIT_12' undeclared (first use in this function)
+  445 |     esp_adc_cal_value_t val_type = esp_adc_cal_characterize(unit, atten, ADC_WIDTH_BIT_12, DEFAULT_VREF, adc_chars);
+      |                                                                          ^~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:446:5: error: implicit declaration of function 'print_char_val_type' [-Werror=implicit-function-declaration]
+  446 |     print_char_val_type(val_type);
+      |     ^~~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:454:32: error: implicit declaration of function 'adc1_get_raw' [-Werror=implicit-function-declaration]
+  454 |                 adc_reading += adc1_get_raw((adc1_channel_t)channel);
+      |                                ^~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:454:46: error: 'adc1_channel_t' undeclared (first use in this function); did you mean 'ledc_channel_t'?
+  454 |                 adc_reading += adc1_get_raw((adc1_channel_t)channel);
+      |                                              ^~~~~~~~~~~~~~
+      |                                              ledc_channel_t
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:454:61: error: expected ')' before 'channel'
+  454 |                 adc_reading += adc1_get_raw((adc1_channel_t)channel);
+      |                                            ~                ^~~~~~~
+      |                                                             )
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:457:17: error: implicit declaration of function 'adc2_get_raw' [-Werror=implicit-function-declaration]
+  457 |                 adc2_get_raw((adc2_channel_t)channel, ADC_WIDTH_BIT_12, &raw);
+      |                 ^~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:457:31: error: 'adc2_channel_t' undeclared (first use in this function); did you mean 'ledc_channel_t'?
+  457 |                 adc2_get_raw((adc2_channel_t)channel, ADC_WIDTH_BIT_12, &raw);
+      |                               ^~~~~~~~~~~~~~
+      |                               ledc_channel_t
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:457:46: error: expected ')' before 'channel'
+  457 |                 adc2_get_raw((adc2_channel_t)channel, ADC_WIDTH_BIT_12, &raw);
+      |                             ~                ^~~~~~~
+      |                                              )
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:463:28: error: implicit declaration of function 'esp_adc_cal_raw_to_voltage' [-Werror=implicit-function-declaration]
+  463 |         uint32_t voltage = esp_adc_cal_raw_to_voltage(adc_reading, adc_chars);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:469:48: error: implicit declaration of function 'log' [-Werror=implicit-function-declaration]
+  469 |         double temp = 1 / (1 / (273.15 + 25) + log(Rt / 10000) / 3950.0);
+      |                                                ^~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:469:48: note: include '<math.h>' or provide a declaration of 'log'
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:469:48: warning: incompatible implicit declaration of built-in function 'log' [-Wbuiltin-declaration-mismatch]
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:469:48: note: include '<math.h>' or provide a declaration of 'log'
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c: In function 'steps_task':
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:484:23: error: implicit declaration of function 'fabs' [-Werror=implicit-function-declaration]
+  484 |         float xDiff = fabs(xVal - prevXAccel);
+      |                       ^~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:484:23: note: include '<math.h>' or provide a declaration of 'fabs'
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:484:23: warning: incompatible implicit declaration of built-in function 'fabs' [-Wbuiltin-declaration-mismatch]
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:484:23: note: include '<math.h>' or provide a declaration of 'fabs'
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c: In function 'app_main':
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:530:9: error: implicit declaration of function 'adc1_config_width' [-Werror=implicit-function-declaration]
+  530 |         adc1_config_width(ADC_WIDTH_BIT_12);
+      |         ^~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:530:27: error: 'ADC_WIDTH_BIT_12' undeclared (first use in this function)
+  530 |         adc1_config_width(ADC_WIDTH_BIT_12);
+      |                           ^~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:531:9: error: implicit declaration of function 'adc1_config_channel_atten' [-Werror=implicit-function-declaration]
+  531 |         adc1_config_channel_atten(channel, atten);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:533:9: error: implicit declaration of function 'adc2_config_channel_atten' [-Werror=implicit-function-declaration]
+  533 |         adc2_config_channel_atten((adc2_channel_t)channel, atten);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:533:36: error: 'adc2_channel_t' undeclared (first use in this function); did you mean 'ledc_channel_t'?
+  533 |         adc2_config_channel_atten((adc2_channel_t)channel, atten);
+      |                                    ^~~~~~~~~~~~~~
+      |                                    ledc_channel_t
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:533:51: error: expected ')' before 'channel'
+  533 |         adc2_config_channel_atten((adc2_channel_t)channel, atten);
+      |                                  ~                ^~~~~~~
+      |                                                   )
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:548:19: error: 'ADXL343_REG_INT_ENABLE' undeclared (first use in this function)
+  548 |     writeRegister(ADXL343_REG_INT_ENABLE, 0);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:550:5: error: implicit declaration of function 'setRange'; did you mean 'getRange'? [-Werror=implicit-function-declaration]
+  550 |     setRange(ADXL343_RANGE_16_G);
+      |     ^~~~~~~~
+      |     getRange
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:550:14: error: 'ADXL343_RANGE_16_G' undeclared (first use in this function)
+  550 |     setRange(ADXL343_RANGE_16_G);
+      |              ^~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:552:19: error: 'ADXL343_REG_POWER_CTL' undeclared (first use in this function)
+  552 |     writeRegister(ADXL343_REG_POWER_CTL, 0x08);
+      |                   ^~~~~~~~~~~~~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c: In function 'getRange':
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:275:1: error: control reaches end of non-void function [-Werror=return-type]
+  275 | }
+      | ^
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c: In function 'getDataRate':
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:279:1: error: control reaches end of non-void function [-Werror=return-type]
+  279 | }
+      | ^
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c: At top level:
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:347:13: warning: 'alarm_init' defined but not used [-Wunused-function]
+  347 | static void alarm_init() {
+      |             ^~~~~~~~~~
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/main/continuous_read_main.c:308:13: warning: 'test_adxl343' defined but not used [-Wunused-function]
+  308 | static void test_adxl343() {
+      |             ^~~~~~~~~~~~
+cc1: some warnings being treated as errors
+ninja: build stopped: subcommand failed.

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Plotting of Data from Serial Port Using Canvas</title>
+    <!-- Include CanvasJS library -->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+</script>
+<body>
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+    <script>
+        // Create an empty data array for the chart
+        let dataPoints = [];
+
+        // Create the chart
+        let chart = new CanvasJS.Chart("chartContainer", {
+            title: {
+                text: "Count vs. Time"
+            },
+            axisX: {
+                title: "Time (seconds)"
+            },
+            axisY: {
+                title: "Count"
+            },
+            data: [{
+                type: "line",
+                dataPoints: dataPoints
+            }]
+        });
+
+        // Function to update the chart with new data
+        function updateChart(data) {
+	    chart.options.data[0].dataPoints.push({y: data}); // Add a new dataPoint to dataPoints array
+            chart.render();
+        }
+
+      // Listen for data delivered to the socket (from the node server)
+        const socket = io.connect();
+        socket.on("data", (data) => {
+            // Parse the received data 
+	    const values = data.split(' ');     // ESP sends (time, count) (separated by a space)
+	    const count = parseInt(values[0]);  // Only use count in example
+            updateChart(count);                 // Call function to update values used by CanvasJS
+        });
+    </script>
+</body>
+</html>
