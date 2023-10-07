@@ -62,6 +62,10 @@ Caption Here
 
 [Timer Interupt Design Brief](https://github.com/BU-EC444/04-Code-Examples/tree/main/i2c-accel)
 
+[I2C Alphanumeric Display Example](https://github.com/BU-EC444/04-Code-Examples/tree/main/i2c-display)
+
+[Sending Data From ESP32 To Node Then CanvasJS Example](https://github.com/BU-EC444/04-Code-Examples/tree/main/serial-canvas)
+
 ### AI Use
 
 I used {chat.openai.com GPT-3.5} on {8/30/2023} with the following prompt:
