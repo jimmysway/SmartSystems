@@ -55,3 +55,40 @@ port.on("open", () => {
         console.log(`Received: ${data.toString()}`);
     });
 }
+
+// canvas
+app.use(express.static(__dirname));  // Serve static files
+
+function getLastDataFromCSV(filePath) {
+    const csvContent = fs.readFileSync(filePath, 'utf-8');
+    const parsed = Papa.parse(csvContent, { header: true });
+    return parsed.data[parsed.data.length - 2];
+}
+
+const csvFilePath = './data.csv';
+
+function timeStringToDate(timeStr) {
+    const [hours, minutes, seconds] = timeStr.split(":").map(Number);
+    const date = new Date();
+    date.setHours(hours, minutes, seconds, 0);
+    return date;
+}
+
+fs.watch(csvFilePath, (eventType, filename) => {
+    if (eventType === 'change') {
+        const newEntry = getLastDataFromCSV(csvFilePath);
+        
+        // Parse the string to get a Date object
+        const parsedTime = timeStringToDate(newEntry.Time);
+        
+        io.emit('data', {
+            x: parsedTime,
+            y: parseFloat(newEntry.Step),
+            temp: parseFloat(newEntry.Temp)
+        });
+    }
+});
+
+server.listen(3000, () => {
+    console.log('listening on *:3000');
+});

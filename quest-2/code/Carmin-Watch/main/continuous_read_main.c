@@ -758,11 +758,11 @@ void get_time_task()
         // Read data from the UART
         int len = uart_read_bytes(uart_num, data, 128-1, 10);
         // Write data back to the UART
-        uart_write_bytes(uart_num, (const char*) data, len);
+        // uart_write_bytes(uart_num, (const char*) data, len);
         if (len) {
             data[len] = '\0';
             strcpy(buff,(char*) data);
-            ESP_LOGI("UART TEST", "Recv str: %s", (char *) data);
+            // ESP_LOGI("UART TEST", "Recv str: %s", (char *) data);
 
         }
     }

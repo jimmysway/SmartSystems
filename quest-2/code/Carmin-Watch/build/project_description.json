@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "continuous_read",
-    "project_version":    "3432680-dirty",
+    "project_version":    "07f1b32-dirty",
     "project_path":       "/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch",
     "idf_path":           "/Users/jason/esp/esp-idf",
     "build_dir":          "/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build",
