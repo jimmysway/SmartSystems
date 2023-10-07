@@ -1,23 +1,28 @@
-# Quest Name
+# Carmin Watch
 
-Authors: FirstName1 LastName1, FirstName2 LastName2, FirstName3 LastName 3
+Authors: Jake Lee, Jason Li , FirstName3 LastName 3
 
-Date: YYYY-MM-DD
+Date: 2023-10-05
 
 ### Summary
+The Carmin Watch is a sport watch that helps you keep track of your steps and body temperature during your activities
+The key features of this watch are:
+- Display real time on the display
+- A button to start, stop, and reset tracking of your activity
+- Reporting of your steps and body temperature every 10s and graphing it to a chart
+- A buzzer alarm to alert you if you are overheating
 
 
 ### Self-Assessment 
 
 | Objective Criterion | Rating | Max Value  | 
 |---------------------------------------------|:-----------:|:---------:|
-| Objective One |  |  1     | 
-| Objective Two |  |  1     | 
-| Objective Three |  |  1     | 
-| Objective Four |  |  1     | 
-| Objective Five |  |  1     | 
-| Objective Six |  |  1     | 
-| Objective Seven |  |  1     | 
+| Displays clock time on alpha display as HR:MIN |  |  1     | 
+| Functions as a simple activity timer (start, stop, reset) |  |  1     | 
+| Provides continuous reporting of steps per 10s interval to laptop |  |  1     | 
+| Provides continuous reporting of body temperature per 10s interval to laptop |  |  1     | 
+| Data at laptop plotted as stripcharts |  |  1     | 
+| Provides alert function with buzzer on alarm |  |  1     | 
 
 
 ### Solution Design
