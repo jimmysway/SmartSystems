@@ -4,7 +4,7 @@ Authors: Jake Lee, Jason Li , JiaLin Sui, Maxim Slobodchikov
 
 Date: 2023-10-05
 
-## Summary
+### Summary
 The Carmin Watch is a sport watch that helps you keep track of your steps and body temperature during your activities
 The key features of this watch are:
 - Display real time on the display
@@ -13,7 +13,7 @@ The key features of this watch are:
 - A buzzer alarm to alert you if you are overheating
 
 
-## Self-Assessment 
+### Self-Assessment 
 
 | Objective Criterion | Rating | Max Value  | 
 |---------------------------------------------|:-----------:|:---------:|
@@ -25,19 +25,19 @@ The key features of this watch are:
 | Provides alert function with buzzer on alarm | 1 |  1     | 
 
 
-## Solution Design
+### Solution Design
 blah blah blah
 
-### Step Tracking
+##### Step Tracking
 blah blah blah
 
-### Data Plotting
+##### Data Plotting
 blah blah blah
 
-### Time Display
+##### Time Display
 blah blah blah
 
-### Activity Tracking
+##### Activity Tracking
 blah blah blah
 
 
