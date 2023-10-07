@@ -1,6 +1,6 @@
 # Carmin Watch
 
-Authors: Jake Lee, Jason Li , FirstName3 LastName 3
+Authors: Jake Lee, Jason Li , JiaLin Sui, Maxim Slobodchikov
 
 Date: 2023-10-05
 
@@ -17,12 +17,12 @@ The key features of this watch are:
 
 | Objective Criterion | Rating | Max Value  | 
 |---------------------------------------------|:-----------:|:---------:|
-| Displays clock time on alpha display as HR:MIN |  |  1     | 
-| Functions as a simple activity timer (start, stop, reset) |  |  1     | 
-| Provides continuous reporting of steps per 10s interval to laptop |  |  1     | 
-| Provides continuous reporting of body temperature per 10s interval to laptop |  |  1     | 
-| Data at laptop plotted as stripcharts |  |  1     | 
-| Provides alert function with buzzer on alarm |  |  1     | 
+| Displays clock time on alpha display as HR:MIN | 1 |  1     | 
+| Functions as a simple activity timer (start, stop, reset) | 1 |  1     | 
+| Provides continuous reporting of steps per 10s interval to laptop | 1 |  1     | 
+| Provides continuous reporting of body temperature per 10s interval to laptop | 1 |  1     | 
+| Data at laptop plotted as stripcharts | 1 |  1     | 
+| Provides alert function with buzzer on alarm | 1 |  1     | 
 
 
 ### Solution Design
