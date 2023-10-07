@@ -538,6 +538,7 @@ static void alarm_init() {
 ////////////////////////// BUTTON //////////////////////////
 
 bool sample = false;
+int button_state = 1; // 0 = stopped 1 = reset 2 = start
 
 // Hardware interrupt definitions
 #define GPIO_INPUT_IO_1       12
@@ -585,7 +586,7 @@ static void timer_task(void *arg)
             //printf("timerCount: %d\n", timerCount);
             timerCount++;
             //print data (step, temp)
-            if(timerCount == 2 && sample) {
+            if(timerCount == 2 && button_state == 2) {
                 printf("%d,%f\n", stepCount, tempC);
                 // printf("%s", buff);
                 stepCount = 0;
@@ -601,8 +602,16 @@ void activity_task()
     {                               // loop forever in this task
         if(btn_flag)
         {
-            sample = !sample;
+            button_state++;
+            if(button_state > 2)
+            {
+                button_state = 0;
+            }
             timerCount = 0;
+            if(button_state == 1)
+            {
+                printf("CLEAR\n");
+            }
             //printf("Button pressed.\n");
             vTaskDelay(400 / portTICK_PERIOD_MS);  // wait a bit
             btn_flag = 0;
@@ -745,7 +754,7 @@ void get_time_task()
     // Configure UART parameters
     ESP_ERROR_CHECK(uart_param_config(uart_num, &uart_config));
 
-   
+
     ESP_ERROR_CHECK(uart_set_pin(UART_NUM_0, 1, 3, UART_PIN_NO_CHANGE,  UART_PIN_NO_CHANGE));
 
     const int uart_buffer_size = (1024*2);

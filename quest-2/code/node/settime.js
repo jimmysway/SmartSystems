@@ -19,24 +19,30 @@ const parser = port.pipe(new ReadlineParser({ delimiter: '\n' }));
 const textFileStream = fs.createWriteStream('data.csv', { flags: 'a' });
 //
 
-let now = DateTime.now();
-let currentTime = now.toFormat('HH:mm:ss');
+function sendTime() 
+{
+    let now = DateTime.now();
+    let currentTime = now.toFormat('HH:mm:ss');
+    
+    const parsedTime = currentTime.split(":");
+    const dataToSend = parsedTime[0] + parsedTime[1];
+    
+    port.write(dataToSend, (err) => {
+        if (err) {
+            console.error('Error writing to serial port:', err);
+        } else {
+            console.log(`sent: ${dataToSend}`);
+    
+            // Add a delay before reading from the serial port
+            setTimeout(() => {
+                readFromPort();
+            }, 1000);  // For example, delay of 1 second
+        }
+    });
+    
+}
 
-const parsedTime = currentTime.split(":");
-const dataToSend = parsedTime[0] + parsedTime[1];
-
-port.write(dataToSend, (err) => {
-    if (err) {
-        console.error('Error writing to serial port:', err);
-    } else {
-        console.log(`sent: ${dataToSend}`);
-
-        // Add a delay before reading from the serial port
-        setTimeout(() => {
-            readFromPort();
-        }, 1000);  // For example, delay of 1 second
-    }
-});
+setInterval(sendTime, 1000);
 
 port.on("open", () => {
     textFileStream.write('Time,Step,Temp\n');
@@ -47,7 +53,19 @@ port.on("open", () => {
         currentTime = now.toFormat('HH:mm:ss');
         content = currentTime + "," + data + '\n';
         console.log(data);
-        textFileStream.write(content);
+        //console.log(data.localeCompare("CLEAR"));
+        if(data.localeCompare("CLEAR") == 1)
+        {
+            console.log("attempt clear");
+            fs.writeFile('data.csv', "Time,Step,Temp\n", function(){console.log('done')})
+            // fs.truncate('data.csv', 0, function(){console.log('done')});
+            console.log("attempt rewrite");
+            textFileStream.write('Time,Step,Temp\n');
+        }
+        else
+        {
+            textFileStream.write(content);
+        }
     });
 
     function readFromPort() {
@@ -76,9 +94,15 @@ function timeStringToDate(timeStr) {
 
 fs.watch(csvFilePath, (eventType, filename) => {
     if (eventType === 'change') {
+        
         const newEntry = getLastDataFromCSV(csvFilePath);
         
         // Parse the string to get a Date object
+        if(newEntry == undefined)
+        {
+            return;
+        }
+        
         const parsedTime = timeStringToDate(newEntry.Time);
         
         io.emit('data', {

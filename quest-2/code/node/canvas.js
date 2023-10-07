@@ -46,12 +46,23 @@ port.on("open", () => {
     textFileStream.write('Time,Step,Temp\n');
     });
     parser.on('data', data =>{
+
         let content;
         now = DateTime.now();
         currentTime = now.toFormat('HH:mm:ss');
         content = currentTime + "," + data + '\n';
-        console.log(data);
-        textFileStream.write(content);
+        console.log(typeof data);
+
+        if(data == "CLEAR")
+        {
+            console.log("attempt clear");
+            //fs.writeFile('data.csv', '', function(){console.log('done')})
+            fs.truncate('data.csv', 0, function(){console.log('done')})
+        }
+        else
+        {
+            textFileStream.write(content);
+        }
     });
 
 const parsedTime = currentTime.split(":");
