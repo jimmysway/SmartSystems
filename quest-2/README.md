@@ -58,7 +58,7 @@ Caption Here
 
 
 ### Modules, Tools, Source Used Including Attribution
-[ADXL343 Base Code]((https://github.com/BU-EC444/04-Code-Examples/tree/main/i2c-accel))
+[ADXL343 Base Code]([https://github.com/BU-EC444/04-Code-Examples/tree/main/i2c-accel])
 
 [Timer Interupt Design Brief](https://github.com/BU-EC444/04-Code-Examples/tree/main/i2c-accel))
 
