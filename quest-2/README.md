@@ -25,7 +25,7 @@ The key features of this watch are:
 | Provides alert function with buzzer on alarm | 1 |  1     | 
 
 
-### Solution Design
+## Solution Design
 blah blah blah
 
 ##### Step Tracking
