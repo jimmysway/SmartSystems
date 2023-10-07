@@ -66,6 +66,8 @@ Caption Here
 
 [Sending Data From ESP32 To Node Then CanvasJS Example](https://github.com/BU-EC444/04-Code-Examples/tree/main/serial-canvas)
 
+[Design Patter - Interupts](https://github.com/BU-EC444/01-EBook/blob/main/docs/briefs/design-patterns/dp-interrupts.md)
+
 ### AI Use
 
 I used {chat.openai.com GPT-3.5} on {8/30/2023} with the following prompt:
