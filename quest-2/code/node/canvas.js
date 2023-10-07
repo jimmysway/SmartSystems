@@ -1,7 +1,7 @@
 const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
-const {SerialPort} = require('serialport')
+const {SerialPort} = require('serialport');
 const fs = require('fs');
 const Papa = require('papaparse');
 const port = new SerialPort({ path: '/dev/cu.usbserial-0264FEBE', baudRate: 115200 });
@@ -60,7 +60,7 @@ port.write(dataToSend, (err) => {
     if (err) {
         console.error('Error writing to serial port:', err);
     } else {
-        console.log(`${dataToSend}`);
+        console.log(`sent: ${dataToSend}`);
     }
 });
 

@@ -8,7 +8,9 @@
 #include "esp_adc_cal.h"
 #include "driver/i2c.h"
 #include "./ADXL343.h"
-
+#include <unistd.h>
+#include <fcntl.h>
+#include <termios.h>
 #include<time.h>
 #include <string.h>           
 #include <inttypes.h>           
@@ -21,7 +23,7 @@
 #include "esp_vfs_dev.h" 
 #include "sdkconfig.h"
 
-char buff[10];
+char buff[128];
 
 ////////////////////////// Temperature Sensor //////////////////////////
 
@@ -585,7 +587,7 @@ static void timer_task(void *arg)
             //print data (step, temp)
             if(timerCount == 2 && sample) {
                 printf("%d,%f\n", stepCount, tempC);
-                printf("%s", buff);
+                // printf("%s", buff);
                 stepCount = 0;
                 timerCount = 0;
             }
@@ -728,16 +730,41 @@ void steps_task()
     
 }
 
+
 void get_time_task()
-{
-    bool get_time = true; 
-    strcpy(buff, "test");
-    printf("Getting the time\n");
-    while(1) {  
-        printf("Looking for time.. ");
-        gets(buff);
-        puts(buff);
-        get_time = false;    
+{   
+    const uart_port_t uart_num = UART_NUM_0;
+    uart_config_t uart_config = {
+        .baud_rate = 115200,
+        .data_bits = UART_DATA_8_BITS,
+        .parity = UART_PARITY_DISABLE,
+        .stop_bits = UART_STOP_BITS_1,
+        .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
+        .rx_flow_ctrl_thresh = UART_SCLK_APB,
+    };
+    // Configure UART parameters
+    ESP_ERROR_CHECK(uart_param_config(uart_num, &uart_config));
+
+   
+    ESP_ERROR_CHECK(uart_set_pin(UART_NUM_0, 1, 3, UART_PIN_NO_CHANGE,  UART_PIN_NO_CHANGE));
+
+    const int uart_buffer_size = (1024*2);
+    // Configure a temporary buffer for the incoming data
+    QueueHandle_t uart_queue;
+    ESP_ERROR_CHECK(uart_driver_install(UART_NUM_0, uart_buffer_size, uart_buffer_size, 10, &uart_queue, 0));
+
+    uint8_t data[128];
+    while (1) {
+        // Read data from the UART
+        int len = uart_read_bytes(uart_num, data, 128-1, 10);
+        // Write data back to the UART
+        uart_write_bytes(uart_num, (const char*) data, len);
+        if (len) {
+            data[len] = '\0';
+            strcpy(buff,(char*) data);
+            ESP_LOGI("UART TEST", "Recv str: %s", (char *) data);
+
+        }
     }
 }
 
@@ -751,17 +778,17 @@ void app_main(void)
     return;
     }
 
-    ESP_ERROR_CHECK( uart_driver_install(UART_NUM_0,
-            256, 0, 0, NULL, 0) );
+    // ESP_ERROR_CHECK( uart_driver_install(UART_NUM_0,
+    //         256, 0, 0, NULL, 0) );
 
     button_init();     // Initialize button config
     buzzer_init();
 
-    /* Tell VFS to use UART driver */
-    esp_vfs_dev_uart_use_driver(UART_NUM_0);
+    // /* Tell VFS to use UART driver */
+    // esp_vfs_dev_uart_use_driver(UART_NUM_0);
 
-    //Check if Two Point or Vref are burned into eFuse
-    check_efuse();
+    // //Check if Two Point or Vref are burned into eFuse
+    // check_efuse();
 
     //Configure ADC
     if (unit == ADC_UNIT_1) {

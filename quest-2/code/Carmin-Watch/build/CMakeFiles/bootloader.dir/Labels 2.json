@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}

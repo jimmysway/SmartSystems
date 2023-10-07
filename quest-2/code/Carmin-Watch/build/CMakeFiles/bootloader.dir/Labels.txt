@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/CMakeFiles/bootloader
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/CMakeFiles/bootloader.rule
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/CMakeFiles/bootloader-complete.rule
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/CMakeFiles/bootloader
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/CMakeFiles/bootloader.rule
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/CMakeFiles/bootloader-complete.rule
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "/Users/jakelee/esp/esp-idf/components/bootloader/subproject"
-  "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader"
-  "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix"
-  "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/tmp"
-  "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp"
-  "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src"
-  "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp"
+  "/Users/jason/esp/esp-idf/components/bootloader/subproject"
+  "/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader"
+  "/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix"
+  "/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/tmp"
+  "/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp"
+  "/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src"
+  "/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-2/code/Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()
