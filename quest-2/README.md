@@ -28,16 +28,16 @@ The key features of this watch are:
 ## Solution Design
 blah blah blah
 
-##### Step Tracking
+#### Step Tracking
 blah blah blah
 
-##### Data Plotting
+#### Data Plotting
 blah blah blah
 
-##### Time Display
+#### Time Display
 blah blah blah
 
-##### Activity Tracking
+#### Activity Tracking
 blah blah blah
 
 
