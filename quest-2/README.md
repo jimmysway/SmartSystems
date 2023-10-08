@@ -44,6 +44,12 @@ blah blah blah
 
 
 ### Sketches/Diagrams
+![image](https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/114517092/9f4dc7cc-27e9-4633-a74d-ad8816144355)
+![image](https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/114517092/2a6afdad-fd66-44ec-b927-ec503251c347)
+![image](https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/114517092/5b4fa984-2dad-4258-978b-8b596fdfbb2c)
+
+
+
 <p align="center">
 <img src="./images/ece444.png](https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/114517092/a1f6852f-af92-4758-9943-864cad877798" width="50%">
 </p>
