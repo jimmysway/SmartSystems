@@ -29,13 +29,13 @@ The key features of this watch are:
 blah blah blah
 
 #### Step Tracking
-blah blah blah
+Step tracking uses an accelerometer fine tuned to a certain threshold. If the threshold is exceeded, it counts as a step. This threshold is tuned so that a regular step should trigger the threshold.
 
 #### Data Plotting
-blah blah blah
+Data plotting is done through CanvasJS. The ESP32 writes sensor data to the serial port which is read by the JS file which then writes the sensor data into a csv file (for storage purposes), which is then read and updated to the nodeJS server. The nodeJS server checks for after updates to the csv file and pushes it to the sensor graphs in real-time.
 
 #### Time Display
-blah blah blah
+For time tracking we used an alphanumeric display that interfaces with the ESP32 using I2C. The time in the present is sent to the serial port from the nodeJS server once and is kept track of and incremented using the ESP32s own time tracking functionality.
 
 #### Activity Tracking
 blah blah blah
