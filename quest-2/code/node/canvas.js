@@ -58,6 +58,8 @@ port.on("open", () => {
             console.log("attempt clear");
             //fs.writeFile('data.csv', '', function(){console.log('done')})
             fs.truncate('data.csv', 0, function(){console.log('done')})
+            io.emit('refresh'); 
+
         }
         else
         {
