@@ -37,7 +37,7 @@ Data plotting is done through CanvasJS. The ESP32 writes sensor data to the seri
 #### Time Display
 For time tracking we used an alphanumeric display that interfaces with the ESP32 using I2C. The time in the present is sent to the serial port from the nodeJS server once and is kept track of and incremented using the ESP32s own time tracking functionality.
 
-### Temperature and Buzzer
+#### Temperature and Buzzer
 We used a thermistor to measure temperature, converted ADC values from the thermistor into Celsius values, once the Celsius values exceeded a certain set threshold (40 C) the buzzer would go off.
 
 #### Activity Tracking
