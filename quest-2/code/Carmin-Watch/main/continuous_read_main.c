@@ -586,7 +586,7 @@ static void timer_task(void *arg)
             //printf("timerCount: %d\n", timerCount);
             timerCount++;
             //print data (step, temp)
-            if(timerCount == 2 && button_state == 2) {
+            if(timerCount == 10 && button_state == 2) {
                 printf("%d,%f\n", stepCount, tempC);
                 // printf("%s", buff);
                 stepCount = 0;
@@ -699,10 +699,10 @@ void temperature_task()
         double temp = 1 / (1 / (273.15 + 25) + log(Rt / 10000) / 3950.0);
         tempC = temp - 273.15;
 
-        if (tempC > 30.0)
+        if (tempC > 25.0)
         {
             gpio_set_level(BUZZER_PIN, 1);
-            printf("BUZZZZZ\n");
+            // printf("BUZZZZZ\n");
         }
         else
         {

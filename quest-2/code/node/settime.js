@@ -42,7 +42,7 @@ function sendTime()
     
 }
 
-setInterval(sendTime, 1000);
+setInterval(sendTime, 5000);
 
 port.on("open", () => {
     textFileStream.write('Time,Step,Temp\n');
@@ -61,6 +61,7 @@ port.on("open", () => {
             // fs.truncate('data.csv', 0, function(){console.log('done')});
             console.log("attempt rewrite");
             textFileStream.write('Time,Step,Temp\n');
+            io.emit('refresh'); 
         }
         else
         {
