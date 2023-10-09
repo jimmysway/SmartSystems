@@ -37,8 +37,11 @@ Data plotting is done through CanvasJS. The ESP32 writes sensor data to the seri
 #### Time Display
 For time tracking we used an alphanumeric display that interfaces with the ESP32 using I2C. The time in the present is sent to the serial port from the nodeJS server once and is kept track of and incremented using the ESP32s own time tracking functionality.
 
+### Temperature and Buzzer
+We used a thermistor to measure temperature, converted ADC values from the thermistor into Celsius values, once the Celsius values exceeded a certain set threshold (40 C) the buzzer would go off.
+
 #### Activity Tracking
-blah blah 
+Activity tracking was done by a single button cycling between states. Upon first press the sampling process would start and sensor data would be processed and displayed. Upon second press the sampling would stop. Upon third press the data was reset. The cycle would continue to loop **start->stop->reset->start->...**
 
 ### Dynamic Plotting of Data
 To plot our data we used a nodeJS server along with the CanvasJS graphing tool to dynamically plot our data. The JS code uses ``fswatch()`` to watch for any changes to the csv file and as soon as and since the JS writes new sensor data to the csv line by line, when the csv file updates the JS will read the data and push it to the server using socket.io.
