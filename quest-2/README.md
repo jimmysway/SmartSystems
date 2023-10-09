@@ -52,6 +52,14 @@ To plot our data we used a nodeJS server along with the CanvasJS graphing tool t
 ### Sketches/Diagrams
 
 <p align="center">
+<img src="images/IMG_9235.jpg" width="50%">
+</p>
+<p align="center">
+Breadboard Circuit
+</p>
+
+
+<p align="center">
 <img src="https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/114517092/9f4dc7cc-27e9-4633-a74d-ad8816144355" width="50%">
 </p>
 <p align="center">
@@ -73,10 +81,16 @@ Graphing
 </p>
 
 
-
 ### Supporting Artifacts
-- [Link to video technical presentation](). Not to exceed 120s
-- [Link to video demo](). Not to exceed 120s
+[![Carmin Watch Demo Video](<images/Screenshot 2023-10-08 at 9.15.31 PM.png>)](https://drive.google.com/file/d/1BsPyDWPxCkl4MLB8yUUSwg9cXl4IrPDQ/view?usp=sharing)
+<p align="center">
+<i>Carmin Watch Demo Video</i>
+</p>
+
+[![Carmin Watch Technical Video](<images/Screenshot 2023-10-08 at 9.15.45 PM.png>)](https://drive.google.com/file/d/1sBCW4uwgvECBZBFeh6AhR5q1wiB-LlGi/view?usp=sharing)
+<p align="center">
+<i>Carmin Watch Technical Video</i>
+</p>
 
 
 ### Modules, Tools, Source Used Including Attribution
