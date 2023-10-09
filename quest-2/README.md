@@ -29,7 +29,7 @@ The key features of this watch are:
 blah blah blah
 
 #### Step Tracking
-Step tracking uses an accelerometer fine tuned to a certain threshold. If the threshold is exceeded, it counts as a step. This threshold is tuned so that a regular step should trigger the threshold.
+blahh lah
 
 #### Data Plotting
 Data plotting is done through CanvasJS. The ESP32 writes sensor data to the serial port which is read by the JS file which then writes the sensor data into a csv file (for storage purposes), which is then read and updated to the nodeJS server. The nodeJS server checks for after updates to the csv file and pushes it to the sensor graphs in real-time.
