@@ -26,7 +26,7 @@ The key features of this watch are:
 
 
 ## Solution Design
-blah blah blah
+In Quest 2, our goal was to create a wearable device that shows time on an alphanumeric display, measures steps, temperature, and alerts. It also provides a stopwatch function with the use of a button, and utilizes an accelerometer to track steps. 
 
 #### Step Tracking
 blahh lah
