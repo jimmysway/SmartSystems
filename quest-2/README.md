@@ -43,7 +43,7 @@ We used a thermistor to measure temperature, converted ADC values from the therm
 #### Activity Tracking
 Activity tracking was done by a single button cycling between states. Upon first press the sampling process would start and sensor data would be processed and displayed. Upon second press the sampling would stop. Upon third press the data was reset. The cycle would continue to loop **start->stop->reset->start->...**
 
-### Dynamic Plotting of Data
+#### Dynamic Plotting of Data
 To plot our data we used a nodeJS server along with the CanvasJS graphing tool to dynamically plot our data. The JS code uses ``fswatch()`` to watch for any changes to the csv file and as soon as and since the JS writes new sensor data to the csv line by line, when the csv file updates the JS will read the data and push it to the server using socket.io.
 
 
