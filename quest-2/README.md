@@ -29,7 +29,7 @@ The key features of this watch are:
 In Quest 2, our goal was to create a wearable device that shows time on an alphanumeric display, measures steps, temperature, and alerts. It also provides a stopwatch function with the use of a button, and utilizes an accelerometer to track steps. 
 
 #### Step Tracking
-blahh lah
+To track the steps we took the difference between the current and previous accelerometer and checked if the difference was greater than 0.5. This value was decided after we did some testing since when we took a step the accelerometer data difference would peak. 
 
 #### Data Plotting
 Data plotting is done through CanvasJS. The ESP32 writes sensor data to the serial port which is read by the JS file which then writes the sensor data into a csv file (for storage purposes), which is then read and updated to the nodeJS server. The nodeJS server checks for after updates to the csv file and pushes it to the sensor graphs in real-time.
