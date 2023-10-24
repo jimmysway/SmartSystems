@@ -26,10 +26,10 @@ The key features of this watch are:
 
 
 ## Solution Design
-blah blah blah
+In Quest 2, our goal was to create a wearable device that shows time on an alphanumeric display, measures steps, temperature, and alerts. It also provides a stopwatch function with the use of a button, and utilizes an accelerometer to track steps. 
 
 #### Step Tracking
-Step tracking uses an accelerometer fine tuned to a certain threshold. If the threshold is exceeded, it counts as a step. This threshold is tuned so that a regular step should trigger the threshold.
+To track the steps we took the difference between the current and previous accelerometer and checked if the difference was greater than 0.5. This value was decided after we did some testing since when we took a step the accelerometer data difference would peak. 
 
 #### Data Plotting
 Data plotting is done through CanvasJS. The ESP32 writes sensor data to the serial port which is read by the JS file which then writes the sensor data into a csv file (for storage purposes), which is then read and updated to the nodeJS server. The nodeJS server checks for after updates to the csv file and pushes it to the sensor graphs in real-time.
@@ -37,31 +37,60 @@ Data plotting is done through CanvasJS. The ESP32 writes sensor data to the seri
 #### Time Display
 For time tracking we used an alphanumeric display that interfaces with the ESP32 using I2C. The time in the present is sent to the serial port from the nodeJS server once and is kept track of and incremented using the ESP32s own time tracking functionality.
 
+#### Temperature and Buzzer
+We used a thermistor to measure temperature, converted ADC values from the thermistor into Celsius values, once the Celsius values exceeded a certain set threshold (40 C) the buzzer would go off.
+
 #### Activity Tracking
-blah blah blah
+Activity tracking was done by a single button cycling between states. Upon first press the sampling process would start and sensor data would be processed and displayed. Upon second press the sampling would stop. Upon third press the data was reset. The cycle would continue to loop **start->stop->reset->start->...**
+
+#### Dynamic Plotting of Data
+To plot our data we used a nodeJS server along with the CanvasJS graphing tool to dynamically plot our data. The JS code uses ``fswatch()`` to watch for any changes to the csv file and as soon as and since the JS writes new sensor data to the csv line by line, when the csv file updates the JS will read the data and push it to the server using socket.io.
 
 
 
 
 ### Sketches/Diagrams
-![image](https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/114517092/9f4dc7cc-27e9-4633-a74d-ad8816144355)
-![image](https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/114517092/2a6afdad-fd66-44ec-b927-ec503251c347)
-![image](https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/114517092/5b4fa984-2dad-4258-978b-8b596fdfbb2c)
 
+<p align="center">
+<img src="images/IMG_9235.jpg" width="50%">
+</p>
+<p align="center">
+Breadboard Circuit
+</p>
 
 
 <p align="center">
-<img src="./images/ece444.png](https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/114517092/a1f6852f-af92-4758-9943-864cad877798" width="50%">
+<img src="https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/114517092/9f4dc7cc-27e9-4633-a74d-ad8816144355" width="50%">
 </p>
 <p align="center">
-Caption Here
+Getting Time
 </p>
 
+<p align="center">
+<img src="https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/114517092/2a6afdad-fd66-44ec-b927-ec503251c347" width="50%">
+</p>
+<p align="center">
+Getting Sensor Data
+</p>
+
+<p align="center">
+<img src="https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/114517092/5b4fa984-2dad-4258-978b-8b596fdfbb2c" width="50%">
+</p>
+<p align="center">
+Graphing
+</p>
 
 
 ### Supporting Artifacts
-- [Link to video technical presentation](). Not to exceed 120s
-- [Link to video demo](). Not to exceed 120s
+[![Carmin Watch Demo Video](<images/Screenshot 2023-10-08 at 9.15.31 PM.png>)](https://drive.google.com/file/d/1BsPyDWPxCkl4MLB8yUUSwg9cXl4IrPDQ/view?usp=sharing)
+<p align="center">
+<i>Carmin Watch Demo Video</i>
+</p>
+
+[![Carmin Watch Technical Video](<images/Screenshot 2023-10-08 at 9.15.45 PM.png>)](https://drive.google.com/file/d/1sBCW4uwgvECBZBFeh6AhR5q1wiB-LlGi/view?usp=sharing)
+<p align="center">
+<i>Carmin Watch Technical Video</i>
+</p>
 
 
 ### Modules, Tools, Source Used Including Attribution
@@ -74,25 +103,4 @@ Caption Here
 [Sending Data From ESP32 To Node Then CanvasJS Example](https://github.com/BU-EC444/04-Code-Examples/tree/main/serial-canvas)
 
 [Design Patter - Interupts](https://github.com/BU-EC444/01-EBook/blob/main/docs/briefs/design-patterns/dp-interrupts.md)
-
-### AI Use
-
-I used {chat.openai.com GPT-3.5} on {8/30/2023} with the following prompt:
-
-***Prompt***
-
-```
-{prompt}
-
-```
-
-***Code Attribution***
-
-I have included a comment in my code for this assignment stating the following:
-
-```
-// This code block was generated by {name} using {chat.openai.com
-GPT-3.5} on {8/30/2023}
-
-```
 
