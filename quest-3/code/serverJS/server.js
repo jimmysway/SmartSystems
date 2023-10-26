@@ -53,7 +53,7 @@ server.on('message', function (message, remote) {
   console.log(carminData);
 
   // Save carmin watch data to CSV in format IPaddress:Port-Sensor,Sensor
-  fs.appendFile(remote.address + ':' + remote.port + '.csv', carminData, function (err) {
+  fs.appendFile('port' + remote.port + '.csv', carminData, function (err) {
       if (err) throw err;
   });
 
