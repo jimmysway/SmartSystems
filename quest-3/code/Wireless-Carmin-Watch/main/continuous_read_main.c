@@ -32,6 +32,7 @@
 
 char buff[128];
 char payload[128];
+uint16_t displaybuffer[8];
 
 ////////////////////////// Temperature Sensor //////////////////////////
 
@@ -724,7 +725,7 @@ static void display_task()
             
             for (int i = display_offset; i < display_offset + 8; i++) 
             {
-                int index = i % strlen(input); // Wrap around the buffer
+                int index = i % strlen(buff); // Wrap around the buffer
                 i2c_master_write_byte(cmd4, displaybuffer[index] & 0xFF, ACK_CHECK_EN);
                 i2c_master_write_byte(cmd4, displaybuffer[index] >> 8, ACK_CHECK_EN);
             }
