@@ -10,6 +10,15 @@ const io = socketIo(server);
 
 app.use(express.static(__dirname));  // Serve static files
 
+let largestStepsFile = null;  // This will keep track of the file with the largest number of steps
+let totalStepsMap = {
+    'carmin0.csv': 0,
+    'carmin1.csv': 0
+};
+
+// const csvFilePath1 = "carmin0.csv";
+// const csvFilePath2 = "carmin1.csv";
+
 function getDataFromCSV(filePath) {
     const csvContent = fs.readFileSync(filePath, 'utf-8');
     const parsed = Papa.parse(csvContent, { header: true });
@@ -26,21 +35,12 @@ function getDataFromCSV(filePath) {
     return { newEntry, totalSteps };
 }
 
-const csvFilePath1 = '../serverJS/port59033.csv';
-const csvFilePath2 = '../serverJS/port64333.csv';
-
 function timeStringToDate(timeStr) {
     const [hours, minutes, seconds] = timeStr.split(":").map(Number);
     const date = new Date();
     date.setHours(hours, minutes, seconds, 0);
     return date;
 }
-
-let largestStepsFile = null;  // This will keep track of the file with the largest number of steps
-let totalStepsMap = {
-    'carmin0.csv': 0,
-    'carmin1.csv': 0
-};
 
 function updateLargestStepsFile(filePath, totalSteps) {
     totalStepsMap[filePath] = totalSteps;
@@ -71,8 +71,25 @@ function watchAndEmitData(csvFilePath, eventName) {
 }
 
 // Watch both CSV files and emit data
-watchAndEmitData(csvFilePath1, 'data0');
-watchAndEmitData(csvFilePath2, 'data1');
+// watchAndEmitData(csvFilePath1, 'data0');
+// watchAndEmitData(csvFilePath2, 'data1');
+
+fs.readdir("../serverJs/", (err, files) => {
+    let csvFilePath1; // Store csv file names
+    let csvFilePath2; // Store csv file names
+
+    if (err) {
+        throw err;
+    }
+
+    // Filter the files with the .csv extension
+    const csvFiles = files.filter(file => file.endsWith('.csv'));
+    csvFilePath1 = "../serverJs/" + csvFiles[0];
+    csvFilePath2 = "../serverJs/" + csvFiles[1];
+
+    watchAndEmitData(csvFilePath1, 'data0');
+    watchAndEmitData(csvFilePath2, 'data1');
+});
 
 server.listen(3000, () => {
     console.log('listening on *:3000');
