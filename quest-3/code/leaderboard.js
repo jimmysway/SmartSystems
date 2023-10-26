@@ -33,9 +33,8 @@ let leaderboard = [];
 
 
 // On connection, print out received message
-// On connection, print out received message
 server.on('message', function (message, remote) {
-  let carminData = remote.address + ':' + remote.port + "-" + message;
+  let carminData = remote.address + ':' + remote.port + "-" + message; // Later parse message by "," to get the sensor contents
   console.log(carminData);
 
   // Save carmin watch data to CSV in format IPaddress:Port-Sensor,Sensor
@@ -43,25 +42,29 @@ server.on('message', function (message, remote) {
       if (err) throw err;
   });
 
-  // ------ Update leaderboard/parsing logic ------
-  let data = message.split(",");
-  let stepsReceived = parseInt(data[0]);
+  // ------ Add some leaderboard/parsing logic ------
+  // Parser
+  let data = message.toString();
+  data = data.split(",");
+  stepsArr.push(parseInt(data[0])); // Push the new steps recieved into array of steps
+  tempArr.push(parseFloat(data[1])); // Push new temps into array
 
-  // If this watch has the highest number of steps, update the leader
-  if (stepsReceived > leaderSteps) {
-      leaderSteps = stepsReceived;
-      leader = `${remote.port} - Steps: ${leaderSteps}, Temp: ${parseFloat(data[1])}`;
-  }
-
-  // Send leaderboard information (only the leader)
-  server.send(leader, remote.port, remote.address, function (error) {
-      if (error) {
-          console.log('MEH!');
-      } else {
-          console.log('Sent Leader:\n', leader);
-      }
+  // Update leaderboard data
+  leaderboard.push({
+      ipAddress: remote.address,
+      port: remote.port,
+      steps: parseInt(data[0]),
+      temperature: parseFloat(data[1]),
   });
-});
+
+  // Sort the leaderboard based on steps (descending order)
+  leaderboard.sort((a, b) => b.steps - a.steps);
+
+  // Prepare the leaderboard message (by steps)
+  let leaderboardMessage = "Leaderboard:\n";
+  leaderboard.forEach((entry, index) => {
+      leaderboardMessage += `${index + 1}. ${entry.ipAddress}:${entry.port} - Steps: ${entry.steps}, Temp: ${entry.temperature}\n`;
+  });
 
   // Send leaderboard information
   server.send(leaderboardMessage, remote.port, remote.address, function (error) {
