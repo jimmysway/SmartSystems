@@ -578,7 +578,7 @@ static void buzzer_init(void)
 ////////////////////////// WIFI //////////////////////////
 #define WIFI_SSID      "Group_7"
 #define WIFI_PASSWORD  "smartsys"
-#define UDP_SERVER_IP  "192.168.1.17"
+#define UDP_SERVER_IP  "192.168.1.36"
 #define UDP_PORT       8080
 #define ESP32_HOSTNAME "ESP32"
 static const char *TAG = "UDP_CLIENT";
