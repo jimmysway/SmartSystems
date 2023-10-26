@@ -689,14 +689,15 @@ static void display_task()
 {
     int ret;
     int display_offset = 0;
+    int display_length = 14;
 
     while (1) 
     {
-        if(strlen(buff) <= 4) // Characters fit without scrolling
+        if(strlen(display_length) <= 4) // Characters fit without scrolling
         {
-            if(strlen(buff) < 4) // Fill the rest of the display buffer with spaces
+            if(strlen(display_length) < 4) // Fill the rest of the display buffer with spaces
                 {
-                    for(int i = strlen(buff); i < 4; i++) // fill the rest of the display buffer with spaces
+                    for(int i = strlen(display_length); i < 4; i++) // fill the rest of the display buffer with spaces
                     {
                         displaybuffer[i] = alphafonttable[0];
                     }
@@ -725,7 +726,7 @@ static void display_task()
             
             for (int i = display_offset; i < display_offset + 8; i++) 
             {
-                int index = i % strlen(buff); // Wrap around the buffer
+                int index = i % strlen(display_length); // Wrap around the buffer
                 i2c_master_write_byte(cmd4, displaybuffer[index] & 0xFF, ACK_CHECK_EN);
                 i2c_master_write_byte(cmd4, displaybuffer[index] >> 8, ACK_CHECK_EN);
             }
@@ -740,7 +741,7 @@ static void display_task()
             // Increment the display offset to shift characters to the left
             display_offset++;
 
-            if (display_offset >= strlen(buff)) 
+            if (display_offset >= strlen(display_length)) 
             {
                 display_offset = 0; // Wrap around to the beginning of the buffer
             }
