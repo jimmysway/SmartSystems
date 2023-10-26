@@ -26,8 +26,8 @@ function getDataFromCSV(filePath) {
     return { newEntry, totalSteps };
 }
 
-const csvFilePath1 = '../serverJS/carmin0.csv';
-const csvFilePath2 = '../serverJS/carmin1.csv';
+const csvFilePath1 = '../serverJS/port59033.csv';
+const csvFilePath2 = '../serverJS/port64333.csv';
 
 function timeStringToDate(timeStr) {
     const [hours, minutes, seconds] = timeStr.split(":").map(Number);

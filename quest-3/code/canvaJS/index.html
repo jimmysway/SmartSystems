@@ -160,7 +160,7 @@
             }]
         });
 
-        const socket = io.connect('http://localhost:3000');
+        const socket = io();
         socket.on('data0', function(data) {
             dpsSteps1.push({
                 x: new Date(data.x),
