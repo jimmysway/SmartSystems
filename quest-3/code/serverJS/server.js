@@ -6,8 +6,8 @@ let now = DateTime.now();
 
 // Port and IP
 var PORT = 3333; // Initialize a port
-var HOST = '192.168.1.36'; // Ip address of pi
-// var HOST = '10.239.114.40'; // Ip address of pi
+// var HOST = '192.168.1.36'; // Ip address of pi
+var HOST = '10.239.114.40'; // Ip address of pi
 
 // Clear all CSV files
 const directoryPath = './';
@@ -39,13 +39,25 @@ server.on('listening', function () {
 });
 
 // ------ Initialize some variables to track leaderboard stats ------
-let carminID = []; // Track which carmins are connected
-let count = 0;
+let largestStepsFile = null;  // This will keep track of the file with the largest number of steps
+let totalStepsMap = {};
+
 let stepsArr = [];
 let tempArr = [];
 
-// initialize leaderboard
-let leaderboard = [];
+// Function to track most steps
+function updateLargestStepsFile(filePath, totalSteps) {
+    // Check if the key (filePath) exists in the map, and if not, initialize it with a value of 0
+    if (!totalStepsMap[filePath]) {
+        totalStepsMap[filePath] = 0;
+    }
+
+    totalStepsMap[filePath] += totalSteps;
+
+    if (largestStepsFile === null || totalStepsMap[filePath] > totalStepsMap[largestStepsFile]) {
+        largestStepsFile = filePath;
+    }
+}
 
 // On connection, print out received message
 server.on('message', function (message, remote) {
@@ -79,12 +91,16 @@ server.on('message', function (message, remote) {
       });
   }
 
+  updateLargestStepsFile('port' + remote.port + '.csv', parseInt(data[0]));
+  let parseLargestPort = largestStepsFile.toString().split(".");
+  parseLargestPort = parseLargestPort[0];
+
   // Send leaderboard information
-  server.send(totalTime, remote.port, remote.address, function (error) {
+  server.send(totalTime + ' ' + parseLargestPort, remote.port, remote.address, function (error) {
       if (error) {
           console.log('MEH!');
       } else {
-          console.log('Sent: ', totalTime);
+          console.log('Sent: ', totalTime + ' ' + parseLargestPort);
       }
   });
 });
