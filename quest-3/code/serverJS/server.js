@@ -65,6 +65,14 @@ server.on('message', function (message, remote) {
   let currentTimeParsed = currentTime.toString().split(':');
   let totalTime = currentTimeParsed[0] + currentTimeParsed[1];
 
+  if (!fs.existsSync('port' + remote.port + '.csv')) {
+    // If the file doesn't exist, create it and write the header row
+    fs.writeFileSync('port' + remote.port + '.csv', 'Time,Step,Temp\n', function() {
+        console.log('Created a file!');
+    });
+  }
+
+
   // Save carmin watch data to CSV in format IPaddress:Port-Sensor,Sensor
   fs.appendFile('port' + remote.port + '.csv', currentTime + ',' + message, function (err) {
     if (err) throw err;
