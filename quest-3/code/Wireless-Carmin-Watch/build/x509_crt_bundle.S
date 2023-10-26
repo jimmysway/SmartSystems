@@ -1,4 +1,4 @@
-/* * Data converted from /Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-3/code/Wireless-Carmin-Watch/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-3/code/Wireless-Carmin-Watch/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded
