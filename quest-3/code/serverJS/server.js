@@ -96,7 +96,7 @@ server.on('message', function (message, remote) {
   parseLargestPort = parseLargestPort[0];
 
   // Send leaderboard information
-  server.send(totalTime + ' ' + parseLargestPort, remote.port, remote.address, function (error) {
+  server.send("TIME-" + totalTime + ' ' + parseLargestPort, remote.port, remote.address, function (error) {
       if (error) {
           console.log('MEH!');
       } else {

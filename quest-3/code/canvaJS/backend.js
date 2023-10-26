@@ -75,7 +75,7 @@ function watchAndEmitData(csvFilePath, eventName) {
 // watchAndEmitData(csvFilePath1, 'data0');
 // watchAndEmitData(csvFilePath2, 'data1');
 
-fs.readdir("../serverJs/", (err, files) => {
+fs.readdir("../serverJS/", (err, files) => {
     let csvFilePath1; // Store csv file names
     let csvFilePath2; // Store csv file names
 
@@ -85,8 +85,8 @@ fs.readdir("../serverJs/", (err, files) => {
 
     // Filter the files with the .csv extension
     const csvFiles = files.filter(file => file.endsWith('.csv'));
-    csvFilePath1 = "../serverJs/" + csvFiles[0];
-    csvFilePath2 = "../serverJs/" + csvFiles[1];
+    csvFilePath1 = "../serverJS/" + csvFiles[0];
+    csvFilePath2 = "../serverJS/" + csvFiles[1];
 
     watchAndEmitData(csvFilePath1, 'data0');
     watchAndEmitData(csvFilePath2, 'data1');
