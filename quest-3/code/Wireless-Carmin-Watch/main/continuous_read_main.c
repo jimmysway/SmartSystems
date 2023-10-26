@@ -23,6 +23,13 @@
 #include "esp_vfs_dev.h" 
 #include "sdkconfig.h"
 
+#include "lwip/sockets.h"
+#include "lwip/netdb.h"
+#include "esp_wifi.h"
+#include "esp_event.h"
+#include "esp_netif.h"
+#include "nvs_flash.h"
+
 char buff[128];
 
 ////////////////////////// Temperature Sensor //////////////////////////
