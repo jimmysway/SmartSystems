@@ -28,34 +28,56 @@ let count = 0;
 let stepsArr = [];
 let tempArr = [];
 
+// initialize leaderboard
+let leaderboard = [];
+
+
 // On connection, print out received message
 server.on('message', function (message, remote) {
-    let carminData = remote.address + ':' + remote.port + "-" + message; // Later parse message by "," to get the sensor contents
-    console.log(carminData);
+  let carminData = remote.address + ':' + remote.port + "-" + message; // Later parse message by "," to get the sensor contents
+  console.log(carminData);
 
-    // Save carmin watch data to CSV in format IPaddress:Port-Sensor,Sensor
-    fs.appendFile('data.csv', content, function (err) {
-        if (err) throw err;
-    });
+  // Save carmin watch data to CSV in format IPaddress:Port-Sensor,Sensor
+  fs.appendFile('data.csv', carminData, function (err) { // Use carminData, not content
+      if (err) throw err;
+  });
 
-    // ------ Add some leaderboard/parsing logic ------
-    // Parser
-    let data = message.split(",");
-    stepsArr.push(parseInt(data[0])); // Push the new steps recieved into array of steps
-    tempArr.push(parseFloat(data[1])); // Push new temps into array
-    
-    // Determine leader
-    let leader = "";
+  // ------ Step 2: Add leaderboard/parsing logic ------
+  // Parser
+  let data = message.split(",");
+  stepsArr.push(parseInt(data[0])); // Push the new steps received into the array of steps
+  tempArr.push(parseFloat(data[1])); // Push new temps into the array
 
-    // Send leaderboard information
-    server.send(leader,remote.port,remote.address,function(error){ // Send leader to carmin watches
-      if(error){
-        console.log('MEH!');
+  // Update leaderboard data
+  leaderboard.push({
+      ipAddress: remote.address,
+      port: remote.port,
+      steps: parseInt(data[0]),
+      temperature: parseFloat(data[1]),
+  });
+
+  // Sort the leaderboard based on steps (descending order)
+  leaderboard.sort((a, b) => b.steps - a.steps);
+
+  // Prepare the leaderboard message
+  let leaderboardMessage = "Leaderboard:\n";
+  leaderboard.forEach((entry, index) => {
+      leaderboardMessage += `${index + 1}. ${entry.ipAddress}:${entry.port} - Steps: ${entry.steps}, Temp: ${entry.temperature}\n`;
+  });
+
+  // Send leaderboard information
+  server.send(leaderboardMessage, remote.port, remote.address, function (error) {
+      if (error) {
+          console.log('MEH!');
+      } else {
+          console.log('Sent Leaderboard:\n', leaderboardMessage);
       }
-      else{
-        console.log('Sent: ', leader);
-      }
-    });
+  });
+
+  // Limit the leaderboard to the top 10 entries to prevent overflow
+  if (leaderboard.length > 10) {
+      leaderboard.pop(); // Remove the last entry
+  }
 });
 
 // Bind server to port and IP
