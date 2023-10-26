@@ -683,53 +683,116 @@ void activity_task()
         vTaskDelay(50 / portTICK_PERIOD_MS);  // wait a bit
     }
 }
-
-void display_task()
+// scrolling display task
+static void display_task()
 {
-    char str[20];
-    int num;
-    int i;
-    // Debug
     int ret;
-    printf(">> Test Alphanumeric Display: \n");
+    int display_offset = 0;
 
-    // Set up routines
-    // Turn on alpha oscillator
-    ret = alpha_oscillator();
-    if(ret == ESP_OK) {printf("- oscillator: ok \n");}
-    // Set display blink off
-    ret = no_blink();
-    if(ret == ESP_OK) {printf("- blink: off \n");}
-    ret = set_brightness_max(0xF);
-    if(ret == ESP_OK) {printf("- brightness: max \n");}
+    while (1) 
+    {
+        if(strlen(buff) <= 4) // Characters fit without scrolling
+        {
+            if(strlen(buff) < 4) // Fill the rest of the display buffer with spaces
+                {
+                    for(int i = strlen(buff); i < 4; i++) // fill the rest of the display buffer with spaces
+                    {
+                        displaybuffer[i] = alphafonttable[0];
+                    }
+                }
+                //Send commands characters to display over I2C
+                i2c_cmd_handle_t cmd4 = i2c_cmd_link_create();
+                i2c_master_start(cmd4);
+                i2c_master_write_byte(cmd4, ( SLAVE_ADDR << 1 ) | WRITE_BIT, ACK_CHECK_EN);
+                i2c_master_write_byte(cmd4, (uint8_t)0x00, ACK_CHECK_EN);
+                for (uint8_t i=0; i<8; i++) 
+                {
+                    i2c_master_write_byte(cmd4, displaybuffer[i] & 0xFF, ACK_CHECK_EN);
+                    i2c_master_write_byte(cmd4, displaybuffer[i] >> 8, ACK_CHECK_EN);
+                }
+                i2c_master_stop(cmd4);
+                ret = i2c_master_cmd_begin(I2C_EXAMPLE_MASTER_NUM, cmd4, 1000 / portTICK_PERIOD_MS);
+                i2c_cmd_link_delete(cmd4);
+        }
+        else
+        {
+            // Send commands characters to display over I2C
+            i2c_cmd_handle_t cmd4 = i2c_cmd_link_create();
+            i2c_master_start(cmd4);
+            i2c_master_write_byte(cmd4, (SLAVE_ADDR << 1) | WRITE_BIT, ACK_CHECK_EN);
+            i2c_master_write_byte(cmd4, (uint8_t)0x00, ACK_CHECK_EN);
+            
+            for (int i = display_offset; i < display_offset + 8; i++) 
+            {
+                int index = i % strlen(input); // Wrap around the buffer
+                i2c_master_write_byte(cmd4, displaybuffer[index] & 0xFF, ACK_CHECK_EN);
+                i2c_master_write_byte(cmd4, displaybuffer[index] >> 8, ACK_CHECK_EN);
+            }
+            
+            i2c_master_stop(cmd4);
+            ret = i2c_master_cmd_begin(I2C_EXAMPLE_MASTER_NUM, cmd4, 1000 / portTICK_PERIOD_MS);
+            i2c_cmd_link_delete(cmd4);
 
-    // Write to characters to buffer
-    uint16_t displaybuffer[8];
-    
-    while(1) {
-        strcpy(str, buff);
-        for(i = 0; i < 8; i++) {
-            displaybuffer[i] = 0b0000110000111111; // change to be zeros
-        }
+            // Delay to control scrolling speed
+            vTaskDelay(500 / portTICK_PERIOD_MS);
 
-        for(i = 0; i < strlen(str); i++) {
-            displaybuffer[i] = alphafonttable[(int) str[i]];
+            // Increment the display offset to shift characters to the left
+            display_offset++;
+
+            if (display_offset >= strlen(buff)) 
+            {
+                display_offset = 0; // Wrap around to the beginning of the buffer
+            }
         }
-    
-        // Send commands characters to display over I2C
-        i2c_cmd_handle_t cmd4 = i2c_cmd_link_create();
-        i2c_master_start(cmd4);
-        i2c_master_write_byte(cmd4, ( SLAVE_ADDR << 1 ) | WRITE_BIT, ACK_CHECK_EN);
-        i2c_master_write_byte(cmd4, (uint8_t)0x00, ACK_CHECK_EN);
-        for (uint8_t i=0; i<8; i++) {
-            i2c_master_write_byte(cmd4, displaybuffer[i] & 0xFF, ACK_CHECK_EN);
-            i2c_master_write_byte(cmd4, displaybuffer[i] >> 8, ACK_CHECK_EN);
-        }
-        i2c_master_stop(cmd4);
-        ret = i2c_master_cmd_begin(I2C_EXAMPLE_MASTER_NUM, cmd4, 1000 / portTICK_PERIOD_MS);
-        i2c_cmd_link_delete(cmd4);
     }
 }
+
+// void display_task()
+// {
+//     char str[20];
+//     int num;
+//     int i;
+//     // Debug
+//     int ret;
+//     printf(">> Test Alphanumeric Display: \n");
+
+//     // Set up routines
+//     // Turn on alpha oscillator
+//     ret = alpha_oscillator();
+//     if(ret == ESP_OK) {printf("- oscillator: ok \n");}
+//     // Set display blink off
+//     ret = no_blink();
+//     if(ret == ESP_OK) {printf("- blink: off \n");}
+//     ret = set_brightness_max(0xF);
+//     if(ret == ESP_OK) {printf("- brightness: max \n");}
+
+//     // Write to characters to buffer
+//     uint16_t displaybuffer[8];
+    
+//     while(1) {
+//         strcpy(str, buff);
+//         for(i = 0; i < 8; i++) {
+//             displaybuffer[i] = 0b0000110000111111; // change to be zeros
+//         }
+
+//         for(i = 0; i < strlen(str); i++) {
+//             displaybuffer[i] = alphafonttable[(int) str[i]];
+//         }
+    
+//         // Send commands characters to display over I2C
+//         i2c_cmd_handle_t cmd4 = i2c_cmd_link_create();
+//         i2c_master_start(cmd4);
+//         i2c_master_write_byte(cmd4, ( SLAVE_ADDR << 1 ) | WRITE_BIT, ACK_CHECK_EN);
+//         i2c_master_write_byte(cmd4, (uint8_t)0x00, ACK_CHECK_EN);
+//         for (uint8_t i=0; i<8; i++) {
+//             i2c_master_write_byte(cmd4, displaybuffer[i] & 0xFF, ACK_CHECK_EN);
+//             i2c_master_write_byte(cmd4, displaybuffer[i] >> 8, ACK_CHECK_EN);
+//         }
+//         i2c_master_stop(cmd4);
+//         ret = i2c_master_cmd_begin(I2C_EXAMPLE_MASTER_NUM, cmd4, 1000 / portTICK_PERIOD_MS);
+//         i2c_cmd_link_delete(cmd4);
+//     }
+// }
 
 void temperature_task()
 {
