@@ -814,18 +814,18 @@ void display_task()
     if(ret == ESP_OK) {printf("- brightness: max \n");}
 
     // Write to characters to buffer
-    uint16_t displaybuffer[8];
+    uint16_t displaybuffer[20];
     int displayOffset = 0; // Initialize the display offset to 0
 
     while(1) {
         strcpy(str, buff);
 
-        for(i = 0; i < 8; i++) {
-            displaybuffer[i] = 0b0000110000111111; // change to be zeros
+        for(i = 0; i < 20; i++) {
+            displaybuffer[i] = 0b0000000000000000; // change to be zeros
         }
 
         // Update the display buffer with characters from str, starting from displayOffset
-        for(i = 0; i < 8; i++) {
+        for(i = 0; i < 20; i++) {
             if (i + displayOffset < strlen(str)) {
                 displaybuffer[i] = alphafonttable[(int) str[i + displayOffset]];
             }
@@ -846,11 +846,11 @@ void display_task()
 
         // Scroll the display
         displayOffset++;
-        if (displayOffset + 8 > strlen(str)) {
+        if (displayOffset > strlen(str)) {
             displayOffset = 0; // Reset the display offset if we've reached the end of the string
         }
 
-        vTaskDelay(140 / portTICK_PERIOD_MS); // Adjust the delay to control scrolling speed
+        vTaskDelay(400 / portTICK_PERIOD_MS); // Adjust the delay to control scrolling speed
     }
 }
 
@@ -1018,7 +1018,7 @@ static void udp_client_task(void *pvParameters) {
                 // }
             }
 
-            vTaskDelay(5000 / portTICK_PERIOD_MS);  // Send every 2 seconds and then check for incoming data
+            vTaskDelay(10000/portTICK_PERIOD_MS);  // Send every 2 seconds and then check for incoming data
         }
 
         if (sock != -1) {
@@ -1094,5 +1094,5 @@ void app_main(void)
     xTaskCreate(temperature_task, "temperature_task", 4096, NULL, configMAX_PRIORITIES-2, NULL);
     xTaskCreate(steps_task, "steps_task", 4096, NULL, configMAX_PRIORITIES-3, NULL);
     xTaskCreate(timer_task, "timer_task", 4096, NULL, configMAX_PRIORITIES-4, NULL);
-    xTaskCreate(display_task, "display_task", 4096, NULL, configMAX_PRIORITIES-5, NULL);
+    xTaskCreate(display_task, "display_task", 4096, NULL, configMAX_PRIORITIES-1, NULL);
 }
