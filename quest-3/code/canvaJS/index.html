@@ -164,7 +164,6 @@
         socket.on('largestStepsFile', function(fileName) {
             document.getElementById("largestStepsTitle").textContent = `File with the largest number of steps is: ${fileName}`;
         });
-        
         socket.on('data0', function(data) {
             dpsSteps1.push({
                 x: new Date(data.x),
@@ -185,6 +184,11 @@
             }
 
             totalSteps0 = data.totalSteps;
+
+            chartSteps.title.set("text", `Steps over Time (${data.name})`);
+            chartTemp.title.set("text", `Temperature over Time (${data.name})`);
+
+            chartStepsComparison.options.data[0].dataPoints[0].label = data.name;
 
             chartSteps.render();
             chartTemp.render();
@@ -212,6 +216,11 @@
             }
             
             totalSteps1 = data.totalSteps;
+
+            chartSteps1.title.set("text", `Steps over Time (${data.name})`);
+            chartTemp1.title.set("text", `Temperature over Time (${data.name})`);
+
+            chartStepsComparison.options.data[0].dataPoints[1].label = data.name;
 
             chartSteps1.render();
             chartTemp1.render();

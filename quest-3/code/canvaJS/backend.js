@@ -61,7 +61,8 @@ function watchAndEmitData(csvFilePath, eventName) {
                 x: parsedTime,
                 y: parseFloat(newEntry.Step),
                 temp: parseFloat(newEntry.Temp),
-                totalSteps : totalSteps
+                totalSteps : totalSteps,
+                name : csvFilePath.replace('.csv', '')
             });
             
             updateLargestStepsFile(csvFilePath, totalSteps);
