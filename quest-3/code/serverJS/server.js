@@ -6,8 +6,8 @@ let now = DateTime.now();
 
 // Port and IP
 var PORT = 3333; // Initialize a port
-var HOST = '192.168.1.36'; // Ip address of pi
-// var HOST = '10.239.114.40'; // Ip address of pi
+// var HOST = '192.168.1.36'; // Ip address of pi
+var HOST = '10.239.114.40'; // Ip address of pi
 
 // Clear all CSV files
 const directoryPath = './';
@@ -50,44 +50,46 @@ let leaderboard = [];
 // On connection, print out received message
 server.on('message', function (message, remote) {
   if(message.toString().length == 0) {
-      return;
-  }
-  let carminData = remote.address + ':' + remote.port + "-" + message + " THE LENGTH: " + message.toString().length; // Later parse message by "," to get the sensor contents
-  console.log(carminData);
-
-  // ------ Add some leaderboard/parsing logic ------
-  // Parser
-  let data = message.toString();
-  data = data.split(",");
-  stepsArr.push(parseInt(data[0])); // Push the new steps recieved into array of steps
-  tempArr.push(parseFloat(data[1])); // Push new temps into array
-
-  // Get time
-  now = DateTime.now();
-  let currentTime = now.toFormat('HH:mm:ss');
-  let currentTimeParsed = currentTime.toString().split(':');
-  let totalTime = currentTimeParsed[0] + currentTimeParsed[1];
-
-  if (!fs.existsSync('port' + remote.port + '.csv')) {
-    // If the file doesn't exist, create it and write the header row
-    fs.writeFileSync('port' + remote.port + '.csv', 'Time,Step,Temp\n', function() {
-        console.log('Created a file!');
-    });
-  }
-
-  // Save carmin watch data to CSV in format IPaddress:Port-Sensor,Sensor
-  fs.appendFile('port' + remote.port + '.csv', currentTime + ',' + message, function (err) {
-    if (err) throw err;
-  });
-
-  // Send leaderboard information
-  server.send(totalTime, remote.port, remote.address, function (error) {
-      if (error) {
-          console.log('MEH!');
-      } else {
-          console.log('Sent: ', totalTime);
+    let carminData = remote.address + ':' + remote.port + "-" + message + " THE LENGTH: " + message.toString().length; // Later parse message by "," to get the sensor contents
+    console.log(carminData);
+  } else {
+      let carminData = remote.address + ':' + remote.port + "-" + message + " THE LENGTH: " + message.toString().length; // Later parse message by "," to get the sensor contents
+      console.log(carminData);
+    
+      // ------ Add some leaderboard/parsing logic ------
+      // Parser
+      let data = message.toString();
+      data = data.split(",");
+      stepsArr.push(parseInt(data[0])); // Push the new steps recieved into array of steps
+      tempArr.push(parseFloat(data[1])); // Push new temps into array
+    
+      // Get time
+      now = DateTime.now();
+      let currentTime = now.toFormat('HH:mm:ss');
+      let currentTimeParsed = currentTime.toString().split(':');
+      let totalTime = currentTimeParsed[0] + currentTimeParsed[1];
+    
+      if (!fs.existsSync('port' + remote.port + '.csv')) {
+        // If the file doesn't exist, create it and write the header row
+        fs.writeFileSync('port' + remote.port + '.csv', 'Time,Step,Temp\n', function() {
+            console.log('Created a file!');
+        });
       }
-  });
+    
+      // Save carmin watch data to CSV in format IPaddress:Port-Sensor,Sensor
+      fs.appendFile('port' + remote.port + '.csv', currentTime + ',' + message, function (err) {
+        if (err) throw err;
+      });
+    
+      // Send leaderboard information
+      server.send(totalTime, remote.port, remote.address, function (error) {
+          if (error) {
+              console.log('MEH!');
+          } else {
+              console.log('Sent: ', totalTime);
+          }
+      });
+  }
 });
 
 // Bind server to port and IP
