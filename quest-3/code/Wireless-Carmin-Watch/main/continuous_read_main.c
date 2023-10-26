@@ -869,6 +869,7 @@ static void udp_client_task(void *pvParameters) {
                 ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
                 break;
             }
+
             ESP_LOGI(TAG, "%s Message sent", payload);
             // Listen for incoming data after sending.
             int len = recvfrom(sock, rx_buffer, sizeof(rx_buffer) - 1, 0, (struct sockaddr *)&source_addr, &socklen);
