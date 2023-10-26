@@ -1,0 +1,686 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 26 2023 02:46:57[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23b40h (146240) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=00033b68 vaddr=3ffb0000 size=03794h ( 14228) load[0m
+[0;32mI (165) esp_image: segment 2: paddr=00037304 vaddr=40080000 size=08d14h ( 36116) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=881a8h (557480) map[0m
+[0;32mI (382) esp_image: segment 4: paddr=000c81d0 vaddr=40088d14 size=0e75ch ( 59228) load[0m
+[0;32mI (418) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (418) boot: Disabling RNG early entropy source...[0m
+[0;32mI (430) cpu_start: Multicore app[0m
+[0;32mI (430) cpu_start: Pro cpu up.[0m
+[0;32mI (430) cpu_start: Starting app cpu, entry point is 0x40081328[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (448) cpu_start: Pro cpu start user code[0m
+[0;32mI (448) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (448) cpu_start: Application information:[0m
+[0;32mI (453) cpu_start: Project name:     continuous_read[0m
+[0;32mI (459) cpu_start: App version:      25aeffd-dirty[0m
+[0;32mI (464) cpu_start: Compile time:     Oct 26 2023 02:52:13[0m
+[0;32mI (470) cpu_start: ELF file SHA256:  9c33e39d5...[0m
+[0;32mI (476) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (483) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (487) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (492) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (497) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (504) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (510) heap_init: At 3FFB79A8 len 00028658 (161 KiB): DRAM[0m
+[0;32mI (516) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (523) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (529) heap_init: At 40097470 len 00008B90 (34 KiB): IRAM[0m
+[0;32mI (537) spi_flash: detected chip: generic[0m
+[0;32mI (540) spi_flash: flash io: dio[0m
+[0;33mW (544) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (557) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (568) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (577) app_start: Starting scheduler on CPU0[0m
+[0;32mI (581) app_start: Starting scheduler on CPU1[0m
+[0;32mI (581) main_task: Started on CPU0[0m
+[0;32mI (591) main_task: Calling app_main()[0m
+[0;32mI (591) gpio: GPIO[12]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:1 [0m
+[0;32mI (601) gpio: GPIO[26]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x53
+- Device found at address: 0x70
+[0;32mI (641) ec444: timer: Start timer, update alarm value dynamically and auto reload[0m
+
+>> Found ADAXL343
+I (701) wifi:wifi driver task: 3ffbfa9c, prio:23, stack:6656, core=0
+I (721) wifi:wifi firmware version: 341633f
+I (721) wifi:wifi certification version: v7.0
+I (721) wifi:config NVS flash: enabled
+I (721) wifi:config nano formating: disabled
+I (731) wifi:Init data frame dynamic rx buffer num: 32
+I (731) wifi:Init management frame dynamic rx buffer num: 32
+I (741) wifi:Init management short buffer num: 32
+I (741) wifi:Init dynamic tx buffer num: 32
+I (751) wifi:Init static rx buffer size: 1600
+I (751) wifi:Init static rx buffer num: 10
+I (751) wifi:Init dynamic rx buffer num: 32
+[0;32mI (761) wifi_init: rx ba win: 6[0m
+[0;32mI (761) wifi_init: tcpip mbox: 32[0m
+[0;32mI (771) wifi_init: udp mbox: 6[0m
+[0;32mI (771) wifi_init: tcp mbox: 6[0m
+[0;32mI (771) wifi_init: tcp tx win: 5744[0m
+[0;32mI (781) wifi_init: tcp rx win: 5744[0m
+[0;32mI (781) wifi_init: tcp mss: 1440[0m
+[0;32mI (791) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (791) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (801) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (881) wifi:mode : sta (44:17:93:5d:59:18)
+I (881) wifi:enable tsf
+[0;32mI (881) UDP_CLIENT: wi errno 118[0m
+[0;31mE (891) UDP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (891) uart: queue free spaces: 10[0m
+[0;32mI (891) UDP_CLIENT: WiFi started, trying to connect...[0m
+I (891) wifi:new:<7,1>, old:<1,0>, ap:<255,255>, sta:<7,1>, prof:1
+I (901) wifi:state: init -> auth (b0)
+Characterized using eFuse Vref
+[0;32mI (911) main_task: Returned from app_main()[0m
+I (911) wifi:state: auth -> assoc (0)
+I (921) wifi:state: assoc -> run (10)
+I (931) wifi:<ba-add>idx:0 (ifx:0, 30:23:03:c7:9f:40), tid:0, ssn:0, winSize:64
+I (971) wifi:connected with Group_7, aid = 3, channel 7, 40U, bssid = 30:23:03:c7:9f:40
+I (971) wifi:security: WPA2-PSK, phy: bgn, rssi: -24
+I (971) wifi:pm start, type: 1
+
+[0;32mI (981) UDP_CLIENT: Connected to WiFi successfully![0m
+I (1041) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (3481) esp_netif_handlers: sta ip: 192.168.1.49, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (3481) UDP_CLIENT: Got IP address: 192.168.1.49[0m
+[0;32mI (5891) UDP_CLIENT: Socket created[0m
+[0;32mI (5891) UDP_CLIENT:  Message sent[0m
+[0;32mI (6081) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (6081) UDP_CLIENT: 0255 port63794[0m
+[0;32mI (11081) UDP_CLIENT:  Message sent[0m
+[0;32mI (11091) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (11091) UDP_CLIENT: 0255 port63794[0m
+[0;32mI (16091) UDP_CLIENT:  Message sent[0m
+[0;32mI (16111) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (16111) UDP_CLIENT: 0255 port63794[0m
+[0;32mI (21111) UDP_CLIENT:  Message sent[0m
+[0;32mI (21131) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (21131) UDP_CLIENT: 0255 port63794[0m
+[0;32mI (26131) UDP_CLIENT:  Message sent[0m
+[0;32mI (26151) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (26151) UDP_CLIENT: 0255 port63794[0m
+[0;32mI (31151) UDP_CLIENT:  Message sent[0m
+[0;32mI (31161) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (31171) UDP_CLIENT: 0255 port63794[0m
+2,16.616698
+
+[0;32mI (36171) UDP_CLIENT: 2,16.616698
+ Message sent[0m
+[0;32mI (36191) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (36191) UDP_CLIENT: 0255 port63794[0m
+[0;32mI (41191) UDP_CLIENT: 2,16.616698
+ Message sent[0m
+[0;32mI (41221) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (41221) UDP_CLIENT: 0255 port63794[0m
+0,16.557902
+
+[0;32mI (46221) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (46241) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (46241) UDP_CLIENT: 0255 port63794[0m
+[0;32mI (51241) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (51251) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (51261) UDP_CLIENT: 0255 port63794[0m
+0,16.646094
+
+[0;32mI (56261) UDP_CLIENT: 0,16.646094
+ Message sent[0m
+[0;32mI (56291) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (56291) UDP_CLIENT: 0256 port63794[0m
+[0;32mI (61291) UDP_CLIENT: 0,16.646094
+ Message sent[0m
+[0;32mI (61321) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (61321) UDP_CLIENT: 0256 port63794[0m
+0,16.646094
+
+[0;32mI (66321) UDP_CLIENT: 0,16.646094
+ Message sent[0m
+[0;32mI (66361) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (66361) UDP_CLIENT: 0256 port63794[0m
+[0;32mI (71361) UDP_CLIENT: 0,16.646094
+ Message sent[0m
+[0;32mI (71381) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (71381) UDP_CLIENT: 0256 port63794[0m
+0,16.675487
+
+[0;32mI (76381) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (76401) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (76401) UDP_CLIENT: 0256 port63794[0m
+[0;32mI (81401) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (81431) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (81431) UDP_CLIENT: 0256 port63794[0m
+0,16.646094
+
+[0;32mI (86431) UDP_CLIENT: 0,16.646094
+ Message sent[0m
+[0;32mI (86441) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (86451) UDP_CLIENT: 0256 port63794[0m
+[0;32mI (91451) UDP_CLIENT: 0,16.646094
+ Message sent[0m
+[0;32mI (91501) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (91501) UDP_CLIENT: 0256 port63794[0m
+0,16.675487
+
+[0;32mI (96501) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (96691) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (96691) UDP_CLIENT: 0256 port63794[0m
+[0;32mI (101691) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (101711) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (101711) UDP_CLIENT: 0256 port63794[0m
+0,16.646094
+
+[0;32mI (106711) UDP_CLIENT: 0,16.646094
+ Message sent[0m
+[0;32mI (106741) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (106741) UDP_CLIENT: 0256 port63794[0m
+[0;32mI (111741) UDP_CLIENT: 0,16.646094
+ Message sent[0m
+[0;32mI (111951) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (111951) UDP_CLIENT: 0256 port63794[0m
+0,16.675487
+
+[0;32mI (116951) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (117071) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (117071) UDP_CLIENT: 0257 port63794[0m
+[0;32mI (122071) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (122121) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (122121) UDP_CLIENT: 0257 port63794[0m
+0,16.675487
+
+[0;32mI (127121) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (127411) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (127411) UDP_CLIENT: 0257 port63794[0m
+[0;32mI (132411) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (132441) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (132441) UDP_CLIENT: 0257 port63794[0m
+0,16.557902
+
+[0;32mI (137441) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (137641) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (137651) UDP_CLIENT: 0257 port63794[0m
+[0;32mI (142651) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (142771) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (142771) UDP_CLIENT: 0257 port63794[0m
+0,16.557902
+
+[0;32mI (147771) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (147891) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (147891) UDP_CLIENT: 0257 port63794[0m
+[0;32mI (152891) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (152951) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (152951) UDP_CLIENT: 0257 port63794[0m
+0,16.646094
+
+[0;32mI (157951) UDP_CLIENT: 0,16.646094
+ Message sent[0m
+[0;32mI (158131) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (158131) UDP_CLIENT: 0257 port63794[0m
+[0;32mI (163131) UDP_CLIENT: 0,16.646094
+ Message sent[0m
+[0;32mI (163161) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (163161) UDP_CLIENT: 0257 port63794[0m
+0,16.499099
+
+[0;32mI (168161) UDP_CLIENT: 0,16.499099
+ Message sent[0m
+[0;32mI (168471) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (168471) UDP_CLIENT: 0257 port63794[0m
+[0;32mI (173471) UDP_CLIENT: 0,16.499099
+ Message sent[0m
+[0;32mI (173591) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (173591) UDP_CLIENT: 0257 port63794[0m
+0,16.675487
+
+[0;32mI (178591) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (178631) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (178631) UDP_CLIENT: 0258 port63794[0m
+[0;32mI (183631) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+0,16.616698
+
+[0;32mI (183831) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (183831) UDP_CLIENT: 0258 port63794[0m
+[0;32mI (188831) UDP_CLIENT: 0,16.616698
+ Message sent[0m
+[0;32mI (188951) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (188951) UDP_CLIENT: 0258 port63794[0m
+0,16.675487
+
+[0;32mI (193951) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (193971) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (193971) UDP_CLIENT: 0258 port63794[0m
+[0;32mI (198971) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (199191) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (199191) UDP_CLIENT: 0258 port63794[0m
+0,16.410880
+
+[0;32mI (204191) UDP_CLIENT: 0,16.410880
+ Message sent[0m
+[0;32mI (204411) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (204411) UDP_CLIENT: 0258 port63794[0m
+[0;32mI (209411) UDP_CLIENT: 0,16.410880
+ Message sent[0m
+[0;32mI (209641) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (209641) UDP_CLIENT: 0258 port63794[0m
+0,16.675487
+
+[0;32mI (214641) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (214861) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (214861) UDP_CLIENT: 0258 port63794[0m
+[0;32mI (219861) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (219891) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (219891) UDP_CLIENT: 0258 port63794[0m
+0,16.616698
+
+[0;32mI (224891) UDP_CLIENT: 0,16.616698
+ Message sent[0m
+[0;32mI (224941) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (224941) UDP_CLIENT: 0258 port63794[0m
+[0;32mI (229941) UDP_CLIENT: 0,16.616698
+ Message sent[0m
+[0;32mI (230321) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (230321) UDP_CLIENT: 0258 port63794[0m
+0,16.557902
+
+[0;32mI (235321) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (235351) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (235351) UDP_CLIENT: 0259 port63794[0m
+[0;32mI (240351) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (240561) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (240561) UDP_CLIENT: 0259 port63794[0m
+0,16.557902
+
+[0;32mI (245561) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (245601) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (245601) UDP_CLIENT: 0259 port63794[0m
+[0;32mI (250601) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (250631) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (250631) UDP_CLIENT: 0259 port63794[0m
+0,16.616698
+
+[0;32mI (255631) UDP_CLIENT: 0,16.616698
+ Message sent[0m
+[0;32mI (255711) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (255721) UDP_CLIENT: 0259 port63794[0m
+[0;32mI (260721) UDP_CLIENT: 0,16.616698
+ Message sent[0m
+[0;32mI (260751) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (260751) UDP_CLIENT: 0259 port63794[0m
+0,16.704880
+
+[0;32mI (265751) UDP_CLIENT: 0,16.704880
+ Message sent[0m
+[0;32mI (266061) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (266061) UDP_CLIENT: 0259 port63794[0m
+[0;32mI (271061) UDP_CLIENT: 0,16.704880
+ Message sent[0m
+[0;32mI (271181) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (271181) UDP_CLIENT: 0259 port63794[0m
+0,16.675487
+
+[0;32mI (276181) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (276231) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (276231) UDP_CLIENT: 0259 port63794[0m
+[0;32mI (281231) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (281421) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (281421) UDP_CLIENT: 0259 port63794[0m
+0,16.528501
+
+[0;32mI (286421) UDP_CLIENT: 0,16.528501
+ Message sent[0m
+[0;32mI (286441) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (286441) UDP_CLIENT: 0259 port63794[0m
+[0;32mI (291441) UDP_CLIENT: 0,16.528501
+ Message sent[0m
+[0;32mI (291561) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (291561) UDP_CLIENT: 0259 port63794[0m
+0,16.528501
+
+[0;32mI (296561) UDP_CLIENT: 0,16.528501
+ Message sent[0m
+[0;32mI (296681) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (296681) UDP_CLIENT: 0300 port63794[0m
+[0;32mI (301681) UDP_CLIENT: 0,16.528501
+ Message sent[0m
+[0;32mI (301741) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (301741) UDP_CLIENT: 0300 port63794[0m
+0,16.646094
+
+[0;32mI (306741) UDP_CLIENT: 0,16.646094
+ Message sent[0m
+[0;32mI (307021) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (307021) UDP_CLIENT: 0300 port63794[0m
+[0;32mI (312021) UDP_CLIENT: 0,16.646094
+ Message sent[0m
+[0;32mI (312041) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (312041) UDP_CLIENT: 0300 port63794[0m
+0,16.616698
+
+[0;32mI (317041) UDP_CLIENT: 0,16.616698
+ Message sent[0m
+[0;32mI (317081) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (317081) UDP_CLIENT: 0300 port63794[0m
+[0;32mI (322081) UDP_CLIENT: 0,16.616698
+ Message sent[0m
+[0;32mI (322281) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (322281) UDP_CLIENT: 0300 port63794[0m
+0,16.675487
+
+[0;32mI (327281) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (327331) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (327331) UDP_CLIENT: 0300 port63794[0m
+[0;32mI (332331) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (332521) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (332521) UDP_CLIENT: 0300 port63794[0m
+0,16.616698
+
+[0;32mI (337521) UDP_CLIENT: 0,16.616698
+ Message sent[0m
+[0;32mI (337571) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (337571) UDP_CLIENT: 0300 port63794[0m
+[0;32mI (342571) UDP_CLIENT: 0,16.616698
+ Message sent[0m
+[0;32mI (342611) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (342611) UDP_CLIENT: 0300 port63794[0m
+0,16.557902
+
+[0;32mI (347611) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (347781) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (347781) UDP_CLIENT: 0300 port63794[0m
+[0;32mI (352781) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (352831) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (352831) UDP_CLIENT: 0300 port63794[0m
+0,16.675487
+
+[0;32mI (357831) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (358021) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (358021) UDP_CLIENT: 0301 port63794[0m
+[0;32mI (363021) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (363131) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (363141) UDP_CLIENT: 0301 port63794[0m
+0,16.763659
+
+[0;32mI (368141) UDP_CLIENT: 0,16.763659
+ Message sent[0m
+[0;32mI (368251) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (368251) UDP_CLIENT: 0301 port63794[0m
+[0;32mI (373251) UDP_CLIENT: 0,16.763659
+ Message sent[0m
+[0;32mI (373381) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (373381) UDP_CLIENT: 0301 port63794[0m
+0,16.557902
+
+[0;32mI (378381) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (378391) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (378391) UDP_CLIENT: 0301 port63794[0m
+[0;32mI (383391) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (383441) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (383441) UDP_CLIENT: 0301 port63794[0m
+0,16.528501
+
+[0;32mI (388441) UDP_CLIENT: 0,16.528501
+ Message sent[0m
+[0;32mI (388631) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (388631) UDP_CLIENT: 0301 port63794[0m
+[0;32mI (393631) UDP_CLIENT: 0,16.528501
+ Message sent[0m
+0,16.675487
+
+[0;32mI (393671) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (393671) UDP_CLIENT: 0301 port63794[0m
+[0;32mI (398671) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (398871) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (398871) UDP_CLIENT: 0301 port63794[0m
+0,16.587301
+
+[0;32mI (403871) UDP_CLIENT: 0,16.587301
+ Message sent[0m
+[0;32mI (403931) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (403931) UDP_CLIENT: 0301 port63794[0m
+[0;32mI (408931) UDP_CLIENT: 0,16.587301
+ Message sent[0m
+[0;32mI (409021) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (409021) UDP_CLIENT: 0301 port63794[0m
+0,16.587301
+
+[0;32mI (414021) UDP_CLIENT: 0,16.587301
+ Message sent[0m
+[0;32mI (414071) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (414071) UDP_CLIENT: 0302 port63794[0m
+[0;32mI (419071) UDP_CLIENT: 0,16.587301
+ Message sent[0m
+[0;32mI (419251) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (419251) UDP_CLIENT: 0302 port63794[0m
+0,16.499099
+
+[0;32mI (424251) UDP_CLIENT: 0,16.499099
+ Message sent[0m
+[0;32mI (424301) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (424301) UDP_CLIENT: 0302 port63794[0m
+[0;32mI (429301) UDP_CLIENT: 0,16.499099
+ Message sent[0m
+[0;32mI (429491) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (429491) UDP_CLIENT: 0302 port63794[0m
+0,16.528501
+
+[0;32mI (434491) UDP_CLIENT: 0,16.528501
+ Message sent[0m
+[0;32mI (434521) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (434521) UDP_CLIENT: 0302 port63794[0m
+[0;32mI (439531) UDP_CLIENT: 0,16.528501
+ Message sent[0m
+[0;32mI (439571) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (439571) UDP_CLIENT: 0302 port63794[0m
+0,16.557902
+
+[0;32mI (444571) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (444741) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (444741) UDP_CLIENT: 0302 port63794[0m
+[0;32mI (449741) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (449781) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (449781) UDP_CLIENT: 0302 port63794[0m
+0,16.704880
+
+[0;32mI (454781) UDP_CLIENT: 0,16.704880
+ Message sent[0m
+[0;32mI (454981) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (454981) UDP_CLIENT: 0302 port63794[0m
+[0;32mI (459981) UDP_CLIENT: 0,16.704880
+ Message sent[0m
+[0;32mI (460021) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (460021) UDP_CLIENT: 0302 port63794[0m
+0,16.557902
+
+[0;32mI (465021) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (465231) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (465231) UDP_CLIENT: 0302 port63794[0m
+[0;32mI (470231) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (470251) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (470251) UDP_CLIENT: 0302 port63794[0m
+0,16.616698
+
+[0;32mI (475251) UDP_CLIENT: 0,16.616698
+ Message sent[0m
+[0;32mI (475371) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (475371) UDP_CLIENT: 0303 port63794[0m
+[0;32mI (480371) UDP_CLIENT: 0,16.616698
+ Message sent[0m
+[0;32mI (480481) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (480481) UDP_CLIENT: 0303 port63794[0m
+0,16.675487
+
+[0;32mI (485481) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (485551) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (485551) UDP_CLIENT: 0303 port63794[0m
+[0;32mI (490551) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (490931) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (490931) UDP_CLIENT: 0303 port63794[0m
+0,16.822432
+
+[0;32mI (495931) UDP_CLIENT: 0,16.822432
+ Message sent[0m
+[0;32mI (495971) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (495971) UDP_CLIENT: 0303 port63794[0m
+[0;32mI (500971) UDP_CLIENT: 0,16.822432
+ Message sent[0m
+[0;32mI (501001) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (501001) UDP_CLIENT: 0303 port63794[0m
+0,16.557902
+
+[0;32mI (506001) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (506181) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (506181) UDP_CLIENT: 0303 port63794[0m
+[0;32mI (511181) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (511231) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (511231) UDP_CLIENT: 0303 port63794[0m
+0,16.675487
+
+[0;32mI (516231) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (516431) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (516431) UDP_CLIENT: 0303 port63794[0m
+[0;32mI (521431) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (521481) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (521481) UDP_CLIENT: 0303 port63794[0m
+2,16.557902
+
+[0;32mI (526481) UDP_CLIENT: 2,16.557902
+ Message sent[0m
+[0;32mI (526661) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (526671) UDP_CLIENT: 0303 port63794[0m
+[0;32mI (531671) UDP_CLIENT: 2,16.557902
+ Message sent[0m
+[0;32mI (531711) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (531711) UDP_CLIENT: 0303 port63794[0m
+0,16.734270
+
+[0;32mI (536711) UDP_CLIENT: 0,16.734270
+ Message sent[0m
+[0;32mI (536751) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (536751) UDP_CLIENT: 0304 port63794[0m
+[0;32mI (541751) UDP_CLIENT: 0,16.734270
+ Message sent[0m
+[0;32mI (541921) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (541921) UDP_CLIENT: 0304 port63794[0m
+0,16.616698
+
+[0;32mI (546921) UDP_CLIENT: 0,16.616698
+ Message sent[0m
+[0;32mI (546961) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (546961) UDP_CLIENT: 0304 port63794[0m
+[0;32mI (551961) UDP_CLIENT: 0,16.616698
+ Message sent[0m
+[0;32mI (551991) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (551991) UDP_CLIENT: 0304 port63794[0m
+0,16.675487
+
+[0;32mI (556991) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (557191) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (557191) UDP_CLIENT: 0304 port63794[0m
+[0;32mI (562191) UDP_CLIENT: 0,16.675487
+ Message sent[0m
+[0;32mI (562221) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (562221) UDP_CLIENT: 0304 port63794[0m
+0,16.646094
+
+[0;32mI (567221) UDP_CLIENT: 0,16.646094
+ Message sent[0m
+[0;32mI (567261) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (567261) UDP_CLIENT: 0304 port63794[0m
+[0;32mI (572261) UDP_CLIENT: 0,16.646094
+ Message sent[0m
+[0;32mI (572441) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (572441) UDP_CLIENT: 0304 port63794[0m
+0,16.557902
+
+[0;32mI (577441) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (577491) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (577491) UDP_CLIENT: 0304 port63794[0m
+[0;32mI (582491) UDP_CLIENT: 0,16.557902
+ Message sent[0m
+[0;32mI (582681) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (582681) UDP_CLIENT: 0304 port63794[0m
+0,16.587301
+
+[0;32mI (587681) UDP_CLIENT: 0,16.587301
+ Message sent[0m
+[0;32mI (587711) UDP_CLIENT: Received 14 bytes from 192.168.1.36:[0m
+[0;32mI (587711) UDP_CLIENT: 0304 port63794[0m

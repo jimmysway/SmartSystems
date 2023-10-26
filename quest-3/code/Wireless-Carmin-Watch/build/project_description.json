@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "continuous_read",
-    "project_version":    "8bfe146",
+    "project_version":    "25aeffd-dirty",
     "project_path":       "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-3/code/Wireless-Carmin-Watch",
     "idf_path":           "/Users/jakelee/esp/esp-idf",
     "build_dir":          "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-3/code/Wireless-Carmin-Watch/build",
