@@ -66,6 +66,7 @@ function watchAndEmitData(csvFilePath, eventName) {
             
             updateLargestStepsFile(csvFilePath, totalSteps);
             console.log(`File with the largest number of steps is: ${largestStepsFile}`);
+            io.emit('largestStepsFile', largestStepsFile.replace('.csv', ''));
         }
     });
 }
