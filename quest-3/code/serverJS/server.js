@@ -49,7 +49,7 @@ let leaderboard = [];
 
 // On connection, print out received message
 server.on('message', function (message, remote) {
-  if(message.toString() === '') {
+  if(message.toString().length == 0) {
       return;
   }
   let carminData = remote.address + ':' + remote.port + "-" + message + " THE LENGTH: " + message.toString().length; // Later parse message by "," to get the sensor contents
