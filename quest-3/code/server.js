@@ -7,6 +7,7 @@ let now = DateTime.now();
 // Port and IP
 var PORT = 3333; // Initialize a port
 var HOST = '192.168.1.36'; // Ip address of pi
+// var HOST = '10.239.114.40'; // Ip address of pi
 
 // Create a CSV file
 fs.writeFile('data.csv', '', function (err) {
@@ -51,13 +52,15 @@ server.on('message', function (message, remote) {
   // Get time
   now = DateTime.now();
   let currentTime = now.toFormat('HH:mm');
+  currentTime = currentTime.toString().split(':');
+  let totalTime = currentTime[0] + currentTime[1];
 
   // Send leaderboard information
-  server.send(currentTime, remote.port, remote.address, function (error) {
+  server.send(totalTime, remote.port, remote.address, function (error) {
       if (error) {
           console.log('MEH!');
       } else {
-          console.log('Sent: ', currentTime);
+          console.log('Sent: ', totalTime);
       }
   });
 });
