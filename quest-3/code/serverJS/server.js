@@ -77,21 +77,21 @@ server.on('message', function (message, remote) {
   let currentTimeParsed = currentTime.toString().split(':');
   let totalTime = currentTimeParsed[0] + currentTimeParsed[1];
 
-  if (!fs.existsSync('port' + remote.port + '.csv')) {
+  if (!fs.existsSync('PORT' + remote.port + '.csv')) {
     // If the file doesn't exist, create it and write the header row
-    fs.writeFileSync('port' + remote.port + '.csv', 'Time,Step,Temp\n', function() {
+    fs.writeFileSync('PORT' + remote.port + '.csv', 'Time,Step,Temp\n', function() {
         console.log('Created a file!');
     });
   }
 
   // Save carmin watch data to CSV in format IPaddress:Port-Sensor,Sensor
   if(message.toString().length != 0) {
-      fs.appendFile('port' + remote.port + '.csv', currentTime + ',' + message, function (err) {
+      fs.appendFile('PORT' + remote.port + '.csv', currentTime + ',' + message, function (err) {
         if (err) throw err;
       });
   }
 
-  updateLargestStepsFile('port' + remote.port + '.csv', parseInt(data[0]));
+  updateLargestStepsFile('PORT' + remote.port + '.csv', parseInt(data[0]));
   let parseLargestPort = largestStepsFile.toString().split(".");
   parseLargestPort = parseLargestPort[0];
 
