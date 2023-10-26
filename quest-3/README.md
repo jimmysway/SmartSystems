@@ -18,13 +18,13 @@ The key features involved:
 
 | Objective Criterion | Rating | Max Value  | 
 |---------------------------------------------|:-----------:|:---------:|
-| Carmins connected via WiFi |  |  1     | 
-| Data from each Carmin sent to central server and aggregated |  |  1     | 
-| Portal reports live leader status and charts on web site |  |  1     | 
+| Carmins connected via WiFi | 1  |  1     | 
+| Data from each Carmin sent to central server and aggregated | 1  |  1     | 
+| Portal reports live leader status and charts on web site | 1  |  1     | 
 | Central server reports live leader status back to Carmin alpha displays |  |  1     | 
-| Portal accessible from open internet |  |  1     | 
-| Web cam operational in same browser window at client |  |  1     | 
-| Node.js runs on pi |  |  1     | 
+| Portal accessible from open internet | 1 |  1     | 
+| Web cam operational in same browser window at client | 1 |  1     | 
+| Node.js runs on pi | 1 |  1     | 
 
 ### Solution Design
 In Quest 3, our goal was to aggregate data from multiple Carmins through wireless networks.
@@ -48,6 +48,8 @@ Activity tracking was done by a single button cycling between states. Upon first
 To plot our data we used similar strategy to Quest 2 with a nodeJS server along with the CanvasJS graphing tool to dynamically plot our data. The JS code uses ``fswatch()`` to watch for any changes to the csv file and as soon as and since the JS writes new sensor data to the csv line by line, when the csv file updates the JS will read the data and push it to the server using socket.io.
 
 ### Sketches/Diagrams
+
+![image](https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/114517092/4ff96b6c-e78b-48b5-8e79-bf62f00620cb)
 
 
 ### Supporting Artifacts
