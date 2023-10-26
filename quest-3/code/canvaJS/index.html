@@ -161,6 +161,10 @@
         });
 
         const socket = io();
+        socket.on('largestStepsFile', function(fileName) {
+            document.getElementById("largestStepsTitle").textContent = `File with the largest number of steps is: ${fileName}`;
+        });
+        
         socket.on('data0', function(data) {
             dpsSteps1.push({
                 x: new Date(data.x),
@@ -219,6 +223,7 @@
     </script>
 </head>
 <body>
+    <h2 id="largestStepsTitle">Loading...</h2>
     <div id="chartContainerStepsComparison"></div> <!-- New Container for comparison chart -->
     <div id="gridContainer">
         <div id="chartContainerSteps1"></div> <!-- New Container for Steps 1 chart -->
