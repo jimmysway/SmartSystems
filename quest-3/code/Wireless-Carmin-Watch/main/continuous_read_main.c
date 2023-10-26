@@ -964,7 +964,7 @@ void app_main(void)
 
     wifi_init();
     xTaskCreate(udp_client_task, "udp_client", 4096, NULL, configMAX_PRIORITIES, NULL);
-    //xTaskCreate(get_time_task, "get_time_task", 4096, NULL, configMAX_PRIORITIES, NULL);
+    xTaskCreate(get_time_task, "get_time_task", 4096, NULL, configMAX_PRIORITIES, NULL);
     xTaskCreate(activity_task, "activity_task", 4096, NULL, configMAX_PRIORITIES-1, NULL);
     xTaskCreate(temperature_task, "temperature_task", 4096, NULL, configMAX_PRIORITIES-2, NULL);
     xTaskCreate(steps_task, "steps_task", 4096, NULL, configMAX_PRIORITIES-3, NULL);
