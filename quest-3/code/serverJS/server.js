@@ -6,8 +6,8 @@ let now = DateTime.now();
 
 // Port and IP
 var PORT = 3333; // Initialize a port
-// var HOST = '192.168.1.36'; // Ip address of pi
-var HOST = '10.239.114.40'; // Ip address of pi
+var HOST = '192.168.1.36'; // Ip address of pi
+// var HOST = '10.239.114.40'; // Ip address of pi
 
 // Clear all CSV files
 const directoryPath = './';
@@ -52,11 +52,6 @@ server.on('message', function (message, remote) {
   let carminData = remote.address + ':' + remote.port + "-" + message; // Later parse message by "," to get the sensor contents
   console.log(carminData);
 
-  // Save carmin watch data to CSV in format IPaddress:Port-Sensor,Sensor
-  fs.appendFile('port' + remote.port + '.csv', carminData, function (err) {
-      if (err) throw err;
-  });
-
   // ------ Add some leaderboard/parsing logic ------
   // Parser
   let data = message.toString();
@@ -66,9 +61,14 @@ server.on('message', function (message, remote) {
 
   // Get time
   now = DateTime.now();
-  let currentTime = now.toFormat('HH:mm');
-  currentTime = currentTime.toString().split(':');
-  let totalTime = currentTime[0] + currentTime[1];
+  let currentTime = now.toFormat('HH:mm:ss');
+  let currentTimeParsed = currentTime.toString().split(':');
+  let totalTime = currentTimeParsed[0] + currentTimeParsed[1];
+
+  // Save carmin watch data to CSV in format IPaddress:Port-Sensor,Sensor
+  fs.appendFile('port' + remote.port + '.csv', currentTime + ',' + message, function (err) {
+    if (err) throw err;
+  });
 
   // Send leaderboard information
   server.send(totalTime, remote.port, remote.address, function (error) {
