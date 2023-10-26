@@ -36,6 +36,21 @@ function timeStringToDate(timeStr) {
     return date;
 }
 
+let largestStepsFile = null;  // This will keep track of the file with the largest number of steps
+let totalStepsMap = {
+    'carmin0.csv': 0,
+    'carmin1.csv': 0
+};
+
+function updateLargestStepsFile(filePath, totalSteps) {
+    totalStepsMap[filePath] = totalSteps;
+
+    if (largestStepsFile === null || totalStepsMap[filePath] > totalStepsMap[largestStepsFile]) {
+        largestStepsFile = filePath;
+    }
+}
+
+
 function watchAndEmitData(csvFilePath, eventName) {
     fs.watch(csvFilePath, (eventType, filename) => {
         if (eventType === 'change') {
@@ -48,6 +63,9 @@ function watchAndEmitData(csvFilePath, eventName) {
                 temp: parseFloat(newEntry.Temp),
                 totalSteps : totalSteps
             });
+            
+            updateLargestStepsFile(csvFilePath, totalSteps);
+            console.log(`File with the largest number of steps is: ${largestStepsFile}`);
         }
     });
 }

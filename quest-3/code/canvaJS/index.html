@@ -4,10 +4,22 @@
     <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <style>
-        #chartContainerSteps, #chartContainerTemp, #chartContainerStepsComparison, #chartContainerSteps1, #chartContainerTemp1 {
-            height: 500px;
+        #gridContainer {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* This will create a 2-column grid */
+            gap: 30px; /* This will create gaps between grid items */
+            margin: 30px auto; /* Margins for the entire grid. Adjust 'auto' if you want to center the grid */
+            width: calc(80vw + 30px); /* Adding width to accommodate two 70vw charts + margin */
+        }
+    
+        #chartContainerStepsComparison {
+            height: 600px;
             width: 70vw;
-            margin: auto;
+            margin-bottom: 20px;
+        }
+        #chartContainerSteps, #chartContainerTemp, #chartContainerSteps1, #chartContainerTemp1 {
+            height: 500px;
+            width: 100%;
             margin-bottom: 20px;
         }
     </style>
@@ -55,7 +67,7 @@
                 text: "Steps over Time (Carmin 01)",
                 fontFamily: "Poppins",
                 fontWeight: "Bold",
-                fontSize: 40
+                fontSize: 20
             },
             axisY: {
                 title: "Steps",
@@ -79,7 +91,7 @@
                 text: "Temperature over Time (Carmin 01) ",
                 fontFamily: "Poppins",
                 fontWeight: "Bold",
-                fontSize: 40
+                fontSize: 20
             },
             axisY: {
                 title: "Temperature (°C)", // Adjust as needed
@@ -101,10 +113,10 @@
         
         var chartSteps = new CanvasJS.Chart("chartContainerSteps", {
             title: {
-                text: "Steps over Time (Carmin 01)",
+                text: "Steps over Time (Carmin 00)",
                 fontFamily: "Poppins",
                 fontWeight: "Bold",
-                fontSize: 40
+                fontSize: 20
             },
             axisY: {
                 title: "Steps",
@@ -125,10 +137,10 @@
 
         var chartTemp = new CanvasJS.Chart("chartContainerTemp", {
             title: {
-                text: "Temperature over Time (Carmin 01)",
+                text: "Temperature over Time (Carmin 00)",
                 fontFamily: "Poppins",
                 fontWeight: "Bold",
-                fontSize: 40
+                fontSize: 20
             },
             axisY: {
                 title: "Temperature (°C)", // Adjust as needed
@@ -208,9 +220,12 @@
 </head>
 <body>
     <div id="chartContainerStepsComparison"></div> <!-- New Container for comparison chart -->
-    <div id="chartContainerSteps1"></div> <!-- New Container for Steps 1 chart -->
-    <div id="chartContainerSteps"></div> 
-    <div id="chartContainerTemp1"></div> <!-- New Container for Temp 1 chart -->
-    <div id="chartContainerTemp"></div>
+    <div id="gridContainer">
+        <div id="chartContainerSteps1"></div> <!-- New Container for Steps 1 chart -->
+        <div id="chartContainerSteps"></div> 
+        <div id="chartContainerTemp1"></div> <!-- New Container for Temp 1 chart -->
+        <div id="chartContainerTemp"></div>
+    </div>
+
 </body>
 </html>
