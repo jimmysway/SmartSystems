@@ -76,7 +76,7 @@ server.on('message', function (message, remote) {
   });
 
   // Limit the leaderboard to the top 10 entries to prevent overflow
-  if (leaderboard.length > 10) {
+  if (leaderboard.length > 1) {
       leaderboard.pop(); // Remove the last entry
   }
 });
