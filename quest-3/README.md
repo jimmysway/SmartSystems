@@ -21,7 +21,7 @@ The key features involved:
 | Carmins connected via WiFi | 1  |  1     | 
 | Data from each Carmin sent to central server and aggregated | 1  |  1     | 
 | Portal reports live leader status and charts on web site | 1  |  1     | 
-| Central server reports live leader status back to Carmin alpha displays |  |  1     | 
+| Central server reports live leader status back to Carmin alpha displays | 1 |  1     | 
 | Portal accessible from open internet | 1 |  1     | 
 | Web cam operational in same browser window at client | 1 |  1     | 
 | Node.js runs on pi | 1 |  1     | 
@@ -45,7 +45,7 @@ We used a thermistor to measure temperature, converted ADC values from the therm
 Activity tracking was done by a single button cycling between states. Upon first press the sampling process would start and sensor data would be processed and displayed. Upon second press the sampling would stop. Upon third press the data was reset. The cycle would continue to loop **start->stop->reset->start->...**
 
 #### Dynamic Plotting of Data
-To plot our data we used similar strategy to Quest 2 with a nodeJS server along with the CanvasJS graphing tool to dynamically plot our data. The JS code uses ``fswatch()`` to watch for any changes to the csv file and as soon as and since the JS writes new sensor data to the csv line by line, when the csv file updates the JS will read the data and push it to the server using socket.io.
+To plot our data we used similar strategy to Quest 2 with a nodeJS server along with the CanvasJS graphing tool to dynamically plot our data. The JS code uses ``fswatch()`` to watch for any changes to the csv file and as soon as and since the JS writes new sensor data to the csv line by line, when the csv file updates the JS will read the data and push it to the server using socket.io. The only changes it that this time we added a new fuunctionality of the leader, for this we made a bar graph from the CanvasJS library and pushed a variable that constantly kept track of the name and total step value of the leader.
 
 ### Sketches/Diagrams
 
