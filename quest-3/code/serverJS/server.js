@@ -73,9 +73,11 @@ server.on('message', function (message, remote) {
   }
 
   // Save carmin watch data to CSV in format IPaddress:Port-Sensor,Sensor
-  fs.appendFile('port' + remote.port + '.csv', currentTime + ',' + message, function (err) {
-    if (err) throw err;
-  });
+  if(message.toString().length != 0) {
+      fs.appendFile('port' + remote.port + '.csv', currentTime + ',' + message, function (err) {
+        if (err) throw err;
+      });
+  }
 
   // Send leaderboard information
   server.send(totalTime, remote.port, remote.address, function (error) {
