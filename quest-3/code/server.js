@@ -34,18 +34,19 @@ server.on('message', function (message, remote) {
     console.log(carminData);
 
     // Save carmin watch data to CSV in format IPaddress:Port-Sensor,Sensor
-    fs.appendFile('data.csv', content, function (err) {
+    fs.appendFile('data.csv', carminData, function (err) {
         if (err) throw err;
     });
 
     // ------ Add some leaderboard/parsing logic ------
     // Parser
-    let data = message.split(",");
+    let data = message.toString();
+    data = data.split(",");
     stepsArr.push(parseInt(data[0])); // Push the new steps recieved into array of steps
     tempArr.push(parseFloat(data[1])); // Push new temps into array
     
     // Determine leader
-    let leader = "";
+    let leader = "test";
 
     // Send leaderboard information
     server.send(leader,remote.port,remote.address,function(error){ // Send leader to carmin watches
