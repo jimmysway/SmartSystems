@@ -31,6 +31,7 @@
 #include "nvs_flash.h"
 
 char buff[128];
+char payload[128];
 
 ////////////////////////// Temperature Sensor //////////////////////////
 
@@ -586,7 +587,7 @@ static void buzzer_init(void)
 #define WIFI_SSID      "Group_7"
 #define WIFI_PASSWORD  "smartsys"
 #define UDP_SERVER_IP  "192.168.1.36"
-#define UDP_PORT       8080
+#define UDP_PORT       3333
 #define ESP32_HOSTNAME "ESP32"
 static const char *TAG = "UDP_CLIENT";
 
@@ -649,7 +650,8 @@ static void timer_task(void *arg)
             timerCount++;
             //print data (step, temp)
             if(timerCount == 10 && button_state == 2) {
-                printf("%d,%f\n", stepCount, tempC);
+                sprintf(payload, "%d,%f\n", stepCount, tempC);
+                printf("%s\n", payload);
                 // printf("%s", buff);
                 stepCount = 0;
                 timerCount = 0;
@@ -862,12 +864,12 @@ static void udp_client_task(void *pvParameters) {
         ESP_LOGI(TAG, "Socket created");
 
         while (1) {
-            int err = sendto(sock, "GET_BLINK_TIME", strlen("GET_BLINK_TIME"), 0, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
+            int err = sendto(sock, payload, strlen(payload), 0, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
             if (err < 0) {
                 ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
                 break;
             }
-
+            ESP_LOGI(TAG, "%s Message sent", payload);
             // Listen for incoming data after sending.
             int len = recvfrom(sock, rx_buffer, sizeof(rx_buffer) - 1, 0, (struct sockaddr *)&source_addr, &socklen);
 
@@ -881,6 +883,7 @@ static void udp_client_task(void *pvParameters) {
                 rx_buffer[len] = 0;  // Null-terminate whatever was received to make it a string
                 ESP_LOGI(TAG, "Received %d bytes from %s:", len, inet_ntoa(source_addr.sin_addr));
                 ESP_LOGI(TAG, "%s", rx_buffer);
+                strcpy(buff,(char*) rx_buffer);
 
                 // int received_blink_duration = atoi(rx_buffer);
                 // ESP_LOGI("BLINK", "%d", received_blink_duration);
@@ -961,7 +964,7 @@ void app_main(void)
 
     wifi_init();
     xTaskCreate(udp_client_task, "udp_client", 4096, NULL, configMAX_PRIORITIES, NULL);
-    xTaskCreate(get_time_task, "get_time_task", 4096, NULL, configMAX_PRIORITIES, NULL);
+    //xTaskCreate(get_time_task, "get_time_task", 4096, NULL, configMAX_PRIORITIES, NULL);
     xTaskCreate(activity_task, "activity_task", 4096, NULL, configMAX_PRIORITIES-1, NULL);
     xTaskCreate(temperature_task, "temperature_task", 4096, NULL, configMAX_PRIORITIES-2, NULL);
     xTaskCreate(steps_task, "steps_task", 4096, NULL, configMAX_PRIORITIES-3, NULL);
