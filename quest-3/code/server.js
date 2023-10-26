@@ -31,7 +31,6 @@ let tempArr = [];
 // initialize leaderboard
 let leaderboard = [];
 
-
 // On connection, print out received message
 server.on('message', function (message, remote) {
   let carminData = remote.address + ':' + remote.port + "-" + message; // Later parse message by "," to get the sensor contents
@@ -49,36 +48,18 @@ server.on('message', function (message, remote) {
   stepsArr.push(parseInt(data[0])); // Push the new steps recieved into array of steps
   tempArr.push(parseFloat(data[1])); // Push new temps into array
 
-  // Update leaderboard data
-  leaderboard.push({
-      ipAddress: remote.address,
-      port: remote.port,
-      steps: parseInt(data[0]),
-      temperature: parseFloat(data[1]),
-  });
-
-  // Sort the leaderboard based on steps (descending order)
-  leaderboard.sort((a, b) => b.steps - a.steps);
-
-  // Prepare the leaderboard message (by steps)
-  let leaderboardMessage = "Leaderboard:\n";
-  leaderboard.forEach((entry, index) => {
-      leaderboardMessage += `${index + 1}. ${entry.ipAddress}:${entry.port} - Steps: ${entry.steps}, Temp: ${entry.temperature}\n`;
-  });
+  // Get time
+  now = DateTime.now();
+  let currentTime = now.toFormat('HH:mm');
 
   // Send leaderboard information
-  server.send(leaderboardMessage, remote.port, remote.address, function (error) {
+  server.send(currentTime, remote.port, remote.address, function (error) {
       if (error) {
           console.log('MEH!');
       } else {
-          console.log('Sent Leaderboard:\n', leaderboardMessage);
+          console.log('Sent: ', currentTime);
       }
   });
-
-  // Limit the leaderboard to the top 10 entries to prevent overflow
-  if (leaderboard.length > 1) {
-      leaderboard.pop(); // Remove the last entry
-  }
 });
 
 // Bind server to port and IP
