@@ -6,8 +6,8 @@ let now = DateTime.now();
 
 // Port and IP
 var PORT = 3333; // Initialize a port
-// var HOST = '192.168.1.36'; // Ip address of pi
-var HOST = '10.239.114.40'; // Ip address of pi
+var HOST = '192.168.1.36'; // Ip address of pi
+// var HOST = '10.239.114.40'; // Ip address of pi
 
 // Clear all CSV files
 const directoryPath = './';
