@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-3/code/Wireless-Carmin-Watch/build/CMakeFiles/bootloader
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-3/code/Wireless-Carmin-Watch/build/CMakeFiles/bootloader.rule
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-3/code/Wireless-Carmin-Watch/build/CMakeFiles/bootloader-complete.rule
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-3/code/Wireless-Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-3/code/Wireless-Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-3/code/Wireless-Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-3/code/Wireless-Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-3/code/Wireless-Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-3/code/Wireless-Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/jason/Documents/Schoolwork/Fall_2023/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-3/code/Wireless-Carmin-Watch/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

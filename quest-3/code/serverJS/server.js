@@ -49,6 +49,9 @@ let leaderboard = [];
 
 // On connection, print out received message
 server.on('message', function (message, remote) {
+  if(message.toString() === '') {
+      return;
+  }
   let carminData = remote.address + ':' + remote.port + "-" + message; // Later parse message by "," to get the sensor contents
   console.log(carminData);
 
@@ -71,7 +74,6 @@ server.on('message', function (message, remote) {
         console.log('Created a file!');
     });
   }
-
 
   // Save carmin watch data to CSV in format IPaddress:Port-Sensor,Sensor
   fs.appendFile('port' + remote.port + '.csv', currentTime + ',' + message, function (err) {
