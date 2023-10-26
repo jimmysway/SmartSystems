@@ -51,11 +51,6 @@ server.on('message', function (message, remote) {
     
     // Determine leader
     let leader = "test";
-  // ------ Step 2: Add leaderboard/parsing logic ------
-  // Parser
-  let data = message.split(",");
-  stepsArr.push(parseInt(data[0])); // Push the new steps received into the array of steps
-  tempArr.push(parseFloat(data[1])); // Push new temps into the array
 
   // Update leaderboard data
   leaderboard.push({
@@ -68,7 +63,7 @@ server.on('message', function (message, remote) {
   // Sort the leaderboard based on steps (descending order)
   leaderboard.sort((a, b) => b.steps - a.steps);
 
-  // Prepare the leaderboard message
+  // Prepare the leaderboard message (by steps)
   let leaderboardMessage = "Leaderboard:\n";
   leaderboard.forEach((entry, index) => {
       leaderboardMessage += `${index + 1}. ${entry.ipAddress}:${entry.port} - Steps: ${entry.steps}, Temp: ${entry.temperature}\n`;
