@@ -882,8 +882,11 @@ static void udp_client_task(void *pvParameters) {
             else {
                 rx_buffer[len] = 0;  // Null-terminate whatever was received to make it a string
                 ESP_LOGI(TAG, "Received %d bytes from %s:", len, inet_ntoa(source_addr.sin_addr));
-                ESP_LOGI(TAG, "%s", rx_buffer);
-                strcpy(buff,(char*) rx_buffer);
+                if(strlen(rx_buffer) > 0)
+                {
+                    ESP_LOGI(TAG, "%s", rx_buffer);
+                    strcpy(buff,(char*) rx_buffer);
+                }
 
                 // int received_blink_duration = atoi(rx_buffer);
                 // ESP_LOGI("BLINK", "%d", received_blink_duration);
