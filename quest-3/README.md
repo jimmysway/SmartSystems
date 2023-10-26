@@ -26,6 +26,27 @@ The key features involved:
 | Web cam operational in same browser window at client |  |  1     | 
 | Node.js runs on pi |  |  1     | 
 
+### Solution Design
+In Quest 3, our goal was to aggregate data from multiple Carmins through wireless networks.
+
+#### WiFi Connection
+To ensure the Carmins were connected on WiFi, we created a free DDNS account from NO-IP provider and set up local "Group 7" router to connect to the service. Then we setup our laptop as a web server (node.js server) and accessed the web server from the hosted DDNS name (on and off the BU network, e.g., from your cellular service). We made our hostname: group7.ddns.net and brought up basic WiFi functionality on an ESP32 by altering the WIFI_SSID.
+
+#### Web Portal
+Data was plotting is done through CanvasJS which followed (1) Feeding the (live) data from the serial port directly into the browser client via socket.io as the link between the node app and the client javascript; and (2) feeding the live data to the browser while saving the data to a local file (local to the node server). The ESP32 writes sensor data to the serial port which is read by the JS file which then writes the sensor data into a csv file (for storage purposes), which is then read and updated to the nodeJS server. The nodeJS server checks for after updates to the csv file and pushes it to the sensor graphs in real-time. 
+
+#### Time Display
+For time tracking we used an alphanumeric display that interfaces with the ESP32 using I2C. The time in the present is sent to the serial port from the nodeJS server once and is kept track of and incremented using the ESP32s own time tracking functionality.
+
+#### Temperature and Buzzer
+We used a thermistor to measure temperature, converted ADC values from the thermistor into Celsius values, once the Celsius values exceeded a certain set threshold (40 C) the buzzer would go off.
+
+#### Activity Tracking
+Activity tracking was done by a single button cycling between states. Upon first press the sampling process would start and sensor data would be processed and displayed. Upon second press the sampling would stop. Upon third press the data was reset. The cycle would continue to loop **start->stop->reset->start->...**
+
+#### Dynamic Plotting of Data
+To plot our data we used similar strategy to Quest 2 with a nodeJS server along with the CanvasJS graphing tool to dynamically plot our data. The JS code uses ``fswatch()`` to watch for any changes to the csv file and as soon as and since the JS writes new sensor data to the csv line by line, when the csv file updates the JS will read the data and push it to the server using socket.io.
+
 ### Sketches/Diagrams
 
 
