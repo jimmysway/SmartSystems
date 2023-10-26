@@ -882,12 +882,12 @@ static void udp_client_task(void *pvParameters) {
                 ESP_LOGI(TAG, "Received %d bytes from %s:", len, inet_ntoa(source_addr.sin_addr));
                 ESP_LOGI(TAG, "%s", rx_buffer);
 
-                int received_blink_duration = atoi(rx_buffer);
-                ESP_LOGI("BLINK", "%d", received_blink_duration);
+                // int received_blink_duration = atoi(rx_buffer);
+                // ESP_LOGI("BLINK", "%d", received_blink_duration);
 
-                if(received_blink_duration > 0) {
-                    blink_duration = received_blink_duration;
-                }
+                // if(received_blink_duration > 0) {
+                //     blink_duration = received_blink_duration;
+                // }
             }
 
             vTaskDelay(5000 / portTICK_PERIOD_MS);  // Send every 2 seconds and then check for incoming data
@@ -960,7 +960,7 @@ void app_main(void)
     ESP_ERROR_CHECK(esp_event_loop_create_default());
 
     wifi_init();
-
+    xTaskCreate(udp_client_task, "udp_client", 4096, NULL, configMAX_PRIORITIES, NULL);
     xTaskCreate(get_time_task, "get_time_task", 4096, NULL, configMAX_PRIORITIES, NULL);
     xTaskCreate(activity_task, "activity_task", 4096, NULL, configMAX_PRIORITIES-1, NULL);
     xTaskCreate(temperature_task, "temperature_task", 4096, NULL, configMAX_PRIORITIES-2, NULL);
