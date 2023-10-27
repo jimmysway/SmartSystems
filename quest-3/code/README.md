@@ -23,4 +23,8 @@ Client-side (index.html):
 Listens for data updates from the server using Socket.io.
 Updates CanvasJS charts in real-time when new data is received.
 Displays a comparison bar chart for total steps of each ESP watch
-Displays the leader and the total steps and the ID of the leader
+Displays the leader and the total steps and the ID of the leader.
+
+Esp32:
+
+The esp code is built on-top of our last skill. Each of our esp's/carmin watches are also wifi-supported now, so we configured them to connect to our router and send sensor data across UDP sockets. It then receives information from the server regarding the current leader and time of day. This is displayed on the alphanumeric display, and since the total character length of the entire message is more than 4, we had to scroll the message.
