@@ -3,7 +3,7 @@
 
 ### NodeJS and Server, Step and Temperature Visualization using Express, Socket.io, and CanvasJS
 
-A web app that visualizes real-time step and temperature data from CSV files.
+Our web app visualizes real-time step and temperature data from CSV files.
 
 Technologies:
 1. Node.js & Express: Backend server setup.
