@@ -22,4 +22,5 @@ Client-side (index.html):
 
 Listens for data updates from the server using Socket.io.
 Updates CanvasJS charts in real-time when new data is received.
-Displays a comparison bar chart for total steps of carmin0 and carmin1.
+Displays a comparison bar chart for total steps of each ESP watch
+Displays the leader and the total steps and the ID of the leader
