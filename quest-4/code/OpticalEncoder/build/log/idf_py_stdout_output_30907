@@ -1,0 +1,286 @@
+D/IRAM[0m
+[0;32mI (289) heap_i�[0;32mI (13) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Nov  7 2023 22:45:30[0m
+[0;32mI (15) boot: Multicore bootloader[0m
+[0;32mI (19) boot: chip revision: v3.0[0m
+[0;32mI (23) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (27) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (32) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cbe0h ( 52192) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=0001cc08 vaddr=3ffb0000 size=02148h (  8520) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=0001ed58 vaddr=40080000 size=012c0h (  4800) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=19cech (105708) map[0m
+[0;32mI (159) esp_image: segment 4: paddr=00039d14 vaddr=400812c0 size=0be9ch ( 48796) load[0m
+[0;32mI (186) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (186) boot: Disabling RNG early entropy source...[0m
+[0;32mI (198) cpu_start: Multicore app[0m
+[0;32mI (198) cpu_start: Pro cpu up.[0m
+[0;32mI (198) cpu_start: Starting app cpu, entry point is 0x40081154[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (216) cpu_start: Pro cpu start user code[0m
+[0;32mI (216) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (216) cpu_start: Application information:[0m
+[0;32mI (221) cpu_start: Project name:     blink[0m
+[0;32mI (226) cpu_start: App version:      abf8bfc[0m
+[0;32mI (231) cpu_start: Compile time:     Nov  7 2023 22:45:18[0m
+[0;32mI (237) cpu_start: ELF file SHA256:  aa01b2a9c...[0m
+[0;32mI (242) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (249) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (254) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (259) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (264) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (271) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (277) heap_init: At 3FFB29E8 len 0002D618 (181 KiB): DRAM[0m
+[0;32mI (283) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (289) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (296) heap_init: At 4008D15C len 00012EA4 (75 KiB): IRAM[0m
+[0;32mI (303) spi_flash: detected chip: generic[0m
+[0;32mI (306) spi_flash: flash io: dio[0m
+[0;33mW (310) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (324) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (332) app_start: Starting scheduler on CPU0[0m
+[0;32mI (337) app_start: Starting scheduler on CPU1[0m
+[0;32mI (337) main_task: Started on CPU0[0m
+[0;32mI (347) main_task: Calling app_main()[0m
+[0;32mI (347) example: Create timer and operator[0m
+[0;32mI (347) example: Connect timer and operator[0m
+[0;32mI (357) example: Create comparator and generator from the operator[0m
+[0;32mI (367) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (367) example: Set generator action on timer and compare event[0m
+[0;32mI (377) example: Enable and start timer[0m
+[0;32mI (387) example: Create timer and operator[0m
+eFuse Two Point: NOT supported
+[0;32mI (397) example: Connect timer and operator[0m
+eFuse Vref: Supported
+[0;32mI (397) example: Create comparator and generator from the operator[0m
+Characterized using eFuse Vref
+[0;32mI (407) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (427) example: Set generator action on timer and compare event[0m
+[0;32mI (427) example: Enable and start timer[0m
+[0;32mI (387) main_task: Returned from app_main()[0m
+Count: 1
+Speed is 0.1m/s
+Count: 0
+Speed is 0.0m/s
+Count: 0
+Speed is 0.0m/s
+[0;32mI (3937) example: Speed of buggy: 0.000000[0m
+Count: 0
+Speed is 0.0m/s
+Count: 0
+Speed is 0.0m/s
+[0;32mI (5937) example: Speed of buggy: 0.130000[0m
+Count: 1
+Speed is 0.1m/s
+Count: 15
+Speed is 1.1m/s
+[0;32mI (7937) example: Speed of buggy: 0.140000[0m
+Count: 22
+Speed is 1.6m/s
+[0;32mI (8937) example: Speed of buggy: 0.150000[0m
+Count: 30
+Speed is 2.2m/s
+[0;32mI (9937) example: Speed of buggy: 0.160000[0m
+Count: 33
+Speed is 2.4m/s
+Count: 34
+Speed is 2.5m/s
+[0;32mI (11937) example: Speed of buggy: 0.000000[0m
+[0;32mI (12037) example: Speed of buggy: 0.000000[0m
+Count: 25
+Speed is 1.8m/s
+Count: 0
+Speed is 0.0m/s
+[0;32mI (14037) example: Speed of buggy: 0.130000[0m
+Count: 0
+Speed is 0.0m/s
+Count: 0
+Speed is 0.0m/s
+[0;32mI (16037) example: Speed of buggy: 0.140000[0m
+Count: 4
+Speed is 0.3m/s
+[0;32mI (17037) example: Speed of buggy: 0.150000[0m
+Count: 30
+Speed is 2.2m/s
+[0;32mI (18037) example: Speed of buggy: 0.160000[0m
+Count: 36
+Speed is 2.6m/s
+Count: 38
+Speed is 2.8m/s
+[0;32mI (20037) example: Speed of buggy: 0.000000[0m
+[0;32mI (20137) example: Speed of buggy: 0.000000[0m
+Count: 27
+Speed is 2.0m/s
+Count: 0
+Speed is 0.0m/s
+[0;32mI (22137) example: Speed of buggy: 0.130000[0m
+Count: 0
+Speed is 0.0m/s
+Count: 8
+Speed is 0.6m/s
+[0;32mI (24137) example: Speed of buggy: 0.140000[0m
+Count: 21
+Speed is 1.5m/s
+[0;32mI (25137) example: Speed of buggy: 0.150000[0m
+Count: 33
+Speed is 2.4m/s
+[0;32mI (26137) example: Speed of buggy: 0.160000[0m
+Count: 35
+Speed is 2.6m/s
+Count: 36
+Speed is 2.6m/s
+[0;32mI (28137) example: Speed of buggy: 0.000000[0m
+[0;32mI (28237) example: Speed of buggy: 0.000000[0m
+Count: 36
+Speed is 2.6m/s
+Count: 3
+Speed is 0.2m/s
+[0;32mI (30237) example: Speed of buggy: 0.130000[0m
+Count: 0
+Speed is 0.0m/s
+Count: 0
+Speed is 0.0m/s
+[0;32mI (32237) example: Speed of buggy: 0.140000[0m
+Count: 1
+Speed is 0.1m/s
+[0;32mI (33237) example: Speed of buggy: 0.150000[0m
+Count: 25
+Speed is 1.8m/s
+[0;32mI (34237) example: Speed of buggy: 0.160000[0m
+Count: 34
+Speed is 2.5m/s
+Count: 37
+Speed is 2.7m/s
+[0;32mI (36237) example: Speed of buggy: 0.000000[0m
+[0;32mI (36337) example: Speed of buggy: 0.000000[0m
+Count: 32
+Speed is 2.3m/s
+Count: 4
+Speed is 0.3m/s
+[0;32mI (38337) example: Speed of buggy: 0.130000[0m
+Count: 0
+Speed is 0.0m/s
+Count: 6
+Speed is 0.4m/s
+[0;32mI (40337) example: Speed of buggy: 0.140000[0m
+Count: 18
+Speed is 1.3m/s
+[0;32mI (41337) example: Speed of buggy: 0.150000[0m
+Count: 24
+Speed is 1.8m/s
+[0;32mI (42337) example: Speed of buggy: 0.160000[0m
+Count: 32
+Speed is 2.3m/s
+Count: 34
+Speed is 2.5m/s
+[0;32mI (44337) example: Speed of buggy: 0.000000[0m
+Count: 32
+Speed is 2.3m/s
+[0;32mI (44437) example: Speed of buggy: 0.000000[0m
+Count: 7
+Speed is 0.5m/s
+Count: 0
+Speed is 0.0m/s
+[0;32mI (46437) example: Speed of buggy: 0.130000[0m
+Count: 4
+Speed is 0.3m/s
+Count: 17
+Speed is 1.2m/s
+[0;32mI (48437) example: Speed of buggy: 0.140000[0m
+Count: 24
+Speed is 1.8m/s
+[0;32mI (49437) example: Speed of buggy: 0.150000[0m
+Count: 31
+Speed is 2.3m/s
+[0;32mI (50437) example: Speed of buggy: 0.160000[0m
+Count: 34
+Speed is 2.5m/s
+Count: 36
+Speed is 2.6m/s
+[0;32mI (52437) example: Speed of buggy: 0.000000[0m
+[0;32mI (52537) example: Speed of buggy: 0.000000[0m
+Count: 10
+Speed is 0.7m/s
+Count: 0
+Speed is 0.0m/s
+[0;32mI (54537) example: Speed of buggy: 0.130000[0m
+Count: 0
+Speed is 0.0m/s
+Count: 0
+Speed is 0.0m/s
+[0;32mI (56537) example: Speed of buggy: 0.140000[0m
+Count: 7
+Speed is 0.5m/s
+[0;32mI (57537) example: Speed of buggy: 0.150000[0m
+Count: 30
+Speed is 2.2m/s
+[0;32mI (58537) example: Speed of buggy: 0.160000[0m
+Count: 33
+Speed is 2.4m/s
+Count: 32
+Speed is 2.3m/s
+[0;32mI (60537) example: Speed of buggy: 0.000000[0m
+[0;32mI (60637) example: Speed of buggy: 0.000000[0m
+Count: 16
+Speed is 1.2m/s
+Count: 0
+Speed is 0.0m/s
+[0;32mI (62637) example: Speed of buggy: 0.130000[0m
+Count: 0
+Speed is 0.0m/s
+Count: 0
+Speed is 0.0m/s
+[0;32mI (64637) example: Speed of buggy: 0.140000[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (65637) example: Speed of buggy: 0.150000[0m
+Count: 22
+Speed is 1.6m/s
+[0;32mI (66637) example: Speed of buggy: 0.160000[0m
+Count: 34
+Speed is 2.5m/s
+Count: 32
+Speed is 2.3m/s
+[0;32mI (68637) example: Speed of buggy: 0.000000[0m
+[0;32mI (68737) example: Speed of buggy: 0.000000[0m
+Count: 15
+Speed is 1.1m/s
+Count: 0
+Speed is 0.0m/s
+[0;32mI (70737) example: Speed of buggy: 0.130000[0m
+Count: 0
+Speed is 0.0m/s
+Count: 0
+Speed is 0.0m/s
+[0;32mI (72737) example: Speed of buggy: 0.140000[0m
+Count: 7
+Speed is 0.5m/s
+[0;32mI (73737) example: Speed of buggy: 0.150000[0m
+Count: 24
+Speed is 1.8m/s
+[0;32mI (74737) example: Speed of buggy: 0.160000[0m
+Count: 31
+Speed is 2.3m/s
+Count: 36
+Speed is 2.6m/s
+[0;32mI (76737) example: Speed of buggy: 0.000000[0m
+[0;32mI (76837) example: Speed of buggy: 0.000000[0m
+Count: 20
+Speed is 1.5m/s
+Count: 0
+Speed is 0.0m/s
+[0;32mI (78837) example: Speed of buggy: 0.130000[0m
+Count: 0
+Speed is 0.0m/s
+Count: 0
+Speed is 0.0m/s
+[0;32mI (80837) example: Speed of buggy: 0.140000[0m
+Count: 4
+Speed is 0.3m/s
