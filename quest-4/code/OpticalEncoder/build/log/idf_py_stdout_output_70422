@@ -1,0 +1,4789 @@
+     v3.0[0m
+[0;32m�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2023 18:00:02[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0dfd4h ( 57300) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0001dffc vaddr=3ffb0000 size=0201ch (  8220) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00020020 vaddr=400d0020 size=1c8f0h (116976) map[0m
+[0;32mI (175) esp_image: segment 3: paddr=0003c918 vaddr=3ffb201c size=0015ch (   348) load[0m
+[0;32mI (176) esp_image: segment 4: paddr=0003ca7c vaddr=40080000 size=0dbdch ( 56284) load[0m
+[0;32mI (211) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (211) boot: Disabling RNG early entropy source...[0m
+[0;32mI (223) cpu_start: Multicore app[0m
+[0;32mI (223) cpu_start: Pro cpu up.[0m
+[0;32mI (223) cpu_start: Starting app cpu, entry point is 0x400811b0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (241) cpu_start: Pro cpu start user code[0m
+[0;32mI (241) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (241) cpu_start: Application information:[0m
+[0;32mI (246) cpu_start: Project name:     blink[0m
+[0;32mI (251) cpu_start: App version:      51730a5-dirty[0m
+[0;32mI (256) cpu_start: Compile time:     Nov  9 2023 20:47:07[0m
+[0;32mI (262) cpu_start: ELF file SHA256:  dcfba3432...[0m
+[0;32mI (268) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (275) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (279) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (284) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (289) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (296) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (302) heap_init: At 3FFB2A38 len 0002D5C8 (181 KiB): DRAM[0m
+[0;32mI (308) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (315) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (321) heap_init: At 4008DBDC len 00012424 (73 KiB): IRAM[0m
+[0;32mI (329) spi_flash: detected chip: generic[0m
+[0;32mI (332) spi_flash: flash io: dio[0m
+[0;33mW (336) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (349) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (360) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (369) app_start: Starting scheduler on CPU0[0m
+[0;32mI (373) app_start: Starting scheduler on CPU1[0m
+[0;32mI (373) main_task: Started on CPU0[0m
+[0;32mI (383) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x62
+
+>> Polling LIDAR
+[0;32mI (413) example: Install capture timer[0m
+[0;32mI (413) example: Install capture channel[0m
+[0;32mI (413) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (423) example: Register capture callback[0m
+[0;32mI (433) example: Enable capture channel[0m
+[0;32mI (433) example: Configure Trig pin[0m
+[0;32mI (443) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (443) example: Enable and start capture timer[0m
+[0;32mI (453) example: Create timer and operator[0m
+[0;32mI (453) example: Measured distance: 9.58cm[0m
+[0;32mI (463) example: Connect timer and operator[0m
+[0;32mI (463) example: Create timer and operator[0m
+[0;32mI (473) example: Create comparator and generator from the operator[0m
+[0;32mI (473) example: Connect timer and operator[0m
+[0;32mI (483) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (483) example: Create comparator and generator from the operator[0m
+[0;32mI (503) example: Set generator action on timer and compare event[0m
+[0;32mI (503) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (513) example: Enable and start timer[0m
+[0;32mI (513) example: Set generator action on timer and compare event[0m
+eFuse Two Point: NOT supported
+[0;32mI (533) example: Enable and start timer[0m
+eFuse Vref: Supported
+[0;32mI (463) main_task: Returned from app_main()[0m
+Characterized using eFuse Vref
+[0;32mI (773) example: WALL DETECTED[0m
+Distance: 35
+[0;32mI (973) example: Measured distance: 9.32cm[0m
+[0;32mI (1213) example: WALL DETECTED[0m
+Distance: 34
+Count: 1
+Speed is 0.1m/s
+[0;32mI (1473) example: Measured distance: 9.62cm[0m
+[0;32mI (1673) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (1973) example: Measured distance: 9.32cm[0m
+[0;32mI (2113) example: WALL DETECTED[0m
+Distance: 34
+Count: 0
+Speed is 0.0m/s
+[0;32mI (2473) example: Measured distance: 9.39cm[0m
+[0;32mI (2553) example: WALL DETECTED[0m
+Distance: 34
+[0;32mI (2973) example: Measured distance: 9.48cm[0m
+[0;32mI (3013) example: WALL DETECTED[0m
+Distance: 34
+[0;32mI (3453) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (3473) example: Measured distance: 9.37cm[0m
+[0;32mI (3913) example: WALL DETECTED[0m
+Distance: 34
+[0;32mI (3973) example: Measured distance: 9.39cm[0m
+[0;32mI (4353) example: WALL DETECTED[0m
+Distance: 34
+Count: 0
+Speed is 0.0m/s
+[0;32mI (4473) example: Measured distance: 9.70cm[0m
+[0;32mI (4773) example: WALL DETECTED[0m
+Distance: 35
+[0;32mI (4973) example: Measured distance: 9.40cm[0m
+[0;32mI (5203) example: WALL DETECTED[0m
+Distance: 40
+Count: 0
+Speed is 0.0m/s
+[0;32mI (5473) example: Measured distance: 9.42cm[0m
+[0;32mI (5653) example: WALL DETECTED[0m
+Distance: 36
+[0;32mI (5973) example: Measured distance: 9.29cm[0m
+[0;32mI (6093) example: WALL DETECTED[0m
+Distance: 36
+Count: 0
+Speed is 0.0m/s
+[0;32mI (6473) example: Measured distance: 9.14cm[0m
+[0;32mI (6543) example: WALL DETECTED[0m
+Distance: 38
+[0;32mI (6973) example: Measured distance: 8.90cm[0m
+[0;32mI (6973) example: WALL DETECTED[0m
+Distance: 37
+[0;32mI (7423) example: WALL DETECTED[0m
+Distance: 36
+Count: 0
+Speed is 0.0m/s
+[0;32mI (7473) example: Measured distance: 8.68cm[0m
+[0;32mI (7863) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (7973) example: Measured distance: 8.95cm[0m
+[0;32mI (8323) example: WALL DETECTED[0m
+Distance: 30
+Count: 0
+Speed is 0.0m/s
+[0;32mI (8473) example: Measured distance: 9.02cm[0m
+[0;32mI (8753) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (8973) example: Measured distance: 8.84cm[0m
+[0;32mI (9183) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (9473) example: Measured distance: 8.93cm[0m
+[0;32mI (9633) example: WALL DETECTED[0m
+Distance: 21
+[0;32mI (9973) example: Measured distance: 8.98cm[0m
+[0;32mI (10103) example: WALL DETECTED[0m
+Distance: 20
+Count: 0
+Speed is 0.0m/s
+[0;32mI (10473) example: Measured distance: 8.98cm[0m
+[0;32mI (10563) example: WALL DETECTED[0m
+Distance: 22
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2023 18:00:02[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0dfd4h ( 57300) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0001dffc vaddr=3ffb0000 size=0201ch (  8220) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00020020 vaddr=400d0020 size=1c8f0h (116976) map[0m
+[0;32mI (175) esp_image: segment 3: paddr=0003c918 vaddr=3ffb201c size=0015ch (   348) load[0m
+[0;32mI (176) esp_image: segment 4: paddr=0003ca7c vaddr=40080000 size=0dbdch ( 56284) load[0m
+[0;32mI (211) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (211) boot: Disabling RNG early entropy source...[0m
+[0;32mI (223) cpu_start: Multicore app[0m
+[0;32mI (223) cpu_start: Pro cpu up.[0m
+[0;32mI (223) cpu_start: Starting app cpu, entry point is 0x400811b0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (241) cpu_start: Pro cpu start user code[0m
+[0;32mI (241) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (241) cpu_start: Application information:[0m
+[0;32mI (246) cpu_start: Project name:     blink[0m
+[0;32mI (251) cpu_start: App version:      51730a5-dirty[0m
+[0;32mI (256) cpu_start: Compile time:     Nov  9 2023 20:47:07[0m
+[0;32mI (262) cpu_start: ELF file SHA256:  dcfba3432...[0m
+[0;32mI (268) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (275) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (279) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (284) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (289) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (296) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (302) heap_init: At 3FFB2A38 len 0002D5C8 (181 KiB): DRAM[0m
+[0;32mI (308) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (315) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (321) heap_init: At 4008DBDC len 00012424 (73 KiB): IRAM[0m
+[0;32mI (329) spi_flash: detected chip: generic[0m
+[0;32mI (332) spi_flash: flash io: dio[0m
+[0;33mW (336) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (349) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (360) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (369) app_start: Starting scheduler on CPU0[0m
+[0;32mI (373) app_start: Starting scheduler on CPU1[0m
+[0;32mI (373) main_task: Started on CPU0[0m
+[0;32mI (383) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x62
+
+>> Polling LIDAR
+[0;32mI (413) example: Install capture timer[0m
+[0;32mI (413) example: Install capture channel[0m
+[0;32mI (413) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (423) example: Register capture callback[0m
+[0;32mI (433) example: Enable capture channel[0m
+[0;32mI (433) example: Configure Trig pin[0m
+[0;32mI (443) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (443) example: Enable and start capture timer[0m
+[0;32mI (453) example: Create timer and operator[0m
+[0;32mI (453) example: Measured distance: 8.94cm[0m
+[0;32mI (463) example: Connect timer and operator[0m
+[0;32mI (453) example: Create timer and operator[0m
+[0;32mI (473) example: Create comparator and generator from the operator[0m
+[0;32mI (473) example: Connect timer and operator[0m
+[0;32mI (483) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (483) example: Create comparator and generator from the operator[0m
+[0;32mI (503) example: Set generator action on timer and compare event[0m
+[0;32mI (503) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (513) example: Enable and start timer[0m
+[0;32mI (513) example: Set generator action on timer and compare event[0m
+eFuse Two Point: NOT supported
+[0;32mI (533) example: Enable and start timer[0m
+eFuse Vref: Supported
+[0;32mI (453) main_task: Returned from app_main()[0m
+Characterized using eFuse Vref
+[0;32mI (773) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (973) example: Measured distance: 8.90cm[0m
+[0;32mI (1213) example: WALL DETECTED[0m
+Distance: 29
+Count: 1
+Speed is 0.1m/s
+[0;32mI (1473) example: Measured distance: 8.90cm[0m
+[0;32mI (1653) example: WALL DETECTED[0m
+Distance: 30
+[0;32mI (1973) example: Measured distance: 8.89cm[0m
+[0;32mI (2093) example: WALL DETECTED[0m
+Distance: 30
+Count: 0
+Speed is 0.0m/s
+[0;32mI (2473) example: Measured distance: 9.03cm[0m
+[0;32mI (2523) example: WALL DETECTED[0m
+Distance: 30
+[0;32mI (2973) example: Measured distance: 8.90cm[0m
+[0;32mI (2973) example: WALL DETECTED[0m
+Distance: 30
+[0;32mI (3403) example: WALL DETECTED[0m
+Distance: 30
+Count: 0
+Speed is 0.0m/s
+[0;32mI (3473) example: Measured distance: 9.07cm[0m
+[0;32mI (3853) example: WALL DETECTED[0m
+Distance: 29
+[0;32mI (3973) example: Measured distance: 9.35cm[0m
+[0;32mI (4283) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (4473) example: Measured distance: 9.40cm[0m
+[0;32mI (4723) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (4973) example: Measured distance: 8.93cm[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2023 18:00:02[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0dfd4h ( 57300) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0001dffc vaddr=3ffb0000 size=0201ch (  8220) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00020020 vaddr=400d0020 size=1c8f0h (116976) map[0m
+[0;32mI (175) esp_image: segment 3: paddr=0003c918 vaddr=3ffb201c size=0015ch (   348) load[0m
+[0;32mI (176) esp_image: segment 4: paddr=0003ca7c vaddr=40080000 size=0dbdch ( 56284) load[0m
+[0;32mI (211) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (211) boot: Disabling RNG early entropy source...[0m
+[0;32mI (223) cpu_start: Multicore app[0m
+[0;32mI (223) cpu_start: Pro cpu up.[0m
+[0;32mI (223) cpu_start: Starting app cpu, entry point is 0x400811b0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (241) cpu_start: Pro cpu start user code[0m
+[0;32mI (241) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (241) cpu_start: Application information:[0m
+[0;32mI (246) cpu_start: Project name:     blink[0m
+[0;32mI (251) cpu_start: App version:      51730a5-dirty[0m
+[0;32mI (256) cpu_start: Compile time:     Nov  9 2023 20:47:07[0m
+[0;32mI (262) cpu_start: ELF file SHA256:  dcfba3432...[0m
+[0;32mI (268) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (275) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (279) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (284) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (289) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (296) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (302) heap_init: At 3FFB2A38 len 0002D5C8 (181 KiB): DRAM[0m
+[0;32mI (308) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (315) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (321) heap_init: At 4008DBDC len 00012424 (73 KiB): IRAM[0m
+[0;32mI (329) spi_flash: detected chip: generic[0m
+[0;32mI (332) spi_flash: flash io: dio[0m
+[0;33mW (336) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (349) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (360) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (369) app_start: Starting scheduler on CPU0[0m
+[0;32mI (373) app_start: Starting scheduler on CPU1[0m
+[0;32mI (373) main_task: Started on CPU0[0m
+[0;32mI (383) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x62
+
+>> Polling LIDAR
+[0;32mI (413) example: Install capture timer[0m
+[0;32mI (413) example: Install capture channel[0m
+[0;32mI (413) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (423) example: Register capture callback[0m
+[0;32mI (433) example: Enable capture channel[0m
+[0;32mI (433) example: Configure Trig pin[0m
+[0;32mI (443) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (443) example: Enable and start capture timer[0m
+[0;32mI (453) example: Create timer and operator[0m
+[0;32mI (453) example: Measured distance: 9.01cm[0m
+[0;32mI (463) example: Connect timer and operator[0m
+[0;32mI (463) example: Create timer and operator[0m
+[0;32mI (473) example: Create comparator and generator from the operator[0m
+[0;32mI (473) example: Connect timer and operator[0m
+[0;32mI (493) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (493) example: Create comparator and generator from the operator[0m
+[0;32mI (503) example: Set generator action on timer and compare event[0m
+[0;32mI (503) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (513) example: Enable and start timer[0m
+[0;32mI (523) example: Set generator action on timer and compare event[0m
+eFuse Two Point: NOT supported
+[0;32mI (533) example: Enable and start timer[0m
+eFuse Vref: Supported
+[0;32mI (453) main_task: Returned from app_main()[0m
+Characterized using eFuse Vref
+[0;32mI (763) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (963) example: Measured distance: 8.99cm[0m
+[0;32mI (1193) example: WALL DETECTED[0m
+Distance: 29
+Count: 1
+Speed is 0.1m/s
+[0;32mI (1463) example: Measured distance: 8.99cm[0m
+[0;32mI (1623) example: WALL DETECTED[0m
+Distance: 29
+[0;32mI (1963) example: Measured distance: 8.99cm[0m
+[0;32mI (2063) example: WALL DETECTED[0m
+Distance: 29
+Count: 0
+Speed is 0.0m/s
+[0;32mI (2463) example: Measured distance: 9.03cm[0m
+[0;32mI (2513) example: WALL DETECTED[0m
+Distance: 23
+[0;32mI (2963) example: Measured distance: 9.05cm[0m
+[0;32mI (2963) example: WALL DETECTED[0m
+Distance: 29
+[0;32mI (3403) example: WALL DETECTED[0m
+Distance: 34
+Count: 0
+Speed is 0.0m/s
+[0;32mI (3463) example: Measured distance: 9.31cm[0m
+[0;32mI (3843) example: WALL DETECTED[0m
+Distance: 37
+[0;32mI (3963) example: Measured distance: 9.01cm[0m
+[0;32mI (4313) example: WALL DETECTED[0m
+Distance: 17
+Count: 0
+Speed is 0.0m/s
+[0;32mI (4463) example: Measured distance: 9.01cm[0m
+[0;32mI (4763) example: WALL DETECTED[0m
+Distance: 37
+[0;32mI (4963) example: Measured distance: 7.42cm[0m
+[0;32mI (5203) example: WALL DETECTED[0m
+Distance: 35
+Count: 0
+Speed is 0.0m/s
+[0;32mI (5463) example: Measured distance: 11.63cm[0m
+[0;32mI (5623) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (5963) example: Measured distance: 24.20cm[0m
+[0;32mI (6063) example: WALL DETECTED[0m
+Distance: 32
+Count: 0
+Speed is 0.0m/s
+[0;32mI (6463) example: Measured distance: 22.59cm[0m
+[0;32mI (6523) example: WALL DETECTED[0m
+Distance: 31
+[0;32mI (6963) example: Measured distance: 20.13cm[0m
+[0;32mI (6973) example: WALL DETECTED[0m
+Distance: 30
+[0;32mI (7433) example: WALL DETECTED[0m
+Distance: 30
+Count: 0
+Speed is 0.0m/s
+[0;32mI (7463) example: Measured distance: 22.28cm[0m
+[0;32mI (7883) example: WALL DETECTED[0m
+Distance: 31
+[0;32mI (7963) example: Measured distance: 24.38cm[0m
+[0;32mI (8343) example: WALL DETECTED[0m
+Distance: 30
+Count: 0
+Speed is 0.0m/s
+[0;32mI (8463) example: Measured distance: 22.33cm[0m
+[0;32mI (8803) example: WALL DETECTED[0m
+Distance: 29
+[0;32mI (8963) example: Measured distance: 23.48cm[0m
+[0;32mI (9253) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (9463) example: Measured distance: 13.32cm[0m
+[0;32mI (9703) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (9963) example: Measured distance: 9.02cm[0m
+[0;32mI (10143) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (10463) example: Measured distance: 8.73cm[0m
+[0;32mI (10603) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (10963) example: Measured distance: 8.59cm[0m
+[0;32mI (11043) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (11463) example: Measured distance: 8.80cm[0m
+[0;32mI (11493) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (11943) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (11963) example: Measured distance: 8.71cm[0m
+[0;32mI (12383) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (12463) example: Measured distance: 8.71cm[0m
+[0;32mI (12823) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (12963) example: Measured distance: 8.73cm[0m
+[0;32mI (13273) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (13463) example: Measured distance: 9.13cm[0m
+[0;32mI (13713) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (13963) example: Measured distance: 14.13cm[0m
+[0;32mI (14163) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (14463) example: Measured distance: 14.59cm[0m
+[0;32mI (14623) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (14963) example: Measured distance: 14.43cm[0m
+[0;32mI (15073) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (15463) example: Measured distance: 14.57cm[0m
+[0;32mI (15513) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (15963) example: Measured distance: 14.01cm[0m
+[0;32mI (15973) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (16423) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (16463) example: Measured distance: 8.72cm[0m
+[0;32mI (16873) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (16963) example: Measured distance: 9.18cm[0m
+[0;32mI (17323) example: WALL DETECTED[0m
+Distance: 27
+Count: 0
+Speed is 0.0m/s
+[0;32mI (17463) example: Measured distance: 17.37cm[0m
+[0;32mI (17783) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (17963) example: Measured distance: 20.69cm[0m
+[0;32mI (18233) example: WALL DETECTED[0m
+Distance: 27
+Count: 0
+Speed is 0.0m/s
+[0;32mI (18463) example: Measured distance: 10.22cm[0m
+[0;32mI (18693) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (18963) example: Measured distance: 9.92cm[0m
+[0;32mI (19163) example: WALL DETECTED[0m
+Distance: 27
+Count: 0
+Speed is 0.0m/s
+[0;32mI (19463) example: Measured distance: 9.08cm[0m
+[0;32mI (19623) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (19963) example: Measured distance: 8.95cm[0m
+[0;32mI (20073) example: WALL DETECTED[0m
+Distance: 27
+Count: 0
+Speed is 0.0m/s
+[0;32mI (20463) example: Measured distance: 8.83cm[0m
+[0;32mI (20533) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (20963) example: Measured distance: 8.80cm[0m
+[0;32mI (20983) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (21433) example: WALL DETECTED[0m
+Distance: 27
+Count: 0
+Speed is 0.0m/s
+[0;32mI (21463) example: Measured distance: 9.63cm[0m
+[0;32mI (21893) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (21963) example: Measured distance: 11.78cm[0m
+[0;32mI (22353) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (22463) example: Measured distance: 19.99cm[0m
+[0;32mI (22813) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (22963) example: Measured distance: 9.05cm[0m
+[0;32mI (23263) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (23463) example: Measured distance: 8.75cm[0m
+[0;32mI (23723) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (23963) example: Measured distance: 8.73cm[0m
+[0;32mI (24173) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (24463) example: Measured distance: 9.90cm[0m
+[0;32mI (24633) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (24963) example: Measured distance: 11.12cm[0m
+[0;32mI (25083) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (25463) example: Measured distance: 14.04cm[0m
+[0;32mI (25553) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (25963) example: Measured distance: 9.46cm[0m
+[0;32mI (26003) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (26463) example: Measured distance: 8.58cm[0m
+[0;32mI (26473) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (26933) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (26963) example: Measured distance: 8.63cm[0m
+[0;32mI (27403) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (27463) example: Measured distance: 10.69cm[0m
+[0;32mI (27853) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (27963) example: Measured distance: 14.96cm[0m
+[0;32mI (28313) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (28463) example: Measured distance: 17.28cm[0m
+[0;32mI (28773) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (28963) example: Measured distance: 9.65cm[0m
+[0;32mI (29223) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (29463) example: Measured distance: 8.83cm[0m
+[0;32mI (29673) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (29963) example: Measured distance: 9.33cm[0m
+[0;32mI (30143) example: WALL DETECTED[0m
+Distance: 29
+Count: 0
+Speed is 0.0m/s
+[0;32mI (30463) example: Measured distance: 16.94cm[0m
+[0;32mI (30593) example: WALL DETECTED[0m
+Distance: 38
+[0;32mI (31043) example: WALL DETECTED[0m
+Distance: 61
+Count: 0
+Speed is 0.0m/s
+Distance: 84
+Distance: 112
+Count: 7
+Speed is 0.5m/s
+Distance: 129
+[0;32mI (32703) example: Measured distance: 21.61cm[0m
+Distance: 129
+[0;32mI (33223) example: Measured distance: 364.84cm[0m
+Count: 29
+Speed is 2.1m/s
+Distance: 130
+[0;32mI (33723) example: Measured distance: 8.24cm[0m
+Distance: 130
+[0;32mI (34223) example: Measured distance: 7.07cm[0m
+Distance: 130
+Count: 24
+Speed is 1.8m/s
+[0;32mI (34723) example: Measured distance: 11.82cm[0m
+Distance: 130
+[0;32mI (35223) example: Measured distance: 13.83cm[0m
+Distance: 129
+Count: 25
+Speed is 1.8m/s
+[0;32mI (35723) example: Measured distance: 21.44cm[0m
+Distance: 129
+[0;32mI (36223) example: Measured distance: 19.49cm[0m
+Distance: 130
+Count: 26
+Speed is 1.9m/s
+[0;32mI (36723) example: Measured distance: 8.54cm[0m
+Distance: 130
+[0;32mI (37223) example: Measured distance: 9.25cm[0m
+Distance: 129
+Count: 23
+Speed is 1.7m/s
+[0;32mI (37723) example: Measured distance: 8.88cm[0m
+Distance: 129
+[0;32mI (38223) example: Measured distance: 11.64cm[0m
+Distance: 130
+Count: 27
+Speed is 2.0m/s
+[0;32mI (38723) example: Measured distance: 13.08cm[0m
+Distance: 130
+[0;32mI (39223) example: Measured distance: 13.84cm[0m
+Distance: 129
+Count: 24
+Speed is 1.8m/s
+[0;32mI (39723) example: Measured distance: 13.74cm[0m
+Distance: 129
+[0;32mI (40223) example: Measured distance: 12.08cm[0m
+Distance: 130
+Count: 31
+Speed is 2.3m/s
+[0;32mI (40723) example: Measured distance: 10.47cm[0m
+Distance: 130
+[0;32mI (41223) example: Measured distance: 9.90cm[0m
+Distance: 129
+Count: 30
+Speed is 2.2m/s
+[0;32mI (41723) example: Measured distance: 9.72cm[0m
+Distance: 129
+Distance: 129
+[0;32mI (42223) example: Measured distance: 9.87cm[0m
+Count: 22
+Speed is 1.6m/s
+Distance: 130
+[0;32mI (42723) example: Measured distance: 9.74cm[0m
+Distance: 130
+[0;32mI (43223) example: Measured distance: 9.15cm[0m
+Count: 24
+Speed is 1.8m/s
+Distance: 130
+[0;32mI (43723) example: Measured distance: 8.68cm[0m
+Distance: 130
+[0;32mI (44223) example: Measured distance: 7.95cm[0m
+Count: 23
+Speed is 1.7m/s
+Distance: 130
+[0;32mI (44723) example: Measured distance: 9.33cm[0m
+Distance: 130
+[0;32mI (45223) example: Measured distance: 9.64cm[0m
+Count: 27
+Speed is 2.0m/s
+Distance: 130
+[0;32mI (45723) example: Measured distance: 13.72cm[0m
+Distance: 130
+[0;32mI (46223) example: Measured distance: 15.21cm[0m
+Count: 28
+Speed is 2.1m/s
+Distance: 130
+[0;32mI (46723) example: Measured distance: 10.33cm[0m
+Distance: 129
+[0;32mI (47223) example: Measured distance: 8.98cm[0m
+Count: 29
+Speed is 2.1m/s
+Distance: 130
+[0;32mI (47723) example: Measured distance: 9.64cm[0m
+Distance: 130
+[0;32mI (48223) example: Measured distance: 11.80cm[0m
+Count: 27
+Speed is 2.0m/s
+Distance: 130
+[0;32mI (48723) example: Measured distance: 17.30cm[0m
+Distance: 130
+[0;32mI (49223) example: Measured distance: 9.83cm[0m
+Count: 25
+Speed is 1.8m/s
+Distance: 129
+[0;32mI (49723) example: Measured distance: 8.80cm[0m
+Distance: 130
+[0;32mI (50223) example: Measured distance: 9.27cm[0m
+Count: 25
+Speed is 1.8m/s
+Distance: 129
+Distance: 129
+Distance: 130
+Count: 28
+Speed is 2.1m/s
+Distance: 129
+[0;32mI (52343) example: Measured distance: 8.60cm[0m
+Distance: 129
+Count: 24
+Speed is 1.8m/s
+[0;32mI (52843) example: Measured distance: 11.80cm[0m
+Distance: 130
+Distance: 129
+Count: 28
+Speed is 2.1m/s
+[0;32mI (53463) example: Measured distance: 18.24cm[0m
+Distance: 129
+[0;32mI (53963) example: Measured distance: 10.80cm[0m
+Distance: 130
+Count: 24
+Speed is 1.8m/s
+[0;32mI (54463) example: Measured distance: 10.22cm[0m
+Distance: 130
+[0;32mI (54963) example: Measured distance: 7.92cm[0m
+Distance: 130
+Count: 27
+Speed is 2.0m/s
+[0;32mI (55463) example: Measured distance: 8.79cm[0m
+Distance: 129
+[0;32mI (55963) example: Measured distance: 6.73cm[0m
+Distance: 129
+Count: 28
+Speed is 2.1m/s
+[0;32mI (56463) example: Measured distance: 6.66cm[0m
+Distance: 128
+[0;32mI (56963) example: Measured distance: 9.97cm[0m
+Distance: 129
+Count: 27
+Speed is 2.0m/s
+[0;32mI (57463) example: Measured distance: 19.93cm[0m
+Distance: 129
+[0;32mI (57963) example: Measured distance: 25.88cm[0m
+Distance: 130
+Count: 29
+Speed is 2.1m/s
+[0;32mI (58463) example: Measured distance: 25.32cm[0m
+Distance: 130
+[0;32mI (58963) example: Measured distance: 18.68cm[0m
+Distance: 129
+Count: 29
+Speed is 2.1m/s
+[0;32mI (59463) example: Measured distance: 10.85cm[0m
+Distance: 130
+[0;32mI (59963) example: Measured distance: 9.70cm[0m
+Distance: 129
+Count: 27
+Speed is 2.0m/s
+[0;32mI (60463) example: Measured distance: 8.28cm[0m
+Distance: 129
+[0;32mI (60963) example: Measured distance: 8.12cm[0m
+Distance: 130
+Count: 32
+Speed is 2.3m/s
+[0;32mI (61463) example: Measured distance: 16.06cm[0m
+Distance: 130
+[0;32mI (61963) example: Measured distance: 18.07cm[0m
+Distance: 130
+Count: 25
+Speed is 1.8m/s
+[0;32mI (62463) example: Measured distance: 32.60cm[0m
+Distance: 130
+[0;32mI (62963) example: Measured distance: 17.57cm[0m
+Distance: 130
+Count: 29
+Speed is 2.1m/s
+[0;32mI (63583) example: Measured distance: 44.65cm[0m
+Distance: 129
+Distance: 128
+[0;32mI (64083) example: Measured distance: 47.28cm[0m
+Count: 32
+Speed is 2.3m/s
+Distance: 123
+[0;32mI (64703) example: Measured distance: 36.77cm[0m
+Distance: 101
+Count: 29
+Speed is 2.1m/s
+Distance: 128
+Distance: 129
+Count: 29
+Speed is 2.1m/s
+Distance: 130
+Distance: 130
+Count: 28
+Speed is 2.1m/s
+Distance: 129
+Distance: 130
+Distance: 130
+Count: 27
+Speed is 2.0m/s
+[0;32mI (68543) example: Measured distance: 24.63cm[0m
+Distance: 130
+Distance: 129
+Count: 26
+Speed is 1.9m/s
+Distance: 129
+Distance: 129
+Count: 33
+Speed is 2.4m/s
+[0;32mI (70663) example: Measured distance: 20.58cm[0m
+Distance: 129
+[0;32mI (71223) example: Measured distance: 10.45cm[0m
+Distance: 129
+Count: 27
+Speed is 2.0m/s
+[0;32mI (71723) example: Measured distance: 32.81cm[0m
+Distance: 130
+[0;32mI (72223) example: Measured distance: 10.94cm[0m
+Distance: 129
+Count: 26
+Speed is 1.9m/s
+[0;32mI (72723) example: Measured distance: 9.09cm[0m
+Distance: 130
+[0;32mI (73223) example: Measured distance: 9.38cm[0m
+Distance: 130
+Count: 30
+Speed is 2.2m/s
+[0;32mI (73783) example: Measured distance: 8.55cm[0m
+Distance: 129
+Distance: 130
+[0;32mI (74283) example: Measured distance: 9.91cm[0m
+Count: 28
+Speed is 2.1m/s
+Distance: 130
+[0;32mI (74783) example: Measured distance: 8.54cm[0m
+Distance: 129
+[0;32mI (75283) example: Measured distance: 8.57cm[0m
+Count: 30
+Speed is 2.2m/s
+Distance: 130
+[0;32mI (76023) example: Measured distance: 36.25cm[0m
+Distance: 130
+Count: 30
+Speed is 2.2m/s
+[0;32mI (76583) example: Measured distance: 14.93cm[0m
+Distance: 130
+Distance: 130
+[0;32mI (77263) example: Measured distance: 46.03cm[0m
+Count: 30
+Speed is 2.2m/s
+Distance: 129
+Distance: 129
+Count: 31
+Speed is 2.3m/s
+Distance: 129
+Distance: 130
+[0;32mI (79443) example: Measured distance: 9.39cm[0m
+Count: 31
+Speed is 2.3m/s
+Distance: 124
+[0;32mI (79943) example: Measured distance: 7.43cm[0m
+Distance: 126
+Count: 31
+Speed is 2.3m/s
+[0;32mI (80523) example: Measured distance: 480.84cm[0m
+Distance: 139
+[0;32mI (81033) example: Measured distance: 29.70cm[0m
+Distance: 127
+Count: 29
+Speed is 2.1m/s
+Distance: 123
+Distance: 123
+Count: 31
+Speed is 2.3m/s
+Distance: 122
+Distance: 122
+Count: 24
+Speed is 1.8m/s
+Distance: 123
+Distance: 122
+Count: 28
+Speed is 2.1m/s
+Distance: 124
+Distance: 122
+Distance: 123
+Count: 32
+Speed is 2.3m/s
+[0;32mI (85563) example: Measured distance: 12.52cm[0m
+Distance: 123
+[0;32mI (86123) example: Measured distance: 12.20cm[0m
+Distance: 122
+Count: 28
+Speed is 2.1m/s
+[0;32mI (86623) example: Measured distance: 7.85cm[0m
+[0;32mI (86893) example: WALL DETECTED[0m
+Distance: 38
+[0;32mI (87383) example: WALL DETECTED[0m
+Distance: 35
+Count: 22
+Speed is 1.6m/s
+[0;32mI (87863) example: WALL DETECTED[0m
+Distance: 35
+[0;32mI (88353) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (88833) example: WALL DETECTED[0m
+Distance: 35
+[0;32mI (89323) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (89803) example: WALL DETECTED[0m
+Distance: 31
+[0;32mI (89833) example: Measured distance: 12.86cm[0m
+[0;32mI (90293) example: WALL DETECTED[0m
+Distance: 30
+Count: 0
+Speed is 0.0m/s
+[0;32mI (90773) example: WALL DETECTED[0m
+Distance: 29
+[0;32mI (91263) example: WALL DETECTED[0m
+Distance: 29
+Count: 0
+Speed is 0.0m/s
+[0;32mI (91753) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (92013) example: Measured distance: 7.39cm[0m
+[0;32mI (92233) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (92513) example: Measured distance: 7.45cm[0m
+[0;32mI (92723) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (93013) example: Measured distance: 7.25cm[0m
+[0;32mI (93203) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (93513) example: Measured distance: 7.24cm[0m
+[0;32mI (93693) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (94013) example: Measured distance: 7.56cm[0m
+[0;32mI (94173) example: WALL DETECTED[0m
+Distance: 29
+Count: 0
+Speed is 0.0m/s
+[0;32mI (94513) example: Measured distance: 7.25cm[0m
+[0;32mI (94663) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (95013) example: Measured distance: 7.27cm[0m
+[0;32mI (95143) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (95513) example: Measured distance: 7.36cm[0m
+[0;32mI (95633) example: WALL DETECTED[0m
+Distance: 29
+[0;32mI (96013) example: Measured distance: 7.43cm[0m
+[0;32mI (96113) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (96513) example: Measured distance: 7.63cm[0m
+[0;32mI (96593) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (97013) example: Measured distance: 7.80cm[0m
+[0;32mI (97083) example: WALL DETECTED[0m
+Distance: 29
+Count: 0
+Speed is 0.0m/s
+[0;32mI (97513) example: Measured distance: 8.18cm[0m
+[0;32mI (97573) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (98013) example: Measured distance: 8.09cm[0m
+[0;32mI (98053) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (98533) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (98663) example: Measured distance: 508.33cm[0m
+[0;32mI (99023) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (99163) example: Measured distance: 8.01cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (99513) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (99663) example: Measured distance: 10.46cm[0m
+[0;32mI (99993) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (100343) example: Measured distance: 37.13cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (100483) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (100963) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (101453) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (101933) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (102403) example: Measured distance: 12.56cm[0m
+[0;32mI (102423) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (102903) example: Measured distance: 8.87cm[0m
+[0;32mI (102903) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (103393) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (103403) example: Measured distance: 10.12cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (103883) example: WALL DETECTED[0m
+Distance: 21
+[0;32mI (104363) example: WALL DETECTED[0m
+Distance: 27
+Count: 0
+Speed is 0.0m/s
+[0;32mI (104573) example: Measured distance: 65.94cm[0m
+[0;32mI (104853) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (105073) example: Measured distance: 9.54cm[0m
+[0;32mI (105333) example: WALL DETECTED[0m
+Distance: 27
+Count: 0
+Speed is 0.0m/s
+[0;32mI (105573) example: Measured distance: 15.77cm[0m
+[0;32mI (105823) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (106073) example: Measured distance: 10.17cm[0m
+[0;32mI (106303) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (106573) example: Measured distance: 9.03cm[0m
+[0;32mI (106793) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (107073) example: Measured distance: 9.09cm[0m
+[0;32mI (107273) example: WALL DETECTED[0m
+Distance: 27
+Count: 0
+Speed is 0.0m/s
+[0;32mI (107573) example: Measured distance: 9.54cm[0m
+[0;32mI (107763) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (108073) example: Measured distance: 10.91cm[0m
+[0;32mI (108243) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (108573) example: Measured distance: 10.43cm[0m
+[0;32mI (108733) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (109073) example: Measured distance: 11.32cm[0m
+[0;32mI (109223) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (109573) example: Measured distance: 9.72cm[0m
+[0;32mI (109703) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (110073) example: Measured distance: 10.28cm[0m
+[0;32mI (110193) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (110573) example: Measured distance: 10.02cm[0m
+[0;32mI (110673) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (111073) example: Measured distance: 17.34cm[0m
+[0;32mI (111163) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (111633) example: Measured distance: 141.47cm[0m
+[0;32mI (111653) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (112133) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (112443) example: Measured distance: 10.64cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (112623) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (113103) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (113593) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (114083) example: WALL DETECTED[0m
+Distance: 29
+Count: 0
+Speed is 0.0m/s
+[0;32mI (114503) example: Measured distance: 149.63cm[0m
+[0;32mI (114563) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (115053) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (115143) example: Measured distance: 141.38cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (115533) example: WALL DETECTED[0m
+Distance: 23
+[0;32mI (115763) example: Measured distance: 11.14cm[0m
+[0;32mI (116023) example: WALL DETECTED[0m
+Distance: 20
+[0;32mI (116393) example: Measured distance: 150.99cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (116513) example: WALL DETECTED[0m
+Distance: 17
+[0;32mI (116893) example: Measured distance: 9.55cm[0m
+[0;32mI (116993) example: WALL DETECTED[0m
+Distance: 18
+Count: 0
+Speed is 0.0m/s
+[0;32mI (117483) example: WALL DETECTED[0m
+Distance: 17
+[0;32mI (117843) example: Measured distance: 459.95cm[0m
+[0;32mI (117963) example: WALL DETECTED[0m
+Distance: 17
+[0;32mI (118343) example: Measured distance: 11.80cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (118453) example: WALL DETECTED[0m
+Distance: 17
+[0;32mI (118843) example: Measured distance: 9.50cm[0m
+[0;32mI (118933) example: WALL DETECTED[0m
+Distance: 18
+[0;32mI (119343) example: Measured distance: 10.01cm[0m
+[0;32mI (119423) example: WALL DETECTED[0m
+Distance: 18
+Count: 0
+Speed is 0.0m/s
+[0;32mI (119903) example: Measured distance: 15.85cm[0m
+[0;32mI (119913) example: WALL DETECTED[0m
+Distance: 21
+[0;32mI (120393) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (120403) example: Measured distance: 12.13cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (120883) example: WALL DETECTED[0m
+Distance: 39
+[0;32mI (120903) example: Measured distance: 11.31cm[0m
+[0;32mI (121363) example: WALL DETECTED[0m
+Distance: 39
+[0;32mI (121403) example: Measured distance: 19.29cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (121843) example: WALL DETECTED[0m
+Distance: 56
+[0;32mI (121903) example: Measured distance: 9.52cm[0m
+[0;32mI (122333) example: WALL DETECTED[0m
+Distance: 39
+[0;32mI (122403) example: Measured distance: 9.69cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (122813) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (122903) example: Measured distance: 12.02cm[0m
+[0;32mI (123303) example: WALL DETECTED[0m
+Distance: 21
+[0;32mI (123403) example: Measured distance: 17.23cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (123783) example: WALL DETECTED[0m
+Distance: 37
+[0;32mI (123903) example: Measured distance: 16.72cm[0m
+Distance: 117
+[0;32mI (124403) example: Measured distance: 10.72cm[0m
+Count: 0
+Speed is 0.0m/s
+Distance: 117
+[0;32mI (124963) example: Measured distance: 20.24cm[0m
+Distance: 113
+Count: 12
+Speed is 0.9m/s
+[0;32mI (125463) example: Measured distance: 18.68cm[0m
+Distance: 115
+Distance: 117
+Count: 31
+Speed is 2.3m/s
+Distance: 117
+Distance: 117
+Count: 25
+Speed is 1.8m/s
+[0;32mI (127643) example: Measured distance: 30.87cm[0m
+Distance: 117
+Distance: 117
+[0;32mI (128333) example: Measured distance: 148.27cm[0m
+Count: 32
+Speed is 2.3m/s
+[0;32mI (128643) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (129133) example: WALL DETECTED[0m
+Distance: 32
+Count: 12
+Speed is 0.9m/s
+[0;32mI (129613) example: WALL DETECTED[0m
+Distance: 35
+[0;32mI (130103) example: WALL DETECTED[0m
+Distance: 34
+Count: 0
+Speed is 0.0m/s
+[0;32mI (130583) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (131073) example: WALL DETECTED[0m
+Distance: 42
+Count: 0
+Speed is 0.0m/s
+[0;32mI (131553) example: WALL DETECTED[0m
+Distance: 47
+[0;32mI (132043) example: WALL DETECTED[0m
+Distance: 50
+Count: 0
+Speed is 0.0m/s
+[0;32mI (132533) example: WALL DETECTED[0m
+Distance: 45
+[0;32mI (133013) example: WALL DETECTED[0m
+Distance: 54
+Count: 0
+Speed is 0.0m/s
+[0;32mI (133503) example: WALL DETECTED[0m
+Distance: 73
+[0;32mI (133813) example: Measured distance: 150.50cm[0m
+[0;32mI (133983) example: WALL DETECTED[0m
+Distance: 59
+Count: 0
+Speed is 0.0m/s
+[0;32mI (134473) example: WALL DETECTED[0m
+Distance: 42
+[0;32mI (134933) example: Measured distance: 149.90cm[0m
+[0;32mI (134953) example: WALL DETECTED[0m
+Distance: 41
+[0;32mI (135433) example: Measured distance: 17.63cm[0m
+[0;32mI (135443) example: WALL DETECTED[0m
+Distance: 40
+Count: 0
+Speed is 0.0m/s
+[0;32mI (135933) example: WALL DETECTED[0m
+Distance: 41
+Distance: 83
+Count: 0
+Speed is 0.0m/s
+[0;32mI (136603) example: Measured distance: 140.56cm[0m
+Distance: 110
+[0;32mI (137103) example: Measured distance: 16.92cm[0m
+Distance: 116
+Count: 18
+Speed is 1.3m/s
+[0;32mI (137663) example: Measured distance: 20.15cm[0m
+Distance: 118
+[0;32mI (138163) example: Measured distance: 11.01cm[0m
+Distance: 117
+Count: 35
+Speed is 2.6m/s
+[0;32mI (138663) example: Measured distance: 141.89cm[0m
+[0;32mI (138853) example: WALL DETECTED[0m
+Distance: 15
+[0;32mI (139173) example: Measured distance: 152.86cm[0m
+[0;32mI (139333) example: WALL DETECTED[0m
+Distance: 6
+Count: 18
+Speed is 1.3m/s
+[0;32mI (139683) example: Measured distance: 11.05cm[0m
+[0;32mI (139823) example: WALL DETECTED[0m
+Distance: 4
+[0;32mI (140303) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (140363) example: Measured distance: 9.53cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (140793) example: WALL DETECTED[0m
+Distance: 2
+[0;32mI (140993) example: Measured distance: 440.09cm[0m
+[0;32mI (141273) example: WALL DETECTED[0m
+Distance: 4
+Count: 0
+Speed is 0.0m/s
+[0;32mI (141493) example: Measured distance: 151.33cm[0m
+[0;32mI (141763) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (142243) example: WALL DETECTED[0m
+Distance: 3
+Count: 0
+Speed is 0.0m/s
+[0;32mI (142733) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (143213) example: WALL DETECTED[0m
+Distance: 3
+Count: 0
+Speed is 0.0m/s
+[0;32mI (143623) example: Measured distance: 141.13cm[0m
+[0;32mI (143703) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (144193) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (144193) example: Measured distance: 9.86cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (144673) example: WALL DETECTED[0m
+Distance: 2
+[0;32mI (145163) example: WALL DETECTED[0m
+Distance: 2
+Count: 0
+Speed is 0.0m/s
+[0;32mI (145643) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (146133) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (146433) example: Measured distance: 10.43cm[0m
+Count: 1
+Speed is 0.1m/s
+[0;32mI (146613) example: WALL DETECTED[0m
+Distance: 2
+[0;32mI (146933) example: Measured distance: 11.15cm[0m
+[0;32mI (147103) example: WALL DETECTED[0m
+Distance: 8
+[0;32mI (147433) example: Measured distance: 11.12cm[0m
+Count: 4
+Speed is 0.3m/s
+[0;32mI (147593) example: WALL DETECTED[0m
+Distance: 1
+[0;32mI (147933) example: Measured distance: 13.41cm[0m
+[0;32mI (148073) example: WALL DETECTED[0m
+Distance: 5
+[0;32mI (148433) example: Measured distance: 13.01cm[0m
+Count: 14
+Speed is 1.0m/s
+[0;32mI (148563) example: WALL DETECTED[0m
+Distance: 2
+[0;32mI (149053) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (149063) example: Measured distance: 291.09cm[0m
+Count: 19
+Speed is 1.4m/s
+[0;32mI (149533) example: WALL DETECTED[0m
+Distance: 4
+[0;32mI (149573) example: Measured distance: 12.00cm[0m
+[0;32mI (150023) example: WALL DETECTED[0m
+Distance: 4
+[0;32mI (150073) example: Measured distance: 11.66cm[0m
+Count: 24
+Speed is 1.8m/s
+[0;32mI (150503) example: WALL DETECTED[0m
+Distance: 4
+[0;32mI (150573) example: Measured distance: 6.94cm[0m
+[0;32mI (150993) example: WALL DETECTED[0m
+Distance: 4
+[0;32mI (151133) example: Measured distance: 10.31cm[0m
+Count: 17
+Speed is 1.2m/s
+[0;32mI (151483) example: WALL DETECTED[0m
+Distance: 7
+[0;32mI (151633) example: Measured distance: 6.69cm[0m
+[0;32mI (151963) example: WALL DETECTED[0m
+Distance: 39
+[0;32mI (152133) example: Measured distance: 9.66cm[0m
+Count: 20
+Speed is 1.5m/s
+[0;32mI (152453) example: WALL DETECTED[0m
+Distance: 67
+[0;32mI (152633) example: Measured distance: 7.51cm[0m
+Distance: 81
+[0;32mI (153133) example: Measured distance: 7.66cm[0m
+Distance: 99
+Count: 9
+Speed is 0.7m/s
+[0;32mI (153633) example: Measured distance: 7.60cm[0m
+Distance: 82
+[0;32mI (154133) example: Measured distance: 7.54cm[0m
+[0;32mI (154393) example: WALL DETECTED[0m
+Distance: 66
+Count: 10
+Speed is 0.7m/s
+[0;32mI (154633) example: Measured distance: 7.72cm[0m
+Distance: 100
+[0;32mI (155263) example: Measured distance: 149.65cm[0m
+[0;32mI (155373) example: WALL DETECTED[0m
+Distance: 7
+Count: 3
+Speed is 0.2m/s
+[0;32mI (155773) example: Measured distance: 194.13cm[0m
+[0;32mI (155853) example: WALL DETECTED[0m
+Distance: 41
+[0;32mI (156333) example: WALL DETECTED[0m
+Distance: 59
+Count: 0
+Speed is 0.0m/s
+[0;32mI (156463) example: Measured distance: 231.18cm[0m
+Distance: 93
+Distance: 75
+Count: 0
+Speed is 0.0m/s
+[0;32mI (157803) example: WALL DETECTED[0m
+Distance: 73
+Distance: 89
+Count: 8
+Speed is 0.6m/s
+[0;32mI (158763) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (159253) example: WALL DETECTED[0m
+Distance: 42
+Count: 0
+Speed is 0.0m/s
+[0;32mI (159743) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (160223) example: WALL DETECTED[0m
+Distance: 2
+Count: 0
+Speed is 0.0m/s
+[0;32mI (160713) example: WALL DETECTED[0m
+Distance: 2
+[0;32mI (160803) example: Measured distance: 18.27cm[0m
+[0;32mI (161193) example: WALL DETECTED[0m
+Distance: 2
+[0;32mI (161313) example: Measured distance: 12.71cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (161683) example: WALL DETECTED[0m
+Distance: 2
+[0;32mI (161813) example: Measured distance: 16.45cm[0m
+[0;32mI (162163) example: WALL DETECTED[0m
+Distance: 2
+[0;32mI (162323) example: Measured distance: 207.02cm[0m
+Count: 1
+Speed is 0.1m/s
+[0;32mI (162653) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (163143) example: WALL DETECTED[0m
+Distance: 3
+Count: 0
+Speed is 0.0m/s
+[0;32mI (163623) example: WALL DETECTED[0m
+Distance: 2
+[0;32mI (164113) example: WALL DETECTED[0m
+Distance: 2
+Count: 0
+Speed is 0.0m/s
+[0;32mI (164573) example: Measured distance: 201.30cm[0m
+[0;32mI (164593) example: WALL DETECTED[0m
+Distance: 1
+[0;32mI (165083) example: Measured distance: 199.83cm[0m
+Distance: 174
+Count: 0
+Speed is 0.0m/s
+Distance: 319
+[0;32mI (165613) example: Measured distance: 538.20cm[0m
+Distance: 382
+[0;32mI (166113) example: Measured distance: 9.87cm[0m
+Count: 9
+Speed is 0.7m/s
+Distance: 241
+[0;32mI (166613) example: Measured distance: 16.40cm[0m
+Distance: 288
+[0;32mI (167123) example: Measured distance: 166.35cm[0m
+Count: 30
+Speed is 2.2m/s
+Distance: 199
+[0;32mI (167693) example: Measured distance: 193.75cm[0m
+Distance: 304
+[0;32mI (168203) example: Measured distance: 199.16cm[0m
+Count: 32
+Speed is 2.3m/s
+Distance: 344
+[0;32mI (168713) example: Measured distance: 203.76cm[0m
+Distance: 345
+[0;32mI (169223) example: Measured distance: 211.25cm[0m
+Count: 32
+Speed is 2.3m/s
+Distance: 354
+[0;32mI (169843) example: Measured distance: 14.49cm[0m
+Distance: 346
+[0;32mI (170343) example: Measured distance: 8.03cm[0m
+Distance: 356
+Count: 32
+Speed is 2.3m/s
+[0;32mI (170843) example: Measured distance: 7.07cm[0m
+Distance: 354
+[0;32mI (171343) example: Measured distance: 11.96cm[0m
+Distance: 349
+Count: 32
+Speed is 2.3m/s
+[0;32mI (171853) example: Measured distance: 205.11cm[0m
+Distance: 342
+[0;32mI (172363) example: Measured distance: 204.59cm[0m
+Distance: 340
+Count: 33
+Speed is 2.4m/s
+[0;32mI (172863) example: Measured distance: 9.91cm[0m
+Distance: 339
+Distance: 343
+[0;32mI (173363) example: Measured distance: 9.96cm[0m
+Count: 31
+Speed is 2.3m/s
+Distance: 344
+[0;32mI (173863) example: Measured distance: 9.81cm[0m
+Distance: 346
+[0;32mI (174363) example: Measured distance: 10.45cm[0m
+Count: 32
+Speed is 2.3m/s
+Distance: 346
+[0;32mI (174863) example: Measured distance: 10.43cm[0m
+Distance: 344
+[0;32mI (175363) example: Measured distance: 9.07cm[0m
+Count: 32
+Speed is 2.3m/s
+Distance: 349
+[0;32mI (175863) example: Measured distance: 7.86cm[0m
+Distance: 345
+[0;32mI (176363) example: Measured distance: 7.66cm[0m
+Count: 30
+Speed is 2.2m/s
+Distance: 343
+[0;32mI (176863) example: Measured distance: 8.25cm[0m
+Distance: 339
+[0;32mI (177363) example: Measured distance: 10.35cm[0m
+Count: 33
+Speed is 2.4m/s
+Distance: 337
+[0;32mI (177863) example: Measured distance: 11.71cm[0m
+Distance: 341
+[0;32mI (178363) example: Measured distance: 20.67cm[0m
+Count: 32
+Speed is 2.3m/s
+Distance: 340
+[0;32mI (178863) example: Measured distance: 9.93cm[0m
+Distance: 345
+[0;32mI (179363) example: Measured distance: 9.96cm[0m
+Count: 32
+Speed is 2.3m/s
+Distance: 343
+[0;32mI (179863) example: Measured distance: 8.17cm[0m
+Distance: 339
+[0;32mI (180373) example: Measured distance: 214.82cm[0m
+Count: 30
+Speed is 2.2m/s
+Distance: 320
+[0;32mI (180993) example: Measured distance: 13.59cm[0m
+Distance: 269
+Count: 33
+Speed is 2.4m/s
+[0;32mI (181493) example: Measured distance: 9.03cm[0m
+Distance: 239
+[0;32mI (181993) example: Measured distance: 8.76cm[0m
+Distance: 216
+Count: 32
+Speed is 2.3m/s
+[0;32mI (182493) example: Measured distance: 8.69cm[0m
+Distance: 209
+[0;32mI (182993) example: Measured distance: 9.86cm[0m
+Distance: 207
+Count: 33
+Speed is 2.4m/s
+[0;32mI (183493) example: Measured distance: 9.13cm[0m
+Distance: 202
+[0;32mI (183993) example: Measured distance: 8.92cm[0m
+Distance: 195
+Count: 30
+Speed is 2.2m/s
+Distance: 177
+Distance: 159
+Count: 31
+Speed is 2.3m/s
+Distance: 145
+Distance: 140
+[0;32mI (186113) example: Measured distance: 155.97cm[0m
+Count: 32
+Speed is 2.3m/s
+Distance: 104
+[0;32mI (186693) example: Measured distance: 154.05cm[0m
+[0;32mI (186973) example: WALL DETECTED[0m
+Distance: 62
+[0;32mI (187443) example: WALL DETECTED[0m
+Distance: 23
+Count: 22
+Speed is 1.6m/s
+[0;32mI (187883) example: WALL DETECTED[0m
+Distance: 32
+[0;32mI (188333) example: WALL DETECTED[0m
+Distance: 35
+Count: 0
+Speed is 0.0m/s
+[0;32mI (188803) example: WALL DETECTED[0m
+Distance: 41
+[0;32mI (189263) example: WALL DETECTED[0m
+Distance: 50
+Count: 0
+Speed is 0.0m/s
+[0;32mI (189713) example: WALL DETECTED[0m
+Distance: 48
+[0;32mI (190163) example: WALL DETECTED[0m
+Distance: 49
+Count: 0
+Speed is 0.0m/s
+[0;32mI (190503) example: Measured distance: 156.12cm[0m
+[0;32mI (190633) example: WALL DETECTED[0m
+Distance: 45
+[0;32mI (191073) example: WALL DETECTED[0m
+Distance: 40
+Count: 0
+Speed is 0.0m/s
+[0;32mI (191513) example: WALL DETECTED[0m
+Distance: 29
+[0;32mI (191983) example: WALL DETECTED[0m
+Distance: 22
+Count: 0
+Speed is 0.0m/s
+[0;32mI (192463) example: WALL DETECTED[0m
+Distance: 17
+[0;32mI (192943) example: WALL DETECTED[0m
+Distance: 18
+[0;32mI (193413) example: WALL DETECTED[0m
+Distance: 21
+Count: 0
+Speed is 0.0m/s
+[0;32mI (193893) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (194373) example: WALL DETECTED[0m
+Distance: 51
+Count: 0
+Speed is 0.0m/s
+Distance: 77
+Distance: 75
+Count: 7
+Speed is 0.5m/s
+[0;32mI (195803) example: WALL DETECTED[0m
+Distance: 54
+[0;32mI (196133) example: Measured distance: 232.22cm[0m
+[0;32mI (196253) example: WALL DETECTED[0m
+Distance: 47
+Count: 16
+Speed is 1.2m/s
+[0;32mI (329283) example: WALL DETECTED[0m
+Distance: 57
+Count: 0
+Speed is 0.0m/s
+[0;32mI (329753) example: WALL DETECTED[0m
+Distance: 53
+[0;32mI (330243) example: WALL DETECTED[0m
+Distance: 68
+Count: 0
+Speed is 0.0m/s
+Distance: 115
+Distance: 146
+Count: 0
+Speed is 0.0m/s
+Distance: 123
+Distance: 173
+Count: 0
+Speed is 0.0m/s
+Distance: 149
+Distance: 161
+Count: 0
+Speed is 0.0m/s
+Distance: 209
+Distance: 122
+Count: 0
+Speed is 0.0m/s
+Distance: 118
+[0;32mI (334823) example: Measured distance: 167.07cm[0m
+Distance: 147
+Count: 0
+Speed is 0.0m/s
+Distance: 135
+Distance: 119
+Count: 0
+Speed is 0.0m/s
+Distance: 98
+Distance: 97
+Count: 0
+Speed is 0.0m/s
+Distance: 156
+Distance: 175
+Count: 0
+Speed is 0.0m/s
+Distance: 225
+Distance: 163
+Count: 0
+Speed is 0.0m/s
+Distance: 154
+Distance: 191
+Count: 0
+Speed is 0.0m/s
+Distance: 149
+Distance: 174
+Distance: 159
+Count: 0
+Speed is 0.0m/s
+Distance: 126
+Distance: 188
+Count: 0
+Speed is 0.0m/s
+Distance: 127
+[0;32mI (343383) example: WALL DETECTED[0m
+Distance: 48
+[0;32mI (343383) example: Measured distance: 17.30cm[0m
+Count: 0
+Speed is 0.0m/s
+Distance: 157
+[0;32mI (343883) example: Measured distance: 13.33cm[0m
+Distance: 175
+[0;32mI (344383) example: Measured distance: 21.09cm[0m
+Count: 0
+Speed is 0.0m/s
+Distance: 123
+[0;32mI (345063) example: Measured distance: 37.07cm[0m
+[0;32mI (345323) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (345563) example: Measured distance: 53.78cm[0m
+[0;32mI (345783) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (346063) example: Measured distance: 49.86cm[0m
+[0;32mI (346233) example: WALL DETECTED[0m
+Distance: 27
+Count: 0
+Speed is 0.0m/s
+[0;32mI (346703) example: WALL DETECTED[0m
+Distance: 31
+Distance: 92
+Count: 0
+Speed is 0.0m/s
+Distance: 152
+Distance: 156
+Count: 0
+Speed is 0.0m/s
+Distance: 137
+Distance: 100
+Count: 0
+Speed is 0.0m/s
+[0;32mI (349623) example: WALL DETECTED[0m
+Distance: 71
+[0;32mI (350103) example: WALL DETECTED[0m
+Distance: 70
+Count: 0
+Speed is 0.0m/s
+[0;32mI (350473) example: WALL DETECTED[0m
+Distance: 71
+[0;32mI (350953) example: WALL DETECTED[0m
+Distance: 71
+[0;32mI (351443) example: WALL DETECTED[0m
+Distance: 72
+Count: 0
+Speed is 0.0m/s
+Distance: 75
+Distance: 75
+Count: 0
+Speed is 0.0m/s
+Distance: 75
+Distance: 76
+Count: 0
+Speed is 0.0m/s
+Distance: 76
+[0;32mI (354343) example: WALL DETECTED[0m
+Distance: 74
+Count: 0
+Speed is 0.0m/s
+Distance: 81
+Distance: 84
+Count: 0
+Speed is 0.0m/s
+Distance: 80
+[0;32mI (356293) example: WALL DETECTED[0m
+Distance: 74
+Count: 0
+Speed is 0.0m/s
+[0;32mI (356763) example: WALL DETECTED[0m
+Distance: 70
+[0;32mI (357223) example: WALL DETECTED[0m
+Distance: 67
+Count: 0
+Speed is 0.0m/s
+[0;32mI (357673) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (358123) example: WALL DETECTED[0m
+Distance: 64
+Count: 0
+Speed is 0.0m/s
+Distance: 76
+Distance: 86
+Count: 0
+Speed is 0.0m/s
+[0;32mI (359593) example: WALL DETECTED[0m
+Distance: 60
+Distance: 106
+Count: 0
+Speed is 0.0m/s
+Distance: 76
+Distance: 140
+Count: 0
+Speed is 0.0m/s
+Distance: 90
+Distance: 89
+Count: 0
+Speed is 0.0m/s
+Distance: 83
+Distance: 135
+Count: 0
+Speed is 0.0m/s
+Distance: 220
+Distance: 146
+Count: 0
+Speed is 0.0m/s
+[0;32mI (364453) example: WALL DETECTED[0m
+Distance: 71
+Distance: 156
+Distance: 197
+Count: 0
+Speed is 0.0m/s
+Distance: 196
+Distance: 101
+Count: 0
+Speed is 0.0m/s
+Distance: 188
+Distance: 185
+Count: 0
+Speed is 0.0m/s
+Distance: 143
+Distance: 158
+Count: 0
+Speed is 0.0m/s
+Distance: 116
+Distance: 138
+Count: 0
+Speed is 0.0m/s
+Distance: 132
+Distance: 158
+Count: 0
+Speed is 0.0m/s
+Distance: 168
+Distance: 176
+Count: 0
+Speed is 0.0m/s
+Distance: 139
+[0;32mI (372233) example: WALL DETECTED[0m
+Distance: 70
+Count: 0
+Speed is 0.0m/s
+[0;32mI (372663) example: WALL DETECTED[0m
+Distance: 52
+[0;32mI (373103) example: WALL DETECTED[0m
+Distance: 44
+Count: 0
+Speed is 0.0m/s
+[0;32mI (373543) example: WALL DETECTED[0m
+Distance: 34
+[0;32mI (374003) example: WALL DETECTED[0m
+Distance: 31
+[0;32mI (374423) example: WALL DETECTED[0m
+Distance: 41
+Count: 0
+Speed is 0.0m/s
+[0;32mI (374863) example: WALL DETECTED[0m
+Distance: 38
+[0;32mI (375313) example: WALL DETECTED[0m
+Distance: 36
+Count: 0
+Speed is 0.0m/s
+[0;32mI (375753) example: WALL DETECTED[0m
+Distance: 34
+[0;32mI (376193) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (376623) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (377063) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (377493) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (377943) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (378393) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (378843) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (379283) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (379733) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (380173) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (380613) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (381043) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (381483) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (381943) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (382373) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (382823) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (383273) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (383713) example: WALL DETECTED[0m
+Distance: 34
+[0;32mI (384163) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (384603) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (385043) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (385483) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (385933) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (386363) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (386803) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (387233) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (387663) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (388113) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (388553) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (389003) example: WALL DETECTED[0m
+Distance: 32
+[0;32mI (389433) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (389883) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (390323) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (390773) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (391223) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (391663) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (392103) example: WALL DETECTED[0m
+Distance: 34
+Count: 0
+Speed is 0.0m/s
+[0;32mI (392553) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (393003) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (393433) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (393873) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (394313) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (394753) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (395193) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (395623) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (396063) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (396493) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (396943) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (397393) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (397833) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (398283) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (398713) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (399153) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (399603) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (400043) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (400483) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (400933) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (401373) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (401813) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (402253) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (402703) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (403133) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (403593) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (404033) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (404473) example: WALL DETECTED[0m
+Distance: 36
+[0;32mI (404923) example: WALL DETECTED[0m
+Distance: 39
+[0;32mI (405363) example: WALL DETECTED[0m
+Distance: 32
+Count: 0
+Speed is 0.0m/s
+[0;32mI (405813) example: WALL DETECTED[0m
+Distance: 34
+[0;32mI (406263) example: WALL DETECTED[0m
+Distance: 34
+Count: 0
+Speed is 0.0m/s
+[0;32mI (406733) example: WALL DETECTED[0m
+Distance: 29
+[0;32mI (407173) example: WALL DETECTED[0m
+Distance: 38
+Count: 0
+Speed is 0.0m/s
+[0;32mI (407603) example: WALL DETECTED[0m
+Distance: 31
+[0;32mI (408053) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (408503) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (408933) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (409363) example: WALL DETECTED[0m
+Distance: 30
+Count: 0
+Speed is 0.0m/s
+[0;32mI (409803) example: WALL DETECTED[0m
+Distance: 31
+[0;32mI (410243) example: WALL DETECTED[0m
+Distance: 29
+Count: 0
+Speed is 0.0m/s
+[0;32mI (410683) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (411123) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (411583) example: WALL DETECTED[0m
+Distance: 29
+[0;32mI (412033) example: WALL DETECTED[0m
+Distance: 29
+Count: 0
+Speed is 0.0m/s
+[0;32mI (412473) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (412923) example: WALL DETECTED[0m
+Distance: 31
+[0;32mI (413353) example: WALL DETECTED[0m
+Distance: 30
+Count: 0
+Speed is 0.0m/s
+[0;32mI (413793) example: WALL DETECTED[0m
+Distance: 29
+[0;32mI (414223) example: WALL DETECTED[0m
+Distance: 29
+Count: 0
+Speed is 0.0m/s
+[0;32mI (414663) example: WALL DETECTED[0m
+Distance: 30
+[0;32mI (415103) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+[0;32mI (415553) example: WALL DETECTED[0m
+Distance: 31
+[0;32mI (416013) example: WALL DETECTED[0m
+Distance: 29
+Count: 0
+Speed is 0.0m/s
+[0;32mI (416453) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (416903) example: WALL DETECTED[0m
+Distance: 37
+[0;32mI (417373) example: WALL DETECTED[0m
+Distance: 31
+Count: 0
+Speed is 0.0m/s
+[0;32mI (417833) example: WALL DETECTED[0m
+Distance: 23
+[0;32mI (418283) example: WALL DETECTED[0m
+Distance: 30
+Count: 0
+Speed is 0.0m/s
+[0;32mI (418713) example: WALL DETECTED[0m
+Distance: 35
+[0;32mI (419133) example: WALL DETECTED[0m
+Distance: 34
+Count: 0
+Speed is 0.0m/s
+[0;32mI (419583) example: WALL DETECTED[0m
+Distance: 32
+[0;32mI (420033) example: WALL DETECTED[0m
+Distance: 32
+Count: 0
+Speed is 0.0m/s
+[0;32mI (420483) example: WALL DETECTED[0m
+Distance: 31
+[0;32mI (420923) example: WALL DETECTED[0m
+Distance: 31
+[0;32mI (421373) example: WALL DETECTED[0m
+Distance: 29
+Count: 0
+Speed is 0.0m/s
+[0;32mI (421813) example: WALL DETECTED[0m
+Distance: 31
+[0;32mI (422263) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (422723) example: WALL DETECTED[0m
+Distance: 46
+[0;32mI (423203) example: WALL DETECTED[0m
+Distance: 60
+Count: 0
+Speed is 0.0m/s
+[0;32mI (423693) example: WALL DETECTED[0m
+Distance: 67
+[0;32mI (424173) example: WALL DETECTED[0m
+Distance: 67
+Count: 0
+Speed is 0.0m/s
+[0;32mI (424623) example: WALL DETECTED[0m
+Distance: 52
+[0;32mI (425093) example: WALL DETECTED[0m
+Distance: 68
+Count: 0
+Speed is 0.0m/s
+[0;32mI (425573) example: WALL DETECTED[0m
+Distance: 70
+[0;32mI (426063) example: WALL DETECTED[0m
+Distance: 67
+Count: 0
+Speed is 0.0m/s
+[0;32mI (426543) example: WALL DETECTED[0m
+Distance: 61
+[0;32mI (427023) example: WALL DETECTED[0m
+Distance: 53
+Count: 0
+Speed is 0.0m/s
+[0;32mI (427493) example: WALL DETECTED[0m
+Distance: 48
+[0;32mI (427933) example: WALL DETECTED[0m
+Distance: 48
+[0;32mI (428373) example: WALL DETECTED[0m
+Distance: 49
+Count: 0
+Speed is 0.0m/s
+[0;32mI (428813) example: WALL DETECTED[0m
+Distance: 49
+[0;32mI (429223) example: WALL DETECTED[0m
+Distance: 50
+Count: 0
+Speed is 0.0m/s
+[0;32mI (429643) example: WALL DETECTED[0m
+Distance: 50
+[0;32mI (430083) example: WALL DETECTED[0m
+Distance: 50
+Count: 0
+Speed is 0.0m/s
+[0;32mI (430493) example: WALL DETECTED[0m
+Distance: 50
+[0;32mI (430923) example: WALL DETECTED[0m
+Distance: 50
+[0;32mI (431363) example: WALL DETECTED[0m
+Distance: 51
+Count: 0
+Speed is 0.0m/s
+[0;32mI (431783) example: WALL DETECTED[0m
+Distance: 48
+[0;32mI (432223) example: WALL DETECTED[0m
+Distance: 47
+Count: 0
+Speed is 0.0m/s
+[0;32mI (432643) example: WALL DETECTED[0m
+Distance: 45
+[0;32mI (433073) example: WALL DETECTED[0m
+Distance: 44
+Count: 0
+Speed is 0.0m/s
+[0;32mI (433513) example: WALL DETECTED[0m
+Distance: 44
+[0;32mI (433943) example: WALL DETECTED[0m
+Distance: 44
+[0;32mI (434363) example: WALL DETECTED[0m
+Distance: 44
+Count: 0
+Speed is 0.0m/s
+[0;32mI (434803) example: WALL DETECTED[0m
+Distance: 44
+[0;32mI (435243) example: WALL DETECTED[0m
+Distance: 45
+Count: 0
+Speed is 0.0m/s
+[0;32mI (435673) example: WALL DETECTED[0m
+Distance: 45
+[0;32mI (436103) example: WALL DETECTED[0m
+Distance: 45
+Count: 0
+Speed is 0.0m/s
+[0;32mI (436543) example: WALL DETECTED[0m
+Distance: 46
+[0;32mI (436993) example: WALL DETECTED[0m
+Distance: 45
+Count: 0
+Speed is 0.0m/s
+[0;32mI (437473) example: WALL DETECTED[0m
+Distance: 47
+[0;32mI (437913) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (438363) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (438793) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (439243) example: WALL DETECTED[0m
+Distance: 27
+Count: 0
+Speed is 0.0m/s
+[0;32mI (439693) example: WALL DETECTED[0m
+Distance: 30
+[0;32mI (440153) example: WALL DETECTED[0m
+Distance: 43
+Count: 0
+Speed is 0.0m/s
+[0;32mI (440633) example: WALL DETECTED[0m
+Distance: 72
+[0;32mI (441113) example: WALL DETECTED[0m
+Distance: 73
+Count: 0
+Speed is 0.0m/s
+Distance: 241
+Distance: 196
+Count: 0
+Speed is 0.0m/s
+Distance: 248
+[0;32mI (443063) example: WALL DETECTED[0m
+Distance: 73
+Count: 0
+Speed is 0.0m/s
+[0;32mI (443523) example: WALL DETECTED[0m
+Distance: 40
+[0;32mI (443973) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (444423) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (444863) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (445303) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (445753) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (446183) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (446623) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (447063) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (447503) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (447933) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (448383) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (448843) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (449293) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (449733) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (450193) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (450643) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (451093) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (451543) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (451993) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (452433) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (452873) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (453313) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (453773) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (454213) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (454653) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (455113) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (455553) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (456013) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (456473) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (456923) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (457383) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (457823) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (458273) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (458723) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (459183) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (459643) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (460103) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (460553) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (461013) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (461453) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (461903) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (462343) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (462803) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (463253) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (463703) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (464153) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (464603) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (465053) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (465503) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (465943) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (466383) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (466843) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (467293) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (467743) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (468193) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (468653) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (469093) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (469543) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (470003) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (470453) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (470923) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (471363) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (471813) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (472253) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (472703) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (473153) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (473613) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (474053) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (474513) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (474953) example: WALL DETECTED[0m
+Distance: 23
+[0;32mI (475403) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (475863) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (476303) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (476753) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (477213) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (477653) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (478103) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (478563) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (479013) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (479463) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (479903) example: WALL DETECTED[0m
+Distance: 23
+[0;32mI (480343) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (480753) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (481183) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (481653) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (482123) example: WALL DETECTED[0m
+Distance: 23
+Count: 0
+Speed is 0.0m/s
+[0;32mI (482583) example: WALL DETECTED[0m
+Distance: 22
+[0;32mI (483053) example: WALL DETECTED[0m
+Distance: 23
+Count: 0
+Speed is 0.0m/s
+[0;32mI (483513) example: WALL DETECTED[0m
+Distance: 22
+[0;32mI (483973) example: WALL DETECTED[0m
+Distance: 22
+[0;32mI (484433) example: WALL DETECTED[0m
+Distance: 23
+Count: 0
+Speed is 0.0m/s
+[0;32mI (484893) example: WALL DETECTED[0m
+Distance: 23
+[0;32mI (485363) example: WALL DETECTED[0m
+Distance: 22
+Count: 0
+Speed is 0.0m/s
+[0;32mI (485833) example: WALL DETECTED[0m
+Distance: 23
+[0;32mI (486283) example: WALL DETECTED[0m
+Distance: 22
+Count: 0
+Speed is 0.0m/s
+[0;32mI (486753) example: WALL DETECTED[0m
+Distance: 22
+[0;32mI (487223) example: WALL DETECTED[0m
+Distance: 22
+Count: 0
+Speed is 0.0m/s
+[0;32mI (487693) example: WALL DETECTED[0m
+Distance: 22
+[0;32mI (488153) example: WALL DETECTED[0m
+Distance: 22
+Count: 0
+Speed is 0.0m/s
+[0;32mI (488613) example: WALL DETECTED[0m
+Distance: 22
+[0;32mI (489063) example: WALL DETECTED[0m
+Distance: 22
+Count: 0
+Speed is 0.0m/s
+[0;32mI (489523) example: WALL DETECTED[0m
+Distance: 22
+[0;32mI (489983) example: WALL DETECTED[0m
+Distance: 22
+[0;32mI (490443) example: WALL DETECTED[0m
+Distance: 23
+Count: 0
+Speed is 0.0m/s
+[0;32mI (490893) example: WALL DETECTED[0m
+Distance: 23
+[0;32mI (491343) example: WALL DETECTED[0m
+Distance: 21
+Count: 0
+Speed is 0.0m/s
+[0;32mI (491803) example: WALL DETECTED[0m
+Distance: 22
+[0;32mI (492253) example: WALL DETECTED[0m
+Distance: 23
+Count: 0
+Speed is 0.0m/s
+[0;32mI (492693) example: WALL DETECTED[0m
+Distance: 23
+[0;32mI (493153) example: WALL DETECTED[0m
+Distance: 22
+Count: 0
+Speed is 0.0m/s
+[0;32mI (493613) example: WALL DETECTED[0m
+Distance: 22
+[0;32mI (494063) example: WALL DETECTED[0m
+Distance: 22
+Count: 0
+Speed is 0.0m/s
+[0;32mI (494523) example: WALL DETECTED[0m
+Distance: 23
+[0;32mI (494973) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (495403) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (495843) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (496283) example: WALL DETECTED[0m
+Distance: 31
+Count: 0
+Speed is 0.0m/s
+[0;32mI (496723) example: WALL DETECTED[0m
+Distance: 46
+[0;32mI (497153) example: WALL DETECTED[0m
+Distance: 47
+Count: 0
+Speed is 0.0m/s
+[0;32mI (497613) example: WALL DETECTED[0m
+Distance: 46
+[0;32mI (498073) example: WALL DETECTED[0m
+Distance: 38
+Count: 0
+Speed is 0.0m/s
+[0;32mI (498533) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (499013) example: WALL DETECTED[0m
+Distance: 32
+Count: 0
+Speed is 0.0m/s
+[0;32mI (499483) example: WALL DETECTED[0m
+Distance: 30
+[0;32mI (499973) example: WALL DETECTED[0m
+Distance: 29
+Count: 0
+Speed is 0.0m/s
+[0;32mI (500453) example: WALL DETECTED[0m
+Distance: 30
+[0;32mI (500933) example: WALL DETECTED[0m
+Distance: 30
+[0;32mI (501313) example: WALL DETECTED[0m
+Distance: 29
+Count: 0
+Speed is 0.0m/s
+[0;32mI (501803) example: WALL DETECTED[0m
+Distance: 32
+[0;32mI (502263) example: WALL DETECTED[0m
+Distance: 37
+Count: 0
+Speed is 0.0m/s
+[0;32mI (502693) example: WALL DETECTED[0m
+Distance: 52
+[0;32mI (503133) example: WALL DETECTED[0m
+Distance: 52
+Count: 0
+Speed is 0.0m/s
+[0;32mI (503553) example: WALL DETECTED[0m
+Distance: 52
+[0;32mI (503963) example: WALL DETECTED[0m
+Distance: 53
+[0;32mI (504393) example: WALL DETECTED[0m
+Distance: 52
+Count: 0
+Speed is 0.0m/s
+[0;32mI (504813) example: WALL DETECTED[0m
+Distance: 52
+[0;32mI (505243) example: WALL DETECTED[0m
+Distance: 54
+Count: 0
+Speed is 0.0m/s
+[0;32mI (505693) example: WALL DETECTED[0m
+Distance: 56
+[0;32mI (506133) example: WALL DETECTED[0m
+Distance: 44
+Count: 0
+Speed is 0.0m/s
+[0;32mI (506573) example: WALL DETECTED[0m
+Distance: 30
+[0;32mI (507023) example: WALL DETECTED[0m
+Distance: 28
+Count: 0
+Speed is 0.0m/s
+[0;32mI (507483) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (507953) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (508413) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (508883) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (509343) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (509813) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (510293) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (510753) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (511223) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (511693) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (512173) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (512643) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (513123) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (513593) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (514073) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (514543) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (515023) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (515493) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (515953) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (516423) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (516893) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (517363) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (517823) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (518293) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (518763) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (519223) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (519693) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (520163) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (520633) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (521093) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (521553) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (522013) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (522463) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (522933) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (523393) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (523853) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (524323) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (524793) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (525243) example: WALL DETECTED[0m
+Distance: 23
+Count: 0
+Speed is 0.0m/s
+[0;32mI (525693) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (526163) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (526623) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (527103) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (527553) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (528023) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (528493) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (528953) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (529413) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (529873) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (530343) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (530793) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (531263) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (531723) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (532183) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (532643) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (533103) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (533563) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (534023) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (534483) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (534933) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (535393) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (535853) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (536303) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (536763) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (537233) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (537473) example: Measured distance: 177.94cm[0m
+[0;32mI (537693) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (537983) example: Measured distance: 166.23cm[0m
+[0;32mI (538143) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (538493) example: Measured distance: 167.21cm[0m
+[0;32mI (538613) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (539003) example: Measured distance: 172.85cm[0m
+[0;32mI (539073) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (539513) example: Measured distance: 169.79cm[0m
+[0;32mI (539523) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (539993) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (540013) example: Measured distance: 161.50cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (540453) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (540533) example: Measured distance: 170.39cm[0m
+[0;32mI (540913) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (541033) example: Measured distance: 162.88cm[0m
+[0;32mI (541373) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (541613) example: Measured distance: 172.11cm[0m
+[0;32mI (541823) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (542123) example: Measured distance: 174.42cm[0m
+[0;32mI (542273) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (542633) example: Measured distance: 170.26cm[0m
+[0;32mI (542743) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (543143) example: Measured distance: 173.90cm[0m
+[0;32mI (543203) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (543673) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (543893) example: Measured distance: 174.42cm[0m
+[0;32mI (544133) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (544593) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (545043) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (545493) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (545963) example: WALL DETECTED[0m
+Distance: 23
+[0;32mI (546423) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (546503) example: Measured distance: 162.05cm[0m
+[0;32mI (546893) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (547353) example: WALL DETECTED[0m
+Distance: 24
+Count: 0
+Speed is 0.0m/s
+[0;32mI (547823) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (548283) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (548733) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (548933) example: Measured distance: 170.44cm[0m
+[0;32mI (549193) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (549443) example: Measured distance: 175.25cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (549643) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (549953) example: Measured distance: 170.98cm[0m
+[0;32mI (550093) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (550463) example: Measured distance: 176.74cm[0m
+[0;32mI (550543) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (550973) example: Measured distance: 174.19cm[0m
+[0;32mI (550993) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (551443) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (551843) example: Measured distance: 181.09cm[0m
+[0;32mI (551893) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (552353) example: Measured distance: 171.07cm[0m
+[0;32mI (552363) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (552813) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (552863) example: Measured distance: 172.86cm[0m
+[0;32mI (553273) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (553733) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (554193) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (554643) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (554933) example: Measured distance: 168.27cm[0m
+[0;32mI (555093) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (555443) example: Measured distance: 173.56cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (555543) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (555953) example: Measured distance: 174.68cm[0m
+[0;32mI (555983) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (556433) example: WALL DETECTED[0m
+Distance: 26
+Count: 0
+Speed is 0.0m/s
+[0;32mI (556463) example: Measured distance: 172.33cm[0m
+[0;32mI (556883) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (556973) example: Measured distance: 175.29cm[0m
+[0;32mI (557333) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (557543) example: Measured distance: 164.38cm[0m
+[0;32mI (557773) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (558043) example: Measured distance: 163.53cm[0m
+[0;32mI (558203) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (558653) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (558863) example: Measured distance: 169.25cm[0m
+[0;32mI (559083) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (559373) example: Measured distance: 168.61cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (559533) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (559993) example: WALL DETECTED[0m
+Distance: 20
+[0;32mI (560003) example: Measured distance: 175.39cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (560463) example: WALL DETECTED[0m
+Distance: 31
+[0;32mI (560513) example: Measured distance: 167.16cm[0m
+[0;32mI (560933) example: WALL DETECTED[0m
+Distance: 34
+[0;32mI (561023) example: Measured distance: 165.07cm[0m
+[0;32mI (561373) example: WALL DETECTED[0m
+Distance: 31
+Count: 0
+Speed is 0.0m/s
+[0;32mI (561533) example: Measured distance: 170.91cm[0m
+[0;32mI (561813) example: WALL DETECTED[0m
+Distance: 36
+[0;32mI (562103) example: Measured distance: 171.26cm[0m
+[0;32mI (562253) example: WALL DETECTED[0m
+Distance: 45
+Count: 0
+Speed is 0.0m/s
+[0;32mI (562613) example: Measured distance: 167.24cm[0m
+[0;32mI (562713) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (563123) example: Measured distance: 171.12cm[0m
+[0;32mI (563183) example: WALL DETECTED[0m
+Distance: 22
+Count: 0
+Speed is 0.0m/s
+[0;32mI (563633) example: Measured distance: 172.14cm[0m
+[0;32mI (563663) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (564153) example: WALL DETECTED[0m
+Distance: 4
+[0;32mI (564323) example: Measured distance: 173.59cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (564633) example: WALL DETECTED[0m
+Distance: 7
+[0;32mI (565113) example: WALL DETECTED[0m
+Distance: 25
+Count: 0
+Speed is 0.0m/s
+[0;32mI (565593) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (566083) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (566393) example: Measured distance: 170.64cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (566563) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (566903) example: Measured distance: 171.64cm[0m
+[0;32mI (567043) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (567413) example: Measured distance: 173.29cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (567523) example: WALL DETECTED[0m
+Distance: 25
+[0;32mI (567923) example: Measured distance: 172.73cm[0m
+[0;32mI (567993) example: WALL DETECTED[0m
+Distance: 33
+[0;32mI (568433) example: Measured distance: 174.88cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (568453) example: WALL DETECTED[0m
+Distance: 43
+[0;32mI (568923) example: WALL DETECTED[0m
+Distance: 40
+[0;32mI (568943) example: Measured distance: 173.69cm[0m
+[0;32mI (569393) example: WALL DETECTED[0m
+Distance: 39
+[0;32mI (569453) example: Measured distance: 168.80cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (569873) example: WALL DETECTED[0m
+Distance: 31
+[0;32mI (569963) example: Measured distance: 166.34cm[0m
+[0;32mI (570353) example: WALL DETECTED[0m
+Distance: 31
+Count: 0
+Speed is 0.0m/s
+[0;32mI (570533) example: Measured distance: 168.07cm[0m
+[0;32mI (570833) example: WALL DETECTED[0m
+Distance: 27
+[0;32mI (571043) example: Measured distance: 171.62cm[0m
+[0;32mI (571313) example: WALL DETECTED[0m
+Distance: 27
+Count: 0
+Speed is 0.0m/s
+[0;32mI (571553) example: Measured distance: 171.61cm[0m
+[0;32mI (571803) example: WALL DETECTED[0m
+Distance: 26
+[0;32mI (572063) example: Measured distance: 167.52cm[0m
+[0;32mI (572283) example: WALL DETECTED[0m
+Distance: 23
+Count: 0
+Speed is 0.0m/s
+[0;32mI (572633) example: Measured distance: 165.73cm[0m
+[0;32mI (572763) example: WALL DETECTED[0m
+Distance: 23
+[0;32mI (573253) example: WALL DETECTED[0m
+Distance: 23
+Count: 0
+Speed is 0.0m/s
+[0;32mI (573733) example: WALL DETECTED[0m
+Distance: 23
+[0;32mI (574213) example: WALL DETECTED[0m
+Distance: 23
+Count: 0
+Speed is 0.0m/s
+[0;32mI (574693) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (574823) example: Measured distance: 171.09cm[0m
+[0;32mI (575173) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (575323) example: Measured distance: 162.82cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (575653) example: WALL DETECTED[0m
+Distance: 23
+[0;32mI (575843) example: Measured distance: 167.44cm[0m
+[0;32mI (576143) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (576353) example: Measured distance: 176.88cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (576613) example: WALL DETECTED[0m
+Distance: 23
+[0;32mI (576863) example: Measured distance: 165.37cm[0m
+[0;32mI (577093) example: WALL DETECTED[0m
+Distance: 23
+[0;32mI (577373) example: Measured distance: 167.10cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (577583) example: WALL DETECTED[0m
+Distance: 23
+[0;32mI (577883) example: Measured distance: 166.06cm[0m
+[0;32mI (578063) example: WALL DETECTED[0m
+Distance: 24
+[0;32mI (578393) example: Measured distance: 167.97cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (578543) example: WALL DETECTED[0m
+Distance: 21
+[0;32mI (578963) example: Measured distance: 168.64cm[0m
+[0;32mI (579033) example: WALL DETECTED[0m
+Distance: 4
+Count: 0
+Speed is 0.0m/s
+[0;32mI (579473) example: Measured distance: 165.38cm[0m
+[0;32mI (579513) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (579983) example: Measured distance: 173.62cm[0m
+[0;32mI (580003) example: WALL DETECTED[0m
+Distance: 2
+Count: 0
+Speed is 0.0m/s
+[0;32mI (580483) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (580493) example: Measured distance: 169.02cm[0m
+[0;32mI (580973) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (581183) example: Measured distance: 176.45cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (581453) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (581693) example: Measured distance: 166.53cm[0m
+[0;32mI (581943) example: WALL DETECTED[0m
+Distance: 4
+[0;32mI (582263) example: Measured distance: 161.96cm[0m
+[0;32mI (582423) example: WALL DETECTED[0m
+Distance: 3
+Count: 0
+Speed is 0.0m/s
+[0;32mI (582773) example: Measured distance: 167.94cm[0m
+[0;32mI (582913) example: WALL DETECTED[0m
+Distance: 2
+[0;32mI (583283) example: Measured distance: 171.10cm[0m
+[0;32mI (583403) example: WALL DETECTED[0m
+Distance: 3
+Count: 0
+Speed is 0.0m/s
+[0;32mI (583793) example: Measured distance: 174.05cm[0m
+[0;32mI (583883) example: WALL DETECTED[0m
+Distance: 2
+[0;32mI (584303) example: Measured distance: 168.14cm[0m
+[0;32mI (584373) example: WALL DETECTED[0m
+Distance: 3
+Count: 0
+Speed is 0.0m/s
+[0;32mI (584813) example: Measured distance: 165.02cm[0m
+[0;32mI (584863) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (585323) example: Measured distance: 169.07cm[0m
+[0;32mI (585343) example: WALL DETECTED[0m
+Distance: 3
+Count: 0
+Speed is 0.0m/s
+[0;32mI (585833) example: Measured distance: 168.54cm[0m
+[0;32mI (585833) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (586313) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (586343) example: Measured distance: 172.02cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (586803) example: WALL DETECTED[0m
+Distance: 2
+[0;32mI (586853) example: Measured distance: 166.36cm[0m
+[0;32mI (587293) example: WALL DETECTED[0m
+Distance: 4
+[0;32mI (587423) example: Measured distance: 168.72cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (587773) example: WALL DETECTED[0m
+Distance: 7
+[0;32mI (587933) example: Measured distance: 171.16cm[0m
+[0;32mI (588253) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (588433) example: Measured distance: 160.16cm[0m
+Count: 1
+Speed is 0.1m/s
+[0;32mI (588733) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (589003) example: Measured distance: 77.58cm[0m
+[0;32mI (589213) example: WALL DETECTED[0m
+Distance: 11
+Count: 1
+Speed is 0.1m/s
+[0;32mI (589503) example: Measured distance: 79.04cm[0m
+[0;32mI (589693) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (590003) example: Measured distance: 159.16cm[0m
+[0;32mI (590173) example: WALL DETECTED[0m
+Distance: 11
+Count: 2
+Speed is 0.1m/s
+[0;32mI (590513) example: Measured distance: 159.24cm[0m
+[0;32mI (590643) example: WALL DETECTED[0m
+Distance: 16
+[0;32mI (591023) example: Measured distance: 14.36cm[0m
+[0;32mI (591133) example: WALL DETECTED[0m
+Distance: 34
+Count: 1
+Speed is 0.1m/s
+[0;32mI (591523) example: Measured distance: 12.16cm[0m
+[0;32mI (591613) example: WALL DETECTED[0m
+Distance: 5
+[0;32mI (592023) example: Measured distance: 9.85cm[0m
+[0;32mI (592103) example: WALL DETECTED[0m
+Distance: 5
+Count: 0
+Speed is 0.0m/s
+[0;32mI (592523) example: Measured distance: 9.53cm[0m
+[0;32mI (592543) example: WALL DETECTED[0m
+Distance: 6
+[0;32mI (593023) example: Measured distance: 9.51cm[0m
+Distance: 150
+Count: 1
+Speed is 0.1m/s
+[0;32mI (593513) example: WALL DETECTED[0m
+Distance: 71
+[0;32mI (593523) example: Measured distance: 15.16cm[0m
+[0;32mI (594003) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (594493) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (594503) example: Measured distance: 22.19cm[0m
+[0;32mI (594973) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (595003) example: Measured distance: 19.53cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (595463) example: WALL DETECTED[0m
+Distance: 62
+[0;32mI (595563) example: Measured distance: 150.17cm[0m
+[0;32mI (595953) example: WALL DETECTED[0m
+Distance: 62
+[0;32mI (596073) example: Measured distance: 22.10cm[0m
+[0;32mI (596433) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (596593) example: Measured distance: 404.00cm[0m
+[0;32mI (596923) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (597183) example: Measured distance: 21.50cm[0m
+[0;32mI (597413) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (597893) example: WALL DETECTED[0m
+Distance: 64
+[0;32mI (598383) example: WALL DETECTED[0m
+Distance: 62
+Count: 0
+Speed is 0.0m/s
+[0;32mI (598863) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (599353) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (599833) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (600323) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (600813) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (601293) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (601783) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (602263) example: WALL DETECTED[0m
+Distance: 62
+Count: 0
+Speed is 0.0m/s
+[0;32mI (602753) example: WALL DETECTED[0m
+Distance: 62
+[0;32mI (603233) example: WALL DETECTED[0m
+Distance: 62
+Count: 0
+Speed is 0.0m/s
+[0;32mI (603723) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (604213) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (604693) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (604893) example: Measured distance: 522.90cm[0m
+[0;32mI (605183) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (605403) example: Measured distance: 169.02cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (605673) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (605953) example: Measured distance: 22.09cm[0m
+[0;32mI (606153) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (606533) example: Measured distance: 155.43cm[0m
+[0;32mI (606643) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (607033) example: Measured distance: 20.45cm[0m
+[0;32mI (607123) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (607533) example: Measured distance: 18.27cm[0m
+[0;32mI (607613) example: WALL DETECTED[0m
+Distance: 62
+[0;32mI (608033) example: Measured distance: 16.71cm[0m
+[0;32mI (608103) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (608593) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (609073) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (609563) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (610043) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (610093) example: Measured distance: 87.55cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (610533) example: WALL DETECTED[0m
+Distance: 64
+[0;32mI (610593) example: Measured distance: 21.61cm[0m
+[0;32mI (611023) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (611503) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (611993) example: WALL DETECTED[0m
+Distance: 62
+Count: 0
+Speed is 0.0m/s
+[0;32mI (612483) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (612963) example: WALL DETECTED[0m
+Distance: 62
+[0;32mI (613213) example: Measured distance: 21.08cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (613453) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (613713) example: Measured distance: 20.77cm[0m
+[0;32mI (613933) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (614273) example: Measured distance: 21.91cm[0m
+[0;32mI (614423) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (614903) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (615193) example: Measured distance: 21.39cm[0m
+[0;32mI (615393) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (615883) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (616173) example: Measured distance: 19.89cm[0m
+[0;32mI (616373) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (616673) example: Measured distance: 11.51cm[0m
+[0;32mI (616853) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (617173) example: Measured distance: 9.51cm[0m
+[0;32mI (617343) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (617673) example: Measured distance: 10.22cm[0m
+[0;32mI (617823) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (618173) example: Measured distance: 9.13cm[0m
+[0;32mI (618313) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (618673) example: Measured distance: 8.89cm[0m
+[0;32mI (618793) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (619283) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (619773) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (620253) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (620743) example: WALL DETECTED[0m
+Distance: 62
+[0;32mI (621223) example: WALL DETECTED[0m
+Distance: 62
+Count: 0
+Speed is 0.0m/s
+[0;32mI (621713) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (622193) example: WALL DETECTED[0m
+Distance: 62
+Count: 0
+Speed is 0.0m/s
+[0;32mI (622683) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (623173) example: WALL DETECTED[0m
+Distance: 62
+Count: 0
+Speed is 0.0m/s
+[0;32mI (623653) example: WALL DETECTED[0m
+Distance: 62
+[0;32mI (624143) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (624623) example: WALL DETECTED[0m
+Distance: 62
+[0;32mI (625113) example: WALL DETECTED[0m
+Distance: 63
+Count: 1
+Speed is 0.1m/s
+[0;32mI (625603) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (626093) example: WALL DETECTED[0m
+Distance: 63
+Count: 2
+Speed is 0.1m/s
+[0;32mI (626573) example: WALL DETECTED[0m
+Distance: 62
+[0;32mI (627063) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (627553) example: WALL DETECTED[0m
+Distance: 64
+[0;32mI (628033) example: WALL DETECTED[0m
+Distance: 64
+Count: 0
+Speed is 0.0m/s
+[0;32mI (628523) example: WALL DETECTED[0m
+Distance: 64
+[0;32mI (629003) example: WALL DETECTED[0m
+Distance: 63
+Count: 0
+Speed is 0.0m/s
+[0;32mI (629493) example: WALL DETECTED[0m
+Distance: 64
+[0;32mI (629983) example: WALL DETECTED[0m
+Distance: 64
+Count: 0
+Speed is 0.0m/s
+[0;32mI (630473) example: WALL DETECTED[0m
+Distance: 63
+[0;32mI (630953) example: WALL DETECTED[0m
+Distance: 64
+[0;32mI (631443) example: WALL DETECTED[0m
+Distance: 64
+Count: 0
+Speed is 0.0m/s
+[0;32mI (631923) example: WALL DETECTED[0m
+Distance: 64
+[0;32mI (632413) example: WALL DETECTED[0m
+Distance: 64
+Count: 0
+Speed is 0.0m/s
+[0;32mI (632903) example: WALL DETECTED[0m
+Distance: 64
+[0;32mI (633383) example: WALL DETECTED[0m
+Distance: 64
+Count: 0
+Speed is 0.0m/s
+[0;32mI (633873) example: WALL DETECTED[0m
+Distance: 64
+[0;32mI (634353) example: WALL DETECTED[0m
+Distance: 64
+Count: 0
+Speed is 0.0m/s
+[0;32mI (634843) example: WALL DETECTED[0m
+Distance: 64
+[0;32mI (635333) example: WALL DETECTED[0m
+Distance: 64
+Count: 0
+Speed is 0.0m/s
+[0;32mI (638993) example: Measured distance: 14.93cm[0m
+[0;32mI (639213) example: WALL DETECTED[0m
+Distance: 66
+Count: 0
+Speed is 0.0m/s
+[0;32mI (639703) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (640193) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (640223) example: Measured distance: 26.31cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (640673) example: WALL DETECTED[0m
+Distance: 67
+[0;32mI (640783) example: Measured distance: 28.67cm[0m
+[0;32mI (641163) example: WALL DETECTED[0m
+Distance: 67
+[0;32mI (641283) example: Measured distance: 25.34cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (641643) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (641783) example: Measured distance: 24.67cm[0m
+[0;32mI (642133) example: WALL DETECTED[0m
+Distance: 67
+[0;32mI (642403) example: Measured distance: 30.06cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (642623) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (642903) example: Measured distance: 29.99cm[0m
+[0;32mI (643103) example: WALL DETECTED[0m
+Distance: 67
+Count: 0
+Speed is 0.0m/s
+[0;32mI (643463) example: Measured distance: 32.21cm[0m
+[0;32mI (643593) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (643963) example: Measured distance: 30.13cm[0m
+[0;32mI (644073) example: WALL DETECTED[0m
+Distance: 67
+Count: 0
+Speed is 0.0m/s
+[0;32mI (644473) example: Measured distance: 211.50cm[0m
+[0;32mI (644563) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (645053) example: WALL DETECTED[0m
+Distance: 67
+[0;32mI (645273) example: Measured distance: 33.04cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (645533) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (646023) example: WALL DETECTED[0m
+Distance: 67
+Count: 0
+Speed is 0.0m/s
+[0;32mI (646503) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (646993) example: WALL DETECTED[0m
+Distance: 67
+Count: 0
+Speed is 0.0m/s
+[0;32mI (647483) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (647513) example: Measured distance: 22.66cm[0m
+[0;32mI (647963) example: WALL DETECTED[0m
+Distance: 67
+[0;32mI (648073) example: Measured distance: 65.70cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (648453) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (648933) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (649423) example: WALL DETECTED[0m
+Distance: 66
+Count: 0
+Speed is 0.0m/s
+[0;32mI (649913) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (650393) example: WALL DETECTED[0m
+Distance: 67
+Count: 0
+Speed is 0.0m/s
+[0;32mI (650873) example: WALL DETECTED[0m
+Distance: 67
+[0;32mI (650923) example: Measured distance: 24.90cm[0m
+[0;32mI (651363) example: WALL DETECTED[0m
+Distance: 66
+Count: 0
+Speed is 0.0m/s
+[0;32mI (651603) example: Measured distance: 23.37cm[0m
+[0;32mI (651853) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (652103) example: Measured distance: 10.84cm[0m
+[0;32mI (652333) example: WALL DETECTED[0m
+Distance: 67
+Count: 0
+Speed is 0.0m/s
+[0;32mI (652603) example: Measured distance: 14.63cm[0m
+[0;32mI (652823) example: WALL DETECTED[0m
+Distance: 67
+[0;32mI (653163) example: Measured distance: 9.23cm[0m
+[0;32mI (653313) example: WALL DETECTED[0m
+Distance: 66
+Count: 0
+Speed is 0.0m/s
+[0;32mI (653793) example: WALL DETECTED[0m
+Distance: 67
+[0;32mI (654023) example: Measured distance: 7.11cm[0m
+[0;32mI (654283) example: WALL DETECTED[0m
+Distance: 66
+Count: 0
+Speed is 0.0m/s
+[0;32mI (654763) example: WALL DETECTED[0m
+Distance: 67
+[0;32mI (655253) example: WALL DETECTED[0m
+Distance: 67
+Count: 0
+Speed is 0.0m/s
+[0;32mI (655743) example: WALL DETECTED[0m
+Distance: 67
+[0;32mI (656223) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (656263) example: Measured distance: 8.57cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (656713) example: WALL DETECTED[0m
+Distance: 67
+[0;32mI (656763) example: Measured distance: 10.27cm[0m
+[0;32mI (657193) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (657323) example: Measured distance: 8.90cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (657683) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (657823) example: Measured distance: 9.44cm[0m
+[0;32mI (658173) example: WALL DETECTED[0m
+Distance: 67
+[0;32mI (658323) example: Measured distance: 9.77cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (658653) example: WALL DETECTED[0m
+Distance: 68
+[0;32mI (658823) example: Measured distance: 8.47cm[0m
+[0;32mI (659143) example: WALL DETECTED[0m
+Distance: 73
+[0;32mI (659323) example: Measured distance: 8.38cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (659623) example: WALL DETECTED[0m
+Distance: 73
+[0;32mI (659823) example: Measured distance: 8.24cm[0m
+[0;32mI (660113) example: WALL DETECTED[0m
+Distance: 71
+[0;32mI (660323) example: Measured distance: 14.80cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (660603) example: WALL DETECTED[0m
+Distance: 68
+[0;32mI (660823) example: Measured distance: 8.61cm[0m
+[0;32mI (661093) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (661443) example: Measured distance: 16.20cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (661573) example: WALL DETECTED[0m
+Distance: 68
+[0;32mI (661943) example: Measured distance: 10.40cm[0m
+[0;32mI (662063) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (662443) example: Measured distance: 11.41cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (662553) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (662943) example: Measured distance: 11.63cm[0m
+[0;32mI (663033) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (663443) example: Measured distance: 8.71cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (663523) example: WALL DETECTED[0m
+Distance: 69
+[0;32mI (664003) example: Measured distance: 28.30cm[0m
+[0;32mI (664003) example: WALL DETECTED[0m
+Distance: 70
+Count: 0
+Speed is 0.0m/s
+[0;32mI (664493) example: WALL DETECTED[0m
+Distance: 69
+[0;32mI (664503) example: Measured distance: 8.53cm[0m
+[0;32mI (664983) example: WALL DETECTED[0m
+Distance: 73
+[0;32mI (665003) example: Measured distance: 8.69cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (665463) example: WALL DETECTED[0m
+Distance: 68
+[0;32mI (665623) example: Measured distance: 26.91cm[0m
+[0;32mI (665953) example: WALL DETECTED[0m
+Distance: 67
+[0;32mI (666443) example: WALL DETECTED[0m
+Distance: 66
+Count: 0
+Speed is 0.0m/s
+[0;32mI (666603) example: Measured distance: 23.51cm[0m
+[0;32mI (666923) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (667413) example: WALL DETECTED[0m
+Distance: 66
+Count: 0
+Speed is 0.0m/s
+[0;32mI (667903) example: WALL DETECTED[0m
+Distance: 66
+[0;32mI (668383) example: WALL DETECTED[0m
+Distance: 66
+Count: 0
+Speed is 0.0m/s
+[0;32mI (668873) example: WALL DETECTED[0m
+Distance: 65
+[0;32mI (669353) example: WALL DETECTED[0m
+Distance: 56
+Count: 0
+Speed is 0.0m/s
+[0;32mI (669633) example: Measured distance: 13.34cm[0m
+[0;32mI (669823) example: WALL DETECTED[0m
+Distance: 60
+[0;32mI (670263) example: WALL DETECTED[0m
+Distance: 40
+Count: 1
+Speed is 0.1m/s
+[0;32mI (670703) example: WALL DETECTED[0m
+Distance: 39
+[0;32mI (671143) example: WALL DETECTED[0m
+Distance: 39
+Count: 0
+Speed is 0.0m/s
+[0;32mI (671573) example: WALL DETECTED[0m
+Distance: 38
+[0;32mI (672033) example: WALL DETECTED[0m
+Distance: 41
+Count: 1
+Speed is 0.1m/s
+[0;32mI (672493) example: WALL DETECTED[0m
+Distance: 65
+Distance: 197
+Count: 3
+Speed is 0.2m/s
+[0;32mI (673463) example: WALL DETECTED[0m
+Distance: 68
+Distance: 113
+Distance: 129
+Count: 0
+Speed is 0.0m/s
+Distance: 173
+[0;32mI (675413) example: WALL DETECTED[0m
+Distance: 57
+Count: 0
+Speed is 0.0m/s
+Distance: 153
+Distance: 105
+Count: 0
+Speed is 0.0m/s
+Distance: 132
+Distance: 79
+Count: 0
+Speed is 0.0m/s
+Distance: 99
+Distance: 91
+Count: 0
+Speed is 0.0m/s
+Distance: 194
+Distance: 145
+Count: 0
+Speed is 0.0m/s
+[0;32mI (679793) example: WALL DETECTED[0m
+Distance: 48
+Distance: 156
+Count: 0
+Speed is 0.0m/s
+Distance: 81
+Distance: 77
+Count: 0
+Speed is 0.0m/s
+Distance: 168
+Distance: 79
+Count: 0
+Speed is 0.0m/s
+Distance: 125
+[0;32mI (683193) example: WALL DETECTED[0m
+Distance: 48
+Count: 0
+Speed is 0.0m/s
+Distance: 145
+Distance: 88
+Count: 0
+Speed is 0.0m/s
+[0;32mI (684653) example: WALL DETECTED[0m
+Distance: 72
+Distance: 167
+Count: 0
+Speed is 0.0m/s
+Distance: 110
+Distance: 166
+Count: 0
+Speed is 0.0m/s
+Distance: 101
+Distance: 211
+Count: 0
+Speed is 0.0m/s
+Distance: 147
+Distance: 173
+Count: 0
+Speed is 0.0m/s
+[0;32mI (688553) example: WALL DETECTED[0m
+Distance: 52
+Distance: 112
+Count: 8
+Speed is 0.6m/s
+Distance: 84
+Distance: 145
+Count: 8
+Speed is 0.6m/s
+Distance: 155
+[0;32mI (690983) example: WALL DETECTED[0m
+Distance: 52
+Count: 4
+Speed is 0.3m/s
+[0;32mI (691463) example: WALL DETECTED[0m
+Distance: 71
+Distance: 135
+Distance: 79
+Count: 0
+Speed is 0.0m/s
+Distance: 182
+[0;32mI (693413) example: WALL DETECTED[0m
+Distance: 49
+Count: 0
+Speed is 0.0m/s
+Distance: 124
+[0;32mI (694383) example: WALL DETECTED[0m
+Distance: 69
+Count: 0
+Speed is 0.0m/s
+Distance: 87
+Distance: 104
+Count: 0
+Speed is 0.0m/s
+[0;32mI (695843) example: WALL DETECTED[0m
+Distance: 63
+Distance: 109
+Count: 0
+Speed is 0.0m/s
+Distance: 158
+Distance: 106
+Count: 0
+Speed is 0.0m/s
+Distance: 144
+Distance: 130
+Count: 0
+Speed is 0.0m/s
+Distance: 80
+Distance: 77
+Count: 0
+Speed is 0.0m/s
+Distance: 91
+Distance: 127
+Count: 0
+Speed is 0.0m/s
+Distance: 86
+Distance: 99
+Count: 0
+Speed is 0.0m/s
+Distance: 81
+[0;32mI (702163) example: WALL DETECTED[0m
+Distance: 49
+Count: 3
+Speed is 0.2m/s
+Distance: 93
+Distance: 137
+Count: 5
+Speed is 0.4m/s
+Distance: 76
+Distance: 165
+Count: 13
+Speed is 1.0m/s
+Distance: 109
+Distance: 101
+Count: 24
+Speed is 1.8m/s
+Distance: 99
+Distance: 124
+Count: 9
+Speed is 0.7m/s
+[0;32mI (706543) example: WALL DETECTED[0m
+Distance: 71
+[0;32mI (707023) example: WALL DETECTED[0m
+Distance: 62
+Distance: 145
+Count: 1
+Speed is 0.1m/s
+Distance: 156
+Distance: 94
+Count: 2
+Speed is 0.1m/s
+Distance: 84
+Distance: 146
+Count: 0
+Speed is 0.0m/s
+Distance: 80
+Distance: 93
+Count: 0
+Speed is 0.0m/s
+[0;32mI (710813) example: WALL DETECTED[0m
+Distance: 42
+Distance: 103
+Count: 0
+Speed is 0.0m/s
+Distance: 94
+Distance: 127
+Count: 0
+Speed is 0.0m/s
+Distance: 157
+Distance: 125
+Count: 0
+Speed is 0.0m/s
+Distance: 148
+Distance: 95
+Count: 0
+Speed is 0.0m/s
+Distance: 105
+Distance: 110
+Count: 0
+Speed is 0.0m/s
+Distance: 121
+Distance: 110
+Count: 0
+Speed is 0.0m/s
+Distance: 141
+Distance: 150
+Count: 0
+Speed is 0.0m/s
+Distance: 141
+Distance: 100
+Count: 0
+Speed is 0.0m/s
+Distance: 132
+[0;32mI (719083) example: WALL DETECTED[0m
+Distance: 51
+Count: 0
+Speed is 0.0m/s
+Distance: 120
+Distance: 87
+Count: 0
+Speed is 0.0m/s
+Distance: 75
+Distance: 196
+Count: 0
+Speed is 0.0m/s
+[0;32mI (721513) example: WALL DETECTED[0m
+Distance: 57
+Distance: 112
+Count: 0
+Speed is 0.0m/s
+Distance: 93
+Distance: 112
+Count: 0
+Speed is 0.0m/s
+Distance: 102
+Distance: 114
+Distance: 91
+Count: 0
+Speed is 0.0m/s
+Distance: 79
+Distance: 142
+Count: 0
+Speed is 0.0m/s
+Distance: 110
+[0;32mI (726373) example: WALL DETECTED[0m
+Distance: 74
+Count: 0
+Speed is 0.0m/s
+[0;32mI (726863) example: WALL DETECTED[0m
+Distance: 71
+Distance: 158
+Count: 0
+Speed is 0.0m/s
+Distance: 117
+Distance: 122
+Count: 0
+Speed is 0.0m/s
+Distance: 113
+Distance: 177
+Count: 0
+Speed is 0.0m/s
+Distance: 151
+Distance: 119
+Count: 0
+Speed is 0.0m/s
+Distance: 108
+Distance: 90
+Count: 0
+Speed is 0.0m/s
+Distance: 133
+Distance: 97
+Count: 0
+Speed is 0.0m/s
+Distance: 107
+Distance: 111
+Count: 0
+Speed is 0.0m/s
+[0;32mI (733673) example: WALL DETECTED[0m
+Distance: 71
+Distance: 135
+Count: 0
+Speed is 0.0m/s
+[0;32mI (734643) example: WALL DETECTED[0m
+Distance: 48
+Distance: 134
+Count: 0
+Speed is 0.0m/s
+Distance: 100
+Distance: 94
+Count: 0
+Speed is 0.0m/s
+Distance: 88
+Distance: 170
+Count: 0
+Speed is 0.0m/s
+Distance: 130
+Distance: 105
+Count: 0
+Speed is 0.0m/s
+Distance: 115
+Distance: 100
+Count: 0
+Speed is 0.0m/s
+Distance: 126
+[0;32mI (739993) example: WALL DETECTED[0m
+Distance: 68
+Count: 0
+Speed is 0.0m/s
+[0;32mI (740483) example: WALL DETECTED[0m
+Distance: 28
+[0;32mI (740963) example: WALL DETECTED[0m
+Distance: 45
+Count: 0
+Speed is 0.0m/s
+Distance: 147
+Distance: 81
+Distance: 92
+Count: 0
+Speed is 0.0m/s
+[0;32mI (742913) example: WALL DETECTED[0m
+Distance: 56
+Distance: 102
+Count: 0
+Speed is 0.0m/s
+Distance: 84
+Distance: 107
+Count: 0
+Speed is 0.0m/s
+Distance: 80
+Distance: 145
+Count: 0
+Speed is 0.0m/s
+Distance: 133
+Distance: 155
+Count: 0
+Speed is 0.0m/s
+Distance: 79
+Distance: 148
+Count: 0
+Speed is 0.0m/s
+Distance: 111
+[0;32mI (748263) example: WALL DETECTED[0m
+Distance: 20
+Count: 0
+Speed is 0.0m/s
+Distance: 132
+Distance: 99
+Count: 0
+Speed is 0.0m/s
+Distance: 143
+[0;32mI (750203) example: WALL DETECTED[0m
+Distance: 23
+Count: 0
+Speed is 0.0m/s
+[0;32mI (750693) example: WALL DETECTED[0m
+Distance: 70
+[0;32mI (751173) example: WALL DETECTED[0m
+Distance: 70
+Count: 0
+Speed is 0.0m/s
+Distance: 215
+Distance: 140
+Count: 0
+Speed is 0.0m/s
+Distance: 79
+Distance: 179
+Count: 0
+Speed is 0.0m/s
+Distance: 90
+Distance: 94
+Count: 0
+Speed is 0.0m/s
+Distance: 116
+Distance: 85
+Count: 0
+Speed is 0.0m/s
+Distance: 107
+Distance: 107
+Count: 0
+Speed is 0.0m/s
+Distance: 91
+Distance: 130
+Count: 0
+Speed is 0.0m/s
+Distance: 173
+Distance: 76
+Count: 0
+Speed is 0.0m/s
+Distance: 124
+[0;32mI (758963) example: WALL DETECTED[0m
+Distance: 64
+Count: 0
+Distance: 133
+Speed is 0.0m/s
+Distance: 152
+Distance: 132
+Count: 0
+Speed is 0.0m/s
+[0;32mI (760903) example: WALL DETECTED[0m
+Distance: 72
+Distance: 111
+Count: 0
+Speed is 0.0m/s
+Distance: 84
+Distance: 173
+Count: 0
+Speed is 0.0m/s
+Distance: 135
+Distance: 89
+Count: 0
+Speed is 0.0m/s
+[0;32mI (763823) example: WALL DETECTED[0m
+Distance: 62
+Distance: 131
+Count: 0
+Speed is 0.0m/s
+Distance: 92
+[0;32mI (765283) example: WALL DETECTED[0m
+Distance: 54
+Count: 0
+Speed is 0.0m/s
+Distance: 125
+Distance: 170
+Count: 0
+Speed is 0.0m/s
+Distance: 124
+Distance: 200
+Count: 0
+Speed is 0.0m/s
+Distance: 97
+Distance: 152
+Count: 0
+Speed is 0.0m/s
+[0;32mI (768683) example: WALL DETECTED[0m
+Distance: 48
+Distance: 97
+Count: 0
+Speed is 0.0m/s
+Distance: 167
+Distance: 104
+Count: 0
+Speed is 0.0m/s
+Distance: 150
+Distance: 120
+Count: 0
+Speed is 0.0m/s
+[0;32mI (771593) example: WALL DETECTED[0m
+Distance: 62
+Distance: 132
+Count: 0
+Speed is 0.0m/s
+Distance: 76
+[0;32mI (773053) example: WALL DETECTED[0m
+Distance: 73
+Count: 0
+Speed is 0.0m/s
+Distance: 98
+Distance: 103
+Count: 0
+Speed is 0.0m/s
+Distance: 78
+Distance: 104
+Count: 0
+Speed is 0.0m/s
+Distance: 179
+[0;32mI (775973) example: WALL DETECTED[0m
+Distance: 54
+Count: 0
+Speed is 0.0m/s
+Distance: 111
+Distance: 111
+Distance: 114
+Count: 0
+Speed is 0.0m/s
+Distance: 114
+Distance: 159
+Count: 0
+Speed is 0.0m/s
+Distance: 161
+[0;32mI (779383) example: WALL DETECTED[0m
+Distance: 53
+Count: 0
+Speed is 0.0m/s
+Distance: 82
+Distance: 136
+Count: 0
+Speed is 0.0m/s
+Distance: 154
+[0;32mI (781323) example: WALL DETECTED[0m
+Distance: 49
+Count: 0
+Speed is 0.0m/s
+Distance: 183
+[0;32mI (782293) example: WALL DETECTED[0m
+Distance: 69
+Count: 0
+Speed is 0.0m/s
+Distance: 209
+Distance: 116
+Count: 0
+Speed is 0.0m/s
+Count: 0
+Speed is 0.0m/s
+Distance: 163
+Distance: 89
+Count: 0
+Speed is 0.0m/s
+Distance: 171
+Distance: 151
+Count: 0
+Speed is 0.0m/s
+Distance: 205
+Distance: 80
+Count: 0
+Speed is 0.0m/s
+Distance: 112
+Distance: 139
+Distance: 120
+Count: 0
+Speed is 0.0m/s
+Distance: 155
+Distance: 166
+Count: 0
+Speed is 0.0m/s
+Distance: 149
+Distance: 98
+Count: 0
+Speed is 0.0m/s
+Distance: 105
+Distance: 178
+Count: 0
+Speed is 0.0m/s
+Distance: 131
+Distance: 131
+Count: 0
+Speed is 0.0m/s
+Distance: 138
+Distance: 119
+Count: 0
+Speed is 0.0m/s
+[0;32mI (817783) example: WALL DETECTED[0m
+Distance: 53
+[0;32mI (818273) example: WALL DETECTED[0m
+Distance: 48
+Count: 0
+Speed is 0.0m/s
+Distance: 114
+Distance: 201
+Count: 0
+Speed is 0.0m/s
+[0;32mI (819723) example: WALL DETECTED[0m
+Distance: 46
+[0;32mI (820213) example: WALL DETECTED[0m
+Distance: 65
+Count: 0
+Speed is 0.0m/s
+Distance: 87
+Distance: 174
+Count: 0
+Speed is 0.0m/s
+Distance: 152
+Distance: 96
+Count: 0
+Speed is 0.0m/s
+Distance: 86
+Distance: 82
+Count: 0
+Speed is 0.0m/s
+Distance: 104
+Distance: 246
+Count: 0
+Speed is 0.0m/s
+Distance: 99
+Distance: 211
+Count: 0
+Speed is 0.0m/s
+Distance: 128
+[0;32mI (826053) example: WALL DETECTED[0m
+Distance: 66
+Count: 0
+Speed is 0.0m/s
+Distance: 91
+[0;32mI (827023) example: WALL DETECTED[0m
+Distance: 57
+Count: 0
+Speed is 0.0m/s
+Distance: 155
+Distance: 131
+Count: 0
+Speed is 0.0m/s
+Distance: 93
+Distance: 118
+Count: 0
+Speed is 0.0m/s
+Distance: 127
+Distance: 110
+Distance: 98
+Count: 0
+Speed is 0.0m/s
+Distance: 133
+Distance: 109
+Count: 0
+Speed is 0.0m/s
+Distance: 79
+Distance: 112
+Count: 0
+Speed is 0.0m/s
+Distance: 120
+Distance: 154
+Count: 0
+Speed is 0.0m/s
+Distance: 83
+Distance: 159
+Count: 0
+Speed is 0.0m/s
+[0;32mI (834793) example: WALL DETECTED[0m
+Distance: 61
+Distance: 83
+Count: 0
+Speed is 0.0m/s
+Distance: 151
+[0;32mI (836253) example: WALL DETECTED[0m
+Distance: 33
+Count: 0
+Speed is 0.0m/s
+Distance: 80
+Distance: 92
+Count: 0
+Speed is 0.0m/s
+Distance: 127
+Distance: 91
+Count: 0
+Speed is 0.0m/s
+Distance: 134
+Distance: 138
+Count: 0
+Speed is 0.0m/s
+Distance: 115
+Distance: 128
+Count: 0
+Speed is 0.0m/s
+Distance: 155
+Distance: 111
+Count: 0
+Speed is 0.0m/s
+Distance: 173
+Distance: 99
+Count: 0
+Speed is 0.0m/s
+Distance: 145
+Distance: 101
+Count: 0
+Speed is 0.0m/s
+Distance: 116
+Distance: 139
+Count: 0
+Speed is 0.0m/s
+Distance: 91
+Distance: 101
+Count: 0
+Speed is 0.0m/s
+Distance: 122
+[0;32mI (845973) example: WALL DETECTED[0m
+Distance: 43
+Count: 0
+Speed is 0.0m/s
+Distance: 126
+[0;32mI (846943) example: WALL DETECTED[0m
+Distance: 50
+Distance: 148
+Count: 0
+Speed is 0.0m/s
+Distance: 122
+[0;32mI (848403) example: WALL DETECTED[0m
+Distance: 48
+Count: 0
+Speed is 0.0m/s
+Distance: 112
+Distance: 113
+Count: 0
+Speed is 0.0m/s
+Distance: 88
+Distance: 112
+Count: 0
+Speed is 0.0m/s
+Distance: 105
+Distance: 97
+Count: 0
+Speed is 0.0m/s
+Distance: 129
+Distance: 218
+Count: 0
+Speed is 0.0m/s
+Distance: 82
+Distance: 174
+Count: 0
+Speed is 0.0m/s
+Distance: 111
+Distance: 144
+Count: 0
+Speed is 0.0m/s
+[0;32mI (854723) example: WALL DETECTED[0m
+Distance: 67
+Distance: 104
+Count: 0
+Speed is 0.0m/s
+Distance: 89
+Distance: 97
+Count: 0
+Speed is 0.0m/s
+Distance: 140
+Distance: 185
+Count: 0
+Speed is 0.0m/s
+Distance: 151
+Distance: 80
+Count: 0
+Speed is 0.0m/s
+Distance: 83
+Distance: 155
+Count: 0
+Speed is 0.0m/s
+[0;32mI (859583) example: WALL DETECTED[0m
+Distance: 62
+[0;32mI (860063) example: WALL DETECTED[0m
+Distance: 71
+Count: 0
+Speed is 0.0m/s
+Distance: 80
+Distance: 136
+Count: 0
+Speed is 0.0m/s
+Distance: 162
+Distance: 157
+Count: 0
+Speed is 0.0m/s
+Distance: 150
+[0;32mI (862983) example: WALL DETECTED[0m
+Distance: 41
+Count: 0
+Speed is 0.0m/s
+Distance: 151
+Distance: 101
+Distance: 126
+Count: 0
+Speed is 0.0m/s
+[0;32mI (864933) example: WALL DETECTED[0m
+Distance: 36
+Distance: 111
+Count: 0
+Speed is 0.0m/s
+Distance: 110
+Distance: 208
+Count: 0
+Speed is 0.0m/s
+Distance: 123
+Distance: 98
+Count: 0
+Speed is 0.0m/s
+Distance: 91
+Distance: 120
+Count: 0
+Speed is 0.0m/s
+Distance: 89
+Distance: 94
+Count: 0
+Speed is 0.0m/s
+Distance: 81
+Distance: 109
+Count: 0
+Speed is 0.0m/s
+[0;32mI (870753) example: WALL DETECTED[0m
+Distance: 37
+[0;32mI (871243) example: WALL DETECTED[0m
+Distance: 38
+Count: 0
+Speed is 0.0m/s
+[0;32mI (871733) example: WALL DETECTED[0m
+Distance: 50
+Distance: 154
+Count: 0
+Speed is 0.0m/s
+[0;32mI (872703) example: WALL DETECTED[0m
+Distance: 64
+[0;32mI (873193) example: WALL DETECTED[0m
+Distance: 51
+Count: 0
+Speed is 0.0m/s
+Distance: 84
+Distance: 106
+Count: 0
+Speed is 0.0m/s
+Distance: 154
+Distance: 162
+Count: 0
+Speed is 0.0m/s
+[0;32mI (875613) example: WALL DETECTED[0m
+Distance: 48
+Distance: 83
+Count: 0
+Speed is 0.0m/s
+[0;32mI (876583) example: WALL DETECTED[0m
+Distance: 68
+[0;32mI (877023) example: Measured distance: 170.68cm[0m
+Distance: 99
+Count: 0
+Speed is 0.0m/s
+Distance: 90
+Distance: 128
+Count: 0
+Speed is 0.0m/s
+[0;32mI (878533) example: WALL DETECTED[0m
+Distance: 58
+Distance: 84
+Count: 0
+Speed is 0.0m/s
+Distance: 84
+[0;32mI (879873) example: Measured distance: 163.85cm[0m
+Distance: 156
+Count: 0
+Speed is 0.0m/s
+Distance: 187
+[0;32mI (880963) example: WALL DETECTED[0m
+Distance: 48
+Distance: 171
+Count: 0
+Speed is 0.0m/s
+[0;32mI (881933) example: WALL DETECTED[0m
+Distance: 41
+Distance: 86
+Count: 0
+Speed is 0.0m/s
+[0;32mI (882803) example: Measured distance: 7.67cm[0m
+Distance: 101
+Distance: 132
+Count: 0
+Speed is 0.0m/s

@@ -1,0 +1,725 @@
+[0;32mI (278) heap_init: At 3F�[0;32mI (13) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Nov  9 2023 18:00:02[0m
+[0;32mI (15) boot: Multicore bootloader[0m
+[0;32mI (19) boot: chip revision: v3.0[0m
+[0;32mI (23) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (27) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (32) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0e244h ( 57924) map[0m
+[0;32mI (109) esp_image: segment 1: paddr=0001e26c vaddr=3ffb0000 size=01dach (  7596) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=00020020 vaddr=400d0020 size=1ce58h (118360) map[0m
+[0;32mI (157) esp_image: segment 3: paddr=0003ce80 vaddr=3ffb1dac size=003cch (   972) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=0003d254 vaddr=40080000 size=0dbdch ( 56284) load[0m
+[0;32mI (193) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (193) boot: Disabling RNG early entropy source...[0m
+[0;32mI (205) cpu_start: Multicore app[0m
+[0;32mI (205) cpu_start: Pro cpu up.[0m
+[0;32mI (205) cpu_start: Starting app cpu, entry point is 0x400811b0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (223) cpu_start: Pro cpu start user code[0m
+[0;32mI (223) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (223) cpu_start: Application information:[0m
+[0;32mI (228) cpu_start: Project name:     blink[0m
+[0;32mI (233) cpu_start: App version:      51730a5-dirty[0m
+[0;32mI (238) cpu_start: Compile time:     Nov  9 2023 20:47:07[0m
+[0;32mI (244) cpu_start: ELF file SHA256:  2a782c7de...[0m
+[0;32mI (250) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (257) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (261) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (266) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (271) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (278) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (284) heap_init: At 3FFB2A60 len 0002D5A0 (181 KiB): DRAM[0m
+[0;32mI (290) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (297) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (303) heap_init: At 4008DBDC len 00012424 (73 KiB): IRAM[0m
+[0;32mI (311) spi_flash: detected chip: generic[0m
+[0;32mI (314) spi_flash: flash io: dio[0m
+[0;33mW (318) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (331) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (342) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (351) app_start: Starting scheduler on CPU0[0m
+[0;32mI (355) app_start: Starting scheduler on CPU1[0m
+[0;32mI (355) main_task: Started on CPU0[0m
+[0;32mI (365) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x62
+- Device found at address: 0x70
+
+>> Polling LIDAR
+[0;32mI (395) example: Install capture timer[0m
+[0;32mI (395) example: Install capture channel[0m
+[0;32mI (395) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (405) example: Register capture callback[0m
+[0;32mI (415) example: Enable capture channel[0m
+[0;32mI (415) example: Configure Trig pin[0m
+[0;32mI (425) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (435) example: Enable and start capture timer[0m
+[0;32mI (435) example: Install capture timer[0m
+[0;32mI (435) example: Measured distance RIGHT: 6.86cm[0m
+[0;32mI (445) example: Install capture channel[0m
+[0;32mI (445) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (455) gpio: GPIO[36]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (445) example: Create timer and operator[0m
+[0;32mI (475) example: Register capture callback[0m
+[0;32mI (475) example: Connect timer and operator[0m
+[0;32mI (475) example: Enable capture channel[0m
+[0;32mI (485) example: Create comparator and generator from the operator[0m
+[0;32mI (485) example: Configure Trig pin[0m
+[0;32mI (495) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (505) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (515) example: Set generator action on timer and compare event[0m
+[0;32mI (515) example: Enable and start capture timer[0m
+[0;32mI (525) example: Enable and start timer[0m
+[0;32mI (445) example: Create timer and operator[0m
+eFuse Two Point: NOT supported
+[0;32mI (545) example: Connect timer and operator[0m
+[0;32mI (545) example: Create comparator and generator from the operator[0m
+eFuse Vref: Supported
+[0;32mI (555) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (565) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (565) example: Set generator action on timer and compare event[0m
+Characterized using eFuse Vref
+[0;32mI (575) example: Enable and start timer[0m
+>> Test Alphanumeric Display: 
+[0;32mI (445) main_task: Returned from app_main()[0m
+[0;32mI (605) example: Measured distance LEFT: 0.17cm[0m
+[0;32mI (675) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (695) example: Measured distance RIGHT: 10.28cm[0m
+[0;32mI (775) example: LEFT IS CLOSER TO WALL[0m
+Distance: 320
+[0;32mI (855) example: Measured distance LEFT: 142.70cm[0m
+[0;32mI (875) example: RIGHT IS CLOSER TO WALL[0m
+- oscillator: ok 
+[0;32mI (945) example: Measured distance RIGHT: 9.16cm[0m
+[0;32mI (975) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (1075) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (1105) example: Measured distance LEFT: 184.40cm[0m
+- blink: off 
+[0;32mI (1175) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (1195) example: Measured distance RIGHT: 9.58cm[0m
+[0;32mI (1275) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 240
+[0;32mI (1365) example: Measured distance LEFT: 153.83cm[0m
+[0;32mI (1375) example: RIGHT IS CLOSER TO WALL[0m
+Count: 1
+Speed is 0.1m/s
+[0;32mI (1445) example: Measured distance RIGHT: 8.67cm[0m
+[0;32mI (1475) example: RIGHT IS CLOSER TO WALL[0m
+- brightness: max 
+[0;32mI (1575) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (1615) example: Measured distance LEFT: 353.82cm[0m
+[0;32mI (1675) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (1695) example: Measured distance RIGHT: 9.30cm[0m
+Distance: 281
+[0;32mI (1775) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (1865) example: Measured distance LEFT: 349.01cm[0m
+[0;32mI (1875) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (1945) example: Measured distance RIGHT: 9.51cm[0m
+[0;32mI (1975) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2075) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2145) example: Measured distance LEFT: 172.89cm[0m
+[0;32mI (2175) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2195) example: Measured distance RIGHT: 7.84cm[0m
+Distance: 240
+[0;32mI (2275) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2375) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2405) example: Measured distance LEFT: 155.72cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (2445) example: Measured distance RIGHT: 9.09cm[0m
+[0;32mI (2475) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2575) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2665) example: Measured distance LEFT: 151.90cm[0m
+[0;32mI (2675) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2695) example: Measured distance RIGHT: 6.30cm[0m
+Distance: 248
+[0;32mI (2775) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2875) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2925) example: Measured distance LEFT: 149.45cm[0m
+[0;32mI (2945) example: Measured distance RIGHT: 6.23cm[0m
+[0;32mI (2975) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3075) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3175) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3185) example: Measured distance LEFT: 157.50cm[0m
+[0;32mI (3195) example: Measured distance RIGHT: 8.04cm[0m
+Distance: 156
+[0;32mI (3275) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3375) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3435) example: Measured distance LEFT: 521.67cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (3445) example: Measured distance RIGHT: 9.02cm[0m
+[0;32mI (3475) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3575) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3675) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3685) example: Measured distance LEFT: 7.53cm[0m
+[0;32mI (3695) example: Measured distance RIGHT: 7.49cm[0m
+Distance: 171
+[0;32mI (3775) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3875) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3935) example: Measured distance LEFT: 158.80cm[0m
+[0;32mI (3945) example: Measured distance RIGHT: 11.89cm[0m
+[0;32mI (3975) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (4075) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (4175) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (4185) example: Measured distance LEFT: 149.90cm[0m
+Distance: 457
+[0;32mI (4275) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (4375) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4435) example: Measured distance LEFT: 107.46cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (4475) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4575) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4675) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4685) example: Measured distance LEFT: 86.66cm[0m
+Distance: 777
+[0;32mI (4775) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4875) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4935) example: Measured distance LEFT: 33.75cm[0m
+[0;32mI (4975) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5075) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5175) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5185) example: Measured distance LEFT: 28.07cm[0m
+Distance: 157
+[0;32mI (5275) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5375) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5435) example: Measured distance LEFT: 25.68cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (5475) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5575) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5675) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5675) example: WALL DETECTED[0m
+Distance: 51
+[0;32mI (5685) example: Measured distance LEFT: 24.45cm[0m
+[0;32mI (5775) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5875) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5935) example: Measured distance LEFT: 21.23cm[0m
+[0;32mI (5935) example: Measured distance RIGHT: 412.13cm[0m
+[0;32mI (5975) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6075) example: LEFT IS CLOSER TO WALL[0m
+Distance: 241
+[0;32mI (6175) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6185) example: Measured distance LEFT: 17.26cm[0m
+[0;32mI (6275) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6375) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6435) example: Measured distance LEFT: 17.74cm[0m
+Count: 1
+Speed is 0.1m/s
+[0;32mI (6475) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6575) example: LEFT IS CLOSER TO WALL[0m
+Distance: 643
+[0;32mI (6675) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6685) example: Measured distance LEFT: 17.53cm[0m
+[0;32mI (6775) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6875) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6935) example: Measured distance LEFT: 17.53cm[0m
+[0;32mI (6975) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7075) example: LEFT IS CLOSER TO WALL[0m
+Distance: 763
+[0;32mI (7175) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7185) example: Measured distance LEFT: 17.53cm[0m
+[0;32mI (7275) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7375) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7435) example: Measured distance LEFT: 17.06cm[0m
+Count: 1
+Speed is 0.1m/s
+[0;32mI (7475) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7575) example: LEFT IS CLOSER TO WALL[0m
+Distance: 233
+[0;32mI (7675) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7685) example: Measured distance LEFT: 14.04cm[0m
+[0;32mI (7775) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7875) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7935) example: Measured distance LEFT: 13.08cm[0m
+[0;32mI (7975) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8075) example: LEFT IS CLOSER TO WALL[0m
+Distance: 772
+[0;32mI (8175) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8185) example: Measured distance LEFT: 13.22cm[0m
+[0;32mI (8275) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8375) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8435) example: Measured distance LEFT: 13.15cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (8475) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8575) example: LEFT IS CLOSER TO WALL[0m
+Distance: 465
+[0;32mI (8675) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8685) example: Measured distance LEFT: 13.15cm[0m
+[0;32mI (8775) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8875) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8935) example: Measured distance LEFT: 13.15cm[0m
+[0;32mI (8975) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9075) example: LEFT IS CLOSER TO WALL[0m
+Distance: 481
+[0;32mI (9175) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9185) example: Measured distance LEFT: 13.15cm[0m
+[0;32mI (9275) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9375) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9435) example: Measured distance LEFT: 13.22cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (9475) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9575) example: LEFT IS CLOSER TO WALL[0m
+Distance: 453
+[0;32mI (9675) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9685) example: Measured distance LEFT: 13.22cm[0m
+[0;32mI (9775) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9875) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9935) example: Measured distance LEFT: 13.15cm[0m
+[0;32mI (9975) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10075) example: LEFT IS CLOSER TO WALL[0m
+Distance: 530
+[0;32mI (10175) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10185) example: Measured distance LEFT: 13.22cm[0m
+[0;32mI (10275) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10375) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10435) example: Measured distance LEFT: 13.22cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (10475) example: LEFT IS CLOSER TO WALL[0m
+Distance: 639
+[0;32mI (10575) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10675) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10685) example: Measured distance LEFT: 13.22cm[0m
+[0;32mI (10775) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10875) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10935) example: Measured distance LEFT: 13.22cm[0m
+[0;32mI (10975) example: LEFT IS CLOSER TO WALL[0m
+Distance: 656
+[0;32mI (11075) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11175) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11185) example: Measured distance LEFT: 13.29cm[0m
+[0;32mI (11275) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11375) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11435) example: Measured distance LEFT: 13.43cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (11475) example: LEFT IS CLOSER TO WALL[0m
+Distance: 753
+[0;32mI (11575) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11675) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11685) example: Measured distance LEFT: 13.56cm[0m
+[0;32mI (11775) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11875) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11935) example: Measured distance LEFT: 13.50cm[0m
+[0;32mI (11975) example: LEFT IS CLOSER TO WALL[0m
+Distance: 621
+[0;32mI (12075) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12175) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12185) example: Measured distance LEFT: 13.50cm[0m
+[0;32mI (12275) example: LEFT IS CLOSER TO WALL[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2023 18:00:02[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0e244h ( 57924) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0001e26c vaddr=3ffb0000 size=01dach (  7596) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00020020 vaddr=400d0020 size=1ce58h (118360) map[0m
+[0;32mI (176) esp_image: segment 3: paddr=0003ce80 vaddr=3ffb1dac size=003cch (   972) load[0m
+[0;32mI (177) esp_image: segment 4: paddr=0003d254 vaddr=40080000 size=0dbdch ( 56284) load[0m
+[0;32mI (212) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (212) boot: Disabling RNG early entropy source...[0m
+[0;32mI (224) cpu_start: Multicore app[0m
+[0;32mI (224) cpu_start: Pro cpu up.[0m
+[0;32mI (224) cpu_start: Starting app cpu, entry point is 0x400811b0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (242) cpu_start: Pro cpu start user code[0m
+[0;32mI (242) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (242) cpu_start: Application information:[0m
+[0;32mI (247) cpu_start: Project name:     blink[0m
+[0;32mI (251) cpu_start: App version:      51730a5-dirty[0m
+[0;32mI (257) cpu_start: Compile time:     Nov  9 2023 20:47:07[0m
+[0;32mI (263) cpu_start: ELF file SHA256:  2a782c7de...[0m
+[0;32mI (268) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (275) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (280) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (285) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (290) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (297) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (303) heap_init: At 3FFB2A60 len 0002D5A0 (181 KiB): DRAM[0m
+[0;32mI (309) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (315) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (322) heap_init: At 4008DBDC len 00012424 (73 KiB): IRAM[0m
+[0;32mI (330) spi_flash: detected chip: generic[0m
+[0;32mI (333) spi_flash: flash io: dio[0m
+[0;33mW (337) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (350) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (360) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (369) app_start: Starting scheduler on CPU0[0m
+[0;32mI (374) app_start: Starting scheduler on CPU1[0m
+[0;32mI (374) main_task: Started on CPU0[0m
+[0;32mI (384) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x62
+- Device found at address: 0x70
+
+>> Polling LIDAR
+[0;32mI (414) example: Install capture timer[0m
+[0;32mI (414) example: Install capture channel[0m
+[0;32mI (414) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (424) example: Register capture callback[0m
+[0;32mI (434) example: Enable capture channel[0m
+[0;32mI (434) example: Configure Trig pin[0m
+[0;32mI (444) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (454) example: Enable and start capture timer[0m
+[0;32mI (454) example: Install capture timer[0m
+[0;32mI (464) example: Install capture channel[0m
+[0;32mI (464) gpio: GPIO[36]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (474) example: Register capture callback[0m
+[0;32mI (474) example: Enable capture channel[0m
+[0;32mI (484) example: Configure Trig pin[0m
+[0;32mI (484) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (494) example: Enable and start capture timer[0m
+[0;32mI (504) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (504) example: Measured distance LEFT: 13.77cm[0m
+[0;32mI (514) example: Create timer and operator[0m
+[0;32mI (514) example: Create timer and operator[0m
+[0;32mI (514) example: Connect timer and operator[0m
+[0;32mI (534) example: Create comparator and generator from the operator[0m
+[0;32mI (534) example: Connect timer and operator[0m
+[0;32mI (544) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (544) example: Create comparator and generator from the operator[0m
+[0;32mI (554) example: Set generator action on timer and compare event[0m
+[0;32mI (554) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (574) example: Enable and start timer[0m
+[0;32mI (574) example: Set generator action on timer and compare event[0m
+eFuse Two Point: NOT supported
+[0;32mI (584) example: Enable and start timer[0m
+eFuse Vref: Supported
+>> Test Alphanumeric Display: 
+Characterized using eFuse Vref
+[0;32mI (514) main_task: Returned from app_main()[0m
+[0;32mI (614) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (714) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (764) example: Measured distance LEFT: 14.45cm[0m
+Distance: 719
+[0;32mI (814) example: LEFT IS CLOSER TO WALL[0m
+- oscillator: ok 
+[0;32mI (914) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (1014) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (1014) example: Measured distance LEFT: 14.52cm[0m
+- blink: off 
+[0;32mI (1114) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (1214) example: LEFT IS CLOSER TO WALL[0m
+- brightness: max 
+[0;32mI (1264) example: Measured distance LEFT: 14.52cm[0m
+Distance: 692
+[0;32mI (1314) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (1414) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (1514) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (1514) example: Measured distance LEFT: 14.39cm[0m
+Count: 1
+Speed is 0.1m/s
+[0;32mI (1614) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (1714) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (1764) example: Measured distance LEFT: 14.52cm[0m
+Distance: 693
+[0;32mI (1814) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (1914) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (2014) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (2014) example: Measured distance LEFT: 15.00cm[0m
+[0;32mI (2114) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (2214) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (2264) example: Measured distance LEFT: 15.07cm[0m
+Distance: 762
+[0;32mI (2314) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (2414) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (2514) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (2514) example: Measured distance LEFT: 15.07cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (2614) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (2714) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (2764) example: Measured distance LEFT: 15.07cm[0m
+Distance: 758
+[0;32mI (2814) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (2914) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (3014) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (3014) example: Measured distance LEFT: 15.07cm[0m
+[0;32mI (3014) example: Measured distance RIGHT: 577.03cm[0m
+[0;32mI (3114) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (3214) example: LEFT IS CLOSER TO WALL[0m
+Distance: 760
+[0;32mI (3264) example: Measured distance LEFT: 15.07cm[0m
+[0;32mI (3314) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (3414) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (3514) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (3514) example: Measured distance LEFT: 15.07cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (3614) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (3714) example: LEFT IS CLOSER TO WALL[0m
+Distance: 761
+[0;32mI (3764) example: Measured distance LEFT: 15.07cm[0m
+[0;32mI (3814) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (3914) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4014) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4014) example: Measured distance LEFT: 15.07cm[0m
+[0;32mI (4114) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4214) example: LEFT IS CLOSER TO WALL[0m
+Distance: 762
+[0;32mI (4264) example: Measured distance LEFT: 15.07cm[0m
+[0;32mI (4314) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4414) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4514) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4514) example: Measured distance LEFT: 14.86cm[0m
+Count: 1
+Speed is 0.1m/s
+[0;32mI (4614) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4714) example: LEFT IS CLOSER TO WALL[0m
+Distance: 744
+[0;32mI (4764) example: Measured distance LEFT: 15.00cm[0m
+[0;32mI (4814) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4914) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5014) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5014) example: Measured distance LEFT: 15.00cm[0m
+[0;32mI (5114) example: LEFT IS CLOSER TO WALL[0m
+Distance: 747
+[0;32mI (5214) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5264) example: Measured distance LEFT: 14.04cm[0m
+[0;32mI (5314) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5414) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5514) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5514) example: Measured distance LEFT: 13.97cm[0m
+Count: 17
+Speed is 1.2m/s
+[0;32mI (5614) example: LEFT IS CLOSER TO WALL[0m
+Distance: 708
+[0;32mI (5714) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5764) example: Measured distance LEFT: 14.11cm[0m
+[0;32mI (5814) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5914) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5954) example: Measured distance RIGHT: 492.59cm[0m
+[0;32mI (6014) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6014) example: Measured distance LEFT: 13.56cm[0m
+[0;32mI (6114) example: LEFT IS CLOSER TO WALL[0m
+Distance: 514
+[0;32mI (6214) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6264) example: Measured distance LEFT: 12.67cm[0m
+[0;32mI (6314) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6414) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6514) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6514) example: Measured distance LEFT: 12.33cm[0m
+Count: 25
+Speed is 1.9m/s
+[0;32mI (6614) example: LEFT IS CLOSER TO WALL[0m
+Distance: 273
+[0;32mI (6714) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6764) example: Measured distance LEFT: 11.30cm[0m
+[0;32mI (6814) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6914) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7014) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7014) example: Measured distance LEFT: 10.48cm[0m
+[0;32mI (7114) example: LEFT IS CLOSER TO WALL[0m
+Distance: 235
+[0;32mI (7214) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7264) example: Measured distance LEFT: 8.16cm[0m
+[0;32mI (7314) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7414) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7514) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7514) example: Measured distance LEFT: 5.97cm[0m
+Count: 32
+Speed is 2.3m/s
+[0;32mI (7614) example: LEFT IS CLOSER TO WALL[0m
+Distance: 179
+[0;32mI (7714) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7764) example: Measured distance LEFT: 7.20cm[0m
+[0;32mI (7814) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7914) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8014) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8014) example: Measured distance LEFT: 7.27cm[0m
+[0;32mI (8114) example: LEFT IS CLOSER TO WALL[0m
+Distance: 121
+[0;32mI (8214) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8264) example: Measured distance LEFT: 8.09cm[0m
+[0;32mI (8314) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8414) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8514) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8514) example: Measured distance LEFT: 10.01cm[0m
+Count: 36
+Speed is 2.7m/s
+[0;32mI (8554) example: WALL DETECTED[0m
+Distance: 59
+[0;32mI (8614) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8714) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8764) example: Measured distance LEFT: 14.32cm[0m
+[0;32mI (8814) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8914) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9014) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9014) example: Measured distance LEFT: 18.29cm[0m
+[0;32mI (9034) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (9114) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9214) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9264) example: Measured distance LEFT: 20.96cm[0m
+[0;32mI (9314) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9414) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9514) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9514) example: Measured distance LEFT: 22.39cm[0m
+Count: 22
+Speed is 1.6m/s
+[0;32mI (9514) example: WALL DETECTED[0m
+Distance: 7
+[0;32mI (9614) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9714) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9764) example: Measured distance LEFT: 23.01cm[0m
+[0;32mI (9814) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9914) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10004) example: WALL DETECTED[0m
+Distance: 2
+[0;32mI (10014) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10014) example: Measured distance LEFT: 23.22cm[0m
+[0;32mI (10114) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10214) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10264) example: Measured distance LEFT: 23.15cm[0m
+[0;32mI (10314) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10414) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10494) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (10514) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10514) example: Measured distance LEFT: 3.76cm[0m
+Count: 1
+Speed is 0.1m/s
+[0;32mI (10614) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10714) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10764) example: Measured distance LEFT: 23.28cm[0m
+[0;32mI (10814) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10914) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10974) example: WALL DETECTED[0m
+Distance: 2
+[0;32mI (11014) example: Measured distance LEFT: 23.21cm[0m
+[0;32mI (11014) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11114) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11214) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11264) example: Measured distance LEFT: 23.28cm[0m
+[0;32mI (11314) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11414) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11464) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (11514) example: Measured distance LEFT: 23.22cm[0m
+[0;32mI (11514) example: LEFT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (11614) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11714) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11764) example: Measured distance LEFT: 23.22cm[0m
+[0;32mI (11814) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11914) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11954) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (12014) example: Measured distance LEFT: 23.22cm[0m
+[0;32mI (12014) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12114) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12214) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12264) example: Measured distance LEFT: 23.22cm[0m
+[0;32mI (12314) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12414) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12444) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (12514) example: Measured distance LEFT: 23.15cm[0m
+[0;32mI (12514) example: LEFT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (12614) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12714) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12764) example: Measured distance LEFT: 23.15cm[0m
+[0;32mI (12814) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12914) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12934) example: WALL DETECTED[0m
+Distance: 2
+[0;32mI (13014) example: Measured distance LEFT: 23.22cm[0m
+[0;32mI (13014) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (13114) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (13214) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (13264) example: Measured distance LEFT: 23.28cm[0m
+[0;32mI (13314) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (13414) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (13424) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (13514) example: Measured distance LEFT: 23.15cm[0m
+[0;32mI (13514) example: LEFT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (13614) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (13714) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (13764) example: Measured distance LEFT: 23.21cm[0m
+[0;32mI (13814) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (13914) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (13914) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (14014) example: Measured distance LEFT: 23.22cm[0m
+[0;32mI (14014) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (14114) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (14214) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (14264) example: Measured distance LEFT: 23.21cm[0m
+[0;32mI (14314) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (14404) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (14414) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (14514) example: Measured distance LEFT: 23.15cm[0m
+[0;32mI (14514) example: LEFT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (14614) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (14714) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (14764) example: Measured distance LEFT: 23.15cm[0m
+[0;32mI (14814) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (14884) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (14914) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (15014) example: Measured distance LEFT: 23.22cm[0m
+[0;32mI (15014) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (15114) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (15214) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (15264) example: Measured distance LEFT: 23.22cm[0m
+[0;32mI (15314) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (15374) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (15414) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (15514) example: Measured distance LEFT: 23.22cm[0m
+[0;32mI (15514) example: LEFT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
