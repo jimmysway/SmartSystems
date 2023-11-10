@@ -50,7 +50,7 @@ app.post('/control', (req, res) => {
     const message = String(req.body.command);
     console.log(`Preparing to send message: ${message}`);
 
-    client.send("test", 0, 4, ESP32_UDP_PORT, ESP32_SERVER_IP, (err) => {
+    client.send(message, 0, message.length, ESP32_UDP_PORT, ESP32_SERVER_IP, (err) => {
         if (err) {
             console.error("Error sending message:", err);
             res.status(500).send('Error sending message to ESP32');
