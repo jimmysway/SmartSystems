@@ -1,0 +1,738 @@
+ev:     v�[0;32mI (13) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Nov 10 2023 03:53:26[0m
+[0;32mI (15) boot: Multicore bootloader[0m
+[0;32mI (19) boot: chip revision: v3.0[0m
+[0;32mI (23) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (27) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (32) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0e3f4h ( 58356) map[0m
+[0;32mI (109) esp_image: segment 1: paddr=0001e41c vaddr=3ffb0000 size=01bfch (  7164) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=00020020 vaddr=400d0020 size=1dc30h (121904) map[0m
+[0;32mI (159) esp_image: segment 3: paddr=0003dc58 vaddr=3ffb1bfc size=0057ch (  1404) load[0m
+[0;32mI (159) esp_image: segment 4: paddr=0003e1dc vaddr=40080000 size=0dbdch ( 56284) load[0m
+[0;32mI (195) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (195) boot: Disabling RNG early entropy source...[0m
+[0;32mI (206) cpu_start: Multicore app[0m
+[0;32mI (207) cpu_start: Pro cpu up.[0m
+[0;32mI (207) cpu_start: Starting app cpu, entry point is 0x400811b0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (225) cpu_start: Pro cpu start user code[0m
+[0;32mI (225) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (225) cpu_start: Application information:[0m
+[0;32mI (229) cpu_start: Project name:     blink[0m
+[0;32mI (234) cpu_start: App version:      0a9ca35-dirty[0m
+[0;32mI (240) cpu_start: Compile time:     Nov 10 2023 04:25:00[0m
+[0;32mI (246) cpu_start: ELF file SHA256:  6a0cfa9d1...[0m
+[0;32mI (251) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (258) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (263) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (268) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (273) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (280) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (286) heap_init: At 3FFB2A68 len 0002D598 (181 KiB): DRAM[0m
+[0;32mI (292) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (298) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (305) heap_init: At 4008DBDC len 00012424 (73 KiB): IRAM[0m
+[0;32mI (312) spi_flash: detected chip: generic[0m
+[0;32mI (315) spi_flash: flash io: dio[0m
+[0;33mW (319) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (333) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (343) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (352) app_start: Starting scheduler on CPU0[0m
+[0;32mI (357) app_start: Starting scheduler on CPU1[0m
+[0;32mI (357) main_task: Started on CPU0[0m
+[0;32mI (367) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x62
+- Device found at address: 0x70
+
+>> Polling LIDAR
+[0;32mI (397) example: Install capture timer[0m
+[0;32mI (397) example: Install capture channel[0m
+[0;32mI (397) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (407) example: Register capture callback[0m
+[0;32mI (417) example: Enable capture channel[0m
+[0;32mI (417) example: Configure Trig pin[0m
+[0;32mI (427) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (437) example: Enable and start capture timer[0m
+[0;32mI (437) example: Install capture timer[0m
+[0;32mI (447) example: Install capture channel[0m
+[0;32mI (447) gpio: GPIO[36]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (457) example: Register capture callback[0m
+[0;32mI (457) example: Enable capture channel[0m
+[0;32mI (467) example: Configure Trig pin[0m
+[0;32mI (467) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup:and operator[0m
+[0;32mI (487) example: Create timer and operator[0m
+[0;32mI (487) example: Connect timer and operator[0m
+[0;32mI (487) example: Connect timer and operator[0m
+[0;32mI (487) example: Create comparator and generator from the operator[0m
+[0;32mI (497) example: Create comparator and generator from the operator[0m
+[0;32mI (507) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (507) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (517) example: Set generator action on timer and compare event[0m
+[0;32mI (537) example: Set generator action on timer and compare event[0m
+[0;32mI (537) example: Enable and start timer[0m
+[0;32mI (547) example: Enable and start timer[0m
+eFuse Two Point: NOT supported
+>> Test Alphanumeric Display: 
+eFuse Vref: Supported
+[0;31mE (487) uart: UART driver already installed[0m
+CharESP_ERROR_CHECK facailed: tesp_err_t 0xeffffffffr (ESP_FAIL) at 0x400d6952
+file: "./main/blink_example_main.c" line 1275
+func: get_time_task
+expression: uart_driver_install(UART_NUM_0, uart_buffer_size, uart_buffer_size, 10, &uart_queue, 0)
+
+abort() was called at PC 0x40086c9b on core 1
+
+
+Backtrace: 0x40081782:0x3ffc0eb0 0x40086ca5:0x3ffc0ed0 0x4008c55e:0x3ffc0ef0 0x40086c9b:0x3ffc0f60 0x400d6952:0x3ffc0f90 0x40089591:0x3ffc1050
+
+
+
+
+ELF file SHA256: 6a0cfa9d1
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Nov 10 2023 03:53:26[0m
+[0;32mI (14) boot: Multicore bootloader[0m
+[0;32mI (18) boot: chip revision: v3.0[0m
+[0;32mI (22) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (27) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (31) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (41) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (67) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0e3f4h ( 58356) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=0001e41c vaddr=3ffb0000 size=01bfch (  7164) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=00020020 vaddr=400d0020 size=1dc30h (121904) map[0m
+[0;32mI (158) esp_image: segment 3: paddr=0003dc58 vaddr=3ffb1bfc size=0057ch (  1404) load[0m
+[0;32mI (159) esp_image: segment 4: paddr=0003e1dc vaddr=40080000 size=0dbdch ( 56284) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (206) cpu_start: Multicore app[0m
+[0;32mI (206) cpu_start: Pro cpu up.[0m
+[0;32mI (206) cpu_start: Starting app cpu, entry point is 0x400811b0[0m
+[0;32mI (202) cpu_start: App cpu up.[0m
+[0;32mI (224) cpu_start: Pro cpu start user code[0m
+[0;32mI (224) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (224) cpu_start: Application information:[0m
+[0;32mI (229) cpu_start: Project name:     blink[0m
+[0;32mI (234) cpu_start: App version:      0a9ca35-dirty[0m
+[0;32mI (239) cpu_start: Compile time:     Nov 10 2023 04:25:00[0m
+[0;32mI (245) cpu_start: ELF file SHA256:  6a0cfa9d1...[0m
+[0;32mI (251) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (258) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (263) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (267) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (272) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (279) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (285) heap_init: At 3FFB2A68 len 0002D598 (181 KiB): DRAM[0m
+[0;32mI (292) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (298) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (304) heap_init: At 4008DBDC len 00012424 (73 KiB): IRAM[0m
+[0;32mI (312) spi_flash: detected chip: generic[0m
+[0;32mI (315) spi_flash: flash io: dio[0m
+[0;33mW (319) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (332) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (343) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (352) app_start: Starting scheduler on CPU0[0m
+[0;32mI (356) app_start: Starting scheduler on CPU1[0m
+[0;32mI (356) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x62
+- Device found at address: 0x70
+
+>> Polling LIDAR
+[0;32mI (396) example: Install capture timer[0m
+[0;32mI (396) example: Install capture channel[0m
+[0;32mI (396) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (406) example: Register capture callback[0m
+[0;32mI (416) example: Enable capture channel[0m
+[0;32mI (416) example: Configure Trig pin[0m
+[0;32mI (426) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullupure timer[0m
+[0;32mI (436) example: Create timer and operator[0m
+[0;32mI (436) example: Install capture channel[0m
+[0;32mI (446) example: Connect timer and operator[0m
+[0;32mI (446) gpio: GPIO[36]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (446) example: Create comparator and generator from the operator[0m
+[0;32mI (456) example: Register capture callback[0m
+[0;32mI (466) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (466) example: Enable capture channel[0m
+[0;32mI (486) example: Set generator action on timer and compare event[0m
+[0;32mI (486) example: Configure Trig pin[0m
+[0;32mI (486) example: Enable and start timer[0m
+[0;32mI (496) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (436) example: Create timer and operator[0m
+[0;32mI (516) example: Enable and start capture timer[0m
+[0;32mI (516) example: Connect timer and operator[0m
+eFuse Two Point: NOT supported
+[0;32mI (526) example: Create comparator and generator from the operator[0m
+eFuse Vref: Supported
+[0;32mI (526) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Characterized using eFuse Vref
+[0;32mI (546) example: Set generator action on timer and compare event[0m
+[0;32mI (556) example: Enable and start timer[0m
+>> Test Alphanumeric Display: 
+[0;31mE (436) uart: UART driver already installed[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x400d6952
+file: "./main/blink_example_main.c" line 1275
+func: get_time_task
+expression: uart_driver_install(UART_NUM_0, uart_buffer_size, uart_buffer_size, 10, &uart_queue, 0)
+
+abort() was called at PC 0x40086c9b on core 1
+
+
+Backtrace: 0x40081782:0x3ffc0de0 0x40086ca5:0x3ffc0e00 0x4008c55e:0x3ffc0e20 0x40086c9b:0x3ffc0e90 0x400d6952:0x3ffc0ec0 0x40089591:0x3ffc0f80
+
+
+
+
+ELF file SHA256: 6a0cfa9d1
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Nov 10 2023 03:53:26[0m
+[0;32mI (14) boot: Multicore bootloader[0m
+[0;32mI (18) boot: chip revision: v3.0[0m
+[0;32mI (22) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (27) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (31) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (41) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (67) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0e3f4h ( 58356) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=0001e41c vaddr=3ffb0000 size=01bfch (  7164) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=00020020 vaddr=400d0020 size=1dc30h (121904) map[0m
+[0;32mI (158) esp_image: segment 3: paddr=0003dc58 vaddr=3ffb1bfc size=0057ch (  1404) load[0m
+[0;32mI (159) esp_image: segment 4: paddr=0003e1dc vaddr=40080000 size=0dbdch ( 56284) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (206) cpu_start: Multicore app[0m
+[0;32mI (206) cpu_start: Pro cpu up.[0m
+[0;32mI (206) cpu_start: Starting app cpu, entry point is 0x400811b0[0m
+[0;32mI (202) cpu_start: App cpu up.[0m
+[0;32mI (224) cpu_start: Pro cpu start user code[0m
+[0;32mI (224) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (224) cpu_start: Application information:[0m
+[0;32mI (229) cpu_start: Project name:     blink[0m
+[0;32mI (234) cpu_start: App version:      0a9ca35-dirty[0m
+[0;32mI (239) cpu_start: Compile time:     Nov 10 2023 04:25:00[0m
+[0;32mI (245) cpu_start: ELF file SHA256:  6a0cfa9d1...[0m
+[0;32mI (251) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (258) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (263) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (267) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (272) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (279) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (285) heap_init: At 3FFB2A68 len 0002D598 (181 KiB): DRAM[0m
+[0;32mI (292) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (298) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (304) heap_init: At 4008DBDC len 00012424 (73 KiB): IRAM[0m
+[0;32mI (312) spi_flash: detected chip: generic[0m
+[0;32mI (315) spi_flash: flash io: dio[0m
+[0;33mW (319) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (332) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (343) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (352) app_start: Starting scheduler on CPU0[0m
+[0;32mI (356) app_start: Starting scheduler on CPU1[0m
+[0;32mI (356) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x62
+- Device found at address: 0x70
+
+>> Polling LIDAR
+[0;32mI (396) example: Install capture timer[0m
+[0;32mI (396) example: Install capture channel[0m
+[0;32mI (396) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (406) example: Register capture callback[0m
+[0;32mI (416) example: Enable capture channel[0m
+[0;32mI (416) example: Configure Trig pin[0m
+[0;32mI (426) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (436) example: Enable and start capture timer[0m
+[0;32mI (436) example: Install capture timer[0m
+[0;32mI (446) example: Install capture channel[0m
+[0;32mI (446) gpio: GPIO[36]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (456) example: Register capture callback[0m
+[0;32mI (456) example: Enable capture channel[0m
+[0;32mI (466) example: Configure Trig pin[0m
+[0;32mI (466) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pperator[0m
+[0;32mI (486) example: Create timer and operator[0m
+[0;32mI (486) example: Connect timer and operator[0m
+[0;32mI (486) example: Connect timer and operator[0m
+[0;32mI (486) example: Create comparator and generator from the operator[0m
+[0;32mI (496) example: Create comparator and generator from the operator[0m
+[0;32mI (506) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (506) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (516) example: Set generator action on timer and compare event[0m
+[0;32mI (536) example: Set generator action on timer and compare event[0m
+[0;32mI (536) example: Enable and start timer[0m
+[0;32mI (546) example: Enable and start timer[0m
+eFuse Two Point: NOT supported
+>> Test Alphanumeric Display: 
+eFuse Vref: Supported
+[0;31mE (486) uart: UART driver already installed[0m
+CharacterESP_ERROR_CHECK fizeailed: esp_err_t 0xdffffffff u (ESP_FAIL) at 0x400d6952
+file: "./main/blink_example_main.c" line 1275
+func: get_time_task
+expression: uart_driver_install(UART_NUM_0, uart_buffer_size, uart_buffer_size, 10, &uart_queue, 0)
+
+abort() was called at PC 0x40086c9b on core 1
+
+
+Backtrace: 0x40081782:0x3ffc0eb0 0x40086ca5:0x3ffc0ed0 0x4008c55e:0x3ffc0ef0 0x40086c9b:0x3ffc0f60 0x400d6952:0x3ffc0f90 0x40089591:0x3ffc1050
+
+
+
+
+ELF file SHA256: 6a0cfa9d1
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Nov 10 2023 03:53:26[0m
+[0;32mI (14) boot: Multicore bootloader[0m
+[0;32mI (18) boot: chip revision: v3.0[0m
+[0;32mI (22) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (27) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (31) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (41) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (67) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0e3f4h ( 58356) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=0001e41c vaddr=3ffb0000 size=01bfch (  7164) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=00020020 vaddr=400d0020 size=1dc30h (121904) map[0m
+[0;32mI (158) esp_image: segment 3: paddr=0003dc58 vaddr=3ffb1bfc size=0057ch (  1404) load[0m
+[0;32mI (159) esp_image: segment 4: paddr=0003e1dc vaddr=40080000 size=0dbdch ( 56284) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (206) cpu_start: Multicore app[0m
+[0;32mI (206) cpu_start: Pro cpu up.[0m
+[0;32mI (206) cpu_start: Starting app cpu, entry point is 0x400811b0[0m
+[0;32mI (202) cpu_start: App cpu up.[0m
+[0;32mI (224) cpu_start: Pro cpu start user code[0m
+[0;32mI (224) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (224) cpu_start: Application information:[0m
+[0;32mI (229) cpu_start: Project name:     blink[0m
+[0;32mI (234) cpu_start: App version:      0a9ca35-dirty[0m
+[0;32mI (239) cpu_start: Compile time:     Nov 10 2023 04:25:00[0m
+[0;32mI (245) cpu_start: ELF file SHA256:  6a0cfa9d1...[0m
+[0;32mI (251) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (258) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (263) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (267) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (272) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (279) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (285) heap_init: At 3FFB2A68 len 0002D598 (181 KiB): DRAM[0m
+[0;32mI (292) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (298) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (304) heap_init: At 4008DBDC len 00012424 (73 KiB): IRAM[0m
+[0;32mI (312) spi_flash: detected chip: generic[0m
+[0;32mI (315) spi_flash: flash io: dio[0m
+[0;33mW (319) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (332) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (343) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (352) app_start: Starting scheduler on CPU0[0m
+[0;32mI (356) app_start: Starting scheduler on CPU1[0m
+[0;32mI (356) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x62
+- Device found at address: 0x70
+
+>> Polling LIDAR
+[0;32mI (396) example: Install capture timer[0m
+[0;32mI (396) example: Install capture channel[0m
+[0;32mI (396) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (406) example: Register capture callback[0m
+[0;32mI (416) example: Enable capture channel[0m
+[0;32mI (416) example: Configure Trig pin[0m
+[0;32mI (426) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (436) example: Enable and start capture timer[0m
+[0;32mI (436) example: Install capture timer[0m
+[0;32mI (446) example: Install capture channel[0m
+[0;32mI (446) gpio: GPIO[36]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (456) example: Register capture callback[0m
+[0;32mI (456) example: Enable capture channel[0m
+[0;32mI (466) example: Configure Trig pin[0m
+[0;32mI (466) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup:and operator[0m
+[0;32mI (486) example: Create timer and operator[0m
+[0;32mI (486) example: Connect timer and operator[0m
+[0;32mI (486) example: Connect timer and operator[0m
+[0;32mI (486) example: Create comparator and generator from the operator[0m
+[0;32mI (496) example: Create comparator and generator from the operator[0m
+[0;32mI (506) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (506) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (516) example: Set generator action on timer and compare event[0m
+[0;32mI (536) example: Set generator action on timer and compare event[0m
+[0;32mI (536) example: Enable and start timer[0m
+[0;32mI (546) example: Enable and start timer[0m
+eFuse Two Point: NOT supported
+>> Test Alphanumeric Display: 
+eFuse Vref: Supported
+[0;31mE (486) uart: UART driver already installed[0m
+CESPh_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x400d6952
+file: "./main/blink_example_main.c" line 1275
+func: get_time_task
+expression: uart_driver_install(UART_NUM_0, uart_buffer_size, uart_buffer_size, 10, &uart_queue, 0)
+
+abort() was called at PC 0x40086c9b on core 1
+
+
+Backtrace: 0x40081782:0x3ffc0eb0 0x40086ca5:0x3ffc0ed0 0x4008c55e:0x3ffc0ef0 0x40086c9b:0x3ffc0f60 0x400d6952:0x3ffc0f90 0x40089591:0x3ffc1050
+
+
+
+
+ELF file SHA256: 6a0cfa9d1
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Nov 10 2023 03:53:26[0m
+[0;32mI (14) boot: Multicore bootloader[0m
+[0;32mI (18) boot: chip revision: v3.0[0m
+[0;32mI (22) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (27) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (31) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (41) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (67) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0e3f4h ( 58356) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=0001e41c vaddr=3ffb0000 size=01bfch (  7164) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=00020020 vaddr=400d0020 size=1dc30h (121904) map[0m
+[0;32mI (158) esp_image: segment 3: paddr=0003dc58 vaddr=3ffb1bfc size=0057ch (  1404) load[0m
+[0;32mI (159) esp_image: segment 4: paddr=0003e1dc vaddr=40080000 size=0dbdch ( 56284) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (206) cpu_start: Multicore app[0m
+[0;32mI (206) cpu_start: Pro cpu up.[0m
+[0;32mI (206) cpu_start: Starting app cpu, entry point is 0x400811b0[0m
+[0;32mI (202) cpu_start: App cpu up.[0m
+[0;32mI (224) cpu_start: Pro cpu start user code[0m
+[0;32mI (224) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (224) cpu_start: Application information:[0m
+[0;32mI (229) cpu_start: Project name:     blink[0m
+[0;32mI (234) cpu_start: App version:      0a9ca35-dirty[0m
+[0;32mI (239) cpu_start: Compile time:     Nov 10 2023 04:25:00[0m
+[0;32mI (245) cpu_start: ELF file SHA256:  6a0cfa9d1...[0m
+[0;32mI (251) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (258) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (263) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (267) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (272) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (279) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (285) heap_init: At 3FFB2A68 len 0002D598 (181 KiB): DRAM[0m
+[0;32mI (292) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (298) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (304) heap_init: At 4008DBDC len 00012424 (73 KiB): IRAM[0m
+[0;32mI (312) spi_flash: detected chip: generic[0m
+[0;32mI (315) spi_flash: flash io: dio[0m
+[0;33mW (319) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (332) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (343) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (352) app_start: Starting scheduler on CPU0[0m
+[0;32mI (356) app_start: Starting scheduler on CPU1[0m
+[0;32mI (356) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x62
+- Device found at address: 0x70
+
+>> Polling LIDAR
+[0;32mI (396) example: Install capture timer[0m
+[0;32mI (396) example: Install capture channel[0m
+[0;32mI (396) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (406) example: Register capture callback[0m
+[0;32mI (416) example: Enable capture channel[0m
+[0;32mI (416) example: Configure Trig pin[0m
+[0;32mI (426) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (436) example: Enable and start capture timer[0m
+[0;32mI (436) example: Install capture timer[0m
+[0;32mI (446) example: Install capture channel[0m
+[0;32mI (446) gpio: GPIO[36]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (456) example: Register capture callback[0m
+[0;32mI (456) example: Enable capture channel[0m
+[0;32mI (466) example: Configure Trig pin[0m
+[0;32mI (466) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Puller and operator[0m
+[0;32mI (486) example: Create timer and operator[0m
+[0;32mI (486) example: Connect timer and operator[0m
+[0;32mI (486) example: Connect timer and operator[0m
+[0;32mI (486) example: Create comparator and generator from the operator[0m
+[0;32mI (506) example: Create comparator and generator from the operator[0m
+[0;32mI (506) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (506) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (516) example: Set generator action on timer and compare event[0m
+[0;32mI (526) example: Set generator action on timer and compare event[0m
+[0;32mI (536) example: Enable and start timer[0m
+[0;32mI (546) example: Enable and start timer[0m
+eFuse Two Point: NOT supported
+>> Test Alphanumeric Display: 
+eFuse Vref: Supported
+[0;31mE (486) uart: UART driver already installed[0m
+CharacteESP_ERROR_CHECK frizailed: esp_err_t 0xffffffff (ESP_FAIL) at 0x400d6952
+file: "./main/blink_example_main.c" line 1275
+func: get_time_task
+expression: uart_driver_install(UART_NUM_0, uart_buffer_size, uart_buffer_size, 10, &uart_queue, 0)
+
+abort() was called at PC 0x40086c9b on core 1
+
+
+Backtrace: 0x40081782:0x3ffc0eb0 0x40086ca5:0x3ffc0ed0 0x4008c55e:0x3ffc0ef0 0x40086c9b:0x3ffc0f60 0x400d6952:0x3ffc0f90 0x40089591:0x3ffc1050
+
+
+
+
+ELF file SHA256: 6a0cfa9d1
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Nov 10 2023 03:53:26[0m
+[0;32mI (14) boot: Multicore bootloader[0m
+[0;32mI (18) boot: chip revision: v3.0[0m
+[0;32mI (22) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (27) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (31) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (41) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (67) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0e3f4h ( 58356) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=0001e41c vaddr=3ffb0000 size=01bfch (  7164) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=00020020 vaddr=400d0020 size=1dc30h (121904) map[0m
+[0;32mI (158) esp_image: segment 3: paddr=0003dc58 vaddr=3ffb1bfc size=0057ch (  1404) load[0m
+[0;32mI (159) esp_image: segment 4: paddr=0003e1dc vaddr=40080000 size=0dbdch ( 56284) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (206) cpu_start: Multicore app[0m
+[0;32mI (206) cpu_start: Pro cpu up.[0m
+[0;32mI (206) cpu_start: Starting app cpu, entry point is 0x400811b0[0m
+[0;32mI (202) cpu_start: App cpu up.[0m
+[0;32mI (224) cpu_start: Pro cpu start user code[0m
+[0;32mI (224) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (224) cpu_start: Application information:[0m
+[0;32mI (229) cpu_start: Project name:     blink[0m
+[0;32mI (234) cpu_start: App version:      0a9ca35-dirty[0m
+[0;32mI (239) cpu_start: Compile time:     Nov 10 2023 04:25:00[0m
+[0;32mI (245) cpu_start: ELF file SHA256:  6a0cfa9d1...[0m
+[0;32mI (251) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (258) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (263) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (267) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (272) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (279) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (285) heap_init: At 3FFB2A68 len 0002D598 (181 KiB): DRAM[0m
+[0;32mI (292) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (298) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (304) heap_init: At 4008DBDC len 00012424 (73 KiB): IRAM[0m
+[0;32mI (312) spi_flash: detected chip: generic[0m
+[0;32mI (315) spi_flash: flash io: dio[0m
+[0;33mW (319) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (332) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (343) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (352) app_start: Starting scheduler on CPU0[0m
+[0;32mI (356) app_start: Starting scheduler on CPU1[0m
+[0;32mI (356) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x62
+- Device found at address: 0x70
+
+>> Polling LIDAR
+[0;32mI (396) example: Install capture timer[0m
+[0;32mI (396) example: Install capture channel[0m
+[0;32mI (396) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (406) example: Register capture callback[0m
+[0;32mI (416) example: Enable capture channel[0m
+[0;32mI (416) example: Configure Trig pin[0m
+[0;32mI (426) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (436) example: Enable and start capture timer[0m
+[0;32mI (436) example: Install capture timer[0m
+[0;32mI (446) example: Install capture channel[0m
+[0;32mI (446) gpio: GPIO[36]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (456) example: Register capture callback[0m
+[0;32mI (456) example: Enable capture channel[0m
+[0;32mI (466) example: Configure Trig pin[0m
+[0;32mI (466) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullur and operator[0m
+[0;32mI (486) example: Create timer and operator[0m
+[0;32mI (486) example: Connect timer and operator[0m
+[0;32mI (486) example: Connect timer and operator[0m
+[0;32mI (486) example: Create comparator and generator from the operator[0m
+[0;32mI (496) example: Create comparator and generator from the operator[0m
+[0;32mI (506) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (506) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (516) example: Set generator action on timer and compare event[0m
+[0;32mI (526) example: Set generator action on timer and compare event[0m
+[0;32mI (536) example: Enable and start timer[0m
+[0;32mI (546) example: Enable and start timer[0m
+eFuse Two Point: NOT supported
+>> Test Alphanumeric Display: 
+eFuse Vref: Supported
+[0;31mE (486) uart: UART driver already installed[0m
+ChESP_ERRaOR_CHECK failed: esp_err_t r0xffffffff (ESP_FAIL) at 0x400d6952
+file: "./main/blink_example_main.c" line 1275
+func: get_time_task
+expression: uart_driver_install(UART_NUM_0, uart_buffer_size, uart_buffer_size, 10, &uart_queue, 0)
+
+abort() was called at PC 0x40086c9b on core 1
+
+
+Backtrace: 0x40081782:0x3ffc0eb0 0x40086ca5:0x3ffc0ed0 0x4008c55e:0x3ffc0ef0 0x40086c9b:0x3ffc0f60 0x400d6952:0x3ffc0f90 0x40089591:0x3ffc1050
+
+
+
+
+ELF file SHA256: 6a0cfa9d1
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Nov 10 2023 03:53:26[0m
+[0;32mI (14) boot: Multicore bootloader[0m
+[0;32mI (18) boot: chip revision: v3.0[0m
+[0;32mI (22) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (27) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (31) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (41) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (67) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0e3f4h ( 58356) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=0001e41c vaddr=3ffb0000 size=01bfch (  7164) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=00020020 vaddr=400d0020 size=1dc30h (121904) map[0m
+[0;32mI (158) esp_image: segment 3: paddr=0003dc58 vaddr=3ffb1bfc size=0057ch (  1404) load[0m
+[0;32mI (159) esp_image: segment 4: paddr=0003e1dc vaddr=40080000 size=0dbdch ( 56284) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (206) cpu_start: Multicore app[0m
+[0;32mI (206) cpu_start: Pro cpu up.[0m
+[0;32mI (206) cpu_start: Starting app cpu, entry point is 0x400811b0[0m
+[0;32mI (202) cpu_start: App cpu up.[0m
+[0;32mI (224) cpu_start: Pro cpu start user code[0m
+[0;32mI (224) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (224) cpu_start: Application information:[0m
+[0;32mI (229) cpu_start: Project name:     blink[0m
+[0;32mI (234) cpu_start: App version:      0a9ca35-dirty[0m
+[0;32mI (239) cpu_start: Compile time:     Nov 10 2023 04:25:00[0m
+[0;32mI (245) cpu_start: ELF file SHA256:  6a0cfa9d1...[0m
+[0;32mI (251) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (258) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (263) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (267) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (272) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (279) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (285) heap_init: At 3FFB2A68 len 0002D598 (181 KiB): DRAM[0m
+[0;32mI (292) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (298) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (304) heap_init: At 4008DBDC len 00012424 (73 KiB): IRAM[0m
+[0;32mI (312) spi_flash: detected chip: generic[0m
+[0;32mI (315) spi_flash: flash io: dio[0m
+[0;33mW (319) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (332) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (343) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (352) app_start: Starting scheduler on CPU0[0m
+[0;32mI (356) app_start: Starting scheduler on CPU1[0m
+[0;32mI (356) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x62
+- Device found at address: 0x70
+
+>> Polling LIDAR
+[0;32mI (396) example: Install capture timer[0m
+[0;32mI (396) example: Install capture channel[0m
+[0;32mI (396) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (406) example: Register capture callback[0m
+[0;32mI (416) example: Enable capture channel[0m
+[0;32mI (416) example: Configure Trig pin[0m
+[0;32mI (426) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (436) example: Enable and start capture timer[0m
+[0;32mI (436) example: Install capture timer[0m
+[0;32mI (446) example: Install capture channel[0m
+[0;32mI (446) gpio: GPIO[36]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (456) example: Register capture callback[0m
+[0;32mI (456) example: Enable capture channel[0m
+[0;32mI (466) example: Configure Trig pin[0m
+[0;32mI (466) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| operator[0m
+[0;32mI (486) example: Create timer and operator[0m
+[0;32mI (486) example: Connect timer and operator[0m
+[0;32mI (486) example: Connect timer and operator[0m
+[0;32mI (486) example: Create comparator and generator from the operator[0m
+[0;32mI (496) example: Create comparator and generator from the operator[0m
+[0;32mI (506) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (506) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (516) example: Set generator action on timer and compare event[0m
+[0;32mI (536) example: Set generator action on timer and compare event[0m
+[0;32mI (536) example: Enable and start timer[0m
+[0;32mI (546) example: Enable and start timer[0m
+eFuse Two Point: NOT supported
+>> Test Alphanumeric Display: 
+eFuse Vref: Supported
+[0;31mE (486) uart: UART driver already installed[0m
+CESP_ERROR_CHECK fahiled: earsp_err_at 0xfffffcfff (ESP_FAIL) at 0x400d6952
+file: "./main/blink_example_main.c" line 1275
+func: get_time_task
+expression: uart_driver_install(UART_NUM_0, uart_buffer_size, uart_buffer_size, 10, &uart_queue, 0)

@@ -1,0 +1,539 @@
+[0;32mI (13) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Nov 10 2023 03:53:26[0m
+[0;32mI (15) boot: Multicore bootloader[0m
+[0;32mI (19) boot: chip revision: v3.0[0m
+[0;32mI (23) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (27) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (32) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24c00h (150528) map[0m
+[0;32mI (142) esp_image: segment 1: paddr=00034c28 vaddr=3ffb0000 size=03794h ( 14228) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=000383c4 vaddr=40080000 size=07c54h ( 31828) load[0m
+[0;32mI (161) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=89ba8h (564136) map[0m
+[0;32mI (365) esp_image: segment 4: paddr=000c9bd0 vaddr=40087c54 size=0f578h ( 62840) load[0m
+[0;32mI (403) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (403) boot: Disabling RNG early entropy source...[0m
+[0;32mI (415) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu up.[0m
+[0;32mI (415) cpu_start: Starting app cpu, entry point is 0x40081308[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (433) cpu_start: Pro cpu start user code[0m
+[0;32mI (433) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (433) cpu_start: Application information:[0m
+[0;32mI (438) cpu_start: Project name:     blink[0m
+[0;32mI (443) cpu_start: App version:      0a9ca35-dirty[0m
+[0;32mI (448) cpu_start: Compile time:     Nov 10 2023 04:25:00[0m
+[0;32mI (454) cpu_start: ELF file SHA256:  deb2cb5e5...[0m
+[0;32mI (460) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (467) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (471) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (476) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (481) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (488) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (494) heap_init: At 3FFB78A8 len 00028758 (161 KiB): DRAM[0m
+[0;32mI (500) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (507) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (513) heap_init: At 400971CC len 00008E34 (35 KiB): IRAM[0m
+[0;32mI (521) spi_flash: detected chip: generic[0m
+[0;32mI (524) spi_flash: flash io: dio[0m
+[0;33mW (528) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (541) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (552) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (561) app_start: Starting scheduler on CPU0[0m
+[0;32mI (565) app_start: Starting scheduler on CPU1[0m
+[0;32mI (565) main_task: Started on CPU0[0m
+[0;32mI (575) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x62
+- Device found at address: 0x70
+I (655) wifi:wifi driver task: 3ffbf728, prio:23, stack:6656, core=0
+I (675) wifi:wifi firmware version: 341633f
+I (675) wifi:wifi certification version: v7.0
+I (675) wifi:config NVS flash: enabled
+I (675) wifi:config nano formating: disabled
+I (685) wifi:Init data frame dynamic rx buffer num: 32
+I (685) wifi:Init management frame dynamic rx buffer num: 32
+I (695) wifi:Init management short buffer num: 32
+I (695) wifi:Init dynamic tx buffer num: 32
+I (705) wifi:Init static rx buffer size: 1600
+I (705) wifi:Init static rx buffer num: 10
+I (705) wifi:Init dynamic rx buffer num: 32
+[0;32mI (715) wifi_init: rx ba win: 6[0m
+[0;32mI (715) wifi_init: tcpip mbox: 32[0m
+[0;32mI (725) wifi_init: udp mbox: 6[0m
+[0;32mI (725) wifi_init: tcp mbox: 6[0m
+[0;32mI (725) wifi_init: tcp tx win: 5744[0m
+[0;32mI (735) wifi_init: tcp rx win: 5744[0m
+[0;32mI (735) wifi_init: tcp mss: 1440[0m
+[0;32mI (745) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (745) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (755) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (835) wifi:mode : sta (0c:dc:7e:cb:59:a4)
+I (835) wifi:enable tsf
+[0;32mI (845) example: wifi_init finished.[0m
+
+>> Polling LIDAR
+[0;32mI (845) example: WiFi started, trying to connect...[0m
+[0;32mI (845) example: Install capture timer[0m
+[0;32mI (855) example: Install capture channel[0m
+[0;32mI (855) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (865) example: Register capture callback[0m
+[0;32mI (865) example: Enable capture channel[0m
+[0;32mI (875) example: Configure Trig pin[0m
+[0;32mI (875) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (885) example: Enable and start capture timer[0m
+I (905) wifi:new:<7,1>, old:<1,0>, ap:<255,255>, sta:<7,1>, prof:1
+I (905) wifi:state: init -> auth (b0)
+[0;32mI (905) example: Install capture timer[0m
+[0;32mI (905) example: Install capture channel[0m
+[0;32mI (915) gpio: GPIO[36]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (915) example: Register capture callback[0m
+[0;32mI (925) example: Enable capture channel[0m
+[0;32mI (925) example: Configure Trig pin[0m
+[0;32mI (935) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (945) example: Enable and start capture timer[0m
+I (945) wifi:state: auth -> assoc (0)
+[0;32mI (955) example: Create timer and operator[0m
+[0;32mI (955) example: Create timer and operator[0m
+I (955) wifi:[0;32mI (955) example: Connect timer and operator[0m
+state: assoc -> run (10)[0;32mI (965) example: Create comparator and generator from the operator[0m
+
+[0;32mI (975) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+I (985) wifi:[0;32mI (985) example: Set generator action on timer and compare event[0m
+<ba-add>idx:0 (ifx:0, 30:23:03:c7:9f:40), tid:0, ssn:0, winSize:64[0;32mI (995) example: Enable and start timer[0m
+
+[0;32mI (965) example: Connect timer and operator[0m
+[0;32mI (1005) example: Create comparator and generator from the operator[0m
+eFuse Two Point: NOT supported
+[0;32mI (1015) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+I (1025) wifi:[0;32mI (1025) example: Set generator action on timer and compare event[0m
+connected with Group_7, aid = 5, channel 7, 40U, bssid = 30:23:03:c7:9f:40[0;32mI (1035) example: Enable and start timer[0m
+
+eFuse Vref: Supported
+I (1045) wifi:security: WPA2-PSK, phy: bgn, rssi: -46Characterized using eFuse Vref
+
+>> Test Alphanumeric Display: 
+[0;32mI (955) example: Socket created[0m
+[0;32mI (1065) example: Socket bound, port 3333[0m
+I (1065) wifi:[0;32mI (1065) example: Waiting for data[0m
+pm start, type: 1
+
+I (1075) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (965) main_task: Returned from app_main()[0m
+[0;32mI (1085) example: Connected to WiFi successfully![0m
+[0;32mI (1235) example: WALL DETECTED[0m
+Distance: 13
+- oscillator: ok 
+- blink: off 
+- brightness: max 
+[0;32mI (1725) example: WALL DETECTED[0m
+Distance: 15
+Count: 0
+Speed is 0.0m/s
+[0;32mI (2215) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (2585) esp_netif_handlers: sta ip: 192.168.1.23, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2585) example: Got IP address: 192.168.1.23[0m
+[0;32mI (2715) example: WALL DETECTED[0m
+Distance: 13
+Count: 0
+Speed is 0.0m/s
+[0;32mI (3215) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (3705) example: WALL DETECTED[0m
+Distance: 13
+Count: 0
+Speed is 0.0m/s
+[0;32mI (4195) example: WALL DETECTED[0m
+Distance: 13
+[0;32mI (4695) example: WALL DETECTED[0m
+Distance: 13
+Count: 0
+Speed is 0.0m/s
+[0;32mI (5195) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (5685) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (6175) example: WALL DETECTED[0m
+Distance: 15
+[0;32mI (6665) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (7165) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (7655) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (8145) example: WALL DETECTED[0m
+Distance: 15
+[0;32mI (8645) example: WALL DETECTED[0m
+Distance: 13
+Count: 0
+Speed is 0.0m/s
+[0;32mI (9135) example: WALL DETECTED[0m
+Distance: 13
+[0;32mI (9635) example: WALL DETECTED[0m
+Distance: 13
+Count: 0
+Speed is 0.0m/s
+[0;32mI (10125) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (10625) example: WALL DETECTED[0m
+Distance: 15
+Count: 0
+Speed is 0.0m/s
+[0;32mI (11075) example: Waiting for data[0m
+[0;32mI (11115) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (11605) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (12105) example: WALL DETECTED[0m
+Distance: 16
+[0;32mI (12595) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (13085) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (13575) example: WALL DETECTED[0m
+Distance: 13
+Count: 0
+Speed is 0.0m/s
+[0;32mI (14075) example: WALL DETECTED[0m
+Distance: 15
+[0;32mI (14565) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (15065) example: WALL DETECTED[0m
+Distance: 14
+[0;32mI (15555) example: WALL DETECTED[0m
+Distance: 14
+Count: 0
+Speed is 0.0m/s
+[0;32mI (16045) example: WALL DETECTED[0m
+Distance: 13
+[0;32mI (16545) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (17035) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (17525) example: WALL DETECTED[0m
+Distance: 14
+Count: 0
+Speed is 0.0m/s
+[0;32mI (18025) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (18515) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (19015) example: WALL DETECTED[0m
+Distance: 15
+[0;32mI (19505) example: WALL DETECTED[0m
+Distance: 13
+Count: 0
+Speed is 0.0m/s
+[0;32mI (20005) example: WALL DETECTED[0m
+Distance: 16
+[0;32mI (20495) example: WALL DETECTED[0m
+Distance: 16
+Count: 0
+Speed is 0.0m/s
+[0;32mI (20995) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (21075) example: Waiting for data[0m
+[0;32mI (21485) example: WALL DETECTED[0m
+Distance: 14
+Count: 0
+Speed is 0.0m/s
+[0;32mI (21975) example: WALL DETECTED[0m
+Distance: 12
+[0;32mI (22465) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (22965) example: WALL DETECTED[0m
+Distance: 14
+[0;32mI (23455) example: WALL DETECTED[0m
+Distance: 14
+[0;32mI (23945) example: WALL DETECTED[0m
+Distance: 14
+Count: 0
+Speed is 0.0m/s
+[0;32mI (24445) example: WALL DETECTED[0m
+Distance: 12
+[0;32mI (24935) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (25425) example: WALL DETECTED[0m
+Distance: 13
+[0;32mI (25925) example: WALL DETECTED[0m
+Distance: 15
+Count: 0
+Speed is 0.0m/s
+[0;32mI (26415) example: WALL DETECTED[0m
+Distance: 17
+[0;32mI (26915) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (27405) example: WALL DETECTED[0m
+Distance: 15
+[0;32mI (27895) example: WALL DETECTED[0m
+Distance: 15
+Count: 0
+Speed is 0.0m/s
+[0;32mI (28385) example: WALL DETECTED[0m
+Distance: 14
+[0;32mI (28885) example: WALL DETECTED[0m
+Distance: 15
+Count: 0
+Speed is 0.0m/s
+[0;32mI (29375) example: WALL DETECTED[0m
+Distance: 12
+[0;32mI (29875) example: WALL DETECTED[0m
+Distance: 16
+Count: 0
+Speed is 0.0m/s
+[0;32mI (30365) example: WALL DETECTED[0m
+Distance: 12
+[0;32mI (30865) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (31075) example: Waiting for data[0m
+[0;32mI (31355) example: WALL DETECTED[0m
+Distance: 15
+[0;32mI (31845) example: WALL DETECTED[0m
+Distance: 14
+Count: 0
+Speed is 0.0m/s
+[0;32mI (32335) example: WALL DETECTED[0m
+Distance: 14
+[0;32mI (32835) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (33325) example: WALL DETECTED[0m
+Distance: 14
+[0;32mI (33825) example: WALL DETECTED[0m
+Distance: 13
+Count: 0
+Speed is 0.0m/s
+[0;32mI (34325) example: WALL DETECTED[0m
+Distance: 16
+[0;32mI (34815) example: WALL DETECTED[0m
+Distance: 14
+Count: 0
+Speed is 0.0m/s
+[0;32mI (35305) example: WALL DETECTED[0m
+Distance: 14
+[0;32mI (35805) example: WALL DETECTED[0m
+Distance: 13
+Count: 0
+Speed is 0.0m/s
+[0;32mI (36295) example: WALL DETECTED[0m
+Distance: 13
+[0;32mI (36795) example: WALL DETECTED[0m
+Distance: 13
+Count: 0
+Speed is 0.0m/s
+[0;32mI (37285) example: WALL DETECTED[0m
+Distance: 14
+[0;32mI (37785) example: WALL DETECTED[0m
+Distance: 15
+Count: 0
+Speed is 0.0m/s
+[0;32mI (38275) example: WALL DETECTED[0m
+Distance: 15
+[0;32mI (38775) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (39265) example: WALL DETECTED[0m
+Distance: 15
+[0;32mI (39765) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (40245) example: WALL DETECTED[0m
+Distance: 15
+[0;32mI (40745) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (41075) example: Waiting for data[0m
+[0;32mI (41235) example: WALL DETECTED[0m
+Distance: 14
+[0;32mI (41735) example: WALL DETECTED[0m
+Distance: 15
+Count: 0
+Speed is 0.0m/s
+[0;32mI (42225) example: WALL DETECTED[0m
+Distance: 16
+[0;32mI (42725) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (43215) example: WALL DETECTED[0m
+Distance: 16
+[0;32mI (43715) example: WALL DETECTED[0m
+Distance: 15
+Count: 0
+Speed is 0.0m/s
+[0;32mI (44205) example: WALL DETECTED[0m
+Distance: 13
+[0;32mI (44695) example: WALL DETECTED[0m
+Distance: 18
+Count: 0
+Speed is 0.0m/s
+[0;32mI (45195) example: WALL DETECTED[0m
+Distance: 15
+[0;32mI (45685) example: WALL DETECTED[0m
+Distance: 13
+Count: 0
+Speed is 0.0m/s
+[0;32mI (46175) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (46675) example: WALL DETECTED[0m
+Distance: 17
+Count: 0
+Speed is 0.0m/s
+[0;32mI (47165) example: WALL DETECTED[0m
+Distance: 12
+[0;32mI (47665) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (48155) example: WALL DETECTED[0m
+Distance: 12
+[0;32mI (48645) example: WALL DETECTED[0m
+Distance: 15
+Count: 0
+Speed is 0.0m/s
+[0;32mI (49145) example: WALL DETECTED[0m
+Distance: 14
+[0;32mI (49645) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (50135) example: WALL DETECTED[0m
+Distance: 13
+[0;32mI (50625) example: WALL DETECTED[0m
+Distance: 17
+Count: 0
+Speed is 0.0m/s
+[0;32mI (51075) example: Waiting for data[0m
+[0;32mI (51125) example: WALL DETECTED[0m
+Distance: 14
+[0;32mI (51615) example: WALL DETECTED[0m
+Distance: 13
+Count: 0
+Speed is 0.0m/s
+[0;32mI (52105) example: WALL DETECTED[0m
+Distance: 13
+[0;32mI (52605) example: WALL DETECTED[0m
+Distance: 15
+Count: 0
+Speed is 0.0m/s
+[0;32mI (53095) example: WALL DETECTED[0m
+Distance: 13
+[0;32mI (53585) example: WALL DETECTED[0m
+Distance: 13
+Count: 0
+Speed is 0.0m/s
+[0;32mI (54085) example: WALL DETECTED[0m
+Distance: 12
+[0;32mI (54575) example: WALL DETECTED[0m
+Distance: 14
+Count: 0
+Speed is 0.0m/s
+[0;32mI (55075) example: WALL DETECTED[0m
+Distance: 14
+[0;32mI (55565) example: WALL DETECTED[0m
+Distance: 14
+Count: 0
+Speed is 0.0m/s
+[0;32mI (56065) example: WALL DETECTED[0m
+Distance: 19
+[0;32mI (56555) example: WALL DETECTED[0m
+Distance: 15
+Count: 0
+Speed is 0.0m/s
+[0;32mI (57055) example: WALL DETECTED[0m
+Distance: 13
+[0;32mI (57545) example: WALL DETECTED[0m
+Distance: 17
+Count: 0
+Speed is 0.0m/s
+[0;32mI (58035) example: WALL DETECTED[0m
+Distance: 13
+[0;32mI (58535) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (59025) example: WALL DETECTED[0m
+Distance: 13
+[0;32mI (59515) example: WALL DETECTED[0m
+Distance: 13
+Count: 0
+Speed is 0.0m/s
+[0;32mI (60015) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (60505) example: WALL DETECTED[0m
+Distance: 15
+Count: 0
+Speed is 0.0m/s
+[0;32mI (61005) example: WALL DETECTED[0m
+Distance: 13
+[0;32mI (61075) example: Waiting for data[0m
+[0;32mI (61495) example: WALL DETECTED[0m
+Distance: 14
+Count: 0
+Speed is 0.0m/s
+[0;32mI (61995) example: WALL DETECTED[0m
+Distance: 14
+[0;32mI (62485) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (62975) example: WALL DETECTED[0m
+Distance: 14
+[0;32mI (63465) example: WALL DETECTED[0m
+Distance: 16
+Count: 0
+Speed is 0.0m/s
+[0;32mI (63965) example: WALL DETECTED[0m
+Distance: 13
+[0;32mI (64455) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (64955) example: WALL DETECTED[0m
+Distance: 13
+[0;32mI (65445) example: WALL DETECTED[0m
+Distance: 15
+[0;32mI (65945) example: WALL DETECTED[0m
+Distance: 16
+Count: 0
+Speed is 0.0m/s

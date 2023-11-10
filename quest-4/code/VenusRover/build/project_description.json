@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "blink",
-    "project_version":    "298319c-dirty",
+    "project_version":    "0a9ca35-dirty",
     "project_path":       "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover",
     "idf_path":           "/Users/jakelee/esp/esp-idf",
     "build_dir":          "/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/build",
