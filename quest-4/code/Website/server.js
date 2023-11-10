@@ -1,4 +1,5 @@
 // to start server cd into Website folder and run "node server.js" in console
+// site interface can be seen on http://localhost:3000/
 // remember to npm install express and node-fetch
 // ESP32 device needs to have a UDP server listening on port 8080 to receive messages "start", "stop", "turn"
 
