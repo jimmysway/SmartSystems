@@ -206,6 +206,62 @@ char alpha_str[20];
 // 360 turn
 int rev_direction = 0;
 
+
+//////////////////////////////////////////WIFI//////////////////////////////////////////
+#define WIFI_SSID      "Group_7"
+#define WIFI_PASSWORD  "smartsys"
+#define UDP_SERVER_IP  "192.168.1.36"
+#define UDP_PORT       3333
+#define ESP32_HOSTNAME "ESP32"
+static const char *TAG = "UDP_CLIENT";
+
+static void wifi_init(void);
+static void udp_client_task(void *pvParameters);
+
+static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data) {
+    if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
+        esp_wifi_connect();
+        ESP_LOGI(TAG, "WiFi started, trying to connect...");
+    } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_CONNECTED) {
+        ESP_LOGI(TAG, "Connected to WiFi successfully!");
+    } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
+        esp_wifi_connect();  // Reconnect upon disconnection
+        ESP_LOGI(TAG, "Disconnected from WiFi. Trying to reconnect...");
+    } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
+        ip_event_got_ip_t* event = (ip_event_got_ip_t*) event_data;
+        ESP_LOGI(TAG, "Got IP address: %s", ip4addr_ntoa(&event->ip_info.ip));
+    }
+}
+static void wifi_init(void) {
+    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+    ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+    
+    // Create a default WiFi STA network interface instance
+    esp_netif_create_default_wifi_sta();
+    
+    ESP_ERROR_CHECK(esp_event_handler_register(WIFI_EVENT, ESP_EVENT_ANY_ID, &event_handler, NULL));
+    ESP_ERROR_CHECK(esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &event_handler, NULL));
+    
+    wifi_config_t wifi_config = {
+        .sta = {
+            .ssid = WIFI_SSID,
+            .password = WIFI_PASSWORD,
+        },
+    };
+    
+    // Set hostname for the STA interface
+    esp_netif_t *sta_netif = esp_netif_get_handle_from_ifkey("WIFI_STA_DEF");
+    if (sta_netif) {
+        esp_netif_set_hostname(sta_netif, ESP32_HOSTNAME);
+    }
+
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
+    ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config));
+    ESP_ERROR_CHECK(esp_wifi_start());
+
+    ESP_LOGI(TAG, "wifi_init finished.");
+}
+
 //////////////////////////////////////////////LIDAR//////////////////////////////////////////////
 // Master I2C
 #define I2C_EXAMPLE_MASTER_SCL_IO          22   // gpio number for i2c clk
@@ -517,23 +573,11 @@ void speed_task(void *param) {
     ESP_LOGI(TAG, "Enable and start timer");
     ESP_ERROR_CHECK(mcpwm_timer_enable(timer2));
     ESP_ERROR_CHECK(mcpwm_timer_start_stop(timer2, MCPWM_TIMER_START_NO_STOP));
-    
-//    ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(0)));
-    
+        
     vTaskDelay(3500 / portTICK_PERIOD_MS); // Do for at least 3s, and leave in neutral state
     
     uint8_t *data = (uint8_t *) malloc(1024);
     char speed_buf[20] = "0";
-    float step = 0.02;
-//    while (1) {
-//        ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
-//        ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-//        vTaskDelay(pdMS_TO_TICKS(500));
-//        printf("Set speed of buggy: ");
-//        gets(speed_buf);
-//        printf("%s\n", speed_buf);
-//        speed_cnt = atof(speed_buf);
-//    }
 
     float previous_error = 0;
     float integral = 0;
@@ -545,7 +589,7 @@ void speed_task(void *param) {
     float output;
     float error;
 
-    float target = 1.2;
+    float target = 1.0;
 
     while (1) {
         if(rev_direction == 0) {
@@ -555,30 +599,29 @@ void speed_task(void *param) {
                 ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
                 vTaskDelay(pdMS_TO_TICKS(1000));
             } else {
-                // error = target - speed;
-                // integral = integral + error * dt;
-                // derivative = (error - previous_error) / dt;
-                // output = Kp * error + Ki * integral + Kd * derivative;
-                // previous_error = error;
-                    
-                // if(error < -1)
-                // {
-                //     speed += step;
-                //     //ESP_LOGI(TAG, "SPEED UP");
-                // }
-                // else if(error > 1)
-                // {
-                //     speed -= step;
-                //     //ESP_LOGI(TAG, "SLOW DOWN");
-                // }
-                // else
-                // {
-                //     continue;
-                // }
-                speed_cnt = 0.15;
-                //ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
+                error = target - speed;
+                integral = integral + error * dt;
+                derivative = (error - previous_error) / dt;
+                output = Kp * error + Ki * integral + Kd * derivative;
+                previous_error = error;
+                if(error < -0.2)
+                {
+                    speed_cnt = 0.146;
+                    //ESP_LOGI(TAG, "SPEED UP");
+                }
+                else if(error > 0.2)
+                {
+                    speed_cnt = 0.158;
+                    //ESP_LOGI(TAG, "SLOW DOWN");
+                }
+                else
+                {
+                    continue;
+                }
+                ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
+                
                 ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-                vTaskDelay(pdMS_TO_TICKS(10));
+                vTaskDelay(pdMS_TO_TICKS(800));
             }
         } else {
             speed_cnt = 0;
@@ -1043,44 +1086,44 @@ static void steer_task() {
 /////////////////////////////////////// Alphanumeric Functions //////////////////////////////////////////////////////
 // Turn on oscillator for alpha display
 int alpha_oscillator() {
-  int ret;
-  i2c_cmd_handle_t cmd = i2c_cmd_link_create();
-  i2c_master_start(cmd);
-  i2c_master_write_byte(cmd, ( SLAVE_ADDR << 1 ) | WRITE_BIT, ACK_CHECK_EN);
-  i2c_master_write_byte(cmd, OSC, ACK_CHECK_EN);
-  i2c_master_stop(cmd);
-  ret = i2c_master_cmd_begin(I2C_EXAMPLE_MASTER_NUM, cmd, 1000 / portTICK_PERIOD_MS);
-  i2c_cmd_link_delete(cmd);
-  vTaskDelay(200 / portTICK_PERIOD_MS);
-  return ret;
+    int ret;
+    i2c_cmd_handle_t cmd = i2c_cmd_link_create();
+    i2c_master_start(cmd);
+    i2c_master_write_byte(cmd, ( SLAVE_ADDR << 1 ) | WRITE_BIT, ACK_CHECK_EN);
+    i2c_master_write_byte(cmd, OSC, ACK_CHECK_EN);
+    i2c_master_stop(cmd);
+    ret = i2c_master_cmd_begin(I2C_EXAMPLE_MASTER_NUM, cmd, 1000 / portTICK_PERIOD_MS);
+    i2c_cmd_link_delete(cmd);
+    vTaskDelay(200 / portTICK_PERIOD_MS);
+    return ret;
 }
 
 // Set blink rate to off
 int no_blink() {
-  int ret;
-  i2c_cmd_handle_t cmd2 = i2c_cmd_link_create();
-  i2c_master_start(cmd2);
-  i2c_master_write_byte(cmd2, ( SLAVE_ADDR << 1 ) | WRITE_BIT, ACK_CHECK_EN);
-  i2c_master_write_byte(cmd2, HT16K33_BLINK_CMD | HT16K33_BLINK_DISPLAYON | (HT16K33_BLINK_OFF << 1), ACK_CHECK_EN);
-  i2c_master_stop(cmd2);
-  ret = i2c_master_cmd_begin(I2C_EXAMPLE_MASTER_NUM, cmd2, 1000 / portTICK_PERIOD_MS);
-  i2c_cmd_link_delete(cmd2);
-  vTaskDelay(200 / portTICK_PERIOD_MS);
-  return ret;
+    int ret;
+    i2c_cmd_handle_t cmd2 = i2c_cmd_link_create();
+    i2c_master_start(cmd2);
+    i2c_master_write_byte(cmd2, ( SLAVE_ADDR << 1 ) | WRITE_BIT, ACK_CHECK_EN);
+    i2c_master_write_byte(cmd2, HT16K33_BLINK_CMD | HT16K33_BLINK_DISPLAYON | (HT16K33_BLINK_OFF << 1), ACK_CHECK_EN);
+    i2c_master_stop(cmd2);
+    ret = i2c_master_cmd_begin(I2C_EXAMPLE_MASTER_NUM, cmd2, 1000 / portTICK_PERIOD_MS);
+    i2c_cmd_link_delete(cmd2);
+    vTaskDelay(200 / portTICK_PERIOD_MS);
+    return ret;
 }
 
 // Set Brightness
 int set_brightness_max(uint8_t val) {
-  int ret;
-  i2c_cmd_handle_t cmd3 = i2c_cmd_link_create();
-  i2c_master_start(cmd3);
-  i2c_master_write_byte(cmd3, ( SLAVE_ADDR << 1 ) | WRITE_BIT, ACK_CHECK_EN);
-  i2c_master_write_byte(cmd3, HT16K33_CMD_BRIGHTNESS | val, ACK_CHECK_EN);
-  i2c_master_stop(cmd3);
-  ret = i2c_master_cmd_begin(I2C_EXAMPLE_MASTER_NUM, cmd3, 1000 / portTICK_PERIOD_MS);
-  i2c_cmd_link_delete(cmd3);
-  vTaskDelay(200 / portTICK_PERIOD_MS);
-  return ret;
+    int ret;
+    i2c_cmd_handle_t cmd3 = i2c_cmd_link_create();
+    i2c_master_start(cmd3);
+    i2c_master_write_byte(cmd3, ( SLAVE_ADDR << 1 ) | WRITE_BIT, ACK_CHECK_EN);
+    i2c_master_write_byte(cmd3, HT16K33_CMD_BRIGHTNESS | val, ACK_CHECK_EN);
+    i2c_master_stop(cmd3);
+    ret = i2c_master_cmd_begin(I2C_EXAMPLE_MASTER_NUM, cmd3, 1000 / portTICK_PERIOD_MS);
+    i2c_cmd_link_delete(cmd3);
+    vTaskDelay(200 / portTICK_PERIOD_MS);
+    return ret;
 }
 
 static void show_display() {
@@ -1122,6 +1165,72 @@ static void show_display() {
         ret = i2c_master_cmd_begin(I2C_EXAMPLE_MASTER_NUM, cmd4, 1000 / portTICK_PERIOD_MS);
         i2c_cmd_link_delete(cmd4);
     }
+}
+
+static void udp_client_task(void *pvParameters) {
+    char rx_buffer[128];
+    char host_ip[] = UDP_SERVER_IP;
+    int addr_family;
+    int ip_protocol;
+
+    while (1) {
+        struct sockaddr_in dest_addr;
+        struct sockaddr_in source_addr;  // For the source address in recvfrom
+        socklen_t socklen = sizeof(source_addr);
+        dest_addr.sin_addr.s_addr = inet_addr(host_ip);
+        dest_addr.sin_family = AF_INET;
+        dest_addr.sin_port = htons(UDP_PORT);
+        addr_family = AF_INET;
+        ip_protocol = IPPROTO_IP;
+        int sock = socket(addr_family, SOCK_DGRAM, ip_protocol);
+        if (sock < 0) {
+            ESP_LOGE(TAG, "Unable to create socket: errno %d", errno);
+            break;
+        }
+        ESP_LOGI(TAG, "Socket created");
+
+        while (1) {
+            int err = sendto(sock, payload, strlen(payload), 0, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
+            if (err < 0) {
+                ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
+                break;
+            }
+
+            ESP_LOGI(TAG, "%s Message sent", payload);
+            // Listen for incoming data after sending.
+            int len = recvfrom(sock, rx_buffer, sizeof(rx_buffer) - 1, 0, (struct sockaddr *)&source_addr, &socklen);
+
+            // Error occurred during receiving
+            if (len < 0) {
+                ESP_LOGE(TAG, "recvfrom failed: errno %d", errno);
+                break;
+            }
+            // Data received
+            else {
+                rx_buffer[len] = 0;  // Null-terminate whatever was received to make it a string
+                ESP_LOGI(TAG, "Received %d bytes from %s:", len, inet_ntoa(source_addr.sin_addr));
+                ESP_LOGI(TAG, "%s", rx_buffer);
+                strcpy(buff,(char*) rx_buffer);
+
+                // int received_blink_duration = atoi(rx_buffer);
+                // ESP_LOGI("BLINK", "%d", received_blink_duration);
+
+                // if(received_blink_duration > 0) {
+                //     blink_duration = received_blink_duration;
+                // }
+            }
+
+            vTaskDelay(10000/portTICK_PERIOD_MS);  // Send every 2 seconds and then check for incoming data
+        }
+
+        if (sock != -1) {
+            ESP_LOGE(TAG, "Shutting down socket and restarting...");
+            shutdown(sock, 0);
+            close(sock);
+        }
+        vTaskDelay(5000 / portTICK_PERIOD_MS);
+    }
+    vTaskDelete(NULL);
 }
 
 
