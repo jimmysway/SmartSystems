@@ -1,0 +1,829 @@
+[0;32mI (13) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Nov 10 2023 03:53:26[0m
+[0;32mI (15) boot: Multicore bootloader[0m
+[0;32mI (19) boot: chip revision: v3.0[0m
+[0;32mI (23) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (27) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (32) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24b80h (150400) map[0m
+[0;32mI (142) esp_image: segment 1: paddr=00034ba8 vaddr=3ffb0000 size=03794h ( 14228) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=00038344 vaddr=40080000 size=07cd4h ( 31956) load[0m
+[0;32mI (161) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=89b48h (564040) map[0m
+[0;32mI (365) esp_image: segment 4: paddr=000c9b70 vaddr=40087cd4 size=0f4f8h ( 62712) load[0m
+[0;32mI (403) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (403) boot: Disabling RNG early entropy source...[0m
+[0;32mI (415) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu up.[0m
+[0;32mI (415) cpu_start: Starting app cpu, entry point is 0x40081308[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (433) cpu_start: Pro cpu start user code[0m
+[0;32mI (433) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (433) cpu_start: Application information:[0m
+[0;32mI (438) cpu_start: Project name:     blink[0m
+[0;32mI (443) cpu_start: App version:      63e185e-dirty[0m
+[0;32mI (448) cpu_start: Compile time:     Nov 10 2023 05:10:52[0m
+[0;32mI (454) cpu_start: ELF file SHA256:  eda13135f...[0m
+[0;32mI (460) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (467) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (471) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (476) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (481) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (488) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (494) heap_init: At 3FFB78A8 len 00028758 (161 KiB): DRAM[0m
+[0;32mI (500) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (507) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (513) heap_init: At 400971CC len 00008E34 (35 KiB): IRAM[0m
+[0;32mI (521) spi_flash: detected chip: generic[0m
+[0;32mI (524) spi_flash: flash io: dio[0m
+[0;33mW (528) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (541) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (552) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (561) app_start: Starting scheduler on CPU0[0m
+[0;32mI (565) app_start: Starting scheduler on CPU1[0m
+[0;32mI (565) main_task: Started on CPU0[0m
+[0;32mI (575) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x62
+- Device found at address: 0x70
+I (655) wifi:wifi driver task: 3ffbf728, prio:23, stack:6656, core=0
+I (675) wifi:wifi firmware version: 341633f
+I (675) wifi:wifi certification version: v7.0
+I (675) wifi:config NVS flash: enabled
+I (675) wifi:config nano formating: disabled
+I (685) wifi:Init data frame dynamic rx buffer num: 32
+I (685) wifi:Init management frame dynamic rx buffer num: 32
+I (695) wifi:Init management short buffer num: 32
+I (695) wifi:Init dynamic tx buffer num: 32
+I (705) wifi:Init static rx buffer size: 1600
+I (705) wifi:Init static rx buffer num: 10
+I (705) wifi:Init dynamic rx buffer num: 32
+[0;32mI (715) wifi_init: rx ba win: 6[0m
+[0;32mI (715) wifi_init: tcpip mbox: 32[0m
+[0;32mI (725) wifi_init: udp mbox: 6[0m
+[0;32mI (725) wifi_init: tcp mbox: 6[0m
+[0;32mI (725) wifi_init: tcp tx win: 5744[0m
+[0;32mI (735) wifi_init: tcp rx win: 5744[0m
+[0;32mI (735) wifi_init: tcp mss: 1440[0m
+[0;32mI (745) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (745) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (755) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (835) wifi:mode : sta (0c:dc:7e:cb:59:a4)
+I (845) wifi:enable tsf
+[0;32mI (845) example: wifi_init finished.[0m
+
+>> Polling LIDAR
+[0;32mI (845) example: WiFi started, trying to connect...[0m
+[0;32mI (855) example: Install capture timer[0m
+[0;32mI (855) example: Install capture channel[0m
+[0;32mI (855) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (865) example: Register capture callback[0m
+[0;32mI (875) example: Enable capture channel[0m
+[0;32mI (875) example: Configure Trig pin[0m
+[0;32mI (875) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (885) example: Enable and start capture timer[0m
+I (905) wifi:new:<7,1>, old:<1,0>, ap:<255,255>, sta:<7,1>, prof:1
+I (905) wifi:state: init -> auth (b0)
+[0;32mI (905) example: Install capture timer[0m
+[0;32mI (905) example: Install capture channel[0m
+[0;32mI (915) gpio: GPIO[36]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+I (915) wifi:[0;32mI (925) example: Register capture callback[0m
+state: auth -> assoc (0)
+[0;32mI (925) example: Enable capture channel[0m
+[0;32mI (915) example: Create timer and operator[0m
+[0;32mI (935) example: Configure Trig pin[0m
+I (935) wifi:[0;32mI (945) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+state: assoc -> run (10)[0;32mI (955) example: Enable and start capture timer[0m
+
+[0;32mI (935) example: Connect timer and operator[0m
+[0;32mI (915) example: Create timer and operator[0m
+I (965) wifi:<ba-add>idx:0 (ifx:0, 30:23:03:c7:9f:40), tid:0, ssn:0, winSize:64[0;32mI (965) example: Create comparator and generator from the operator[0m
+
+[0;32mI (985) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (975) example: Connect timer and operator[0m
+[0;32mI (995) example: Set generator action on timer and compare event[0m
+I (1005) wifi:[0;32mI (1005) example: Enable and start timer[0m
+connected with Group_7, aid = 5, channel 7, 40U, bssid = 30:23:03:c7:9f:40
+[0;32mI (995) example: Create comparator and generator from the operator[0m
+I (1015) wifi:security: WPA2-PSK, phy: bgn, rssi: -45
+[0;32mI (1025) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+I (1035) wifi:[0;32mI (1035) example: Set generator action on timer and compare event[0m
+pm start, type: 1
+
+[0;32mI (1045) example: Enable and start timer[0m
+I (1045) wifi:eFuse Two Point: NOT supported
+eFuse Vref: Supported
+AP's beacon interval = 102400 us, DTIM period = 1
+Characterized using eFuse Vref
+>> Test Alphanumeric Display: 
+[0;32mI (1065) example: Connected to WiFi successfully![0m
+[0;32mI (915) example: Socket created[0m
+[0;32mI (915) main_task: Returned from appmain()[0m
+[0;32mI (1075) example: Socket bound, port 3333[0m
+[0;32mI (1085) example: Waiting for data[0m
+[0;32mI (1235) example: WALL DETECTED[0m
+Distance: 10
+- oscillator: ok 
+- blink: off 
+- brightness: max 
+[0;32mI (1725) example: WALL DETECTED[0m
+Distance: 9
+Count: 1
+Speed is 0.1m/s
+[0;32mI (2225) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (2565) esp_netif_handlers: sta ip: 192.168.1.23, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2565) example: Got IP address: 192.168.1.23[0m
+[0;32mI (2725) example: WALL DETECTED[0m
+Distance: 7
+Count: 0
+Speed is 0.0m/s
+[0;32mI (3215) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (3715) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (4205) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (4705) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (5195) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (5685) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (6185) example: WALL DETECTED[0m
+Distance: 8
+[0;32mI (6675) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (7175) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (7665) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (8165) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (8665) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (9155) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (9645) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (10145) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (10645) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;31mE (11095) example: recvfrom failed: errno 11[0m
+[0;31mE (11095) example: Shutting down socket and restarting...[0m
+[0;32mI (11095) example: Socket created[0m
+[0;32mI (11095) example: Socket bound, port 3333[0m
+[0;32mI (11105) example:Waiting for data[0m
+[0;32mI (11135) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (11635) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (12125) example: WALL DETECTED[0m
+Distance: 12
+[0;32mI (12625) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (13115) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (13615) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (14105) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (14605) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (15095) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (15595) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (16085) example: WALL DETECTED[0m
+Distance: 8
+[0;32mI (16585) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (17085) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (17575) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (18075) example: WALL DETECTED[0m
+Distance: 7
+[0;32mI (18565) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (19065) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (19555) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (20055) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (20555) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (21045) example: WALL DETECTED[0m
+Distance: 10
+[0;31mE (21105) example: recvfrom failed: errno 11[0m
+[0;31mE (21105) example: Shutting down socket and restarting...[0m
+[0;32mI (21105) example: Socket created[0m
+[0;32mI (21105) example: Socket bound, port 3333[0m
+[0;32mI (21105) example: Waiting for data[0m
+[0;32mI (21545) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (22045) example: WALL DETECTED[0m
+Distance: 12
+[0;32mI (22535) example: WALL DETECTED[0m
+Distance: 8
+Count: 0
+Speed is 0.0m/s
+[0;32mI (23035) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (23525) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (24015) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (24515) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (25005) example: WALL DETECTED[0m
+Distance: 8
+[0;32mI (25505) example: WALL DETECTED[0m
+Distance: 7
+Count: 0
+Speed is 0.0m/s
+[0;32mI (25995) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (26485) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (26985) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (27485) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (27975) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (28475) example: WALL DETECTED[0m
+Distance: 8
+Count: 0
+Speed is 0.0m/s
+[0;32mI (28965) example: WALL DETECTED[0m
+Distance: 8
+[0;32mI (29465) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (29955) example: WALL DETECTED[0m
+Distance: 8
+[0;32mI (30455) example: WALL DETECTED[0m
+Distance: 14
+Count: 0
+Speed is 0.0m/s
+[0;32mI (30945) example: WALL DETECTED[0m
+Distance: 12
+[0;31mE (31115) example: recvfrom failed: errno 11[0m
+[0;31mE (31115) example: Shutting down socket and restarting...[0m
+[0;32mI (31115) example: Socket created[0m
+[0;32mI (31115) example: Socket bound, port 3333[0m
+[0;2mI (31125) example: Waitng or data[0m
+[0;32mI (31445) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (31945) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (32435) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (32935) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (33425) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (33925) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (34415) example: WALL DETECTED[0m
+Distance: 8
+[0;32mI (34905) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (35395) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (35895) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (36395) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (36885) example: WALL DETECTED[0m
+Distance: 8
+Count: 0
+Speed is 0.0m/s
+[0;32mI (37385) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (37885) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (38375) example: WALL DETECTED[0m
+Distance: 8
+[0;32mI (38875) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (39375) example: WALL DETECTED[0m
+Distance: 8
+[0;32mI (39865) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (40365) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (40855) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;31mE (41125) example: recvfrom failed: errno 11[0m
+[0;31mE (41125) example: Shutting down socket and restarting...[0m
+[0;32mI (41125) example: Socket created[0m
+[0;32mI (41125) example: Socket bound, port 3333[0m
+[0;32mI (41135) eamle: Waiting for data[0m
+[0;32mI (41345) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (41845) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (42345) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (42835) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (43325) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (43825) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (44315) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (44815) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (45305) example: WALL DETECTED[0m
+Distance: 8
+[0;32mI (45805) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (46305) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (46795) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (47295) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (47785) example: WALL DETECTED[0m
+Distance: 8
+Count: 0
+Speed is 0.0m/s
+[0;32mI (48275) example: WALL DETECTED[0m
+Distance: 12
+[0;32mI (48775) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (49265) example: WALL DETECTED[0m
+Distance: 8
+[0;32mI (49755) example: WALL DETECTED[0m
+Distance: 8
+Count: 0
+Speed is 0.0m/s
+[0;32mI (50255) example: WALL DETECTED[0m
+Distance: 8
+[0;32mI (50745) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;31mE (51135) example: recvfrom failed: errno 11[0m
+[0;31mE (51135) example: Shutting down socket and restarting...[0m
+[0;32mI (51135) example: Socket created[0m
+[0;32mI (51135) example: Socket bound, port 3333[0m
+[0;32mI (51145) example: Waiting for data[0m
+[0;32mI (51245) example: WALL DETECTED[0m
+Distance: 12
+[0;32mI (51735) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (52225) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (52725) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (53215) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (53715) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (54215) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (54705) example: WALL DETECTED[0m
+Distance: 8
+Count: 0
+Speed is 0.0m/s
+[0;32mI (55205) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (55695) example: WALL DETECTED[0m
+Distance: 7
+Count: 0
+Speed is 0.0m/s
+[0;32mI (56195) example: WALL DETECTED[0m
+Distance: 12
+[0;32mI (56695) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (57185) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (57685) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (58175) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (58675) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (59175) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (59675) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (60165) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (60655) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;31mE (61145) example: recvfrom failed: errno 11[0m
+[0;31mE (61145) example: Shutting down socket and restarting...[0m
+[0;32mI (61145) example: Socket created[0m
+[0;32mI (61145) example: Socket bound, port 3333[0m
+[0;32mI (61145) example: WALL DETECTED[0m
+[0;32mI (61155) example: Waiting for data[0m
+Distance: 11
+[0;32mI (61645) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (62145) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (62635) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (63135) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (63625) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (64125) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (64615) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (65105) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (65605) example: WALL DETECTED[0m
+Distance: 8
+Count: 0
+Speed is 0.0m/s
+[0;32mI (66105) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (66595) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (67095) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (67595) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (68095) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (68585) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (69085) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (69575) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;32mI (70065) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (70565) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (71065) example: WALL DETECTED[0m
+Distance: 11
+[0;31mE (71165) example: recvfrom failed: errno 11[0m
+[0;31mE (71165) example: Shutting down socket and restarting...[0m
+[0;32mI (71165) example: Socket created[0m
+[0;32mI (71165) example: Socket bound, port 3333[0m
+[0;32m (71175) exampl: Waiting for data[0m
+[0;32mI (71555) example: WALL DETECTED[0m
+Distance: 13
+Count: 0
+Speed is 0.0m/s
+[0;32mI (72055) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (72555) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (73045) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (73545) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (74035) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (74535) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (75025) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (75525) example: WALL DETECTED[0m
+Distance: 13
+Count: 0
+Speed is 0.0m/s
+[0;32mI (76015) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (76515) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (77005) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (77495) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (77995) example: WALL DETECTED[0m
+Distance: 8
+[0;32mI (78485) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (78985) example: WALL DETECTED[0m
+Distance: 8
+[0;32mI (79485) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (79975) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (80475) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (80965) example: WALL DETECTED[0m
+Distance: 9
+[0;31mE (81175) example: recvfrom failed: errno 11[0m
+[0;31mE (81175) example: Shutting down socket and restarting...[0m
+[0;32mI (81175) example: Socket created[0m
+[0;32mI (81175) example: Socket bound, port 3333[0m
+[0;32mI (8185) example:Waiting fr data[0m
+[0;32mI (81465) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (81965) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (82455) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (82955) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (83445) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (83945) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (84435) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (84935) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (85435) example: WALL DETECTED[0m
+Distance: 8
+Count: 0
+Speed is 0.0m/s
+[0;32mI (85925) example: WALL DETECTED[0m
+Distance: 11
+[0;32mI (86425) example: WALL DETECTED[0m
+Distance: 13
+Count: 0
+Speed is 0.0m/s
+[0;32mI (86915) example: WALL DETECTED[0m
+Distance: 8
+[0;32mI (87405) example: WALL DETECTED[0m
+Distance: 8
+[0;32mI (87905) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (88405) example: WALL DETECTED[0m
+Distance: 13
+[0;32mI (88905) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
+[0;32mI (89395) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (89895) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (90385) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (90875) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;31mE (91185) example: recvfrom failed: errno 11[0m
+[0;31mE (91185) example: Shutting down socket and restarting...[0m
+[0;32mI (91185) example: Socket created[0m
+[0;32mI (91185) example: Socket bound, port 3333[0
+[0;32mI (91195) example: Waitng for data[0m
+[0;32mI (91375) example: WALL DETECTED[0m
+Distance: 7
+[0;32mI (91875) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (92365) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (92865) example: WALL DETECTED[0m
+Distance: 8
+Count: 0
+Speed is 0.0m/s
+[0;32mI (93365) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (93855) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (94355) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (94845) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (95345) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (95845) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (96345) example: WALL DETECTED[0m
+Distance: 8
+[0;32mI (96835) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (97335) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (97825) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (98325) example: WALL DETECTED[0m
+Distance: 12
+[0;32mI (98825) example: WALL DETECTED[0m
+Distance: 8
+Count: 0
+Speed is 0.0m/s
+[0;32mI (99315) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (99815) example: WALL DETECTED[0m
+Distance: 8
+Count: 0
+Speed is 0.0m/s
+[0;32mI (100315) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (100815) example: WALL DETECTED[0m
+Distance: 12
+Count: 0
+Speed is 0.0m/s
+[0;31mE (101195) example: recvfrom failed: errno 11[0m
+[0;31mE (101195) example: Shutting down socket and restarting...[0m
+[0;32mI (101195) example: Socket created[0m
+[0;32mI (101195) example: Socket bound, port 3333[0m
+[0;32I (101205) example: Waiting for data[0m
+[0;32mI (101305) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (101805) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (102305) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (102795) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (103295) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (103795) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (104295) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (104785) example: WALL DETECTED[0m
+Distance: 10
+Count: 0
+Speed is 0.0m/s
+[0;32mI (105285) example: WALL DETECTED[0m
+Distance: 10
+[0;32mI (105775) example: WALL DETECTED[0m
+Distance: 9
+Count: 0
+Speed is 0.0m/s
+[0;32mI (106275) example: WALL DETECTED[0m
+Distance: 9
+[0;32mI (106765) example: WALL DETECTED[0m
+Distance: 11
+Count: 0
+Speed is 0.0m/s
