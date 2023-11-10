@@ -661,7 +661,12 @@ void speed_task(void *param) {
                 speed_cnt = 0.15;
                 ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
                 ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-                vTaskDelay(pdMS_TO_TICKS(1750));
+                vTaskDelay(pdMS_TO_TICKS(750));
+                if (wall == 1) {
+                    rev_direction = 0;
+                    continue;
+                }
+                vTaskDelay(pdMS_TO_TICKS(1000));
                 speed_cnt = 0;
                 ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
                 ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
@@ -795,14 +800,14 @@ void servo_task(void *param) {
                 vTaskDelay(pdMS_TO_TICKS(2000));
                 angle = -17;
                 ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
-                vTaskDelay(pdMS_TO_TICKS(500));
+                vTaskDelay(pdMS_TO_TICKS(700));
                 angle = -60; // reverse right
                 ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
-                vTaskDelay(pdMS_TO_TICKS(450));
+                vTaskDelay(pdMS_TO_TICKS(750));
                 
                 angle = -17;
                 ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
-                vTaskDelay(pdMS_TO_TICKS(400));
+                vTaskDelay(pdMS_TO_TICKS(300));
                 
                 angle = 40; // turn left forward
                 ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
@@ -1069,7 +1074,7 @@ static void steer_task() {
 
             //ESP_LOGI(TAG, "LEFT IS CLOSER TO WALL");
 
-            if(error < -0.25) {
+            if(error < -0.65) {
                 pid_turn = TURN_LEFT;
             } else if(error > 0.25) {
                 pid_turn = TURN_RIGHT;
@@ -1086,7 +1091,7 @@ static void steer_task() {
             previous_error = error;
 
             //ESP_LOGI(TAG, "RIGHT IS CLOSER TO WALL");
-            if(error < -0.25) {
+            if(error < -0.65) {
                 pid_turn = TURN_RIGHT;
             } else if(error > 0.25) {
                 pid_turn = TURN_LEFT;
@@ -1150,6 +1155,8 @@ static void show_display() {
     int i;
         // Debug
     int ret;
+    int sec_elapse = 0;
+    int min_elapse = 0;
     printf(">> Test Alphanumeric Display: \n");
 
     // Set up routines
@@ -1164,8 +1171,29 @@ static void show_display() {
 
     // Write to characters to buffer
     uint16_t displaybuffer[8];
-    strcpy(alpha_str, "0123");
     while(1) {
+        char sec[50];
+        char min[50];
+        sec_elapse++;
+        if(sec_elapse == 60) {
+            sec_elapse = 0;
+            min_elapse++;
+        }
+
+        if(sec_elapse < 10) {
+            sprintf(sec, "0%d", sec_elapse);
+        } else {
+            sprintf(sec, "%d", sec_elapse);
+        }
+
+        if(min_elapse < 10) {
+            sprintf(min, "0%d", min_elapse);
+        } else {
+            sprintf(min, "%d", min_elapse);
+        }
+
+        strcat(min, sec);
+        strcpy(alpha_str, min);
         for(i = 0; i < 8; i++) {
             displaybuffer[i] = 0b0000000000000000;
         }
@@ -1184,6 +1212,7 @@ static void show_display() {
         i2c_master_stop(cmd4);
         ret = i2c_master_cmd_begin(I2C_EXAMPLE_MASTER_NUM, cmd4, 1000 / portTICK_PERIOD_MS);
         i2c_cmd_link_delete(cmd4);
+        vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
 
@@ -1264,14 +1293,14 @@ void app_main(void) {
     xTaskCreate(ultra_sensor_left, "ultra_sensor_left", 4096, NULL, configMAX_PRIORITIES - 1, NULL);
 
     xTaskCreate(steer_task, "SteerTask", 4096, NULL, configMAX_PRIORITIES-3, NULL);
+    xTaskCreate(udp_server_task, "udp_server", 4096, (void*)AF_INET, configMAX_PRIORITIES-3, NULL);
 
     xTaskCreate(servo_task, "ServoTask", 4096, NULL, configMAX_PRIORITIES-4, NULL);
-    xTaskCreate(speed_task, "SpeedTask", 4096, NULL, configMAX_PRIORITIES-5, NULL);
+    xTaskCreate(speed_task, "SpeedTask", 4096, NULL, configMAX_PRIORITIES-4, NULL);
 
     xTaskCreate(encoder_task, "EncoderTask", 4096, NULL, configMAX_PRIORITIES-6, NULL);
 
     xTaskCreate(timer, "timer", 4096, NULL, configMAX_PRIORITIES-7, NULL);
     xTaskCreate(show_display,"show_display", 4096, NULL, configMAX_PRIORITIES-8, NULL);
     // xTaskCreate(udp_client_task, "UDPTask", 4096, NULL, configMAX_PRIORITIES-9, NULL);
-    xTaskCreate(udp_server_task, "udp_server", 4096, (void*)AF_INET, configMAX_PRIORITIES-9, NULL);
 }
