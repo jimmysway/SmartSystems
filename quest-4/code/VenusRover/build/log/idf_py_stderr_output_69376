@@ -1,0 +1,44 @@
+[0;33m--- idf_monitor on /dev/cu.usbserial-02655159 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4008119c: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x400dd61b: task_wdt_timeout_handling at /Users/jakelee/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400dd7a2: task_wdt_isr at /Users/jakelee/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400830ed: _xt_lowint1 at /Users/jakelee/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x400896f7: vPortClearInterruptMaskFromISR at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:577
+ (inlined by) vPortExitCritical at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:532
+[0m
+[0;33m0x400d95ab: vPortExitCriticalSafe at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:613
+ (inlined by) mcpwm_comparator_set_compare_value at /Users/jakelee/esp/esp-idf/components/driver/mcpwm/mcpwm_cmpr.c:144
+[0m
+[0;33m0x400d5cba: servo_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/OpticalEncoder/main/blink_example_main.c:549
+[0m
+[0;33m0x40089355: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400dd61b: task_wdt_timeout_handling at /Users/jakelee/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400dd7a2: task_wdt_isr at /Users/jakelee/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x400830ed: _xt_lowint1 at /Users/jakelee/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4000bfed: _xtos_set_intlevel in ROM
+[0m
+[0;33m0x40089519: vPortClearInterruptMaskFromISR at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:577
+ (inlined by) xPortInIsrContext at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:474
+[0m
+[0;33m0x400d953c: xPortEnterCriticalTimeoutSafe at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:595 (discriminator 2)
+ (inlined by) vPortEnterCriticalSafe at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:605 (discriminator 2)
+ (inlined by) mcpwm_comparator_set_compare_value at /Users/jakelee/esp/esp-idf/components/driver/mcpwm/mcpwm_cmpr.c:142 (discriminator 2)
+[0m
+[0;33m0x400d5cba: servo_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/OpticalEncoder/main/blink_example_main.c:549
+[0m
+[0;33m0x40089355: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0m
