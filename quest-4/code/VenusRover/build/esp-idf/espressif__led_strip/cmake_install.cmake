@@ -1,4 +1,4 @@
-# Install script for directory: /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/OpticalEncoder/managed_components/espressif__led_strip
+# Install script for directory: /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/managed_components/espressif__led_strip
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

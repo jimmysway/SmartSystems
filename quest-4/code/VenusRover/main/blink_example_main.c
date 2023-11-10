@@ -25,6 +25,16 @@
 // includes for ultrasonic sensor
 #include "esp_private/esp_clk.h"
 #include "driver/mcpwm_cap.h"
+
+#include "lwip/sockets.h"
+#include "lwip/netdb.h"
+#include "esp_wifi.h"
+#include "esp_event.h"
+#include "esp_netif.h"
+#include "nvs_flash.h"
+
+char buff[128];
+
 #define HC_SR04_TRIG_GPIORIGHT  25
 #define HC_SR04_ECHO_GPIORIGHT  26
 #define HC_SR04_TRIG_GPIOLEFT  4
@@ -206,6 +216,8 @@ char alpha_str[20];
 // 360 turn
 int rev_direction = 0;
 
+// Force stop
+int e_brake = 0;
 
 //////////////////////////////////////////WIFI//////////////////////////////////////////
 #define WIFI_SSID      "Group_7"
@@ -213,7 +225,7 @@ int rev_direction = 0;
 #define UDP_SERVER_IP  "192.168.1.36"
 #define UDP_PORT       3333
 #define ESP32_HOSTNAME "ESP32"
-static const char *TAG = "UDP_CLIENT";
+// static const char *TAG = "UDP_CLIENT";
 
 static void wifi_init(void);
 static void udp_client_task(void *pvParameters);
@@ -592,67 +604,72 @@ void speed_task(void *param) {
     float target = 1.0;
 
     while (1) {
-        if(rev_direction == 0) {
-            if (wall == 1) {
-                speed_cnt = 0.0;
-                //ESP_LOGI(TAG, "Speed of buggy STOPPED: %f", speed_cnt);
-                ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-                vTaskDelay(pdMS_TO_TICKS(1000));
+        if(e_brake == 0) {
+            if(rev_direction == 0) {
+                if (wall == 1) {
+                    speed_cnt = 0.0;
+                    //ESP_LOGI(TAG, "Speed of buggy STOPPED: %f", speed_cnt);
+                    ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
+                    vTaskDelay(pdMS_TO_TICKS(1000));
+                } else {
+                    error = target - speed;
+                    integral = integral + error * dt;
+                    derivative = (error - previous_error) / dt;
+                    output = Kp * error + Ki * integral + Kd * derivative;
+                    previous_error = error;
+                    if(error < -0.2)
+                    {
+                        speed_cnt = 0.146;
+                        //ESP_LOGI(TAG, "SPEED UP");
+                    }
+                    else if(error > 0.2)
+                    {
+                        speed_cnt = 0.158;
+                        //ESP_LOGI(TAG, "SLOW DOWN");
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                    ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
+                    
+                    ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
+                    vTaskDelay(pdMS_TO_TICKS(800));
+                }
             } else {
-                error = target - speed;
-                integral = integral + error * dt;
-                derivative = (error - previous_error) / dt;
-                output = Kp * error + Ki * integral + Kd * derivative;
-                previous_error = error;
-                if(error < -0.2)
-                {
-                    speed_cnt = 0.146;
-                    //ESP_LOGI(TAG, "SPEED UP");
-                }
-                else if(error > 0.2)
-                {
-                    speed_cnt = 0.158;
-                    //ESP_LOGI(TAG, "SLOW DOWN");
-                }
-                else
-                {
-                    continue;
-                }
+                speed_cnt = 0;
                 ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
-                
                 ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-                vTaskDelay(pdMS_TO_TICKS(800));
+                vTaskDelay(pdMS_TO_TICKS(2000));
+                speed_cnt = -0.27;
+                ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
+                ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
+                vTaskDelay(pdMS_TO_TICKS(100));
+                speed_cnt = 0;
+                ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
+                ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
+                vTaskDelay(pdMS_TO_TICKS(100));
+                speed_cnt = -0.27;
+                ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
+                ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
+                vTaskDelay(pdMS_TO_TICKS(750));
+                speed_cnt = 0;
+                ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
+                ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
+                vTaskDelay(pdMS_TO_TICKS(500));
+                speed_cnt = 0.15;
+                ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
+                ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
+                vTaskDelay(pdMS_TO_TICKS(1750));
+                speed_cnt = 0;
+                ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
+                ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
+                rev_direction = 0;
+                vTaskDelay(pdMS_TO_TICKS(500));
             }
         } else {
-            speed_cnt = 0;
-            ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
+            speed_cnt = 0.0;
             ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-            vTaskDelay(pdMS_TO_TICKS(2000));
-            speed_cnt = -0.27;
-            ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
-            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-            vTaskDelay(pdMS_TO_TICKS(100));
-            speed_cnt = 0;
-            ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
-            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-            vTaskDelay(pdMS_TO_TICKS(100));
-            speed_cnt = -0.27;
-            ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
-            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-            vTaskDelay(pdMS_TO_TICKS(750));
-            speed_cnt = 0;
-            ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
-            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-            vTaskDelay(pdMS_TO_TICKS(500));
-            speed_cnt = 0.15;
-            ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
-            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-            vTaskDelay(pdMS_TO_TICKS(1750));
-            speed_cnt = 0;
-            ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
-            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-            rev_direction = 0;
-            vTaskDelay(pdMS_TO_TICKS(500));
         }
     }
 }
@@ -759,41 +776,45 @@ void servo_task(void *param) {
     int angle = 0;
     int step = 2;
     while (1) {
-        if(rev_direction == 0) {
-            if(pid_turn == STRAIGHT) {
+        if(e_brake == 0) {
+            if(rev_direction == 0) {
+                if(pid_turn == STRAIGHT) {
+                    angle = -17;
+                    ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
+                } else if(pid_turn == TURN_LEFT) {
+                    angle = -11;
+                    ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
+                } else if(pid_turn == TURN_RIGHT) {
+                    angle = -23;
+                    ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
+                }
+            } else {
                 angle = -17;
                 ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
-            } else if(pid_turn == TURN_LEFT) {
-                angle = -11;
+                vTaskDelay(pdMS_TO_TICKS(2000));
+                angle = -17;
                 ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
-            } else if(pid_turn == TURN_RIGHT) {
-                angle = -23;
+                vTaskDelay(pdMS_TO_TICKS(500));
+                angle = -60; // reverse right
                 ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
+                vTaskDelay(pdMS_TO_TICKS(450));
+                
+                angle = -17;
+                ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
+                vTaskDelay(pdMS_TO_TICKS(400));
+                
+                angle = 40; // turn left forward
+                ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
+                vTaskDelay(pdMS_TO_TICKS(1750));
+                angle = -17; // reset
+                ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
+                rev_direction = 0;
+                vTaskDelay(pdMS_TO_TICKS(500));
             }
+            vTaskDelay(pdMS_TO_TICKS(25));
         } else {
-            angle = -17;
-            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
-            vTaskDelay(pdMS_TO_TICKS(2000));
-            angle = -17;
-            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
-            vTaskDelay(pdMS_TO_TICKS(500));
-            angle = -60; // reverse right
-            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
-            vTaskDelay(pdMS_TO_TICKS(450));
-            
-            angle = -17;
-            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
-            vTaskDelay(pdMS_TO_TICKS(400));
-            
-            angle = 40; // turn left forward
-            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
-            vTaskDelay(pdMS_TO_TICKS(1750));
-            angle = -17; // reset
-            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
-            rev_direction = 1;
-            vTaskDelay(pdMS_TO_TICKS(500));
+            continue;
         }
-        vTaskDelay(pdMS_TO_TICKS(25));
     }
 }
 
@@ -813,11 +834,9 @@ void lidar_task()
             speed_cnt = 0.0;
             ESP_LOGI(TAG, "WALL DETECTED");
             wall = 1;
-            rev_direction = 1;
             //ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
         } else {
             wall = 0;
-            rev_direction = 0;
         }
         printf("Distance: %d\n", cumDistance / numTrials);
         vTaskDelay(30/portTICK_PERIOD_MS);
@@ -950,7 +969,7 @@ static void ultra_sensor_right() {
             }
             // convert the pulse width into measure distance
             float distance = (float) pulse_width_us / 58;
-            ESP_LOGI(TAG, "Measured distance RIGHT: %.2fcm", distance);
+            //ESP_LOGI(TAG, "Measured distance RIGHT: %.2fcm", distance);
             dist_read_right = distance;
         }
         vTaskDelay(pdMS_TO_TICKS(50));
@@ -1014,7 +1033,7 @@ static void ultra_sensor_left() {
             }
             // convert the pulse width into measure distance
             float distance = (float) pulse_width_us / 58;
-            ESP_LOGI(TAG, "Measured distance LEFT: %.2fcm", distance);
+            //ESP_LOGI(TAG, "Measured distance LEFT: %.2fcm", distance);
             dist_read_left = distance;
         }
         vTaskDelay(pdMS_TO_TICKS(50));
@@ -1047,7 +1066,7 @@ static void steer_task() {
             output = Kp * error + Ki * integral + Kd * derivative;
             previous_error = error;
 
-            ESP_LOGI(TAG, "LEFT IS CLOSER TO WALL");
+            //ESP_LOGI(TAG, "LEFT IS CLOSER TO WALL");
 
             if(error < -0.25) {
                 pid_turn = TURN_LEFT;
@@ -1065,7 +1084,7 @@ static void steer_task() {
             output = Kp * error + Ki * integral + Kd * derivative;
             previous_error = error;
 
-            ESP_LOGI(TAG, "RIGHT IS CLOSER TO WALL");
+            //ESP_LOGI(TAG, "RIGHT IS CLOSER TO WALL");
             if(error < -0.25) {
                 pid_turn = TURN_RIGHT;
             } else if(error > 0.25) {
@@ -1190,13 +1209,13 @@ static void udp_client_task(void *pvParameters) {
         ESP_LOGI(TAG, "Socket created");
 
         while (1) {
-            int err = sendto(sock, payload, strlen(payload), 0, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
-            if (err < 0) {
-                ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
-                break;
-            }
+            // int err = sendto(sock, payload, strlen(payload), 0, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
+            // if (err < 0) {
+            //     ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
+            //     break;
+            // }
 
-            ESP_LOGI(TAG, "%s Message sent", payload);
+            // ESP_LOGI(TAG, "%s Message sent", payload);
             // Listen for incoming data after sending.
             int len = recvfrom(sock, rx_buffer, sizeof(rx_buffer) - 1, 0, (struct sockaddr *)&source_addr, &socklen);
 
@@ -1252,4 +1271,5 @@ void app_main(void) {
 
     xTaskCreate(timer, "timer", 4096, NULL, configMAX_PRIORITIES-7, NULL);
     xTaskCreate(show_display,"show_display", 4096, NULL, configMAX_PRIORITIES-8, NULL);
+    xTaskCreate(udp_client_task, "UDPTask", 4096, NULL, configMAX_PRIORITIES-9, NULL);
 }

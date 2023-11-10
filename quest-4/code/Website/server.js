@@ -34,8 +34,8 @@ const express = require('express');
 const app = express();
 const client = dgram.createSocket('udp4');
 
-const ESP32_SERVER_IP = 'group7.ddns.net'; // Using DDNS
-const ESP32_UDP_PORT = 8080;
+const ESP32_SERVER_IP = '192.168.1.33'; // Using DDNS
+const ESP32_UDP_PORT = 3333;
 
 app.use(express.json()); // Middleware to parse JSON
 app.use(express.static('public'));
