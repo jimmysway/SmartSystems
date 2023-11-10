@@ -665,8 +665,8 @@ void speed_task(void *param) {
                 speed_cnt = 0;
                 ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
                 ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-                rev_direction = 0;
                 vTaskDelay(pdMS_TO_TICKS(500));
+                rev_direction = 0;
             }
         } else {
             speed_cnt = 0.0;
@@ -809,8 +809,8 @@ void servo_task(void *param) {
                 vTaskDelay(pdMS_TO_TICKS(1750));
                 angle = -17; // reset
                 ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
-                rev_direction = 0;
                 vTaskDelay(pdMS_TO_TICKS(500));
+                rev_direction = 0;
             }
             vTaskDelay(pdMS_TO_TICKS(25));
         } else {
@@ -1214,11 +1214,16 @@ static void udp_server_task(void *pvParameters) {
         }
         // Data received
         else {
-            printf("IT IS RECIEVING SOMETHING\n");
             rx_buffer[len] = 0;  // Null-terminate whatever we received and treat like a string
             ESP_LOGI(TAG, "Received %d bytes from %s:", len, inet_ntoa(client_addr.sin_addr));
             ESP_LOGI(TAG, "%s", rx_buffer);
-            
+            if(strcmp(rx_buffer, "stop") == 0) {
+                e_brake = 1;
+            } else if(strcmp(rx_buffer, "start") == 0) {
+                e_brake = 0;
+            } else if(strcmp(rx_buffer, "turn") == 0) {
+                rev_direction = 1;
+            }
             // if (strcmp(rx_buffer, "TURN_ON") == 0) {
             //     gpio_set_level(LED_GPIO_PIN, 1); // Turn on the LED
             //     ESP_LOGI(TAG, "%s", "on");
