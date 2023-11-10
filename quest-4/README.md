@@ -59,25 +59,12 @@ Make sure to secure the communication and possibly authenticate the requests to 
 
 ### Sketches/Diagrams
 
-![image](https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/114517092/4ff96b6c-e78b-48b5-8e79-bf62f00620cb)
-
 
 ### Supporting Artifacts
 
-[![Straba Demo](<images/Screenshot 2023-10-26 at 9.09.18 PM.png>)](https://drive.google.com/file/d/1yyxFPOEBhLKcMl3_Dy2q6e8vETdw8cQn/view?usp=sharing)
-<p align="center">
-<i>Straba Demo</i>
-</p>
-
-[![Straba Technical](<images/Screenshot 2023-10-26 at 9.09.35 PM.png>)](https://drive.google.com/file/d/1aAKkc4bS0-rHjh72BFBYsLzd88dr5FB7/view?usp=sharing)
-<p align="center">
-<i>Straba Technical</i>
-</p>
-
-
 ### Modules, Tools, Source Used Including Attribution
-- [WiFi Station Example](https://github.com/espressif/esp-idf/tree/master/examples/wifi/getting_started/station)
-- [UDP client](https://github.com/espressif/esp-idf/tree/master/examples/protocols/sockets/udp_client)
-- [Serial Port Module](https://www.npmjs.com/package/serialport)
-- [Socket.io Brief](/docs/briefs/design-patterns/dp-socketIO.md)
-- [Serial to Node Example](https://github.com/BU-EC444/04-Code-Examples/tree/main/serial-esp-to-node-serialport)
+- [Recipe for Wiring ESP32 to Buggy](/docs/briefs/recipes/recipe-buggy-interfacing.md)
+- [Recipe for Calibrating ESC and Steering Servo -- Buggy](/docs/briefs/recipes/recipe-esc-buggy.md)
+- [Recipe for using Multiple LIDAR-Lite V4s on same bus](/docs/briefs/recipes/recipe-lidarlite-v4.md)
+- [PWM Design Pattern](/docs/briefs/design-patterns/dp-pwm.md)
+- [PID For Wall Tracking and Speed Control Design Pattern](/docs/briefs/design-patterns/dp-pid.md)
