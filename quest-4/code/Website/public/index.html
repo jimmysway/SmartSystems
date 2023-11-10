@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buggy Control</title>
+</head>
+<body>
+<h1>Buggy Control Panel</h1>
+<p>Designed by Group 7</p>
+<button id="start-btn">Start</button>
+<button id="stop-btn">Stop</button>
+<button id="turn-btn">360 Turn</button>
+
+<script>
+document.getElementById('start-btn').addEventListener('click', function() {
+    sendCommand('start');
+});
+
+document.getElementById('stop-btn').addEventListener('click', function() {
+    sendCommand('stop');
+});
+
+document.getElementById('turn-btn').addEventListener('click', function() {
+    sendCommand('turn360');
+});
+
+function sendCommand(command) {
+    fetch('/control', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ command: command }),
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch((error) => console.error('Error:', error));
+}
+</script>
+</body>
+</html>
