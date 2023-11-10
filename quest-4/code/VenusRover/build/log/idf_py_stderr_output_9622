@@ -1,0 +1,908 @@
+[0;33m--- idf_monitor on /dev/cu.usbserial-02655159 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x4008185a: panic_abort at /Users/jakelee/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40086dfd: esp_system_abort at /Users/jakelee/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008c879: __assert_func at /Users/jakelee/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400e181f: tcpip_send_msg_wait_sem at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x400ec3ed: netconn_apimsg at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x400ec475: netconn_new_with_proto_and_callback at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x400e1682: lwip_socket at /Users/jakelee/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1707 (discriminator 12)
+[0m
+[0;33m0x400d72fb: socket at /Users/jakelee/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) udp_client_task at /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/VenusRover/main/blink_example_main.c:1204
+[0m
+[0;33m0x40089769: vPortTaskWrapper at /Users/jakelee/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40081254: call_start_cpu1 at /Users/jakelee/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0m

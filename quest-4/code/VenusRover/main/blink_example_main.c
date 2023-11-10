@@ -222,7 +222,7 @@ int e_brake = 0;
 //////////////////////////////////////////WIFI//////////////////////////////////////////
 #define WIFI_SSID      "Group_7"
 #define WIFI_PASSWORD  "smartsys"
-#define UDP_SERVER_IP  "192.168.1.36"
+#define UDP_SERVER_IP  "192.168.1.33"
 #define UDP_PORT       3333
 #define ESP32_HOSTNAME "ESP32"
 // static const char *TAG = "UDP_CLIENT";
