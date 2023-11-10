@@ -1,4 +1,4 @@
-/* * Data converted from /Users/jakelee/Documents/Boston-Univeristy/EC444/Lee-Jake/skills/cluster-4/27/code/OpticalEncoder/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/OpticalEncoder/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

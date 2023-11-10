@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Lee-Jake/skills/cluster-4/27/code/OpticalEncoder/build/CMakeFiles/bootloader
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Lee-Jake/skills/cluster-4/27/code/OpticalEncoder/build/CMakeFiles/bootloader.rule
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Lee-Jake/skills/cluster-4/27/code/OpticalEncoder/build/CMakeFiles/bootloader-complete.rule
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Lee-Jake/skills/cluster-4/27/code/OpticalEncoder/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Lee-Jake/skills/cluster-4/27/code/OpticalEncoder/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Lee-Jake/skills/cluster-4/27/code/OpticalEncoder/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Lee-Jake/skills/cluster-4/27/code/OpticalEncoder/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Lee-Jake/skills/cluster-4/27/code/OpticalEncoder/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Lee-Jake/skills/cluster-4/27/code/OpticalEncoder/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-/Users/jakelee/Documents/Boston-Univeristy/EC444/Lee-Jake/skills/cluster-4/27/code/OpticalEncoder/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/OpticalEncoder/build/CMakeFiles/bootloader
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/OpticalEncoder/build/CMakeFiles/bootloader.rule
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/OpticalEncoder/build/CMakeFiles/bootloader-complete.rule
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/OpticalEncoder/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/OpticalEncoder/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/OpticalEncoder/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/OpticalEncoder/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/OpticalEncoder/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/OpticalEncoder/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/jakelee/Documents/Boston-Univeristy/EC444/Team7-Lee-Li-Slobodchikov-Sui/quest-4/code/OpticalEncoder/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

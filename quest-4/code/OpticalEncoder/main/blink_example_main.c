@@ -19,6 +19,8 @@
 #include "esp_attr.h"
 #include "soc/mcpwm_reg.h"
 #include "soc/mcpwm_struct.h"
+#include "driver/i2c.h"
+#include <string.h>
 
 static const char *TAG = "example";
 
@@ -51,6 +53,212 @@ static const adc_unit_t unit = ADC_UNIT_1;
 bool pulsed = false;
 
 int count;
+
+float speed_cnt = 0;
+
+volatile int wall = 0;
+
+//////////////////////////////////////////////LIDAR//////////////////////////////////////////////
+// Master I2C
+#define I2C_EXAMPLE_MASTER_SCL_IO          22   // gpio number for i2c clk
+#define I2C_EXAMPLE_MASTER_SDA_IO          23   // gpio number for i2c data
+#define I2C_EXAMPLE_MASTER_NUM             I2C_NUM_0  // i2c port
+#define I2C_EXAMPLE_MASTER_TX_BUF_DISABLE  0    // i2c master no buffer needed
+#define I2C_EXAMPLE_MASTER_RX_BUF_DISABLE  0    // i2c master no buffer needed
+#define I2C_EXAMPLE_MASTER_FREQ_HZ         100000     // i2c master clock freq
+#define WRITE_BIT                          I2C_MASTER_WRITE // i2c master write
+#define READ_BIT                           I2C_MASTER_READ  // i2c master read
+#define ACK_CHECK_EN                       true // i2c master will check ack
+#define ACK_CHECK_DIS                      false// i2c master will not check ack
+#define ACK_VAL                            0x00 // i2c ack value
+#define NACK_VAL                           0xFF // i2c nack value
+
+// LIDARLITE
+#define LIDARLITE_ADDR_DEFAULT 0x62
+
+static void i2c_master_init(){
+    // Debug
+    printf("\n>> i2c Config\n");
+    int err;
+
+    // Port configuration
+    int i2c_master_port = I2C_EXAMPLE_MASTER_NUM;
+
+    /// Define I2C configurations
+    i2c_config_t conf;
+    conf.mode = I2C_MODE_MASTER;                              // Master mode
+    conf.sda_io_num = I2C_EXAMPLE_MASTER_SDA_IO;              // Default SDA pin
+    conf.sda_pullup_en = GPIO_PULLUP_ENABLE;                  // Internal pullup
+    conf.scl_io_num = I2C_EXAMPLE_MASTER_SCL_IO;              // Default SCL pin
+    conf.scl_pullup_en = GPIO_PULLUP_ENABLE;                  // Internal pullup
+    conf.master.clk_speed = I2C_EXAMPLE_MASTER_FREQ_HZ;       // CLK frequency
+    conf.clk_flags = 0;   
+    err = i2c_param_config(i2c_master_port, &conf);           // Configure
+    if (err == ESP_OK) {printf("- parameters: ok\n");}
+
+    // Install I2C driver
+    err = i2c_driver_install(i2c_master_port, conf.mode,
+                        I2C_EXAMPLE_MASTER_RX_BUF_DISABLE,
+                        I2C_EXAMPLE_MASTER_TX_BUF_DISABLE, 0);
+    if (err == ESP_OK) {printf("- initialized: yes\n");}
+
+    // Data in MSB mode
+    i2c_set_data_mode(i2c_master_port, I2C_DATA_MODE_MSB_FIRST, I2C_DATA_MODE_MSB_FIRST);
+}
+
+// Utility function to test for I2C device address -- not used in deploy
+int testConnection(uint8_t devAddr, int32_t timeout) {
+    i2c_cmd_handle_t cmd = i2c_cmd_link_create();
+    i2c_master_start(cmd);
+    i2c_master_write_byte(cmd, (devAddr << 1) | I2C_MASTER_WRITE, ACK_CHECK_EN);
+    i2c_master_stop(cmd);
+    int err = i2c_master_cmd_begin(I2C_EXAMPLE_MASTER_NUM, cmd, 1000 / portTICK_PERIOD_MS);
+    i2c_cmd_link_delete(cmd);
+    return err;
+}
+
+// Utility function to scan for i2c device
+static void i2c_scanner() {
+    int32_t scanTimeout = 1000;
+    printf("\n>> I2C scanning ..."  "\n");
+    uint8_t count = 0;
+    for (uint8_t i = 1; i < 127; i++) {
+        // printf("0x%X%s",i,"\n");
+        if (testConnection(i, scanTimeout) == ESP_OK) {
+        printf( "- Device found at address: 0x%X%s", i, "\n");
+        count++;
+        }
+    }
+    if (count == 0) {printf("- No I2C devices found!" "\n");}
+}
+
+
+// Write one byte to register
+int writeRegister(uint8_t reg, uint8_t data) {
+    //adapted from esp idf i2c_simple_main program
+    uint8_t write_buf[2] = {reg, data};
+    int ret;
+    ret = i2c_master_write_to_device(I2C_EXAMPLE_MASTER_NUM, LIDARLITE_ADDR_DEFAULT, write_buf, sizeof(write_buf), 1000/ portTICK_PERIOD_MS);
+    return ret;
+}
+
+// Read register
+uint8_t readRegister(uint8_t reg) {
+    //adapted from esp idf i2c_simple_main program
+    uint8_t data;
+    i2c_master_write_read_device(I2C_EXAMPLE_MASTER_NUM, LIDARLITE_ADDR_DEFAULT, &reg, 1, &data, 1, 1000 / portTICK_PERIOD_MS);
+    return data;
+}
+
+// read 16 bits (2 bytes)
+int16_t read16(uint8_t reg) {
+    // YOUR CODE HERE
+    //adapted from esp idf i2c_simple_main program
+
+    int16_t data, MSB, LSB;
+    
+    LSB = readRegister(reg);
+    MSB = readRegister(reg + 1);
+    data = MSB;
+    data = LSB | (MSB << 8);
+    return data;
+}
+//   configuration:  Default 0.
+//     0: Maximum range. Uses maximum acquisition count.
+//     1: Balanced performance.
+//     2: Short range, high speed. Reduces maximum acquisition count.
+//     3: Mid range, higher speed. Turns on quick termination
+//          detection for faster measurements at short range (with decreased
+//          accuracy)
+//     4: Maximum range, higher speed on short range targets. Turns on quick
+//          termination detection for faster measurements at short range (with
+//          decreased accuracy)1
+//     5: Very short range, higher speed, high error. Reduces maximum
+//          acquisition count to a minimum for faster rep rates on very
+//          close targets with high error.
+void configure(uint8_t configuration, uint8_t lidarliteAddress)
+{
+    uint8_t sigCountMax = 0;
+    uint8_t acqConfigReg = 0;
+
+    switch (configuration)
+    {
+        case 0: // Default mode - Maximum range
+            sigCountMax     = 0xff;
+            acqConfigReg    = 0x08;
+            break;
+
+        case 1: // Balanced performance
+            sigCountMax     = 0x80;
+            acqConfigReg    = 0x08;
+            break;
+
+        case 2: // Short range, high speed
+            sigCountMax     = 0x18;
+            acqConfigReg    = 0x00;
+            break;
+
+        case 3: // Mid range, higher speed on short range targets
+            sigCountMax     = 0x80;
+            acqConfigReg    = 0x00;
+            break;
+
+        case 4: // Maximum range, higher speed on short range targets
+            sigCountMax     = 0xff;
+            acqConfigReg    = 0x00;
+            break;
+
+        case 5: // Very short range, higher speed, high error
+            sigCountMax     = 0x04;
+            acqConfigReg    = 0x00;
+            break;
+    }
+
+    writeRegister(0x05, sigCountMax);
+    writeRegister(0xE5, acqConfigReg);
+}
+
+uint8_t getBusyFlag(uint8_t lidarliteAddress)
+{
+    uint8_t  statusByte = 0;
+    uint8_t  busyFlag; // busyFlag monitors when the device is done with a measurement
+
+    // Read status register to check busy flag
+    statusByte = readRegister(0x01);
+
+    // STATUS bit 0 is busyFlag
+    busyFlag = statusByte & 0x01;
+    return busyFlag;
+}
+
+void waitForBusy(uint8_t lidarliteAddress)
+{
+    uint8_t  busyFlag;
+
+    do
+    {
+        busyFlag = getBusyFlag(lidarliteAddress);
+    } while (busyFlag);
+
+}
+
+void takeRange(uint8_t lidarliteAddress)
+{
+    uint8_t dataByte = 0x04;
+    writeRegister(0x00, dataByte);
+}
+
+
+uint16_t readDistance(uint8_t lidarliteAddress)
+{
+    uint16_t distance;
+    // Read two bytes from registers 0x10 and 0x11
+    distance = read16(0x10);
+    // printf("Reading %d: %d\n",i, distance);
+    return distance;
+}
+
+/////////////////////////////////////////////Wheel Speed/////////////////////////////////////////////
 
 // For ADC
 static void check_efuse(void)
@@ -166,7 +374,7 @@ void calibrateESC(void *param) {
     
     vTaskDelay(3500 / portTICK_PERIOD_MS); // Do for at least 3s, and leave in neutral state
     
-    float speed_cnt = 0;
+    uint8_t *data = (uint8_t *) malloc(1024);
     char speed_buf[20] = "0";
     float step = 0.02;
 //    while (1) {
@@ -179,35 +387,41 @@ void calibrateESC(void *param) {
 //        speed_cnt = atof(speed_buf);
 //    }
     while (1) {
-        speed_cnt = 0;
-        ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
-        ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-        vTaskDelay(pdMS_TO_TICKS(2000));
+        // speed_cnt = 0;
+        // ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
+        // ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
+        // vTaskDelay(pdMS_TO_TICKS(2000));
+        if (wall == 1) {
+            speed_cnt = 0.0;
+            ESP_LOGI(TAG, "Speed of buggy STOPPED: %f", speed_cnt);
+            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
+            vTaskDelay(pdMS_TO_TICKS(1000));
+        } else {
+            speed_cnt = 0.15;
+            ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
+            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
+            vTaskDelay(pdMS_TO_TICKS(10));
+        }
         
-        speed_cnt = 0.13;
-        ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
-        ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-        vTaskDelay(pdMS_TO_TICKS(2000));
+    //     speed_cnt = 0.14;
+    //     ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
+    //     ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
+    //     vTaskDelay(pdMS_TO_TICKS(1000));
         
-        speed_cnt = 0.14;
-        ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
-        ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-        vTaskDelay(pdMS_TO_TICKS(1000));
+    //     speed_cnt = 0.15;
+    //     ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
+    //     ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
+    //     vTaskDelay(pdMS_TO_TICKS(1000));
         
-        speed_cnt = 0.15;
-        ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
-        ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-        vTaskDelay(pdMS_TO_TICKS(1000));
+    //     speed_cnt = 0.16;
+    //     ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
+    //     ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
+    //     vTaskDelay(pdMS_TO_TICKS(2000));
         
-        speed_cnt = 0.16;
-        ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
-        ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-        vTaskDelay(pdMS_TO_TICKS(2000));
-        
-        speed_cnt = 0;
-        ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
-        ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
-        vTaskDelay(pdMS_TO_TICKS(100));
+    //     speed_cnt = 0;
+    //     ESP_LOGI(TAG, "Speed of buggy: %f", speed_cnt);
+    //     ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
+    //     vTaskDelay(pdMS_TO_TICKS(100));
     }
 }
 
@@ -313,41 +527,57 @@ void servo_task(void *param) {
     int angle = 0;
     int step = 2;
     while (1) {
+        angle = -22;
         // ESP_LOGI(TAG, "Angle of rotation: %d", angle);
         ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(angle)));
-        if(angle == -22) {
-            vTaskDelay(pdMS_TO_TICKS(1975));
-        }
+        // if(angle == -22) {
+        //     vTaskDelay(pdMS_TO_TICKS(1975));
+        // }
         //Add delay, since it takes time for servo to rotate, usually 200ms/60degree rotation under 5V power supply
         vTaskDelay(pdMS_TO_TICKS(25));
-        if ((angle + step) > 10 || (angle + step) < -60) {
-            step *= -1;
+        // if ((angle + step) > 10 || (angle + step) < -60) {
+        //     step *= -1;
+        // }
+        // angle += step;
+    }
+}
+
+void lidar_task() 
+{
+    printf("\n>> Polling LIDAR\n");
+    int numTrials = 5;
+    while (1) {
+        int cumDistance = 0;
+        for (int i = 0; i < numTrials; i++) {
+            waitForBusy(LIDARLITE_ADDR_DEFAULT);
+            takeRange(LIDARLITE_ADDR_DEFAULT);
+            cumDistance += readDistance(LIDARLITE_ADDR_DEFAULT);
         }
-        angle += step;
+        if(cumDistance / numTrials < 75)
+        {
+            speed_cnt = 0.0;
+            ESP_LOGI(TAG, "WALL DETECTED");
+            wall = 1;
+            //ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, speed_to_compare(speed_cnt)));
+        } else {
+            wall = 0;
+        }
+        printf("Distance: %d\n", cumDistance / numTrials);
+        vTaskDelay(30/portTICK_PERIOD_MS);
     }
 }
 
 void app_main(void) {
+
+    i2c_master_init();
+    i2c_scanner();
+    configure(2, LIDARLITE_ADDR_DEFAULT);
     // Create the servo task
-    xTaskCreate(servo_task,       // Task function
-                "ServoTask",      // Name of the task
-                4096,             // Stack size (in words)
-                NULL,             // Task input parameter
-                configMAX_PRIORITIES,                // Priority of the task
-                NULL);            // Task handle
-    xTaskCreate(calibrateESC,       // Task function
-                "calibrateESC",      // Name of the task
-                4096,             // Stack size (in words)
-                NULL,             // Task input parameter
-                configMAX_PRIORITIES - 1,                // Priority of the task
-                NULL);            // Task handle
+    xTaskCreate(lidar_task, "LidarTask", 4096, NULL, configMAX_PRIORITIES, NULL);
+    xTaskCreate(servo_task, "ServoTask", 4096, NULL, configMAX_PRIORITIES-1, NULL);
+    xTaskCreate(calibrateESC, "calibrateESC", 4096, NULL, configMAX_PRIORITIES - 2, NULL);
 
-    xTaskCreate(encoder_task,       // Task function
-                "EncoderTask",      // Name of the task
-                4096,             // Stack size (in words)
-                NULL,             // Task input parameter
-                configMAX_PRIORITIES-2,                // Priority of the task
-                NULL);   
+    xTaskCreate(encoder_task, "EncoderTask", 4096, NULL, configMAX_PRIORITIES-3, NULL);   
 
-    xTaskCreate(timer, "timer", 4096, NULL, configMAX_PRIORITIES-3, NULL);
+    xTaskCreate(timer, "timer", 4096, NULL, configMAX_PRIORITIES-4, NULL);
 }

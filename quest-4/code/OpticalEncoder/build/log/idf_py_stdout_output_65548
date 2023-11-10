@@ -1,0 +1,992 @@
+p rev:      �ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2023 18:00:02[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0d73ch ( 55100) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=0001d764 vaddr=3ffb0000 size=02178h (  8568) load[0m
+[0;32mI (130) esp_image: segment 2: paddr=0001f8e4 vaddr=40080000 size=00734h (  1844) load[0m
+[0;32mI (133) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1bcb0h (113840) map[0m
+[0;32mI (182) esp_image: segment 4: paddr=0003bcd8 vaddr=40080734 size=0d26ch ( 53868) load[0m
+[0;32mI (211) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (211) boot: Disabling RNG early entropy source...[0m
+[0;32mI (223) cpu_start: Multicore app[0m
+[0;32mI (223) cpu_start: Pro cpu up.[0m
+[0;32mI (223) cpu_start: Starting app cpu, entry point is 0x4008119c[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (241) cpu_start: Pro cpu start user code[0m
+[0;32mI (241) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (241) cpu_start: Application information:[0m
+[0;32mI (246) cpu_start: Project name:     blink[0m
+[0;32mI (251) cpu_start: App version:      ab2584e-dirty[0m
+[0;32mI (256) cpu_start: Compile time:     Nov  9 2023 17:59:50[0m
+[0;32mI (262) cpu_start: ELF file SHA256:  b68cad0ee...[0m
+[0;32mI (268) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (275) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (279) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (284) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (289) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (296) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (302) heap_init: At 3FFB2A28 len 0002D5D8 (181 KiB): DRAM[0m
+[0;32mI (308) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (315) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (321) heap_init: At 4008D9A0 len 00012660 (73 KiB): IRAM[0m
+[0;32mI (329) spi_flash: detected chip: generic[0m
+[0;32mI (332) spi_flash: flash io: dio[0m
+[0;33mW (336) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (349) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (360) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (368) app_start: Starting scheduler on CPU0[0m
+[0;32mI (373) app_start: Starting scheduler on CPU1[0m
+[0;32mI (373) main_task: Started on CPU0[0m
+[0;32mI (383) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x62
+
+>> Polling LIDAR
+[0;32mI (413) example: Create timer and operator[0m
+[0;32mI (413) example: Connect timer and operator[0m
+[0;32mI (413) example: Create comparator and generator from the operator[0m
+[0;32mI (423) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (433) example: Set generator action on timer and compare event[0m
+[0;32mI (443) example: Enable and start timer[0m
+eFuse Two Point: NOT supported
+[0;32mI (443) example: Create timer and operator[0m
+eFuse Vref: Supported
+[0;32mI (463) example: Connect timer and operator[0m
+Characterized using eFuse Vref
+[0;32mI (463) example: Create comparator and generator from the operator[0m
+[0;32mI (443) main_task: Returned from app_main()[0m
+[0;32mI (473) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (493) example: Set generator action on timer and compare event[0m
+[0;32mI (493) example: Enable and start timer[0m
+Distance: 281
+Count: 1
+Speed is 0.1m/s
+Distance: 359
+Count: 0
+Speed is 0.0m/s
+Count: 0
+Speed is 0.0m/s
+Distance: 319
+[0;32mI (4023) example: Speed of buggy: 0.130000[0m
+Count: 0
+Speed is 0.0m/s
+Distance: 306
+Count: 0
+Speed is 0.0m/s
+[0;32mI (6043) example: Speed of buggy: 0.130000[0m
+Distance: 319
+Count: 8
+Speed is 0.6m/s
+Count: 20
+Speed is 1.5m/s
+Distance: 225
+[0;32mI (8063) example: Speed of buggy: 0.130000[0m
+Count: 21
+Speed is 1.5m/s
+Distance: 11
+Count: 17
+Speed is 1.2m/s
+[0;32mI (10083) example: Speed of buggy: 0.130000[0m
+Count: 20
+Speed is 1.5m/s
+[0;32mI (10533) example: WALL DETECTED[0m
+Distance: 9
+Count: 19
+Speed is 1.4m/s
+Distance: 10
+[0;32mI (12103) example: Speed of buggy: 0.130000[0m
+Count: 20
+Speed is 1.5m/s
+Distance: 232
+Count: 22
+Speed is 1.6m/s
+[0;32mI (14123) example: Speed of buggy: 0.130000[0m
+Count: 17
+Speed is 1.2m/s
+Distance: 61
+Count: 20
+Speed is 1.5m/s
+[0;32mI (16093) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (16143) example: Speed of buggy: 0.130000[0m
+Count: 22
+Speed is 1.6m/s
+Count: 18
+Speed is 1.3m/s
+[0;32mI (17483) example: WALL DETECTED[0m
+Distance: 2
+[0;32mI (18163) example: Speed of buggy: 0.130000[0m
+Count: 21
+Speed is 1.5m/s
+Distance: 122
+Count: 19
+Speed is 1.4m/s
+[0;32mI (20183) example: Speed of buggy: 0.130000[0m
+Distance: 271
+Count: 18
+Speed is 1.3m/s
+Count: 21
+Speed is 1.5m/s
+Distance: 282
+[0;32mI (22203) example: Speed of buggy: 0.130000[0m
+Count: 18
+Speed is 1.3m/s
+Distance: 271
+Count: 22
+Speed is 1.6m/s
+[0;32mI (24223) example: Speed of buggy: 0.130000[0m
+Distance: 347
+Count: 21
+Speed is 1.5m/s
+Count: 17
+Speed is 1.2m/s
+Distance: 324
+[0;32mI (26243) example: Speed of buggy: 0.130000[0m
+Count: 20
+Speed is 1.5m/s
+Distance: 311
+Count: 19
+Speed is 1.4m/s
+[0;32mI (28263) example: Speed of buggy: 0.130000[0m
+Count: 18
+Speed is 1.3m/s
+Distance: 287
+Count: 20
+Speed is 1.5m/s
+Distance: 289
+[0;32mI (30283) example: Speed of buggy: 0.130000[0m
+Count: 17
+Speed is 1.2m/s
+Distance: 353
+Count: 20
+Speed is 1.5m/s
+[0;32mI (32303) example: Speed of buggy: 0.130000[0m
+Count: 19
+Speed is 1.4m/s
+Distance: 83
+Count: 17
+Speed is 1.2m/s
+Distance: 84
+[0;32mI (34323) example: Speed of buggy: 0.130000[0m
+Count: 22
+Speed is 1.6m/s
+Count: 19
+Speed is 1.4m/s
+[0;32mI (35553) example: WALL DETECTED[0m
+Distance: 7
+[0;32mI (36343) example: Speed of buggy: 0.130000[0m
+Count: 19
+Speed is 1.4m/s
+Distance: 24
+Count: 19
+Speed is 1.4m/s
+Distance: 285
+[0;32mI (38363) example: Speed of buggy: 0.130000[0m
+Count: 18
+Speed is 1.3m/s
+Count: 19
+Speed is 1.4m/s
+Distance: 289
+[0;32mI (40383) example: Speed of buggy: 0.130000[0m
+Count: 21
+Speed is 1.5m/s
+Distance: 369
+Count: 17
+Speed is 1.2m/s
+[0;32mI (42403) example: Speed of buggy: 0.130000[0m
+Count: 19
+Speed is 1.4m/s
+Distance: 314
+Count: 19
+Speed is 1.4m/s
+Distance: 350
+[0;32mI (44423) example: Speed of buggy: 0.130000[0m
+Count: 19
+Speed is 1.4m/s
+Distance: 369
+Count: 20
+Speed is 1.5m/s
+[0;32mI (46443) example: Speed of buggy: 0.130000[0m
+Count: 17
+Speed is 1.2m/s
+Distance: 328
+Count: 20
+Speed is 1.5m/s
+Distance: 276
+Count: 20
+Speed is 1.5m/s
+[0;32mI (48463) example: Speed of buggy: 0.130000[0m
+Count: 17
+Speed is 1.2m/s
+Distance: 289
+Count: 20
+Speed is 1.5m/s
+[0;32mI (50483) example: Speed of buggy: 0.130000[0m
+Distance: 339
+Count: 18
+Speed is 1.3m/s
+Distance: 279
+Count: 18
+Speed is 1.3m/s
+[0;32mI (52503) example: Speed of buggy: 0.130000[0m
+Count: 19
+Speed is 1.4m/s
+Distance: 291
+Count: 17
+Speed is 1.2m/s
+[0;32mI (54523) example: Speed of buggy: 0.130000[0m
+Distance: 335
+Count: 20
+Speed is 1.5m/s
+Distance: 256
+Count: 19
+Speed is 1.4m/s
+[0;32mI (56543) example: Speed of buggy: 0.130000[0m
+Count: 14
+Speed is 1.0m/s
+Distance: 351
+Count: 18
+Speed is 1.3m/s
+[0;32mI (58563) example: Speed of buggy: 0.130000[0m
+Distance: 291
+Count: 18
+Speed is 1.3m/s
+Count: 16
+Speed is 1.2m/s
+Distance: 290
+[0;32mI (60583) example: Speed of buggy: 0.130000[0m
+Count: 18
+Speed is 1.3m/s
+Distance: 318
+Count: 15
+Speed is 1.1m/s
+[0;32mI (62603) example: Speed of buggy: 0.130000[0m
+Distance: 327
+Count: 17
+Speed is 1.2m/s
+Count: 18
+Speed is 1.3m/s
+[0;32mI (64623) example: Speed of buggy: 0.130000[0m
+Distance: 275
+Count: 17
+Speed is 1.2m/s
+Distance: 304
+Count: 20
+Speed is 1.5m/s
+[0;32mI (66643) example: Speed of buggy: 0.130000[0m
+Count: 18
+Speed is 1.3m/s
+Distance: 246
+Count: 16
+Speed is 1.2m/s
+[0;32mI (68663) example: Speed of buggy: 0.130000[0m
+Distance: 362
+Count: 19
+Speed is 1.4m/s
+Distance: 317
+Count: 17
+Speed is 1.2m/s
+[0;32mI (70683) example: Speed of buggy: 0.130000[0m
+Count: 17
+Speed is 1.2m/s
+Distance: 274
+Count: 19
+Speed is 1.4m/s
+[0;32mI (72703) example: Speed of buggy: 0.130000[0m
+Distance: 318
+Count: 16
+Speed is 1.2m/s
+Count: 19
+Speed is 1.4m/s
+Distance: 330
+[0;32mI (74723) example: Speed of buggy: 0.130000[0m
+Count: 18
+Speed is 1.3m/s
+Distance: 274
+Count: 17
+Speed is 1.2m/s
+[0;32mI (76743) example: Speed of buggy: 0.130000[0m
+Distance: 338
+Count: 20
+Speed is 1.5m/s
+Count: 15
+Speed is 1.1m/s
+Distance: 312
+[0;32mI (78763) example: Speed of buggy: 0.130000[0m
+Count: 20
+Speed is 1.5m/s
+Distance: 325
+Count: 19
+Speed is 1.4m/s
+[0;32mI (80783) example: Speed of buggy: 0.130000[0m
+Distance: 260
+Count: 16
+Speed is 1.2m/s
+Count: 19
+Speed is 1.4m/s
+[0;32mI (82803) example: Speed of buggy: 0.130000[0m
+Distance: 275
+Count: 18
+Speed is 1.3m/s
+Distance: 317
+Count: 16
+Speed is 1.2m/s
+[0;32mI (84823) example: Speed of buggy: 0.130000[0m
+Count: 17
+Speed is 1.2m/s
+Distance: 321
+Count: 17
+Speed is 1.2m/s
+[0;32mI (86843) example: Speed of buggy: 0.130000[0m
+Distance: 285
+Count: 18
+Speed is 1.3m/s
+Distance: 344
+Count: 18
+Speed is 1.3m/s
+[0;32mI (88863) example: Speed of buggy: 0.130000[0m
+Count: 15
+Speed is 1.1m/s
+Distance: 321
+Count: 18
+Speed is 1.3m/s
+[0;32mI (90883) example: Speed of buggy: 0.130000[0m
+Distance: 289
+Count: 15
+Speed is 1.1m/s
+Count: 15
+Speed is 1.1m/s
+Distance: 330
+[0;32mI (92903) example: Speed of buggy: 0.130000[0m
+Count: 16
+Speed is 1.2m/s
+Distance: 58
+Count: 15
+Speed is 1.1m/s
+[0;32mI (94923) example: Speed of buggy: 0.130000[0m
+[0;32mI (95323) example: WALL DETECTED[0m
+Distance: 6
+Count: 18
+Speed is 1.3m/s
+Count: 14
+Speed is 1.0m/s
+[0;32mI (96703) example: WALL DETECTED[0m
+Distance: 6
+[0;32mI (96943) example: Speed of buggy: 0.130000[0m
+Count: 9
+Speed is 0.7m/s
+[0;32mI (98083) example: WALL DETECTED[0m
+Distance: 5
+Count: 16
+Speed is 1.2m/s
+[0;32mI (98963) example: Speed of buggy: 0.130000[0m
+Count: 17
+Speed is 1.2m/s
+[0;32mI (99483) example: WALL DETECTED[0m
+Distance: 5
+Count: 18
+Speed is 1.3m/s
+Distance: 244
+[0;32mI (100983) example: Speed of buggy: 0.130000[0m
+Count: 18
+Speed is 1.3m/s
+Distance: 338
+Count: 14
+Speed is 1.0m/s
+[0;32mI (103003) example: Speed of buggy: 0.130000[0m
+Count: 18
+Speed is 1.3m/s
+Distance: 351
+Count: 16
+Speed is 1.2m/s
+[0;32mI (105023) example: Speed of buggy: 0.130000[0m
+Distance: 322
+Count: 15
+Speed is 1.1m/s
+Distance: 309
+Count: 19
+Speed is 1.4m/s
+[0;32mI (107043) example: Speed of buggy: 0.130000[0m
+Count: 20
+Speed is 1.5m/s
+Distance: 323
+Count: 17
+Speed is 1.2m/s
+[0;32mI (109063) example: Speed of buggy: 0.130000[0m
+Distance: 265
+Count: 19
+Speed is 1.4m/s
+Count: 13
+Speed is 1.0m/s
+Distance: 319
+[0;32mI (111083) example: Speed of buggy: 0.130000[0m
+Count: 18
+Speed is 1.3m/s
+Distance: 327
+Count: 20
+Speed is 1.5m/s
+[0;32mI (113103) example: Speed of buggy: 0.130000[0m
+Distance: 351
+Count: 14
+Speed is 1.0m/s
+Count: 17
+Speed is 1.2m/s
+Distance: 325
+[0;32mI (115123) example: Speed of buggy: 0.130000[0m
+Count: 12
+Speed is 0.9m/s
+Distance: 268
+Count: 11
+Speed is 0.8m/s
+[0;32mI (117143) example: Speed of buggy: 0.130000[0m
+Count: 13
+Speed is 1.0m/s
+Distance: 351
+Count: 16
+Speed is 1.2m/s
+Distance: 371
+[0;32mI (119163) example: Speed of buggy: 0.130000[0m
+Count: 14
+Speed is 1.0m/s
+Distance: 362
+Count: 18
+Speed is 1.3m/s
+[0;32mI (121183) example: Speed of buggy: 0.130000[0m
+Count: 10
+Speed is 0.7m/s
+Distance: 361
+Count: 12
+Speed is 0.9m/s
+Distance: 364
+[0;32mI (123203) example: Speed of buggy: 0.130000[0m
+Count: 15
+Speed is 1.1m/s
+Count: 12
+Speed is 0.9m/s
+Distance: 323
+[0;32mI (125223) example: Speed of buggy: 0.130000[0m
+Count: 16
+Speed is 1.2m/s
+Distance: 320
+Count: 16
+Speed is 1.2m/s
+[0;32mI (127243) example: Speed of buggy: 0.130000[0m
+Distance: 327
+Count: 12
+Speed is 0.9m/s
+Count: 11
+Speed is 0.8m/s
+Distance: 349
+[0;32mI (129263) example: Speed of buggy: 0.130000[0m
+Count: 10
+Speed is 0.7m/s
+Distance: 325
+Count: 12
+Speed is 0.9m/s
+[0;32mI (131283) example: Speed of buggy: 0.130000[0m
+Count: 11
+Speed is 0.8m/s
+Distance: 295
+Count: 9
+Speed is 0.7m/s
+Distance: 316
+[0;32mI (133303) example: Speed of buggy: 0.130000[0m
+Count: 11
+Speed is 0.8m/s
+Distance: 342
+Count: 11
+Speed is 0.8m/s
+[0;32mI (135323) example: Speed of buggy: 0.130000[0m
+Count: 16
+Speed is 1.2m/s
+Distance: 328
+Count: 12
+Speed is 0.9m/s
+Distance: 262
+[0;32mI (137343) example: Speed of buggy: 0.130000[0m
+Count: 9
+Speed is 0.7m/s
+Distance: 334
+Count: 12
+Speed is 0.9m/s
+[0;32mI (139363) example: Speed of buggy: 0.130000[0m
+Count: 11
+Speed is 0.8m/s
+Distance: 358
+Count: 10
+Speed is 0.7m/s
+Distance: 341
+[0;32mI (141383) example: Speed of buggy: 0.130000[0m
+Count: 15
+Speed is 1.1m/s
+Count: 10
+Speed is 0.7m/s
+Distance: 305
+[0;32mI (143403) example: Speed of buggy: 0.130000[0m
+Count: 9
+Speed is 0.7m/s
+Distance: 273
+Count: 14
+Speed is 1.0m/s
+Distance: 324
+[0;32mI (145423) example: Speed of buggy: 0.130000[0m
+Count: 8
+Speed is 0.6m/s
+Count: 10
+Speed is 0.7m/s
+Distance: 343
+[0;32mI (147443) example: Speed of buggy: 0.130000[0m
+Count: 13
+Speed is 1.0m/s
+Distance: 387
+Count: 9
+Speed is 0.7m/s
+Count: 13
+Speed is 1.0m/s
+[0;32mI (149463) example: Speed of buggy: 0.130000[0m
+Distance: 311
+Count: 14
+Speed is 1.0m/s
+Distance: 276
+Count: 13
+Speed is 1.0m/s
+[0;32mI (151483) example: Speed of buggy: 0.130000[0m
+Distance: 355
+Count: 14
+Speed is 1.0m/s
+Count: 10
+Speed is 0.7m/s
+[0;32mI (153503) example: Speed of buggy: 0.130000[0m
+Distance: 304
+Count: 14
+Speed is 1.0m/s
+Distance: 320
+Count: 13
+Speed is 1.0m/s
+[0;32mI (155523) example: Speed of buggy: 0.130000[0m
+Count: 12
+Speed is 0.9m/s
+Distance: 368
+Count: 13
+Speed is 1.0m/s
+[0;32mI (157543) example: Speed of buggy: 0.130000[0m
+Distance: 274
+Count: 13
+Speed is 1.0m/s
+Distance: 265
+Count: 15
+Speed is 1.1m/s
+[0;32mI (159563) example: Speed of buggy: 0.130000[0m
+Count: 16
+Speed is 1.2m/s
+Distance: 247
+Count: 13
+Speed is 1.0m/s
+[0;32mI (161583) example: Speed of buggy: 0.130000[0m
+Distance: 277
+Count: 13
+Speed is 1.0m/s
+Distance: 378
+Count: 12
+Speed is 0.9m/s
+[0;32mI (163603) example: Speed of buggy: 0.130000[0m
+Count: 12
+Speed is 0.9m/s
+Distance: 258
+Count: 14
+Speed is 1.0m/s
+[0;32mI (165623) example: Speed of buggy: 0.130000[0m
+Distance: 3720
+Count: 14
+Speed is 1.0m/s
+Count: 12
+Speed is 0.9m/s
+Distance: 322
+[0;32mI (167643) example: Speed of buggy: 0.130000[0m
+Count: 13
+Speed is 1.0m/s
+Distance: 347
+Count: 10
+Speed is 0.7m/s
+[0;32mI (169663) example: Speed of buggy: 0.130000[0m
+Distance: 346
+Count: 13
+Speed is 1.0m/s
+Count: 13
+Speed is 1.0m/s
+[0;32mI (171683) example: Speed of buggy: 0.130000[0m
+Distance: 250
+Count: 11
+Speed is 0.8m/s
+Distance: 380
+Count: 13
+Speed is 1.0m/s
+[0;32mI (173703) example: Speed of buggy: 0.130000[0m
+Count: 11
+Speed is 0.8m/s
+Distance: 301
+Count: 14
+Speed is 1.0m/s
+[0;32mI (175723) example: Speed of buggy: 0.130000[0m
+Distance: 297
+Count: 16
+Speed is 1.2m/s
+Distance: 334
+Count: 12
+Speed is 0.9m/s
+[0;32mI (177743) example: Speed of buggy: 0.130000[0m
+Count: 13
+Speed is 1.0m/s
+Distance: 280
+Count: 13
+Speed is 1.0m/s
+[0;32mI (179763) example: Speed of buggy: 0.130000[0m
+Distance: 292
+Count: 11
+Speed is 0.8m/s
+Count: 13
+Speed is 1.0m/s
+Distance: 331
+[0;32mI (181783) example: Speed of buggy: 0.130000[0m
+Count: 12
+Speed is 0.9m/s
+Distance: 314
+Count: 13
+Speed is 1.0m/s
+[0;32mI (183803) example: Speed of buggy: 0.130000[0m
+Distance: 324
+Count: 14
+Speed is 1.0m/s
+Count: 10
+Speed is 0.7m/s
+Distance: 245
+[0;32mI (185823) example: Speed of buggy: 0.130000[0m
+Count: 13
+Speed is 1.0m/s
+Distance: 373
+Count: 14
+Speed is 1.0m/s
+[0;32mI (187843) example: Speed of buggy: 0.130000[0m
+Count: 11
+Speed is 0.8m/s
+Distance: 310
+Count: 14
+Speed is 1.0m/s
+Distance: 333
+[0;32mI (189863) example: Speed of buggy: 0.130000[0m
+Count: 12
+Speed is 0.9m/s
+Distance: 290
+Count: 12
+Speed is 0.9m/s
+[0;32mI (191883) example: Speed of buggy: 0.130000[0m
+Count: 13
+Speed is 1.0m/s
+Distance: 305
+Count: 12
+Speed is 0.9m/s
+[0;32mI (193903) example: Speed of buggy: 0.130000[0m
+Distance: 333
+Count: 13
+Speed is 1.0m/s
+Distance: 369
+Count: 12
+Speed is 0.9m/s
+[0;32mI (195923) example: Speed of buggy: 0.130000[0m
+Count: 11
+Speed is 0.8m/s
+Distance: 273
+Count: 13
+Speed is 1.0m/s
+[0;32mI (197943) example: Speed of buggy: 0.130000[0m
+Distance: 336
+Count: 12
+Speed is 0.9m/s
+Count: 12
+Speed is 0.9m/s
+Distance: 302
+[0;32mI (199963) example: Speed of buggy: 0.130000[0m
+Count: 15
+Speed is 1.1m/s
+Distance: 301
+Count: 12
+Speed is 0.9m/s
+[0;32mI (201983) example: Speed of buggy: 0.130000[0m
+Distance: 296
+Count: 13
+Speed is 1.0m/s
+Count: 13
+Speed is 1.0m/s
+Distance: 297
+[0;32mI (204003) example: Speed of buggy: 0.130000[0m
+Count: 11
+Speed is 0.8m/s
+Distance: 352
+Count: 13
+Speed is 1.0m/s
+[0;32mI (206023) example: Speed of buggy: 0.130000[0m
+Count: 12
+Speed is 0.9m/s
+Distance: 241
+Count: 13
+Speed is 1.0m/s
+Distance: 306
+[0;32mI (208043) example: Speed of buggy: 0.130000[0m
+Count: 13
+Speed is 1.0m/s
+Distance: 296
+Count: 11
+Speed is 0.8m/s
+[0;32mI (210063) example: Speed of buggy: 0.130000[0m
+Count: 13
+Speed is 1.0m/s
+Distance: 347
+Count: 13
+Speed is 1.0m/s
+Distance: 224
+[0;32mI (212083) example: Speed of buggy: 0.130000[0m
+Count: 10
+Speed is 0.7m/s
+Count: 13
+Speed is 1.0m/s
+Distance: 349
+[0;32mI (214103) example: Speed of buggy: 0.130000[0m
+Count: 12
+Speed is 0.9m/s
+Distance: 324
+Count: 12
+Speed is 0.9m/s
+[0;32mI (216123) example: Speed of buggy: 0.130000[0m
+Distance: 356
+Count: 14
+Speed is 1.0m/s
+Count: 10
+Speed is 0.7m/s
+Distance: 359
+[0;32mI (218143) example: Speed of buggy: 0.130000[0m
+Count: 14
+Speed is 1.0m/s
+Distance: 327
+Count: 14
+Speed is 1.0m/s
+[0;32mI (220163) example: Speed of buggy: 0.130000[0m
+Distance: 280
+Count: 12
+Speed is 0.9m/s
+Count: 13
+Speed is 1.0m/s
+Distance: 276
+[0;32mI (222183) example: Speed of buggy: 0.130000[0m
+Count: 12
+Speed is 0.9m/s
+Distance: 294
+Count: 13
+Speed is 1.0m/s
+[0;32mI (224203) example: Speed of buggy: 0.130000[0m
+Count: 13
+Speed is 1.0m/s
+Distance: 344
+Count: 12
+Speed is 0.9m/s
+Distance: 325
+[0;32mI (226223) example: Speed of buggy: 0.130000[0m
+Count: 13
+Speed is 1.0m/s
+Distance: 335
+Count: 13
+Speed is 1.0m/s
+[0;32mI (228243) example: Speed of buggy: 0.130000[0m
+Count: 10
+Speed is 0.7m/s
+Distance: 301
+Count: 12
+Speed is 0.9m/s
+Distance: 326
+[0;32mI (230263) example: Speed of buggy: 0.130000[0m
+Count: 12
+Speed is 0.9m/s
+Count: 13
+Speed is 1.0m/s
+Distance: 327
+[0;32mI (232283) example: Speed of buggy: 0.130000[0m
+Count: 13
+Speed is 1.0m/s
+Distance: 342
+Count: 9
+Speed is 0.7m/s
+[0;32mI (234303) example: Speed of buggy: 0.130000[0m
+Distance: 337
+Count: 13
+Speed is 1.0m/s
+Count: 13
+Speed is 1.0m/s
+Distance: 341
+[0;32mI (236323) example: Speed of buggy: 0.130000[0m
+Count: 12
+Speed is 0.9m/s
+Distance: 330
+Count: 12
+Speed is 0.9m/s
+[0;32mI (238343) example: Speed of buggy: 0.130000[0m
+Count: 12
+Speed is 0.9m/s
+Distance: 284
+Count: 11
+Speed is 0.8m/s
+Distance: 306
+[0;32mI (240363) example: Speed of buggy: 0.130000[0m
+Count: 14
+Speed is 1.0m/s
+Distance: 308
+Count: 10
+Speed is 0.7m/s
+[0;32mI (242383) example: Speed of buggy: 0.130000[0m
+Count: 13
+Speed is 1.0m/s
+Distance: 352
+Count: 14
+Speed is 1.0m/s
+Distance: 290
+[0;32mI (244403) example: Speed of buggy: 0.130000[0m
+Count: 10
+Speed is 0.7m/s
+Distance: 344
+Count: 12
+Speed is 0.9m/s
+[0;32mI (246423) example: Speed of buggy: 0.130000[0m
+Count: 11
+Speed is 0.8m/s
+Distance: 290
+Count: 12
+Speed is 0.9m/s
+Distance: 380
+[0;32mI (248443) example: Speed of buggy: 0.130000[0m
+Count: 12
+Speed is 0.9m/s
+Count: 11
+Speed is 0.8m/s
+Distance: 324
+Count: 13
+Speed is 1.0m/s
+[0;32mI (250463) example: Speed of buggy: 0.130000[0m
+Distance: 289
+Count: 13
+Speed is 1.0m/s
+Distance: 379
+Count: 11
+Speed is 0.8m/s
+[0;32mI (252483) example: Speed of buggy: 0.130000[0m
+Count: 12
+Speed is 0.9m/s
+Distance: 334
+Count: 11
+Speed is 0.8m/s
+[0;32mI (254503) example: Speed of buggy: 0.130000[0m
+Distance: 269
+Count: 11
+Speed is 0.8m/s
+Count: 13
+Speed is 1.0m/s
+[0;32mI (256523) example: Speed of buggy: 0.130000[0m
+Distance: 367
+Count: 11
+Speed is 0.8m/s
+Distance: 331
+Count: 13
+Speed is 1.0m/s
+[0;32mI (258543) example: Speed of buggy: 0.130000[0m
+Distance: 298
+Count: 13
+Speed is 1.0m/s
+Count: 9
+Speed is 0.7m/s
+[0;32mI (260563) example: Speed of buggy: 0.130000[0m
+Distance: 309
+Count: 13
+Speed is 1.0m/s
+Distance: 307
+Count: 12
+Speed is 0.9m/s
+[0;32mI (262583) example: Speed of buggy: 0.130000[0m
+Count: 12
+Speed is 0.9m/s
+Distance: 298
+Count: 15
+Speed is 1.1m/s
+[0;32mI (264603) example: Speed of buggy: 0.130000[0m
+Distance: 335
+Count: 11
+Speed is 0.8m/s
+Distance: 280
+Count: 12
+Speed is 0.9m/s
+[0;32mI (266623) example: Speed of buggy: 0.130000[0m
+Count: 13
+Speed is 1.0m/s
+Distance: 296
+Count: 11
+Speed is 0.8m/s
+[0;32mI (268643) example: Speed of buggy: 0.130000[0m
+Distance: 298
+Count: 12
+Speed is 0.9m/s
+Count: 12
+Speed is 0.9m/s
+Distance: 315
+[0;32mI (270663) example: Speed of buggy: 0.130000[0m
+Count: 12
+Speed is 0.9m/s
+Distance: 326
+Count: 13
+Speed is 1.0m/s
+[0;32mI (272683) example: Speed of buggy: 0.130000[0m
+Distance: 279
+Count: 11
+Speed is 0.8m/s
+Count: 13
+Speed is 1.0m/s
+Distance: 331
+[0;32mI (274703) example: Speed of buggy: 0.130000[0m
+Count: 12
+Speed is 0.9m/s
+Distance: 309
+Count: 12
+Speed is 0.9m/s
+[0;32mI (276723) example: Speed of buggy: 0.130000[0m
+Distance: 364
+Count: 13
+Speed is 1.0m/s
+Count: 12
+Speed is 0.9m/s
+[0;32mI (278743) example: Speed of buggy: 0.130000[0m
+Distance: 334
+Count: 12
+Speed is 0.9m/s
