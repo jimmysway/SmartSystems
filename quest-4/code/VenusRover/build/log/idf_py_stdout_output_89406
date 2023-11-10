@@ -1,0 +1,2150 @@
+m
+[0;32mI (266) cp�[0;32mI (13) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Nov  9 2023 18:00:02[0m
+[0;32mI (15) boot: Multicore bootloader[0m
+[0;32mI (19) boot: chip revision: v3.0[0m
+[0;32mI (23) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (27) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (32) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0e424h ( 58404) map[0m
+[0;32mI (109) esp_image: segment 1: paddr=0001e44c vaddr=3ffb0000 size=01bcch (  7116) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=00020020 vaddr=400d0020 size=1cf0ch (118540) map[0m
+[0;32mI (157) esp_image: segment 3: paddr=0003cf34 vaddr=3ffb1bcc size=005ach (  1452) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=0003d4e8 vaddr=40080000 size=0dbdch ( 56284) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (205) cpu_start: Multicore app[0m
+[0;32mI (205) cpu_start: Pro cpu up.[0m
+[0;32mI (206) cpu_start: Starting app cpu, entry point is 0x400811b0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (223) cpu_start: Pro cpu start user code[0m
+[0;32mI (223) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (223) cpu_start: Application information:[0m
+[0;32mI (228) cpu_start: Project name:     blink[0m
+[0;32mI (233) cpu_start: App version:      51730a5-dirty[0m
+[0;32mI (238) cpu_start: Compile time:     Nov  9 2023 20:47:07[0m
+[0;32mI (245) cpu_start: ELF file SHA256:  a3ce754d2...[0m
+[0;32mI (250) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (257) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (262) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (266) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (271) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (279) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (284) heap_init: At 3FFB2A60 len 0002D5A0 (181 KiB): DRAM[0m
+[0;32mI (291) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (297) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (303) heap_init: At 4008DBDC len 00012424 (73 KiB): IRAM[0m
+[0;32mI (311) spi_flash: detected chip: generic[0m
+[0;32mI (314) spi_flash: flash io: dio[0m
+[0;33mW (318) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (331) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (342) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (351) app_start: Starting scheduler on CPU0[0m
+[0;32mI (355) app_start: Starting scheduler on CPU1[0m
+[0;32mI (355) main_task: Started on CPU0[0m
+[0;32mI (365) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x62
+- Device found at address: 0x70
+
+>> Polling LIDAR
+[0;32mI (395) example: Install capture timer[0m
+[0;32mI (395) example: Install capture timer[0m
+[0;32mI (395) example: Install capture channel[0m
+[0;32mI (405) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (415) example: Install capture channel[0m
+[0;32mI (415) gpio: GPIO[36]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (425) example: Register capture callback[0m
+[0;32mI (435) example: Register capture callback[0m
+[0;32mI (435) example: Enable capture channel[0m
+[0;32mI (435) example: Enable capture channel[0m
+[0;32mI (445) example: Configure Trig pin[0m
+[0;32mI (445) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (455) example: Enable and start capture timer[0m
+[0;32mI (465) example: Configure Trig pin[0m
+[0;32mI (465) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (475) example: Enable and start capture timer[0m
+[0;32mI (485) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (485) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (485) example: Create timer and operator[0m
+[0;32mI (495) example: LEFT - Measured distance: 134.53cm[0m
+[0;32mI (505) example: Connect timer and operator[0m
+[0;32mI (485) example: Create timer and operator[0m
+[0;32mI (515) example: Create comparator and generator from the operator[0m
+[0;32mI (515) example: Connect timer and operator[0m
+[0;32mI (525) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (525) example: Create comparator and generator from the operator[0m
+[0;32mI (545) example: Set generator action on timer and compare event[0m
+[0;32mI (545) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (555) example: Enable and start timer[0m
+[0;32mI (555) example: Set generator action on timer and compare event[0m
+eFuse Two Point: NOT supported
+[0;32mI (575) example: Enable and start timer[0m
+[0;32mI (585) example: RIGHT IS CLOSER TO WALL[0m
+eFuse Vref: Supported
+>> Test Alphanumeric Display: 
+Characterized using eFuse Vref
+[0;32mI (485) main_task: Returned from app_main()[0m
+[0;32mI (685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (785) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 119
+[0;32mI (885) example: RIGHT IS CLOSER TO WALL[0m
+- oscillator: ok 
+[0;32mI (985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (1015) example: RIGHT - Measured distance: 11.71cm[0m
+[0;32mI (1015) example: LEFT - Measured distance: 134.18cm[0m
+[0;32mI (1085) example: RIGHT IS CLOSER TO WALL[0m
+- blink: off 
+[0;32mI (1185) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 100
+[0;32mI (1285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (1385) example: RIGHT IS CLOSER TO WALL[0m
+- brightness: max 
+[0;32mI (1485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (1525) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (1525) example: LEFT - Measured distance: 133.70cm[0m
+[0;32mI (1585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (1685) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 121
+[0;32mI (1785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (1885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (1985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2035) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (2035) example: LEFT - Measured distance: 134.10cm[0m
+[0;32mI (2085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2185) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 89
+[0;32mI (2285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (2545) example: RIGHT - Measured distance: 11.71cm[0m
+[0;32mI (2545) example: LEFT - Measured distance: 134.04cm[0m
+[0;32mI (2585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2685) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 147
+[0;32mI (2785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3055) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (3055) example: LEFT - Measured distance: 134.19cm[0m
+[0;32mI (3085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3185) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 162
+[0;32mI (3285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (3565) example: RIGHT - Measured distance: 11.71cm[0m
+[0;32mI (3565) example: LEFT - Measured distance: 134.11cm[0m
+[0;32mI (3585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3685) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 172
+[0;32mI (3785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (4075) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (4075) example: LEFT - Measured distance: 134.46cm[0m
+[0;32mI (4085) example: SLOW DOWN[0m
+[0;32mI (4085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (4095) example: SLOW DOWN[0m
+[0;32mI (4105) example: SLOW DOWN[0m
+[0;32mI (4115) example: SLOW DOWN[0m
+[0;32mI (4125) example: SLOW DOWN[0m
+[0;32mI (4135) example: SLOW DOWN[0m
+[0;32mI (4145) example: SLOW DOWN[0m
+[0;32mI (4155) example: SLOW DOWN[0m
+[0;32mI (4165) example: SLOW DOWN[0m
+[0;32mI (4175) example: SLOW DOWN[0m
+[0;32mI (4185) example: SLOW DOWN[0m
+[0;32mI (4185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (4195) example: SLOW DOWN[0m
+[0;32mI (4195) example: WALL DETECTED[0m
+Distance: 67
+[0;32mI (4285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (4385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (4485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (4585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (4585) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (4585) example: LEFT - Measured distance: 134.74cm[0m
+[0;32mI (4685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (4685) example: WALL DETECTED[0m
+Distance: 37
+[0;32mI (4785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (4885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (4985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (5085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (5095) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (5095) example: LEFT - Measured distance: 134.24cm[0m
+Distance: 159
+[0;32mI (5185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (5205) example: SLOW DOWN[0m
+[0;32mI (5215) example: SLOW DOWN[0m
+[0;32mI (5225) example: SLOW DOWN[0m
+[0;32mI (5235) example: SLOW DOWN[0m
+[0;32mI (5245) example: SLOW DOWN[0m
+[0;32mI (5255) example: SLOW DOWN[0m
+[0;32mI (5265) example: SLOW DOWN[0m
+[0;32mI (5275) example: SLOW DOWN[0m
+[0;32mI (5285) example: SLOW DOWN[0m
+[0;32mI (5285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (5295) example: SLOW DOWN[0m
+[0;32mI (5305) example: SLOW DOWN[0m
+[0;32mI (5315) example: SLOW DOWN[0m
+[0;32mI (5325) example: SLOW DOWN[0m
+[0;32mI (5335) example: SLOW DOWN[0m
+[0;32mI (5345) example: SLOW DOWN[0m
+[0;32mI (5355) example: SLOW DOWN[0m
+[0;32mI (5365) example: SLOW DOWN[0m
+[0;32mI (5375) example: SLOW DOWN[0m
+[0;32mI (5385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (5385) example: SLOW DOWN[0m
+[0;32mI (5395) example: SLOW DOWN[0m
+[0;32mI (5405) example: SLOW DOWN[0m
+[0;32mI (5415) example: SLOW DOWN[0m
+[0;32mI (5425) example: SLOW DOWN[0m
+[0;32mI (5435) example: SLOW DOWN[0m
+[0;32mI (5445) example: SLOW DOWN[0m
+[0;32mI (5455) example: SLOW DOWN[0m
+[0;32mI (5465) example: SLOW DOWN[0m
+[0;32mI (5475) example: SLOW DOWN[0m
+[0;32mI (5485) example: SLOW DOWN[0m
+[0;32mI (5485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (5495) example: SLOW DOWN[0m
+[0;32mI (5505) example: SLOW DOWN[0m
+[0;32mI (5515) example: SLOW DOWN[0m
+[0;32mI (5525) example: SLOW DOWN[0m
+[0;32mI (5535) example: SLOW DOWN[0m
+[0;32mI (5545) example: SLOW DOWN[0m
+[0;32mI (5555) example: SLOW DOWN[0m
+[0;32mI (5565) example: SLOW DOWN[0m
+[0;32mI (5575) example: SLOW DOWN[0m
+[0;32mI (5585) example: SLOW DOWN[0m
+[0;32mI (5585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (5595) example: SLOW DOWN[0m
+[0;32mI (5605) example: SLOW DOWN[0m
+[0;32mI (5605) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (5605) example: LEFT - Measured distance: 133.76cm[0m
+[0;32mI (5615) example: SLOW DOWN[0m
+[0;32mI (5625) example: SLOW DOWN[0m
+[0;32mI (5635) example: SLOW DOWN[0m
+[0;32mI (5645) example: SLOW DOWN[0m
+[0;32mI (5655) example: SLOW DOWN[0m
+Distance: 149
+[0;32mI (5665) example: SLOW DOWN[0m
+[0;32mI (5675) example: SLOW DOWN[0m
+[0;32mI (5685) example: SLOW DOWN[0m
+[0;32mI (5685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (5695) example: SLOW DOWN[0m
+[0;32mI (5705) example: SLOW DOWN[0m
+[0;32mI (5715) example: SLOW DOWN[0m
+[0;32mI (5725) example: SLOW DOWN[0m
+[0;32mI (5735) example: SLOW DOWN[0m
+[0;32mI (5745) example: SLOW DOWN[0m
+[0;32mI (5755) example: SLOW DOWN[0m
+[0;32mI (5765) example: SLOW DOWN[0m
+[0;32mI (5775) example: SLOW DOWN[0m
+[0;32mI (5785) example: SLOW DOWN[0m
+[0;32mI (5785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (5795) example: SLOW DOWN[0m
+[0;32mI (5805) example: SLOW DOWN[0m
+[0;32mI (5815) example: SLOW DOWN[0m
+[0;32mI (5825) example: SLOW DOWN[0m
+[0;32mI (5835) example: SLOW DOWN[0m
+[0;32mI (5845) example: SLOW DOWN[0m
+[0;32mI (5855) example: SLOW DOWN[0m
+[0;32mI (5865) example: SLOW DOWN[0m
+[0;32mI (5875) example: SLOW DOWN[0m
+[0;32mI (5885) example: SLOW DOWN[0m
+[0;32mI (5885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (5895) example: SLOW DOWN[0m
+[0;32mI (5905) example: SLOW DOWN[0m
+[0;32mI (5915) example: SLOW DOWN[0m
+[0;32mI (5925) example: SLOW DOWN[0m
+[0;32mI (5935) example: SLOW DOWN[0m
+[0;32mI (5945) example: SLOW DOWN[0m
+[0;32mI (5955) example: SLOW DOWN[0m
+[0;32mI (5965) example: SLOW DOWN[0m
+[0;32mI (5975) example: SLOW DOWN[0m
+[0;32mI (5985) example: SLOW DOWN[0m
+[0;32mI (5985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (5995) example: SLOW DOWN[0m
+[0;32mI (6005) example: SLOW DOWN[0m
+[0;32mI (6015) example: SLOW DOWN[0m
+[0;32mI (6025) example: SLOW DOWN[0m
+[0;32mI (6035) example: SLOW DOWN[0m
+[0;32mI (6045) example: SLOW DOWN[0m
+[0;32mI (6055) example: SLOW DOWN[0m
+[0;32mI (6065) example: SLOW DOWN[0m
+[0;32mI (6075) example: SLOW DOWN[0m
+[0;32mI (6085) example: SLOW DOWN[0m
+[0;32mI (6085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (6095) example: SLOW DOWN[0m
+[0;32mI (6105) example: SLOW DOWN[0m
+[0;32mI (6115) example: SLOW DOWN[0m
+[0;32mI (6115) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (6115) example: LEFT - Measured distance: 134.18cm[0m
+[0;32mI (6125) example: SLOW DOWN[0m
+[0;32mI (6135) example: SLOW DOWN[0m
+[0;32mI (6145) example: SLOW DOWN[0m
+Distance: 167
+[0;32mI (6155) example: SLOW DOWN[0m
+[0;32mI (6165) example: SLOW DOWN[0m
+[0;32mI (6175) example: SLOW DOWN[0m
+[0;32mI (6185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (6185) example: SLOW DOWN[0m
+[0;32mI (6195) example: SLOW DOWN[0m
+[0;32mI (6205) example: SLOW DOWN[0m
+[0;32mI (6215) example: SLOW DOWN[0m
+[0;32mI (6225) example: SLOW DOWN[0m
+[0;32mI (6235) example: SLOW DOWN[0m
+[0;32mI (6245) example: SLOW DOWN[0m
+[0;32mI (6255) example: SLOW DOWN[0m
+[0;32mI (6265) example: SLOW DOWN[0m
+[0;32mI (6275) example: SLOW DOWN[0m
+[0;32mI (6285) example: SLOW DOWN[0m
+[0;32mI (6285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (6295) example: SLOW DOWN[0m
+[0;32mI (6305) example: SLOW DOWN[0m
+[0;32mI (6315) example: SLOW DOWN[0m
+[0;32mI (6325) example: SLOW DOWN[0m
+[0;32mI (6335) example: SLOW DOWN[0m
+[0;32mI (6345) example: SLOW DOWN[0m
+[0;32mI (6355) example: SLOW DOWN[0m
+[0;32mI (6365) example: SLOW DOWN[0m
+[0;32mI (6375) example: SLOW DOWN[0m
+[0;32mI (6385) example: SLOW DOWN[0m
+[0;32mI (6385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (6395) example: SLOW DOWN[0m
+[0;32mI (6405) example: SLOW DOWN[0m
+[0;32mI (6415) example: SLOW DOWN[0m
+[0;32mI (6425) example: SLOW DOWN[0m
+[0;32mI (6435) example: SLOW DOWN[0m
+[0;32mI (6445) example: SLOW DOWN[0m
+[0;32mI (6455) example: SLOW DOWN[0m
+[0;32mI (6465) example: SLOW DOWN[0m
+[0;32mI (6475) example: SLOW DOWN[0m
+[0;32mI (6485) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (6485) example: SLOW DOWN[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (6495) example: SLOW DOWN[0m
+[0;32mI (6505) example: SLOW DOWN[0m
+[0;32mI (6515) example: SLOW DOWN[0m
+[0;32mI (6525) example: SLOW DOWN[0m
+[0;32mI (6535) example: SLOW DOWN[0m
+[0;32mI (6545) example: SLOW DOWN[0m
+[0;32mI (6555) example: SLOW DOWN[0m
+[0;32mI (6565) example: SLOW DOWN[0m
+[0;32mI (6575) example: SLOW DOWN[0m
+[0;32mI (6585) example: SLOW DOWN[0m
+[0;32mI (6585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (6595) example: SLOW DOWN[0m
+[0;32mI (6605) example: SLOW DOWN[0m
+[0;32mI (6615) example: SLOW DOWN[0m
+[0;32mI (6625) example: SLOW DOWN[0m
+[0;32mI (6625) example: RIGHT - Measured distance: 11.65cm[0m
+Distance: 99
+[0;32mI (6625) example: LEFT - Measured distance: 134.24cm[0m
+[0;32mI (6635) example: SLOW DOWN[0m
+[0;32mI (6645) example: SLOW DOWN[0m
+[0;32mI (6655) example: SLOW DOWN[0m
+[0;32mI (6665) example: SLOW DOWN[0m
+[0;32mI (6675) example: SLOW DOWN[0m
+[0;32mI (6685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (6685) example: SLOW DOWN[0m
+[0;32mI (6695) example: SLOW DOWN[0m
+[0;32mI (6705) example: SLOW DOWN[0m
+[0;32mI (6715) example: SLOW DOWN[0m
+[0;32mI (6725) example: SLOW DOWN[0m
+[0;32mI (6735) example: SLOW DOWN[0m
+[0;32mI (6745) example: SLOW DOWN[0m
+[0;32mI (6755) example: SLOW DOWN[0m
+[0;32mI (6765) example: SLOW DOWN[0m
+[0;32mI (6775) example: SLOW DOWN[0m
+[0;32mI (6785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (6785) example: SLOW DOWN[0m
+[0;32mI (6795) example: SLOW DOWN[0m
+[0;32mI (6805) example: SLOW DOWN[0m
+[0;32mI (6815) example: SLOW DOWN[0m
+[0;32mI (6825) example: SLOW DOWN[0m
+[0;32mI (6835) example: SLOW DOWN[0m
+[0;32mI (6845) example: SLOW DOWN[0m
+[0;32mI (6855) example: SLOW DOWN[0m
+[0;32mI (6865) example: SLOW DOWN[0m
+[0;32mI (6875) example: SLOW DOWN[0m
+[0;32mI (6885) example: SLOW DOWN[0m
+[0;32mI (6885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (6895) example: SLOW DOWN[0m
+[0;32mI (6905) example: SLOW DOWN[0m
+[0;32mI (6915) example: SLOW DOWN[0m
+[0;32mI (6925) example: SLOW DOWN[0m
+[0;32mI (6935) example: SLOW DOWN[0m
+[0;32mI (6945) example: SLOW DOWN[0m
+[0;32mI (6955) example: SLOW DOWN[0m
+[0;32mI (6965) example: SLOW DOWN[0m
+[0;32mI (6975) example: SLOW DOWN[0m
+[0;32mI (6985) example: SLOW DOWN[0m
+[0;32mI (6985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (6995) example: SLOW DOWN[0m
+[0;32mI (7005) example: SLOW DOWN[0m
+[0;32mI (7015) example: SLOW DOWN[0m
+[0;32mI (7025) example: SLOW DOWN[0m
+[0;32mI (7035) example: SLOW DOWN[0m
+[0;32mI (7045) example: SLOW DOWN[0m
+[0;32mI (7055) example: SLOW DOWN[0m
+[0;32mI (7065) example: SLOW DOWN[0m
+[0;32mI (7075) example: SLOW DOWN[0m
+[0;32mI (7085) example: SLOW DOWN[0m
+[0;32mI (7085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (7095) example: SLOW DOWN[0m
+[0;32mI (7105) example: SLOW DOWN[0m
+[0;32mI (7115) example: SLOW DOWN[0m
+Distance: 154
+[0;32mI (7125) example: SLOW DOWN[0m
+[0;32mI (7135) example: SLOW DOWN[0m
+[0;32mI (7135) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (7145) example: SLOW DOWN[0m
+[0;32mI (7145) example: LEFT - Measured distance: 134.46cm[0m
+[0;32mI (7155) example: SLOW DOWN[0m
+[0;32mI (7165) example: SLOW DOWN[0m
+[0;32mI (7175) example: SLOW DOWN[0m
+[0;32mI (7185) example: SLOW DOWN[0m
+[0;32mI (7185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (7195) example: SLOW DOWN[0m
+[0;32mI (7205) example: SLOW DOWN[0m
+[0;32mI (7215) example: SLOW DOWN[0m
+[0;32mI (7225) example: SLOW DOWN[0m
+[0;32mI (7235) example: SLOW DOWN[0m
+[0;32mI (7245) example: SLOW DOWN[0m
+[0;32mI (7255) example: SLOW DOWN[0m
+[0;32mI (7265) example: SLOW DOWN[0m
+[0;32mI (7275) example: SLOW DOWN[0m
+[0;32mI (7285) example: SLOW DOWN[0m
+[0;32mI (7285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (7295) example: SLOW DOWN[0m
+[0;32mI (7305) example: SLOW DOWN[0m
+[0;32mI (7315) example: SLOW DOWN[0m
+[0;32mI (7325) example: SLOW DOWN[0m
+[0;32mI (7335) example: SLOW DOWN[0m
+[0;32mI (7345) example: SLOW DOWN[0m
+[0;32mI (7355) example: SLOW DOWN[0m
+[0;32mI (7365) example: SLOW DOWN[0m
+[0;32mI (7375) example: SLOW DOWN[0m
+[0;32mI (7385) example: SLOW DOWN[0m
+[0;32mI (7385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (7395) example: SLOW DOWN[0m
+[0;32mI (7405) example: SLOW DOWN[0m
+[0;32mI (7415) example: SLOW DOWN[0m
+[0;32mI (7425) example: SLOW DOWN[0m
+[0;32mI (7435) example: SLOW DOWN[0m
+[0;32mI (7445) example: SLOW DOWN[0m
+[0;32mI (7455) example: SLOW DOWN[0m
+[0;32mI (7465) example: SLOW DOWN[0m
+[0;32mI (7475) example: SLOW DOWN[0m
+[0;32mI (7485) example: SLOW DOWN[0m
+[0;32mI (7485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (7495) example: SLOW DOWN[0m
+[0;32mI (7505) example: SLOW DOWN[0m
+[0;32mI (7515) example: SLOW DOWN[0m
+[0;32mI (7525) example: SLOW DOWN[0m
+[0;32mI (7535) example: SLOW DOWN[0m
+[0;32mI (7545) example: SLOW DOWN[0m
+[0;32mI (7555) example: SLOW DOWN[0m
+[0;32mI (7565) example: SLOW DOWN[0m
+[0;32mI (7575) example: SLOW DOWN[0m
+[0;32mI (7585) example: SLOW DOWN[0m
+[0;32mI (7585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (7595) example: SLOW DOWN[0m
+[0;32mI (7605) example: SLOW DOWN[0m
+Distance: 186
+[0;32mI (7615) example: SLOW DOWN[0m
+[0;32mI (7625) example: SLOW DOWN[0m
+[0;32mI (7635) example: SLOW DOWN[0m
+[0;32mI (7645) example: SLOW DOWN[0m
+[0;32mI (7645) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (7645) example: LEFT - Measured distance: 134.60cm[0m
+[0;32mI (7655) example: SLOW DOWN[0m
+[0;32mI (7665) example: SLOW DOWN[0m
+[0;32mI (7675) example: SLOW DOWN[0m
+[0;32mI (7685) example: SLOW DOWN[0m
+[0;32mI (7685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (7695) example: SLOW DOWN[0m
+[0;32mI (7705) example: SLOW DOWN[0m
+[0;32mI (7715) example: SLOW DOWN[0m
+[0;32mI (7725) example: SLOW DOWN[0m
+[0;32mI (7735) example: SLOW DOWN[0m
+[0;32mI (7745) example: SLOW DOWN[0m
+[0;32mI (7755) example: SLOW DOWN[0m
+[0;32mI (7765) example: SLOW DOWN[0m
+[0;32mI (7775) example: SLOW DOWN[0m
+[0;32mI (7785) example: SLOW DOWN[0m
+[0;32mI (7785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (7795) example: SLOW DOWN[0m
+[0;32mI (7805) example: SLOW DOWN[0m
+[0;32mI (7815) example: SLOW DOWN[0m
+[0;32mI (7825) example: SLOW DOWN[0m
+[0;32mI (7835) example: SLOW DOWN[0m
+[0;32mI (7845) example: SLOW DOWN[0m
+[0;32mI (7855) example: SLOW DOWN[0m
+[0;32mI (7865) example: SLOW DOWN[0m
+[0;32mI (7875) example: SLOW DOWN[0m
+[0;32mI (7885) example: SLOW DOWN[0m
+[0;32mI (7885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (7895) example: SLOW DOWN[0m
+[0;32mI (7905) example: SLOW DOWN[0m
+[0;32mI (7915) example: SLOW DOWN[0m
+[0;32mI (7925) example: SLOW DOWN[0m
+[0;32mI (7935) example: SLOW DOWN[0m
+[0;32mI (7945) example: SLOW DOWN[0m
+[0;32mI (7955) example: SLOW DOWN[0m
+[0;32mI (7965) example: SLOW DOWN[0m
+[0;32mI (7975) example: SLOW DOWN[0m
+[0;32mI (7985) example: SLOW DOWN[0m
+[0;32mI (7985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (7995) example: SLOW DOWN[0m
+[0;32mI (8005) example: SLOW DOWN[0m
+[0;32mI (8015) example: SLOW DOWN[0m
+[0;32mI (8025) example: SLOW DOWN[0m
+[0;32mI (8035) example: SLOW DOWN[0m
+[0;32mI (8045) example: SLOW DOWN[0m
+[0;32mI (8055) example: SLOW DOWN[0m
+[0;32mI (8065) example: SLOW DOWN[0m
+[0;32mI (8075) example: SLOW DOWN[0m
+[0;32mI (8085) example: SLOW DOWN[0m
+[0;32mI (8085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (8095) example: SLOW DOWN[0m
+Distance: 146
+[0;32mI (8105) example: SLOW DOWN[0m
+[0;32mI (8115) example: SLOW DOWN[0m
+[0;32mI (8125) example: SLOW DOWN[0m
+[0;32mI (8135) example: SLOW DOWN[0m
+[0;32mI (8145) example: SLOW DOWN[0m
+[0;32mI (8155) example: SLOW DOWN[0m
+[0;32mI (8155) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (8155) example: LEFT - Measured distance: 133.89cm[0m
+[0;32mI (8165) example: SLOW DOWN[0m
+[0;32mI (8175) example: SLOW DOWN[0m
+[0;32mI (8185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (8185) example: SLOW DOWN[0m
+[0;32mI (8195) example: SLOW DOWN[0m
+[0;32mI (8205) example: SLOW DOWN[0m
+[0;32mI (8215) example: SLOW DOWN[0m
+[0;32mI (8225) example: SLOW DOWN[0m
+[0;32mI (8235) example: SLOW DOWN[0m
+[0;32mI (8245) example: SLOW DOWN[0m
+[0;32mI (8255) example: SLOW DOWN[0m
+[0;32mI (8265) example: SLOW DOWN[0m
+[0;32mI (8275) example: SLOW DOWN[0m
+[0;32mI (8285) example: SLOW DOWN[0m
+[0;32mI (8285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (8295) example: SLOW DOWN[0m
+[0;32mI (8305) example: SLOW DOWN[0m
+[0;32mI (8315) example: SLOW DOWN[0m
+[0;32mI (8325) example: SLOW DOWN[0m
+[0;32mI (8335) example: SLOW DOWN[0m
+[0;32mI (8345) example: SLOW DOWN[0m
+[0;32mI (8355) example: SLOW DOWN[0m
+[0;32mI (8365) example: SLOW DOWN[0m
+[0;32mI (8375) example: SLOW DOWN[0m
+[0;32mI (8385) example: SLOW DOWN[0m
+[0;32mI (8385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (8395) example: SLOW DOWN[0m
+[0;32mI (8405) example: SLOW DOWN[0m
+[0;32mI (8415) example: SLOW DOWN[0m
+[0;32mI (8425) example: SLOW DOWN[0m
+[0;32mI (8435) example: SLOW DOWN[0m
+[0;32mI (8445) example: SLOW DOWN[0m
+[0;32mI (8455) example: SLOW DOWN[0m
+[0;32mI (8465) example: SLOW DOWN[0m
+[0;32mI (8475) example: SLOW DOWN[0m
+[0;32mI (8485) example: SLOW DOWN[0m
+Count: 0
+[0;32mI (8485) example: RIGHT IS CLOSER TO WALL[0m
+Speed is 0.0m/s
+[0;32mI (8495) example: SLOW DOWN[0m
+[0;32mI (8505) example: SLOW DOWN[0m
+[0;32mI (8515) example: SLOW DOWN[0m
+[0;32mI (8525) example: SLOW DOWN[0m
+[0;32mI (8535) example: SLOW DOWN[0m
+[0;32mI (8545) example: SLOW DOWN[0m
+[0;32mI (8555) example: SLOW DOWN[0m
+[0;32mI (8565) example: SLOW DOWN[0m
+[0;32mI (8575) example: SLOW DOWN[0m
+[0;32mI (8575) example: WALL DETECTED[0m
+Distance: 70
+[0;32mI (8585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (8665) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (8665) example: LEFT - Measured distance: 134.39cm[0m
+[0;32mI (8685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (8785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (8885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (8985) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 140
+[0;32mI (9085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (9175) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (9175) example: LEFT - Measured distance: 134.74cm[0m
+[0;32mI (9185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (9285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (9385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (9485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+Distance: 138
+[0;32mI (9585) example: SLOW DOWN[0m
+[0;32mI (9585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (9595) example: SLOW DOWN[0m
+[0;32mI (9605) example: SLOW DOWN[0m
+[0;32mI (9615) example: SLOW DOWN[0m
+[0;32mI (9625) example: SLOW DOWN[0m
+[0;32mI (9635) example: SLOW DOWN[0m
+[0;32mI (9645) example: SLOW DOWN[0m
+[0;32mI (9655) example: SLOW DOWN[0m
+[0;32mI (9665) example: SLOW DOWN[0m
+[0;32mI (9675) example: SLOW DOWN[0m
+[0;32mI (9685) example: SLOW DOWN[0m
+[0;32mI (9685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (9685) example: RIGHT - Measured distance: 11.58cm[0m
+[0;32mI (9685) example: LEFT - Measured distance: 134.18cm[0m
+[0;32mI (9695) example: SLOW DOWN[0m
+[0;32mI (9705) example: SLOW DOWN[0m
+[0;32mI (9715) example: SLOW DOWN[0m
+[0;32mI (9725) example: SLOW DOWN[0m
+[0;32mI (9735) example: SLOW DOWN[0m
+[0;32mI (9745) example: SLOW DOWN[0m
+[0;32mI (9755) example: SLOW DOWN[0m
+[0;32mI (9765) example: SLOW DOWN[0m
+[0;32mI (9775) example: SLOW DOWN[0m
+[0;32mI (9785) example: SLOW DOWN[0m
+[0;32mI (9785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (9795) example: SLOW DOWN[0m
+[0;32mI (9805) example: SLOW DOWN[0m
+[0;32mI (9815) example: SLOW DOWN[0m
+[0;32mI (9825) example: SLOW DOWN[0m
+[0;32mI (9835) example: SLOW DOWN[0m
+[0;32mI (9845) example: SLOW DOWN[0m
+[0;32mI (9855) example: SLOW DOWN[0m
+[0;32mI (9865) example: SLOW DOWN[0m
+[0;32mI (9875) example: SLOW DOWN[0m
+[0;32mI (9885) example: SLOW DOWN[0m
+[0;32mI (9885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (9895) example: SLOW DOWN[0m
+[0;32mI (9905) example: SLOW DOWN[0m
+[0;32mI (9915) example: SLOW DOWN[0m
+[0;32mI (9925) example: SLOW DOWN[0m
+[0;32mI (9935) example: SLOW DOWN[0m
+[0;32mI (9945) example: SLOW DOWN[0m
+[0;32mI (9955) example: SLOW DOWN[0m
+[0;32mI (9965) example: SLOW DOWN[0m
+[0;32mI (9975) example: SLOW DOWN[0m
+[0;32mI (9985) example: SLOW DOWN[0m
+[0;32mI (9985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (9995) example: SLOW DOWN[0m
+[0;32mI (10005) example: SLOW DOWN[0m
+[0;32mI (10015) example: SLOW DOWN[0m
+[0;32mI (10025) example: SLOW DOWN[0m
+[0;32mI (10035) example: SLOW DOWN[0m
+Distance: 137
+[0;32mI (10045) example: SLOW DOWN[0m
+[0;32mI (10055) example: SLOW DOWN[0m
+[0;32mI (10065) example: SLOW DOWN[0m
+[0;32mI (10075) example: SLOW DOWN[0m
+[0;32mI (10085) example: SLOW DOWN[0m
+[0;32mI (10085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (10095) example: SLOW DOWN[0m
+[0;32mI (10105) example: SLOW DOWN[0m
+[0;32mI (10115) example: SLOW DOWN[0m
+[0;32mI (10125) example: SLOW DOWN[0m
+[0;32mI (10135) example: SLOW DOWN[0m
+[0;32mI (10145) example: SLOW DOWN[0m
+[0;32mI (10155) example: SLOW DOWN[0m
+[0;32mI (10165) example: SLOW DOWN[0m
+[0;32mI (10175) example: SLOW DOWN[0m
+[0;32mI (10185) example: SLOW DOWN[0m
+[0;32mI (10185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (10195) example: SLOW DOWN[0m
+[0;32mI (10195) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (10195) example: LEFT - Measured distance: 133.55cm[0m
+[0;32mI (10205) example: SLOW DOWN[0m
+[0;32mI (10215) example: SLOW DOWN[0m
+[0;32mI (10225) example: SLOW DOWN[0m
+[0;32mI (10235) example: SLOW DOWN[0m
+[0;32mI (10245) example: SLOW DOWN[0m
+[0;32mI (10255) example: SLOW DOWN[0m
+[0;32mI (10265) example: SLOW DOWN[0m
+[0;32mI (10275) example: SLOW DOWN[0m
+[0;32mI (10285) example: SLOW DOWN[0m
+[0;32mI (10285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (10295) example: SLOW DOWN[0m
+[0;32mI (10305) example: SLOW DOWN[0m
+[0;32mI (10315) example: SLOW DOWN[0m
+[0;32mI (10325) example: SLOW DOWN[0m
+[0;32mI (10335) example: SLOW DOWN[0m
+[0;32mI (10345) example: SLOW DOWN[0m
+[0;32mI (10355) example: SLOW DOWN[0m
+[0;32mI (10365) example: SLOW DOWN[0m
+[0;32mI (10375) example: SLOW DOWN[0m
+[0;32mI (10385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (10385) example: SLOW DOWN[0m
+[0;32mI (10395) example: SLOW DOWN[0m
+[0;32mI (10405) example: SLOW DOWN[0m
+[0;32mI (10415) example: SLOW DOWN[0m
+[0;32mI (10425) example: SLOW DOWN[0m
+[0;32mI (10435) example: SLOW DOWN[0m
+[0;32mI (10445) example: SLOW DOWN[0m
+[0;32mI (10455) example: SLOW DOWN[0m
+[0;32mI (10465) example: SLOW DOWN[0m
+[0;32mI (10475) example: SLOW DOWN[0m
+[0;32mI (10485) example: SLOW DOWN[0m
+[0;32mI (10485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (10495) example: SLOW DOWN[0m
+[0;32mI (10505) example: SLOW DOWN[0m
+[0;32mI (10515) example: SLOW DOWN[0m
+[0;32mI (10525) example: SLOW DOWN[0m
+Distance: 163
+[0;32mI (10535) example: SLOW DOWN[0m
+[0;32mI (10545) example: SLOW DOWN[0m
+[0;32mI (10555) example: SLOW DOWN[0m
+[0;32mI (10565) example: SLOW DOWN[0m
+[0;32mI (10575) example: SLOW DOWN[0m
+[0;32mI (10585) example: SLOW DOWN[0m
+[0;32mI (10585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (10595) example: SLOW DOWN[0m
+[0;32mI (10605) example: SLOW DOWN[0m
+[0;32mI (10615) example: SLOW DOWN[0m
+[0;32mI (10625) example: SLOW DOWN[0m
+[0;32mI (10635) example: SLOW DOWN[0m
+[0;32mI (10645) example: SLOW DOWN[0m
+[0;32mI (10655) example: SLOW DOWN[0m
+[0;32mI (10665) example: SLOW DOWN[0m
+[0;32mI (10675) example: SLOW DOWN[0m
+[0;32mI (10685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (10685) example: SLOW DOWN[0m
+[0;32mI (10695) example: SLOW DOWN[0m
+[0;32mI (10705) example: SLOW DOWN[0m
+[0;32mI (10705) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (10705) example: LEFT - Measured distance: 134.17cm[0m
+[0;32mI (10715) example: SLOW DOWN[0m
+[0;32mI (10725) example: SLOW DOWN[0m
+[0;32mI (10735) example: SLOW DOWN[0m
+[0;32mI (10745) example: SLOW DOWN[0m
+[0;32mI (10755) example: SLOW DOWN[0m
+[0;32mI (10765) example: SLOW DOWN[0m
+[0;32mI (10775) example: SLOW DOWN[0m
+[0;32mI (10785) example: SLOW DOWN[0m
+[0;32mI (10785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (10795) example: SLOW DOWN[0m
+[0;32mI (10805) example: SLOW DOWN[0m
+[0;32mI (10815) example: SLOW DOWN[0m
+[0;32mI (10825) example: SLOW DOWN[0m
+[0;32mI (10835) example: SLOW DOWN[0m
+[0;32mI (10845) example: SLOW DOWN[0m
+[0;32mI (10855) example: SLOW DOWN[0m
+[0;32mI (10865) example: SLOW DOWN[0m
+[0;32mI (10875) example: SLOW DOWN[0m
+[0;32mI (10885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (10885) example: SLOW DOWN[0m
+[0;32mI (10895) example: SLOW DOWN[0m
+[0;32mI (10905) example: SLOW DOWN[0m
+[0;32mI (10915) example: SLOW DOWN[0m
+[0;32mI (10925) example: SLOW DOWN[0m
+[0;32mI (10935) example: SLOW DOWN[0m
+[0;32mI (10945) example: SLOW DOWN[0m
+[0;32mI (10955) example: SLOW DOWN[0m
+[0;32mI (10965) example: SLOW DOWN[0m
+[0;32mI (10975) example: SLOW DOWN[0m
+[0;32mI (10985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (10985) example: SLOW DOWN[0m
+[0;32mI (10995) example: SLOW DOWN[0m
+[0;32mI (11005) example: SLOW DOWN[0m
+[0;32mI (11015) example: SLOW DOWN[0m
+Distance: 134
+[0;32mI (11025) example: SLOW DOWN[0m
+[0;32mI (11035) example: SLOW DOWN[0m
+[0;32mI (11045) example: SLOW DOWN[0m
+[0;32mI (11055) example: SLOW DOWN[0m
+[0;32mI (11065) example: SLOW DOWN[0m
+[0;32mI (11075) example: SLOW DOWN[0m
+[0;32mI (11085) example: SLOW DOWN[0m
+[0;32mI (11085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (11095) example: SLOW DOWN[0m
+[0;32mI (11105) example: SLOW DOWN[0m
+[0;32mI (11115) example: SLOW DOWN[0m
+[0;32mI (11125) example: SLOW DOWN[0m
+[0;32mI (11135) example: SLOW DOWN[0m
+[0;32mI (11145) example: SLOW DOWN[0m
+[0;32mI (11155) example: SLOW DOWN[0m
+[0;32mI (11165) example: SLOW DOWN[0m
+[0;32mI (11175) example: SLOW DOWN[0m
+[0;32mI (11185) example: SLOW DOWN[0m
+[0;32mI (11185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (11195) example: SLOW DOWN[0m
+[0;32mI (11205) example: SLOW DOWN[0m
+[0;32mI (11215) example: SLOW DOWN[0m
+[0;32mI (11215) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (11215) example: LEFT - Measured distance: 134.25cm[0m
+[0;32mI (11225) example: SLOW DOWN[0m
+[0;32mI (11235) example: SLOW DOWN[0m
+[0;32mI (11245) example: SLOW DOWN[0m
+[0;32mI (11255) example: SLOW DOWN[0m
+[0;32mI (11265) example: SLOW DOWN[0m
+[0;32mI (11275) example: SLOW DOWN[0m
+[0;32mI (11285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (11285) example: SLOW DOWN[0m
+[0;32mI (11295) example: SLOW DOWN[0m
+[0;32mI (11305) example: SLOW DOWN[0m
+[0;32mI (11315) example: SLOW DOWN[0m
+[0;32mI (11325) example: SLOW DOWN[0m
+[0;32mI (11335) example: SLOW DOWN[0m
+[0;32mI (11345) example: SLOW DOWN[0m
+[0;32mI (11355) example: SLOW DOWN[0m
+[0;32mI (11365) example: SLOW DOWN[0m
+[0;32mI (11375) example: SLOW DOWN[0m
+[0;32mI (11385) example: SLOW DOWN[0m
+[0;32mI (11385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (11395) example: SLOW DOWN[0m
+[0;32mI (11405) example: SLOW DOWN[0m
+[0;32mI (11415) example: SLOW DOWN[0m
+[0;32mI (11425) example: SLOW DOWN[0m
+[0;32mI (11435) example: SLOW DOWN[0m
+[0;32mI (11445) example: SLOW DOWN[0m
+[0;32mI (11455) example: SLOW DOWN[0m
+[0;32mI (11465) example: SLOW DOWN[0m
+[0;32mI (11475) example: SLOW DOWN[0m
+[0;32mI (11485) example: SLOW DOWN[0m
+[0;32mI (11485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (11495) example: SLOW DOWN[0m
+[0;32mI (11505) example: SLOW DOWN[0m
+Distance: 128
+[0;32mI (11515) example: SLOW DOWN[0m
+[0;32mI (11525) example: SLOW DOWN[0m
+[0;32mI (11535) example: SLOW DOWN[0m
+[0;32mI (11545) example: SLOW DOWN[0m
+[0;32mI (11555) example: SLOW DOWN[0m
+[0;32mI (11565) example: SLOW DOWN[0m
+[0;32mI (11575) example: SLOW DOWN[0m
+[0;32mI (11585) example: SLOW DOWN[0m
+[0;32mI (11585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (11595) example: SLOW DOWN[0m
+[0;32mI (11605) example: SLOW DOWN[0m
+[0;32mI (11615) example: SLOW DOWN[0m
+[0;32mI (11625) example: SLOW DOWN[0m
+[0;32mI (11635) example: SLOW DOWN[0m
+[0;32mI (11645) example: SLOW DOWN[0m
+[0;32mI (11655) example: SLOW DOWN[0m
+[0;32mI (11665) example: SLOW DOWN[0m
+[0;32mI (11675) example: SLOW DOWN[0m
+[0;32mI (11685) example: SLOW DOWN[0m
+[0;32mI (11685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (11695) example: SLOW DOWN[0m
+[0;32mI (11705) example: SLOW DOWN[0m
+[0;32mI (11715) example: SLOW DOWN[0m
+[0;32mI (11725) example: SLOW DOWN[0m
+[0;32mI (11725) example: RIGHT - Measured distance: 11.71cm[0m
+[0;32mI (11725) example: LEFT - Measured distance: 134.18cm[0m
+[0;32mI (11735) example: SLOW DOWN[0m
+[0;32mI (11745) example: SLOW DOWN[0m
+[0;32mI (11755) example: SLOW DOWN[0m
+[0;32mI (11765) example: SLOW DOWN[0m
+[0;32mI (11775) example: SLOW DOWN[0m
+[0;32mI (11785) example: SLOW DOWN[0m
+[0;32mI (11785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (11795) example: SLOW DOWN[0m
+[0;32mI (11805) example: SLOW DOWN[0m
+[0;32mI (11815) example: SLOW DOWN[0m
+[0;32mI (11825) example: SLOW DOWN[0m
+[0;32mI (11835) example: SLOW DOWN[0m
+[0;32mI (11845) example: SLOW DOWN[0m
+[0;32mI (11855) example: SLOW DOWN[0m
+[0;32mI (11865) example: SLOW DOWN[0m
+[0;32mI (11875) example: SLOW DOWN[0m
+[0;32mI (11885) example: SLOW DOWN[0m
+[0;32mI (11885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (11895) example: SLOW DOWN[0m
+[0;32mI (11905) example: SLOW DOWN[0m
+[0;32mI (11915) example: SLOW DOWN[0m
+[0;32mI (11925) example: SLOW DOWN[0m
+[0;32mI (11935) example: SLOW DOWN[0m
+[0;32mI (11945) example: SLOW DOWN[0m
+[0;32mI (11955) example: SLOW DOWN[0m
+[0;32mI (11965) example: SLOW DOWN[0m
+[0;32mI (11975) example: SLOW DOWN[0m
+[0;32mI (11985) example: SLOW DOWN[0m
+[0;32mI (11985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (11995) example: SLOW DOWN[0m
+Distance: 111
+[0;32mI (12005) example: SLOW DOWN[0m
+[0;32mI (12015) example: SLOW DOWN[0m
+[0;32mI (12025) example: SLOW DOWN[0m
+[0;32mI (12035) example: SLOW DOWN[0m
+[0;32mI (12045) example: SLOW DOWN[0m
+[0;32mI (12055) example: SLOW DOWN[0m
+[0;32mI (12065) example: SLOW DOWN[0m
+[0;32mI (12075) example: SLOW DOWN[0m
+[0;32mI (12085) example: SLOW DOWN[0m
+[0;32mI (12085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (12095) example: SLOW DOWN[0m
+[0;32mI (12105) example: SLOW DOWN[0m
+[0;32mI (12115) example: SLOW DOWN[0m
+[0;32mI (12125) example: SLOW DOWN[0m
+[0;32mI (12135) example: SLOW DOWN[0m
+[0;32mI (12145) example: SLOW DOWN[0m
+[0;32mI (12155) example: SLOW DOWN[0m
+[0;32mI (12165) example: SLOW DOWN[0m
+[0;32mI (12175) example: SLOW DOWN[0m
+[0;32mI (12185) example: SLOW DOWN[0m
+[0;32mI (12185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (12195) example: SLOW DOWN[0m
+[0;32mI (12205) example: SLOW DOWN[0m
+[0;32mI (12215) example: SLOW DOWN[0m
+[0;32mI (12225) example: SLOW DOWN[0m
+[0;32mI (12235) example: SLOW DOWN[0m
+[0;32mI (12235) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (12235) example: LEFT - Measured distance: 134.11cm[0m
+[0;32mI (12245) example: SLOW DOWN[0m
+[0;32mI (12255) example: SLOW DOWN[0m
+[0;32mI (12265) example: SLOW DOWN[0m
+[0;32mI (12275) example: SLOW DOWN[0m
+[0;32mI (12285) example: SLOW DOWN[0m
+[0;32mI (12285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (12295) example: SLOW DOWN[0m
+[0;32mI (12305) example: SLOW DOWN[0m
+[0;32mI (12315) example: SLOW DOWN[0m
+[0;32mI (12325) example: SLOW DOWN[0m
+[0;32mI (12335) example: SLOW DOWN[0m
+[0;32mI (12345) example: SLOW DOWN[0m
+[0;32mI (12355) example: SLOW DOWN[0m
+[0;32mI (12365) example: SLOW DOWN[0m
+[0;32mI (12375) example: SLOW DOWN[0m
+[0;32mI (12385) example: SLOW DOWN[0m
+[0;32mI (12385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (12395) example: SLOW DOWN[0m
+[0;32mI (12405) example: SLOW DOWN[0m
+[0;32mI (12415) example: SLOW DOWN[0m
+[0;32mI (12425) example: SLOW DOWN[0m
+[0;32mI (12435) example: SLOW DOWN[0m
+[0;32mI (12445) example: SLOW DOWN[0m
+[0;32mI (12455) example: SLOW DOWN[0m
+[0;32mI (12465) example: SLOW DOWN[0m
+[0;32mI (12475) example: SLOW DOWN[0m
+Distance: 122
+[0;32mI (12485) example: SLOW DOWN[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (12485) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (12495) example: SLOW DOWN[0m
+[0;32mI (12505) example: SLOW DOWN[0m
+[0;32mI (12515) example: SLOW DOWN[0m
+[0;32mI (12525) example: SLOW DOWN[0m
+[0;32mI (12535) example: SLOW DOWN[0m
+[0;32mI (12545) example: SLOW DOWN[0m
+[0;32mI (12555) example: SLOW DOWN[0m
+[0;32mI (12565) example: SLOW DOWN[0m
+[0;32mI (12575) example: SLOW DOWN[0m
+[0;32mI (12585) example: SLOW DOWN[0m
+[0;32mI (12585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (12595) example: SLOW DOWN[0m
+[0;32mI (12605) example: SLOW DOWN[0m
+[0;32mI (12615) example: SLOW DOWN[0m
+[0;32mI (12625) example: SLOW DOWN[0m
+[0;32mI (12635) example: SLOW DOWN[0m
+[0;32mI (12645) example: SLOW DOWN[0m
+[0;32mI (12655) example: SLOW DOWN[0m
+[0;32mI (12665) example: SLOW DOWN[0m
+[0;32mI (12675) example: SLOW DOWN[0m
+[0;32mI (12685) example: SLOW DOWN[0m
+[0;32mI (12685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (12695) example: SLOW DOWN[0m
+[0;32mI (12705) example: SLOW DOWN[0m
+[0;32mI (12715) example: SLOW DOWN[0m
+[0;32mI (12725) example: SLOW DOWN[0m
+[0;32mI (12735) example: SLOW DOWN[0m
+[0;32mI (12745) example: SLOW DOWN[0m
+[0;32mI (12745) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (12745) example: LEFT - Measured distance: 134.80cm[0m
+[0;32mI (12755) example: SLOW DOWN[0m
+[0;32mI (12765) example: SLOW DOWN[0m
+[0;32mI (12775) example: SLOW DOWN[0m
+[0;32mI (12785) example: SLOW DOWN[0m
+[0;32mI (12785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (12795) example: SLOW DOWN[0m
+[0;32mI (12805) example: SLOW DOWN[0m
+[0;32mI (12815) example: SLOW DOWN[0m
+[0;32mI (12825) example: SLOW DOWN[0m
+[0;32mI (12835) example: SLOW DOWN[0m
+[0;32mI (12845) example: SLOW DOWN[0m
+[0;32mI (12855) example: SLOW DOWN[0m
+[0;32mI (12865) example: SLOW DOWN[0m
+[0;32mI (12875) example: SLOW DOWN[0m
+[0;32mI (12885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (12885) example: SLOW DOWN[0m
+[0;32mI (12895) example: SLOW DOWN[0m
+[0;32mI (12905) example: SLOW DOWN[0m
+[0;32mI (12915) example: SLOW DOWN[0m
+[0;32mI (12925) example: SLOW DOWN[0m
+[0;32mI (12935) example: SLOW DOWN[0m
+[0;32mI (12945) example: SLOW DOWN[0m
+[0;32mI (12955) example: SLOW DOWN[0m
+[0;32mI (12965) example: SLOW DOWN[0m
+Distance: 108
+[0;32mI (12975) example: SLOW DOWN[0m
+[0;32mI (12985) example: SLOW DOWN[0m
+[0;32mI (12985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (12995) example: SLOW DOWN[0m
+[0;32mI (13005) example: SLOW DOWN[0m
+[0;32mI (13015) example: SLOW DOWN[0m
+[0;32mI (13025) example: SLOW DOWN[0m
+[0;32mI (13035) example: SLOW DOWN[0m
+[0;32mI (13045) example: SLOW DOWN[0m
+[0;32mI (13055) example: SLOW DOWN[0m
+[0;32mI (13065) example: SLOW DOWN[0m
+[0;32mI (13075) example: SLOW DOWN[0m
+[0;32mI (13085) example: SLOW DOWN[0m
+[0;32mI (13085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (13095) example: SLOW DOWN[0m
+[0;32mI (13105) example: SLOW DOWN[0m
+[0;32mI (13115) example: SLOW DOWN[0m
+[0;32mI (13125) example: SLOW DOWN[0m
+[0;32mI (13135) example: SLOW DOWN[0m
+[0;32mI (13145) example: SLOW DOWN[0m
+[0;32mI (13155) example: SLOW DOWN[0m
+[0;32mI (13165) example: SLOW DOWN[0m
+[0;32mI (13175) example: SLOW DOWN[0m
+[0;32mI (13185) example: SLOW DOWN[0m
+[0;32mI (13185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (13195) example: SLOW DOWN[0m
+[0;32mI (13205) example: SLOW DOWN[0m
+[0;32mI (13215) example: SLOW DOWN[0m
+[0;32mI (13225) example: SLOW DOWN[0m
+[0;32mI (13235) example: SLOW DOWN[0m
+[0;32mI (13245) example: SLOW DOWN[0m
+[0;32mI (13255) example: SLOW DOWN[0m
+[0;32mI (13255) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (13255) example: LEFT - Measured distance: 134.25cm[0m
+[0;32mI (13265) example: SLOW DOWN[0m
+[0;32mI (13275) example: SLOW DOWN[0m
+[0;32mI (13285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (13285) example: SLOW DOWN[0m
+[0;32mI (13295) example: SLOW DOWN[0m
+[0;32mI (13305) example: SLOW DOWN[0m
+[0;32mI (13315) example: SLOW DOWN[0m
+[0;32mI (13325) example: SLOW DOWN[0m
+[0;32mI (13335) example: SLOW DOWN[0m
+[0;32mI (13345) example: SLOW DOWN[0m
+[0;32mI (13355) example: SLOW DOWN[0m
+[0;32mI (13365) example: SLOW DOWN[0m
+[0;32mI (13375) example: SLOW DOWN[0m
+[0;32mI (13385) example: SLOW DOWN[0m
+[0;32mI (13385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (13395) example: SLOW DOWN[0m
+[0;32mI (13405) example: SLOW DOWN[0m
+[0;32mI (13415) example: SLOW DOWN[0m
+[0;32mI (13425) example: SLOW DOWN[0m
+[0;32mI (13435) example: SLOW DOWN[0m
+[0;32mI (13445) example: SLOW DOWN[0m
+[0;32mI (13455) example: SLOW DOWN[0m
+Distance: 138
+[0;32mI (13465) example: SLOW DOWN[0m
+[0;32mI (13475) example: SLOW DOWN[0m
+[0;32mI (13485) example: SLOW DOWN[0m
+[0;32mI (13485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (13495) example: SLOW DOWN[0m
+[0;32mI (13505) example: SLOW DOWN[0m
+[0;32mI (13515) example: SLOW DOWN[0m
+[0;32mI (13525) example: SLOW DOWN[0m
+[0;32mI (13535) example: SLOW DOWN[0m
+[0;32mI (13545) example: SLOW DOWN[0m
+[0;32mI (13555) example: SLOW DOWN[0m
+[0;32mI (13565) example: SLOW DOWN[0m
+[0;32mI (13575) example: SLOW DOWN[0m
+[0;32mI (13585) example: SLOW DOWN[0m
+[0;32mI (13585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (13595) example: SLOW DOWN[0m
+[0;32mI (13605) example: SLOW DOWN[0m
+[0;32mI (13615) example: SLOW DOWN[0m
+[0;32mI (13625) example: SLOW DOWN[0m
+[0;32mI (13635) example: SLOW DOWN[0m
+[0;32mI (13645) example: SLOW DOWN[0m
+[0;32mI (13655) example: SLOW DOWN[0m
+[0;32mI (13665) example: SLOW DOWN[0m
+[0;32mI (13675) example: SLOW DOWN[0m
+[0;32mI (13685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (13685) example: SLOW DOWN[0m
+[0;32mI (13695) example: SLOW DOWN[0m
+[0;32mI (13705) example: SLOW DOWN[0m
+[0;32mI (13715) example: SLOW DOWN[0m
+[0;32mI (13725) example: SLOW DOWN[0m
+[0;32mI (13735) example: SLOW DOWN[0m
+[0;32mI (13745) example: SLOW DOWN[0m
+[0;32mI (13755) example: SLOW DOWN[0m
+[0;32mI (13765) example: SLOW DOWN[0m
+[0;32mI (13765) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (13765) example: LEFT - Measured distance: 136.62cm[0m
+[0;32mI (13775) example: SLOW DOWN[0m
+[0;32mI (13785) example: SLOW DOWN[0m
+[0;32mI (13785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (13795) example: SLOW DOWN[0m
+[0;32mI (13805) example: SLOW DOWN[0m
+[0;32mI (13815) example: SLOW DOWN[0m
+[0;32mI (13825) example: SLOW DOWN[0m
+[0;32mI (13835) example: SLOW DOWN[0m
+[0;32mI (13845) example: SLOW DOWN[0m
+[0;32mI (13855) example: SLOW DOWN[0m
+[0;32mI (13865) example: SLOW DOWN[0m
+[0;32mI (13875) example: SLOW DOWN[0m
+[0;32mI (13885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (13885) example: SLOW DOWN[0m
+[0;32mI (13895) example: SLOW DOWN[0m
+[0;32mI (13905) example: SLOW DOWN[0m
+[0;32mI (13915) example: SLOW DOWN[0m
+[0;32mI (13925) example: SLOW DOWN[0m
+[0;32mI (13935) example: SLOW DOWN[0m
+[0;32mI (13945) example: SLOW DOWN[0m
+Distance: 181
+[0;32mI (13955) example: SLOW DOWN[0m
+[0;32mI (13965) example: SLOW DOWN[0m
+[0;32mI (13975) example: SLOW DOWN[0m
+[0;32mI (13985) example: SLOW DOWN[0m
+[0;32mI (13985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (13995) example: SLOW DOWN[0m
+[0;32mI (14005) example: SLOW DOWN[0m
+[0;32mI (14015) example: SLOW DOWN[0m
+[0;32mI (14025) example: SLOW DOWN[0m
+[0;32mI (14035) example: SLOW DOWN[0m
+[0;32mI (14045) example: SLOW DOWN[0m
+[0;32mI (14055) example: SLOW DOWN[0m
+[0;32mI (14065) example: SLOW DOWN[0m
+[0;32mI (14075) example: SLOW DOWN[0m
+[0;32mI (14085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (14085) example: SLOW DOWN[0m
+[0;32mI (14095) example: SLOW DOWN[0m
+[0;32mI (14105) example: SLOW DOWN[0m
+[0;32mI (14115) example: SLOW DOWN[0m
+[0;32mI (14125) example: SLOW DOWN[0m
+[0;32mI (14135) example: SLOW DOWN[0m
+[0;32mI (14145) example: SLOW DOWN[0m
+[0;32mI (14155) example: SLOW DOWN[0m
+[0;32mI (14165) example: SLOW DOWN[0m
+[0;32mI (14175) example: SLOW DOWN[0m
+[0;32mI (14185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (14185) example: SLOW DOWN[0m
+[0;32mI (14195) example: SLOW DOWN[0m
+[0;32mI (14205) example: SLOW DOWN[0m
+[0;32mI (14215) example: SLOW DOWN[0m
+[0;32mI (14225) example: SLOW DOWN[0m
+[0;32mI (14235) example: SLOW DOWN[0m
+[0;32mI (14245) example: SLOW DOWN[0m
+[0;32mI (14255) example: SLOW DOWN[0m
+[0;32mI (14265) example: SLOW DOWN[0m
+[0;32mI (14275) example: SLOW DOWN[0m
+[0;32mI (14275) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (14275) example: LEFT - Measured distance: 135.09cm[0m
+[0;32mI (14285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (14285) example: SLOW DOWN[0m
+[0;32mI (14295) example: SLOW DOWN[0m
+[0;32mI (14305) example: SLOW DOWN[0m
+[0;32mI (14315) example: SLOW DOWN[0m
+[0;32mI (14325) example: SLOW DOWN[0m
+[0;32mI (14335) example: SLOW DOWN[0m
+[0;32mI (14345) example: SLOW DOWN[0m
+[0;32mI (14355) example: SLOW DOWN[0m
+[0;32mI (14365) example: SLOW DOWN[0m
+[0;32mI (14375) example: SLOW DOWN[0m
+[0;32mI (14385) example: SLOW DOWN[0m
+[0;32mI (14385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (14395) example: SLOW DOWN[0m
+[0;32mI (14405) example: SLOW DOWN[0m
+[0;32mI (14415) example: SLOW DOWN[0m
+[0;32mI (14425) example: SLOW DOWN[0m
+[0;32mI (14435) example: SLOW DOWN[0m
+[0;32mI (14435) example: WALL DETECTED[0m
+Distance: 68
+[0;32mI (14485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (14585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (14685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (14785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (14785) example: RIGHT - Measured distance: 11.58cm[0m
+[0;32mI (14785) example: LEFT - Measured distance: 134.33cm[0m
+[0;32mI (14885) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 131
+[0;32mI (14985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (15085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (15185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (15285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (15295) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (15295) example: LEFT - Measured distance: 134.53cm[0m
+[0;32mI (15385) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 103
+[0;32mI (15445) example: SLOW DOWN[0m
+[0;32mI (15455) example: SLOW DOWN[0m
+[0;32mI (15465) example: SLOW DOWN[0m
+[0;32mI (15475) example: SLOW DOWN[0m
+[0;32mI (15485) example: SLOW DOWN[0m
+[0;32mI (15485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (15495) example: SLOW DOWN[0m
+[0;32mI (15505) example: SLOW DOWN[0m
+[0;32mI (15515) example: SLOW DOWN[0m
+[0;32mI (15525) example: SLOW DOWN[0m
+[0;32mI (15535) example: SLOW DOWN[0m
+[0;32mI (15545) example: SLOW DOWN[0m
+[0;32mI (15555) example: SLOW DOWN[0m
+[0;32mI (15565) example: SLOW DOWN[0m
+[0;32mI (15575) example: SLOW DOWN[0m
+[0;32mI (15585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (15585) example: SLOW DOWN[0m
+[0;32mI (15595) example: SLOW DOWN[0m
+[0;32mI (15605) example: SLOW DOWN[0m
+[0;32mI (15615) example: SLOW DOWN[0m
+[0;32mI (15625) example: SLOW DOWN[0m
+[0;32mI (15635) example: SLOW DOWN[0m
+[0;32mI (15645) example: SLOW DOWN[0m
+[0;32mI (15655) example: SLOW DOWN[0m
+[0;32mI (15665) example: SLOW DOWN[0m
+[0;32mI (15675) example: SLOW DOWN[0m
+[0;32mI (15685) example: SLOW DOWN[0m
+[0;32mI (15685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (15695) example: SLOW DOWN[0m
+[0;32mI (15705) example: SLOW DOWN[0m
+[0;32mI (15715) example: SLOW DOWN[0m
+[0;32mI (15725) example: SLOW DOWN[0m
+[0;32mI (15735) example: SLOW DOWN[0m
+[0;32mI (15745) example: SLOW DOWN[0m
+[0;32mI (15755) example: SLOW DOWN[0m
+[0;32mI (15765) example: SLOW DOWN[0m
+[0;32mI (15775) example: SLOW DOWN[0m
+[0;32mI (15785) example: SLOW DOWN[0m
+[0;32mI (15785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (15795) example: SLOW DOWN[0m
+[0;32mI (15805) example: SLOW DOWN[0m
+[0;32mI (15805) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (15815) example: SLOW DOWN[0m
+[0;32mI (15825) example: SLOW DOWN[0m
+[0;32mI (15835) example: SLOW DOWN[0m
+[0;32mI (15845) example: SLOW DOWN[0m
+[0;32mI (15855) example: SLOW DOWN[0m
+[0;32mI (15865) example: SLOW DOWN[0m
+[0;32mI (15875) example: SLOW DOWN[0m
+[0;32mI (15885) example: SLOW DOWN[0m
+[0;32mI (15885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (15885) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (15895) example: SLOW DOWN[0m
+[0;32mI (15895) example: WALL DETECTED[0m
+Distance: 72
+[0;32mI (15965) example: RIGHT - Measured distance: 11.71cm[0m
+[0;32mI (15985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (16045) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (16085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (16125) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (16185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (16195) example: RIGHT - Measured distance: 11.58cm[0m
+[0;32mI (16285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (16285) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (16365) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (16375) example: LEFT - Measured distance: 139.28cm[0m
+[0;32mI (16385) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 95
+[0;32mI (16485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (16585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (16685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (16785) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 179
+[0;32mI (16875) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (16885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (16905) example: SLOW DOWN[0m
+[0;32mI (16915) example: SLOW DOWN[0m
+[0;32mI (16925) example: SLOW DOWN[0m
+[0;32mI (16935) example: SLOW DOWN[0m
+[0;32mI (16945) example: SLOW DOWN[0m
+[0;32mI (16955) example: SLOW DOWN[0m
+[0;32mI (16955) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (16965) example: SLOW DOWN[0m
+[0;32mI (16965) example: LEFT - Measured distance: 137.68cm[0m
+[0;32mI (16975) example: SLOW DOWN[0m
+[0;32mI (16985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (16985) example: SLOW DOWN[0m
+[0;32mI (16995) example: SLOW DOWN[0m
+[0;32mI (17005) example: SLOW DOWN[0m
+[0;32mI (17015) example: SLOW DOWN[0m
+[0;32mI (17025) example: SLOW DOWN[0m
+[0;32mI (17035) example: SLOW DOWN[0m
+[0;32mI (17045) example: SLOW DOWN[0m
+[0;32mI (17055) example: SLOW DOWN[0m
+[0;32mI (17065) example: SLOW DOWN[0m
+[0;32mI (17075) example: SLOW DOWN[0m
+[0;32mI (17085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (17085) example: SLOW DOWN[0m
+[0;32mI (17095) example: SLOW DOWN[0m
+[0;32mI (17105) example: SLOW DOWN[0m
+[0;32mI (17115) example: SLOW DOWN[0m
+[0;32mI (17125) example: SLOW DOWN[0m
+[0;32mI (17135) example: SLOW DOWN[0m
+[0;32mI (17145) example: SLOW DOWN[0m
+[0;32mI (17155) example: SLOW DOWN[0m
+[0;32mI (17165) example: SLOW DOWN[0m
+[0;32mI (17175) example: SLOW DOWN[0m
+[0;32mI (17185) example: SLOW DOWN[0m
+[0;32mI (17185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (17195) example: SLOW DOWN[0m
+[0;32mI (17205) example: SLOW DOWN[0m
+[0;32mI (17215) example: SLOW DOWN[0m
+[0;32mI (17225) example: SLOW DOWN[0m
+[0;32mI (17235) example: SLOW DOWN[0m
+[0;32mI (17245) example: SLOW DOWN[0m
+[0;32mI (17255) example: SLOW DOWN[0m
+[0;32mI (17265) example: SLOW DOWN[0m
+[0;32mI (17275) example: SLOW DOWN[0m
+[0;32mI (17285) example: SLOW DOWN[0m
+[0;32mI (17285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (17295) example: SLOW DOWN[0m
+[0;32mI (17305) example: SLOW DOWN[0m
+[0;32mI (17315) example: SLOW DOWN[0m
+[0;32mI (17325) example: SLOW DOWN[0m
+[0;32mI (17335) example: SLOW DOWN[0m
+[0;32mI (17345) example: SLOW DOWN[0m
+[0;32mI (17355) example: SLOW DOWN[0m
+Distance: 94
+[0;32mI (17365) example: SLOW DOWN[0m
+[0;32mI (17375) example: SLOW DOWN[0m
+[0;32mI (17385) example: SLOW DOWN[0m
+[0;32mI (17385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (17395) example: SLOW DOWN[0m
+[0;32mI (17405) example: SLOW DOWN[0m
+[0;32mI (17415) example: SLOW DOWN[0m
+[0;32mI (17425) example: SLOW DOWN[0m
+[0;32mI (17435) example: SLOW DOWN[0m
+[0;32mI (17445) example: SLOW DOWN[0m
+[0;32mI (17455) example: SLOW DOWN[0m
+[0;32mI (17465) example: SLOW DOWN[0m
+[0;32mI (17465) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (17465) example: LEFT - Measured distance: 136.28cm[0m
+[0;32mI (17475) example: SLOW DOWN[0m
+[0;32mI (17485) example: SLOW DOWN[0m
+[0;32mI (17485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (17495) example: SLOW DOWN[0m
+[0;32mI (17505) example: SLOW DOWN[0m
+[0;32mI (17515) example: SLOW DOWN[0m
+[0;32mI (17525) example: SLOW DOWN[0m
+[0;32mI (17535) example: SLOW DOWN[0m
+[0;32mI (17545) example: SLOW DOWN[0m
+[0;32mI (17555) example: SLOW DOWN[0m
+[0;32mI (17565) example: SLOW DOWN[0m
+[0;32mI (17575) example: SLOW DOWN[0m
+[0;32mI (17585) example: SLOW DOWN[0m
+[0;32mI (17585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (17595) example: SLOW DOWN[0m
+[0;32mI (17605) example: SLOW DOWN[0m
+[0;32mI (17615) example: SLOW DOWN[0m
+[0;32mI (17625) example: SLOW DOWN[0m
+[0;32mI (17635) example: SLOW DOWN[0m
+[0;32mI (17645) example: SLOW DOWN[0m
+[0;32mI (17655) example: SLOW DOWN[0m
+[0;32mI (17665) example: SLOW DOWN[0m
+[0;32mI (17675) example: SLOW DOWN[0m
+[0;32mI (17685) example: SLOW DOWN[0m
+[0;32mI (17685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (17695) example: SLOW DOWN[0m
+[0;32mI (17705) example: SLOW DOWN[0m
+[0;32mI (17715) example: SLOW DOWN[0m
+[0;32mI (17725) example: SLOW DOWN[0m
+[0;32mI (17735) example: SLOW DOWN[0m
+[0;32mI (17745) example: SLOW DOWN[0m
+[0;32mI (17755) example: SLOW DOWN[0m
+[0;32mI (17765) example: SLOW DOWN[0m
+[0;32mI (17775) example: SLOW DOWN[0m
+[0;32mI (17785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (17785) example: SLOW DOWN[0m
+[0;32mI (17795) example: SLOW DOWN[0m
+[0;32mI (17805) example: SLOW DOWN[0m
+[0;32mI (17815) example: SLOW DOWN[0m
+[0;32mI (17825) example: SLOW DOWN[0m
+[0;32mI (17835) example: SLOW DOWN[0m
+[0;32mI (17845) example: SLOW DOWN[0m
+Distance: 146
+[0;32mI (17855) example: SLOW DOWN[0m
+[0;32mI (17865) example: SLOW DOWN[0m
+[0;32mI (17875) example: SLOW DOWN[0m
+[0;32mI (17885) example: SLOW DOWN[0m
+[0;32mI (17885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (17895) example: SLOW DOWN[0m
+[0;32mI (17905) example: SLOW DOWN[0m
+[0;32mI (17915) example: SLOW DOWN[0m
+[0;32mI (17925) example: SLOW DOWN[0m
+[0;32mI (17935) example: SLOW DOWN[0m
+[0;32mI (17945) example: SLOW DOWN[0m
+[0;32mI (17955) example: SLOW DOWN[0m
+[0;32mI (17965) example: SLOW DOWN[0m
+[0;32mI (17975) example: SLOW DOWN[0m
+[0;32mI (17975) example: RIGHT - Measured distance: 11.58cm[0m
+[0;32mI (17975) example: LEFT - Measured distance: 134.67cm[0m
+[0;32mI (17985) example: SLOW DOWN[0m
+[0;32mI (17985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (17995) example: SLOW DOWN[0m
+[0;32mI (18005) example: SLOW DOWN[0m
+[0;32mI (18015) example: SLOW DOWN[0m
+[0;32mI (18025) example: SLOW DOWN[0m
+[0;32mI (18035) example: SLOW DOWN[0m
+[0;32mI (18045) example: SLOW DOWN[0m
+[0;32mI (18055) example: SLOW DOWN[0m
+[0;32mI (18065) example: SLOW DOWN[0m
+[0;32mI (18075) example: SLOW DOWN[0m
+[0;32mI (18085) example: SLOW DOWN[0m
+[0;32mI (18085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (18095) example: SLOW DOWN[0m
+[0;32mI (18105) example: SLOW DOWN[0m
+[0;32mI (18115) example: SLOW DOWN[0m
+[0;32mI (18125) example: SLOW DOWN[0m
+[0;32mI (18135) example: SLOW DOWN[0m
+[0;32mI (18145) example: SLOW DOWN[0m
+[0;32mI (18155) example: SLOW DOWN[0m
+[0;32mI (18165) example: SLOW DOWN[0m
+[0;32mI (18175) example: SLOW DOWN[0m
+[0;32mI (18185) example: SLOW DOWN[0m
+[0;32mI (18185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (18195) example: SLOW DOWN[0m
+[0;32mI (18205) example: SLOW DOWN[0m
+[0;32mI (18215) example: SLOW DOWN[0m
+[0;32mI (18225) example: SLOW DOWN[0m
+[0;32mI (18235) example: SLOW DOWN[0m
+[0;32mI (18245) example: SLOW DOWN[0m
+[0;32mI (18255) example: SLOW DOWN[0m
+[0;32mI (18265) example: SLOW DOWN[0m
+[0;32mI (18275) example: SLOW DOWN[0m
+[0;32mI (18285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (18285) example: SLOW DOWN[0m
+[0;32mI (18295) example: SLOW DOWN[0m
+[0;32mI (18305) example: SLOW DOWN[0m
+[0;32mI (18315) example: SLOW DOWN[0m
+[0;32mI (18325) example: SLOW DOWN[0m
+[0;32mI (18335) example: SLOW DOWN[0m
+Distance: 110
+[0;32mI (18345) example: SLOW DOWN[0m
+[0;32mI (18355) example: SLOW DOWN[0m
+[0;32mI (18365) example: SLOW DOWN[0m
+[0;32mI (18375) example: SLOW DOWN[0m
+[0;32mI (18385) example: SLOW DOWN[0m
+[0;32mI (18385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (18395) example: SLOW DOWN[0m
+[0;32mI (18405) example: SLOW DOWN[0m
+[0;32mI (18415) example: SLOW DOWN[0m
+[0;32mI (18425) example: SLOW DOWN[0m
+[0;32mI (18435) example: SLOW DOWN[0m
+[0;32mI (18445) example: SLOW DOWN[0m
+[0;32mI (18455) example: SLOW DOWN[0m
+[0;32mI (18465) example: SLOW DOWN[0m
+[0;32mI (18475) example: SLOW DOWN[0m
+[0;32mI (18485) example: SLOW DOWN[0m
+[0;32mI (18485) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (18485) example: RIGHT - Measured distance: 11.65cm[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (18485) example: LEFT - Measured distance: 134.32cm[0m
+[0;32mI (18495) example: SLOW DOWN[0m
+[0;32mI (18515) example: SLOW DOWN[0m
+[0;32mI (18525) example: SLOW DOWN[0m
+[0;32mI (18535) example: SLOW DOWN[0m
+[0;32mI (18545) example: SLOW DOWN[0m
+[0;32mI (18555) example: SLOW DOWN[0m
+[0;32mI (18565) example: SLOW DOWN[0m
+[0;32mI (18575) example: SLOW DOWN[0m
+[0;32mI (18585) example: SLOW DOWN[0m
+[0;32mI (18585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (18595) example: SLOW DOWN[0m
+[0;32mI (18605) example: SLOW DOWN[0m
+[0;32mI (18615) example: SLOW DOWN[0m
+[0;32mI (18625) example: SLOW DOWN[0m
+[0;32mI (18635) example: SLOW DOWN[0m
+[0;32mI (18645) example: SLOW DOWN[0m
+[0;32mI (18655) example: SLOW DOWN[0m
+[0;32mI (18665) example: SLOW DOWN[0m
+[0;32mI (18675) example: SLOW DOWN[0m
+[0;32mI (18685) example: SLOW DOWN[0m
+[0;32mI (18685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (18695) example: SLOW DOWN[0m
+[0;32mI (18705) example: SLOW DOWN[0m
+[0;32mI (18715) example: SLOW DOWN[0m
+[0;32mI (18725) example: SLOW DOWN[0m
+[0;32mI (18735) example: SLOW DOWN[0m
+[0;32mI (18745) example: SLOW DOWN[0m
+[0;32mI (18755) example: SLOW DOWN[0m
+[0;32mI (18765) example: SLOW DOWN[0m
+[0;32mI (18775) example: SLOW DOWN[0m
+[0;32mI (18785) example: SLOW DOWN[0m
+[0;32mI (18785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (18795) example: SLOW DOWN[0m
+[0;32mI (18805) example: SLOW DOWN[0m
+[0;32mI (18815) example: SLOW DOWN[0m
+[0;32mI (18825) example: SLOW DOWN[0m
+Distance: 115
+[0;32mI (18835) example: SLOW DOWN[0m
+[0;32mI (18845) example: SLOW DOWN[0m
+[0;32mI (18855) example: SLOW DOWN[0m
+[0;32mI (18865) example: SLOW DOWN[0m
+[0;32mI (18875) example: SLOW DOWN[0m
+[0;32mI (18885) example: SLOW DOWN[0m
+[0;32mI (18885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (18895) example: SLOW DOWN[0m
+[0;32mI (18905) example: SLOW DOWN[0m
+[0;32mI (18915) example: SLOW DOWN[0m
+[0;32mI (18925) example: SLOW DOWN[0m
+[0;32mI (18935) example: SLOW DOWN[0m
+[0;32mI (18945) example: SLOW DOWN[0m
+[0;32mI (18955) example: SLOW DOWN[0m
+[0;32mI (18965) example: SLOW DOWN[0m
+[0;32mI (18975) example: SLOW DOWN[0m
+[0;32mI (18985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (18985) example: SLOW DOWN[0m
+[0;32mI (18995) example: SLOW DOWN[0m
+[0;32mI (19005) example: SLOW DOWN[0m
+[0;32mI (19005) example: RIGHT - Measured distance: 11.58cm[0m
+[0;32mI (19015) example: SLOW DOWN[0m
+[0;32mI (19025) example: SLOW DOWN[0m
+[0;32mI (19035) example: SLOW DOWN[0m
+[0;32mI (19045) example: SLOW DOWN[0m
+[0;32mI (19055) example: SLOW DOWN[0m
+[0;32mI (19065) example: SLOW DOWN[0m
+[0;32mI (19075) example: SLOW DOWN[0m
+[0;32mI (19085) example: SLOW DOWN[0m
+[0;32mI (19085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (19085) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (19095) example: SLOW DOWN[0m
+[0;32mI (19095) example: LEFT - Measured distance: 137.60cm[0m
+[0;32mI (19105) example: SLOW DOWN[0m
+[0;32mI (19115) example: SLOW DOWN[0m
+[0;32mI (19125) example: SLOW DOWN[0m
+[0;32mI (19135) example: SLOW DOWN[0m
+[0;32mI (19145) example: SLOW DOWN[0m
+[0;32mI (19155) example: SLOW DOWN[0m
+[0;32mI (19165) example: SLOW DOWN[0m
+[0;32mI (19175) example: SLOW DOWN[0m
+[0;32mI (19185) example: SLOW DOWN[0m
+[0;32mI (19185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (19195) example: SLOW DOWN[0m
+[0;32mI (19205) example: SLOW DOWN[0m
+[0;32mI (19215) example: SLOW DOWN[0m
+[0;32mI (19225) example: SLOW DOWN[0m
+[0;32mI (19235) example: SLOW DOWN[0m
+[0;32mI (19245) example: SLOW DOWN[0m
+[0;32mI (19255) example: SLOW DOWN[0m
+[0;32mI (19265) example: SLOW DOWN[0m
+[0;32mI (19275) example: SLOW DOWN[0m
+[0;32mI (19285) example: SLOW DOWN[0m
+[0;32mI (19285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (19295) example: SLOW DOWN[0m
+[0;32mI (19305) example: SLOW DOWN[0m
+[0;32mI (19315) example: SLOW DOWN[0m
+Distance: 106
+[0;32mI (19325) example: SLOW DOWN[0m
+[0;32mI (19335) example: SLOW DOWN[0m
+[0;32mI (19345) example: SLOW DOWN[0m
+[0;32mI (19355) example: SLOW DOWN[0m
+[0;32mI (19365) example: SLOW DOWN[0m
+[0;32mI (19375) example: SLOW DOWN[0m
+[0;32mI (19385) example: SLOW DOWN[0m
+[0;32mI (19385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (19395) example: SLOW DOWN[0m
+[0;32mI (19405) example: SLOW DOWN[0m
+[0;32mI (19415) example: SLOW DOWN[0m
+[0;32mI (19425) example: SLOW DOWN[0m
+[0;32mI (19435) example: SLOW DOWN[0m
+[0;32mI (19445) example: SLOW DOWN[0m
+[0;32mI (19455) example: SLOW DOWN[0m
+[0;32mI (19465) example: SLOW DOWN[0m
+[0;32mI (19475) example: SLOW DOWN[0m
+[0;32mI (19485) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (19485) example: SLOW DOWN[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (19495) example: SLOW DOWN[0m
+[0;32mI (19505) example: SLOW DOWN[0m
+[0;32mI (19515) example: SLOW DOWN[0m
+[0;32mI (19525) example: SLOW DOWN[0m
+[0;32mI (19535) example: SLOW DOWN[0m
+[0;32mI (19545) example: SLOW DOWN[0m
+[0;32mI (19555) example: SLOW DOWN[0m
+[0;32mI (19565) example: SLOW DOWN[0m
+[0;32mI (19575) example: SLOW DOWN[0m
+[0;32mI (19585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (19585) example: SLOW DOWN[0m
+[0;32mI (19595) example: SLOW DOWN[0m
+[0;32mI (19595) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (19595) example: LEFT - Measured distance: 137.26cm[0m
+[0;32mI (19605) example: SLOW DOWN[0m
+[0;32mI (19615) example: SLOW DOWN[0m
+[0;32mI (19625) example: SLOW DOWN[0m
+[0;32mI (19635) example: SLOW DOWN[0m
+[0;32mI (19645) example: SLOW DOWN[0m
+[0;32mI (19655) example: SLOW DOWN[0m
+[0;32mI (19665) example: SLOW DOWN[0m
+[0;32mI (19675) example: SLOW DOWN[0m
+[0;32mI (19685) example: SLOW DOWN[0m
+[0;32mI (19685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (19695) example: SLOW DOWN[0m
+[0;32mI (19705) example: SLOW DOWN[0m
+[0;32mI (19715) example: SLOW DOWN[0m
+[0;32mI (19725) example: SLOW DOWN[0m
+[0;32mI (19735) example: SLOW DOWN[0m
+[0;32mI (19745) example: SLOW DOWN[0m
+[0;32mI (19755) example: SLOW DOWN[0m
+[0;32mI (19765) example: SLOW DOWN[0m
+[0;32mI (19775) example: SLOW DOWN[0m
+[0;32mI (19785) example: SLOW DOWN[0m
+[0;32mI (19785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (19795) example: SLOW DOWN[0m
+[0;32mI (19795) example: WALL DETECTED[0m
+Distance: 56
+[0;32mI (19885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (19985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (20085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (20105) example: RIGHT - Measured distance: 11.58cm[0m
+[0;32mI (20105) example: LEFT - Measured distance: 134.39cm[0m
+[0;32mI (20185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (20285) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 129
+[0;32mI (20385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (20485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (20585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (20615) example: RIGHT - Measured distance: 11.58cm[0m
+[0;32mI (20615) example: LEFT - Measured distance: 134.67cm[0m
+[0;32mI (20685) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 95
+[0;32mI (20785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (20805) example: SLOW DOWN[0m
+[0;32mI (20815) example: SLOW DOWN[0m
+[0;32mI (20825) example: SLOW DOWN[0m
+[0;32mI (20835) example: SLOW DOWN[0m
+[0;32mI (20845) example: SLOW DOWN[0m
+[0;32mI (20855) example: SLOW DOWN[0m
+[0;32mI (20865) example: SLOW DOWN[0m
+[0;32mI (20875) example: SLOW DOWN[0m
+[0;32mI (20885) example: SLOW DOWN[0m
+[0;32mI (20885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (20895) example: SLOW DOWN[0m
+[0;32mI (20905) example: SLOW DOWN[0m
+[0;32mI (20915) example: SLOW DOWN[0m
+[0;32mI (20925) example: SLOW DOWN[0m
+[0;32mI (20935) example: SLOW DOWN[0m
+[0;32mI (20945) example: SLOW DOWN[0m
+[0;32mI (20955) example: SLOW DOWN[0m
+[0;32mI (20965) example: SLOW DOWN[0m
+[0;32mI (20975) example: SLOW DOWN[0m
+[0;32mI (20985) example: SLOW DOWN[0m
+[0;32mI (20985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (20995) example: SLOW DOWN[0m
+[0;32mI (21005) example: SLOW DOWN[0m
+[0;32mI (21015) example: SLOW DOWN[0m
+[0;32mI (21025) example: SLOW DOWN[0m
+[0;32mI (21035) example: SLOW DOWN[0m
+[0;32mI (21045) example: SLOW DOWN[0m
+[0;32mI (21055) example: SLOW DOWN[0m
+[0;32mI (21065) example: SLOW DOWN[0m
+[0;32mI (21075) example: SLOW DOWN[0m
+[0;32mI (21085) example: SLOW DOWN[0m
+[0;32mI (21085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (21095) example: SLOW DOWN[0m
+[0;32mI (21105) example: SLOW DOWN[0m
+[0;32mI (21115) example: SLOW DOWN[0m
+[0;32mI (21125) example: SLOW DOWN[0m
+[0;32mI (21125) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (21125) example: LEFT - Measured distance: 134.18cm[0m
+[0;32mI (21135) example: SLOW DOWN[0m
+[0;32mI (21145) example: SLOW DOWN[0m
+[0;32mI (21155) example: SLOW DOWN[0m
+[0;32mI (21165) example: SLOW DOWN[0m
+[0;32mI (21175) example: SLOW DOWN[0m
+[0;32mI (21185) example: SLOW DOWN[0m
+[0;32mI (21185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (21195) example: SLOW DOWN[0m
+[0;32mI (21205) example: SLOW DOWN[0m
+[0;32mI (21215) example: SLOW DOWN[0m
+[0;32mI (21225) example: SLOW DOWN[0m
+[0;32mI (21235) example: SLOW DOWN[0m
+[0;32mI (21245) example: SLOW DOWN[0m
+[0;32mI (21255) example: SLOW DOWN[0m
+Distance: 149
+[0;32mI (21265) example: SLOW DOWN[0m
+[0;32mI (21275) example: SLOW DOWN[0m
+[0;32mI (21285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (21285) example: SLOW DOWN[0m
+[0;32mI (21295) example: SLOW DOWN[0m
+[0;32mI (21305) example: SLOW DOWN[0m
+[0;32mI (21315) example: SLOW DOWN[0m
+[0;32mI (21325) example: SLOW DOWN[0m
+[0;32mI (21335) example: SLOW DOWN[0m
+[0;32mI (21345) example: SLOW DOWN[0m
+[0;32mI (21355) example: SLOW DOWN[0m
+[0;32mI (21365) example: SLOW DOWN[0m
+[0;32mI (21375) example: SLOW DOWN[0m
+[0;32mI (21385) example: SLOW DOWN[0m
+[0;32mI (21385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (21395) example: SLOW DOWN[0m
+[0;32mI (21405) example: SLOW DOWN[0m
+[0;32mI (21415) example: SLOW DOWN[0m
+[0;32mI (21425) example: SLOW DOWN[0m
+[0;32mI (21435) example: SLOW DOWN[0m
+[0;32mI (21445) example: SLOW DOWN[0m
+[0;32mI (21455) example: SLOW DOWN[0m
+[0;32mI (21465) example: SLOW DOWN[0m
+[0;32mI (21475) example: SLOW DOWN[0m
+[0;32mI (21485) example: SLOW DOWN[0m
+[0;32mI (21485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (21495) example: SLOW DOWN[0m
+[0;32mI (21505) example: SLOW DOWN[0m
+[0;32mI (21515) example: SLOW DOWN[0m
+[0;32mI (21525) example: SLOW DOWN[0m
+[0;32mI (21535) example: SLOW DOWN[0m
+[0;32mI (21545) example: SLOW DOWN[0m
+[0;32mI (21555) example: SLOW DOWN[0m
+[0;32mI (21565) example: SLOW DOWN[0m
+[0;32mI (21575) example: SLOW DOWN[0m
+[0;32mI (21585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (21585) example: SLOW DOWN[0m
+[0;32mI (21595) example: SLOW DOWN[0m
+[0;32mI (21605) example: SLOW DOWN[0m
+[0;32mI (21615) example: SLOW DOWN[0m
+[0;32mI (21625) example: SLOW DOWN[0m
+[0;32mI (21635) example: SLOW DOWN[0m
+[0;32mI (21635) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (21635) example: LEFT - Measured distance: 134.67cm[0m
+[0;32mI (21645) example: SLOW DOWN[0m
+[0;32mI (21655) example: SLOW DOWN[0m
+[0;32mI (21665) example: SLOW DOWN[0m
+[0;32mI (21675) example: SLOW DOWN[0m
+[0;32mI (21685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (21685) example: SLOW DOWN[0m
+[0;32mI (21695) example: SLOW DOWN[0m
+[0;32mI (21705) example: SLOW DOWN[0m
+[0;32mI (21715) example: SLOW DOWN[0m
+[0;32mI (21725) example: SLOW DOWN[0m
+[0;32mI (21735) example: SLOW DOWN[0m
+[0;32mI (21745) example: SLOW DOWN[0m
+[0;32mI (21745) example: WALL DETECTED[0m
+Distance: 70
+[0;32mI (21785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (21885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (21985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (22085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (22145) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (22145) example: LEFT - Measured distance: 135.50cm[0m
+[0;32mI (22185) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 123
+[0;32mI (22285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (22385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (22485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (22585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (22655) example: RIGHT - Measured distance: 11.65cm[0m
+[0;32mI (22655) example: LEFT - Measured distance: 134.60cm[0m
+[0;32mI (22685) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 148
+[0;32mI (22755) example: SLOW DOWN[0m
+[0;32mI (22765) example: SLOW DOWN[0m
+[0;32mI (22775) example: SLOW DOWN[0m
+[0;32mI (22785) example: SLOW DOWN[0m
+[0;32mI (22785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (22795) example: SLOW DOWN[0m
+[0;32mI (22805) example: SLOW DOWN[0m
+[0;32mI (22815) example: SLOW DOWN[0m
+[0;32mI (22825) example: SLOW DOWN[0m
+[0;32mI (22835) example: SLOW DOWN[0m
+[0;32mI (22845) example: SLOW DOWN[0m
+[0;32mI (22855) example: SLOW DOWN[0m
+[0;32mI (22865) example: SLOW DOWN[0m
+[0;32mI (22875) example: SLOW DOWN[0m
+[0;32mI (22885) example: SLOW DOWN[0m
+[0;32mI (22885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (22895) example: SLOW DOWN[0m
+[0;32mI (22905) example: SLOW DOWN[0m
+[0;32mI (22915) example: SLOW DOWN[0m
+[0;32mI (22925) example: SLOW DOWN[0m
+[0;32mI (22935) example: SLOW DOWN[0m
+[0;32mI (22945) example: SLOW DOWN[0m
+[0;32mI (22955) example: SLOW DOWN[0m
+[0;32mI (22965) example: SLOW DOWN[0m
+[0;32mI (22975) example: SLOW DOWN[0m
+[0;32mI (22985) example: SLOW DOWN[0m
+[0;32mI (22985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (22995) example: SLOW DOWN[0m
+[0;32mI (23005) example: SLOW DOWN[0m
+[0;32mI (23015) example: SLOW DOWN[0m
+[0;32mI (23025) example: SLOW DOWN[0m
+[0;32mI (23035) example: SLOW DOWN[0m
+[0;32mI (23045) example: SLOW DOWN[0m
+[0;32mI (23055) example: SLOW DOWN[0m
+[0;32mI (23065) example: SLOW DOWN[0m
+[0;32mI (23075) example: SLOW DOWN[0m
+[0;32mI (23085) example: SLOW DOWN[0m
+[0;32mI (23085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (23095) example: SLOW DOWN[0m
+[0;32mI (23105) example: SLOW DOWN[0m
+[0;32mI (23115) example: SLOW DOWN[0m
+[0;32mI (23125) example: SLOW DOWN[0m
+[0;32mI (23135) example: SLOW DOWN[0m
+[0;32mI (23145) example: SLOW DOWN[0m
+[0;32mI (23155) example: SLOW DOWN[0m
+[0;32mI (23165) example: SLOW DOWN[0m
+[0;32mI (23165) example: RIGHT - Measured distance: 11.58cm[0m
+[0;32mI (23165) example: LEFT - Measured distance: 134.95cm[0m
+[0;32mI (23175) example: SLOW DOWN[0m
+[0;32mI (23185) example: SLOW DOWN[0m
+[0;32mI (23185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (23195) example: SLOW DOWN[0m
+[0;32mI (23205) example: SLOW DOWN[0m
+Distance: 122
+[0;32mI (23215) example: SLOW DOWN[0m
+[0;32mI (23225) example: SLOW DOWN[0m
+[0;32mI (23235) example: SLOW DOWN[0m
+[0;32mI (23245) example: SLOW DOWN[0m
+[0;32mI (23255) example: SLOW DOWN[0m
+[0;32mI (23265) example: SLOW DOWN[0m
+[0;32mI (23275) example: SLOW DOWN[0m
+[0;32mI (23285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (23285) example: SLOW DOWN[0m
+[0;32mI (23295) example: SLOW DOWN[0m
+[0;32mI (23305) example: SLOW DOWN[0m
+[0;32mI (23315) example: SLOW DOWN[0m
+[0;32mI (23325) example: SLOW DOWN[0m
+[0;32mI (23335) example: SLOW DOWN[0m
+[0;32mI (23345) example: SLOW DOWN[0m
+[0;32mI (23355) example: SLOW DOWN[0m
+[0;32mI (23365) example: SLOW DOWN[0m
+[0;32mI (23375) example: SLOW DOWN[0m
+[0;32mI (23385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (23385) example: SLOW DOWN[0m
+[0;32mI (23395) example: SLOW DOWN[0m
+[0;32mI (23405) example: SLOW DOWN[0m
+[0;32mI (23415) example: SLOW DOWN[0m
+[0;32mI (23425) example: SLOW DOWN[0m
+[0;32mI (23435) example: SLOW DOWN[0m
+[0;32mI (23445) example: SLOW DOWN[0m
+[0;32mI (23455) example: SLOW DOWN[0m
+[0;32mI (23465) example: SLOW DOWN[0m
+[0;32mI (23475) example: SLOW DOWN[0m
+[0;32mI (23485) example: SLOW DOWN[0m
+[0;32mI (23485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (23495) example: SLOW DOWN[0m
+[0;32mI (23505) example: SLOW DOWN[0m
+[0;32mI (23515) example: SLOW DOWN[0m
+[0;32mI (23525) example: SLOW DOWN[0m
+[0;32mI (23535) example: SLOW DOWN[0m
+[0;32mI (23545) example: SLOW DOWN[0m
+[0;32mI (23555) example: SLOW DOWN[0m
+[0;32mI (23565) example: SLOW DOWN[0m
+[0;32mI (23575) example: SLOW DOWN[0m
+[0;32mI (23585) example: SLOW DOWN[0m
+[0;32mI (23585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (23595) example: SLOW DOWN[0m
+[0;32mI (23605) example: SLOW DOWN[0m
+[0;32mI (23615) example: SLOW DOWN[0m
+[0;32mI (23625) example: SLOW DOWN[0m
+[0;32mI (23635) example: SLOW DOWN[0m
+[0;32mI (23645) example: SLOW DOWN[0m
+[0;32mI (23655) example: SLOW DOWN[0m
+[0;32mI (23665) example: SLOW DOWN[0m
+[0;32mI (23675) example: SLOW DOWN[0m
+[0;32mI (23675) example: RIGHT - Measured distance: 11.58cm[0m
+[0;32mI (23685) example: SLOW DOWN[0m
+[0;32mI (23685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (23695) example: SLOW DOWN[0m
+Distance: 117
+[0;32mI (23705) example: SLOW DOWN[0m
+[0;32mI (23715) example: SLOW DOWN[0m
+[0;32mI (23725) example: SLOW DOWN[0m
+[0;32mI (23735) example: SLOW DOWN[0m
+[0;32mI (23745) example: SLOW DOWN[0m
+[0;32mI (23755) example: SLOW DOWN[0m
+[0;32mI (23755) example: RIGHT - Measured distance: 11.71cm[0m
+[0;32mI (23765) example: SLOW DOWN[0m
+[0;32mI (23775) example: SLOW DOWN[0m
+[0;32mI (23785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (23785) example: SLOW DOWN[0m
+[0;32mI (23795) example: SLOW DOWN[0m
+[0;32mI (23805) example: SLOW DOWN[0m
+[0;32mI (23815) example: SLOW DOWN[0m
+[0;32mI (23825) example: SLOW DOWN[0m
+[0;32mI (23835) example: SLOW DOWN[0m
+[0;32mI (23835) example: RIGHT - Measured distance: 12.47cm[0m
+[0;32mI (23845) example: SLOW DOWN[0m
+[0;32mI (23855) example: SLOW DOWN[0m
+[0;32mI (23865) example: SLOW DOWN[0m
+[0;32mI (23875) example: SLOW DOWN[0m
+[0;32mI (23885) example: SLOW DOWN[0m
+[0;32mI (23885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (23895) example: SLOW DOWN[0m
+[0;32mI (23905) example: SLOW DOWN[0m
+[0;32mI (23915) example: SLOW DOWN[0m
+[0;32mI (23915) example: RIGHT - Measured distance: 40.18cm[0m
+[0;32mI (23925) example: SLOW DOWN[0m
+[0;32mI (23935) example: SLOW DOWN[0m
+[0;32mI (23945) example: SLOW DOWN[0m
+[0;32mI (23955) example: SLOW DOWN[0m
+[0;32mI (23965) example: SLOW DOWN[0m
+[0;32mI (23975) example: SLOW DOWN[0m
+[0;32mI (23985) example: SLOW DOWN[0m
+[0;32mI (23985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (23995) example: SLOW DOWN[0m
+[0;32mI (24005) example: SLOW DOWN[0m
+[0;32mI (24005) example: RIGHT - Measured distance: 25.81cm[0m
+[0;32mI (24005) example: LEFT - Measured distance: 37.79cm[0m
+[0;32mI (24015) example: SLOW DOWN[0m
+[0;32mI (24025) example: SLOW DOWN[0m
+[0;32mI (24035) example: SLOW DOWN[0m
+[0;32mI (24045) example: SLOW DOWN[0m
+[0;32mI (24055) example: SLOW DOWN[0m
+[0;32mI (24065) example: SLOW DOWN[0m
+[0;32mI (24075) example: SLOW DOWN[0m
+[0;32mI (24085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (24085) example: SLOW DOWN[0m
+[0;32mI (24095) example: SLOW DOWN[0m
+[0;32mI (24105) example: SLOW DOWN[0m
+[0;32mI (24115) example: SLOW DOWN[0m
+[0;32mI (24125) example: SLOW DOWN[0m
+[0;32mI (24135) example: SLOW DOWN[0m
+[0;32mI (24145) example: SLOW DOWN[0m
+[0;32mI (24155) example: SLOW DOWN[0m
+[0;32mI (24165) example: SLOW DOWN[0m
+[0;32mI (24175) example: SLOW DOWN[0m
+[0;32mI (24185) example: SLOW DOWN[0m
+Distance: 86
+[0;32mI (24185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (24195) example: SLOW DOWN[0m
+[0;32mI (24205) example: SLOW DOWN[0m
+[0;32mI (24215) example: SLOW DOWN[0m
+[0;32mI (24225) example: SLOW DOWN[0m
+[0;32mI (24235) example: SLOW DOWN[0m
+[0;32mI (24245) example: SLOW DOWN[0m
+[0;32mI (24255) example: SLOW DOWN[0m
+[0;32mI (24265) example: SLOW DOWN[0m
+[0;32mI (24275) example: SLOW DOWN[0m
+[0;32mI (24285) example: SLOW DOWN[0m
+[0;32mI (24285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (24295) example: SLOW DOWN[0m
+[0;32mI (24305) example: SLOW DOWN[0m
+[0;32mI (24315) example: SLOW DOWN[0m
+[0;32mI (24325) example: SLOW DOWN[0m
+[0;32mI (24335) example: SLOW DOWN[0m
+[0;32mI (24345) example: SLOW DOWN[0m
+[0;32mI (24355) example: SLOW DOWN[0m
+[0;32mI (24365) example: SLOW DOWN[0m
+[0;32mI (24375) example: SLOW DOWN[0m
+[0;32mI (24385) example: SLOW DOWN[0m
+[0;32mI (24385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (24395) example: SLOW DOWN[0m
+[0;32mI (24405) example: SLOW DOWN[0m
+[0;32mI (24415) example: SLOW DOWN[0m
+[0;32mI (24425) example: SLOW DOWN[0m
+[0;32mI (24435) example: SLOW DOWN[0m
+[0;32mI (24445) example: SLOW DOWN[0m
+[0;32mI (24455) example: SLOW DOWN[0m
+[0;32mI (24465) example: SLOW DOWN[0m
+[0;32mI (24475) example: SLOW DOWN[0m
+[0;32mI (24485) example: SLOW DOWN[0m
+Count: 1
+[0;32mI (24485) example: RIGHT IS CLOSER TO WALL[0m
+Speed is 0.1m/s
+[0;32mI (24495) example: SLOW DOWN[0m
+[0;32mI (24505) example: SLOW DOWN[0m
+[0;32mI (24515) example: SLOW DOWN[0m
+[0;32mI (24525) example: SLOW DOWN[0m
+[0;32mI (24535) example: SLOW DOWN[0m
+[0;32mI (24535) example: RIGHT - Measured distance: 169.75cm[0m
+[0;32mI (24545) example: SLOW DOWN[0m
+[0;32mI (24545) example: LEFT - Measured distance: 344.07cm[0m
+[0;32mI (24555) example: SLOW DOWN[0m
+[0;32mI (24565) example: SLOW DOWN[0m
+[0;32mI (24575) example: SLOW DOWN[0m
+[0;32mI (24585) example: SLOW DOWN[0m
+[0;32mI (24585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (24595) example: SLOW DOWN[0m
+[0;32mI (24605) example: SLOW DOWN[0m
+[0;32mI (24615) example: SLOW DOWN[0m
+[0;32mI (24625) example: SLOW DOWN[0m
+[0;32mI (24635) example: SLOW DOWN[0m
+[0;32mI (24645) example: SLOW DOWN[0m
+[0;32mI (24655) example: SLOW DOWN[0m
+[0;32mI (24665) example: SLOW DOWN[0m
+Distance: 75
+[0;32mI (24675) example: SLOW DOWN[0m
+[0;32mI (24685) example: SLOW DOWN[0m
+[0;32mI (24685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (24695) example: SLOW DOWN[0m
+[0;32mI (24705) example: SLOW DOWN[0m
+[0;32mI (24715) example: SLOW DOWN[0m
+[0;32mI (24725) example: SLOW DOWN[0m
+[0;32mI (24735) example: SLOW DOWN[0m
+[0;32mI (24745) example: SLOW DOWN[0m
+[0;32mI (24755) example: SLOW DOWN[0m
+[0;32mI (24765) example: SLOW DOWN[0m
+[0;32mI (24775) example: SLOW DOWN[0m
+[0;32mI (24785) example: SLOW DOWN[0m
+[0;32mI (24785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (24795) example: SLOW DOWN[0m
+[0;32mI (24805) example: SLOW DOWN[0m
+[0;32mI (24815) example: SLOW DOWN[0m
+[0;32mI (24825) example: SLOW DOWN[0m
+[0;32mI (24835) example: SLOW DOWN[0m
+[0;32mI (24845) example: SLOW DOWN[0m
+[0;32mI (24855) example: SLOW DOWN[0m
+[0;32mI (24865) example: SLOW DOWN[0m
+[0;32mI (24875) example: SLOW DOWN[0m
+[0;32mI (24885) example: SLOW DOWN[0m
+[0;32mI (24885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (24895) example: SLOW DOWN[0m
+[0;32mI (24905) example: SLOW DOWN[0m
+[0;32mI (24915) example: SLOW DOWN[0m
+[0;32mI (24925) example: SLOW DOWN[0m
+[0;32mI (24935) example: SLOW DOWN[0m
+[0;32mI (24945) example: SLOW DOWN[0m
+[0;32mI (24955) example: SLOW DOWN[0m
+[0;32mI (24965) example: SLOW DOWN[0m
+[0;32mI (24975) example: SLOW DOWN[0m
+[0;32mI (24985) example: SLOW DOWN[0m
+[0;32mI (24985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (24995) example: SLOW DOWN[0m
+[0;32mI (25005) example: SLOW DOWN[0m
+[0;32mI (25015) example: SLOW DOWN[0m
+[0;32mI (25025) example: SLOW DOWN[0m
+[0;32mI (25035) example: SLOW DOWN[0m
+[0;32mI (25045) example: SLOW DOWN[0m
+[0;32mI (25055) example: SLOW DOWN[0m
+[0;32mI (25065) example: SLOW DOWN[0m
+[0;32mI (25065) example: RIGHT - Measured distance: 176.12cm[0m
+[0;32mI (25075) example: SLOW DOWN[0m
+[0;32mI (25075) example: LEFT - Measured distance: 344.57cm[0m
+[0;32mI (25085) example: SLOW DOWN[0m
+[0;32mI (25085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (25095) example: SLOW DOWN[0m
+[0;32mI (25105) example: SLOW DOWN[0m
+[0;32mI (25115) example: SLOW DOWN[0m
+[0;32mI (25125) example: SLOW DOWN[0m
+[0;32mI (25135) example: SLOW DOWN[0m
+[0;32mI (25145) example: SLOW DOWN[0m
+[0;32mI (25155) example: SLOW DOWN[0m
+Distance: 79
+[0;32mI (25165) example: SLOW DOWN[0m
+[0;32mI (25175) example: SLOW DOWN[0m
+[0;32mI (25185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (25185) example: SLOW DOWN[0m
+[0;32mI (25195) example: SLOW DOWN[0m
+[0;32mI (25205) example: SLOW DOWN[0m
+[0;32mI (25215) example: SLOW DOWN[0m
+[0;32mI (25225) example: SLOW DOWN[0m
+[0;32mI (25235) example: SLOW DOWN[0m
+[0;32mI (25245) example: SLOW DOWN[0m
+[0;32mI (25255) example: SLOW DOWN[0m
+[0;32mI (25265) example: SLOW DOWN[0m
+[0;32mI (25275) example: SLOW DOWN[0m
+[0;32mI (25285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (25285) example: SLOW DOWN[0m
+[0;32mI (25295) example: SLOW DOWN[0m
+[0;32mI (25305) example: SLOW DOWN[0m
+[0;32mI (25315) example: SLOW DOWN[0m
+[0;32mI (25325) example: SLOW DOWN[0m
+[0;32mI (25335) example: SLOW DOWN[0m
+[0;32mI (25345) example: SLOW DOWN[0m
+[0;32mI (25355) example: SLOW DOWN[0m
+[0;32mI (25365) example: SLOW DOWN[0m
+[0;32mI (25375) example: SLOW DOWN[0m
+[0;32mI (25385) example: SLOW DOWN[0m
+[0;32mI (25385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (25395) example: SLOW DOWN[0m
+[0;32mI (25405) example: SLOW DOWN[0m
+[0;32mI (25415) example: SLOW DOWN[0m
+[0;32mI (25425) example: SLOW DOWN[0m
+[0;32mI (25435) example: SLOW DOWN[0m
+[0;32mI (25445) example: SLOW DOWN[0m
+[0;32mI (25455) example: SLOW DOWN[0m
+[0;32mI (25465) example: SLOW DOWN[0m
+[0;32mI (25475) example: SLOW DOWN[0m
+[0;32mI (25485) example: SLOW DOWN[0m
+[0;32mI (25485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 6
+Speed is 0.4m/s
+[0;32mI (25585) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (25585) example: RIGHT - Measured distance: 174.16cm[0m
+[0;32mI (25595) example: LEFT - Measured distance: 330.94cm[0m
+[0;32mI (25635) example: WALL DETECTED[0m
+Distance: 57
+[0;32mI (25685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (25785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (25885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (25985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (26085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (26105) example: RIGHT - Measured distance: 156.55cm[0m
+[0;32mI (26115) example: LEFT - Measured distance: 328.56cm[0m
+[0;32mI (26115) example: WALL DETECTED[0m
+Distance: 35
+[0;32mI (26185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (26285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (26385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (26485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (26585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (26595) example: WALL DETECTED[0m
+Distance: 42
+[0;32mI (26625) example: RIGHT - Measured distance: 72.56cm[0m
+[0;32mI (26635) example: LEFT - Measured distance: 244.07cm[0m
+[0;32mI (26685) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (26785) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (26885) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (26985) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (27075) example: WALL DETECTED[0m
+Distance: 41
+[0;32mI (27085) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (27145) example: RIGHT - Measured distance: 157.44cm[0m
+[0;32mI (27155) example: LEFT - Measured distance: 329.75cm[0m
+[0;32mI (27185) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (27285) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (27385) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (27485) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (27565) example: WALL DETECTED[0m
+Distance: 41
+[0;32mI (27585) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (27665) example: RIGHT - Measured distance: 151.97cm[0m
+[0;32mI (27685) example: LEFT - Measured distance: 172.29cm[0m
+[0;32mI (27685) example: RIGHT IS CLOSER TO WALL[0m

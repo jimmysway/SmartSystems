@@ -1,0 +1,922 @@
+2590-g62ee4�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2590-g62ee4135e0-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2023 18:00:02[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0e244h ( 57924) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0001e26c vaddr=3ffb0000 size=01dach (  7596) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00020020 vaddr=400d0020 size=1ce58h (118360) map[0m
+[0;32mI (176) esp_image: segment 3: paddr=0003ce80 vaddr=3ffb1dac size=003cch (   972) load[0m
+[0;32mI (177) esp_image: segment 4: paddr=0003d254 vaddr=40080000 size=0dbdch ( 56284) load[0m
+[0;32mI (212) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (212) boot: Disabling RNG early entropy source...[0m
+[0;32mI (224) cpu_start: Multicore app[0m
+[0;32mI (224) cpu_start: Pro cpu up.[0m
+[0;32mI (224) cpu_start: Starting app cpu, entry point is 0x400811b0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (242) cpu_start: Pro cpu start user code[0m
+[0;32mI (242) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (242) cpu_start: Application information:[0m
+[0;32mI (247) cpu_start: Project name:     blink[0m
+[0;32mI (251) cpu_start: App version:      5379e7a-dirty[0m
+[0;32mI (257) cpu_start: Compile time:     Nov 10 2023 01:04:53[0m
+[0;32mI (263) cpu_start: ELF file SHA256:  82158020f...[0m
+[0;32mI (268) cpu_start: ESP-IDF:          v5.2-dev-2590-g62ee4135e0-dirty[0m
+[0;32mI (275) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (280) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (285) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (290) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (297) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (303) heap_init: At 3FFB2A60 len 0002D5A0 (181 KiB): DRAM[0m
+[0;32mI (309) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (315) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (322) heap_init: At 4008DBDC len 00012424 (73 KiB): IRAM[0m
+[0;32mI (330) spi_flash: detected chip: generic[0m
+[0;32mI (333) spi_flash: flash io: dio[0m
+[0;33mW (337) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (350) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (360) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (369) app_start: Starting scheduler on CPU0[0m
+[0;32mI (374) app_start: Starting scheduler on CPU1[0m
+[0;32mI (374) main_task: Started on CPU0[0m
+[0;32mI (384) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x62
+- Device found at address: 0x70
+
+>> Polling LIDAR
+[0;32mI (414) example: Install capture timer[0m
+[0;32mI (414) example: Install capture channel[0m
+[0;32mI (414) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (424) example: Register capture callback[0m
+[0;32mI (434) example: Enable capture channel[0m
+[0;32mI (434) example: Configure Trig pin[0m
+[0;32mI (444) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (454) example: Enable and start capture timer[0m
+[0;32mI (454) example: Install capture timer[0m
+[0;32mI (464) example: Install capture channel[0m
+[0;32mI (464) gpio: GPIO[36]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (474) example: Register capture callback[0m
+[0;32mI (474) example: Enable capture channel[0m
+[0;32mI (484) example: Configure Trig pin[0m
+[0;32mI (484) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (494) example: Enable and start capture timer[0m
+[0;32mI (504) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (504) example: Create timer and operator[0m
+[0;32mI (514) example: Create timer and operator[0m
+[0;32mI (514) example: Connect timer and operator[0m
+[0;32mI (524) example: Connect timer and operator[0m
+[0;32mI (524) example: Create comparator and generator from the operator[0m
+[0;32mI (524) example: Create comparator and generator from the operator[0m
+[0;32mI (534) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (544) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (554) example: Set generator action on timer and compare event[0m
+[0;32mI (564) example: Set generator action on timer and compare event[0m
+[0;32mI (564) example: Enable and start timer[0m
+[0;32mI (574) example: Enable and start timer[0m
+eFuse Two Point: NOT supported
+>> Test Alphanumeric Display: 
+eFuse Vref: Supported
+[0;32mI (504) main_task: Returned from app_main()[0m
+Characterized using eFuse Vref
+[0;32mI (604) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (614) example: Measured distance LEFT: 468.57cm[0m
+[0;32mI (664) example: Measured distance LEFT: 172.92cm[0m
+[0;32mI (704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (714) example: Measured distance LEFT: 212.04cm[0m
+[0;32mI (804) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (804) example: Measured distance LEFT: 152.05cm[0m
+- oscillator: ok 
+Distance: 112
+[0;32mI (854) example: Measured distance LEFT: 344.90cm[0m
+[0;32mI (904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (904) example: Measured distance LEFT: 183.39cm[0m
+[0;32mI (954) example: Measured distance LEFT: 173.01cm[0m
+[0;32mI (1004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (1004) example: Measured distance LEFT: 11.90cm[0m
+- blink: off 
+[0;32mI (1094) example: Measured distance LEFT: 143.35cm[0m
+[0;32mI (1104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (1144) example: Measured distance LEFT: 172.37cm[0m
+[0;32mI (1194) example: Measured distance LEFT: 17.57cm[0m
+[0;32mI (1204) example: LEFT IS CLOSER TO WALL[0m
+- brightness: max 
+[0;32mI (1244) example: Measured distance LEFT: 173.19cm[0m
+[0;32mI (1294) example: Measured distance LEFT: 7.22cm[0m
+Distance: 139
+[0;32mI (1304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (1344) example: Measured distance LEFT: 171.02cm[0m
+[0;32mI (1394) example: Measured distance LEFT: 350.06cm[0m
+[0;32mI (1404) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (1484) example: Measured distance LEFT: 146.95cm[0m
+[0;32mI (1504) example: LEFT IS CLOSER TO WALL[0m
+Count: 1
+Speed is 0.1m/s
+[0;32mI (1534) example: Measured distance LEFT: 4.36cm[0m
+[0;32mI (1584) example: Measured distance LEFT: 360.34cm[0m
+[0;32mI (1604) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (1634) example: Measured distance LEFT: 345.27cm[0m
+[0;32mI (1684) example: Measured distance LEFT: 179.15cm[0m
+[0;32mI (1704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (1734) example: Measured distance LEFT: 345.20cm[0m
+Distance: 139
+[0;32mI (1794) example: Measured distance LEFT: 156.27cm[0m
+[0;32mI (1804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (1844) example: Measured distance LEFT: 172.32cm[0m
+[0;32mI (1894) example: Measured distance LEFT: 523.12cm[0m
+[0;32mI (1904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (1944) example: Measured distance LEFT: 344.65cm[0m
+[0;32mI (2004) example: Measured distance LEFT: 154.39cm[0m
+[0;32mI (2004) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2054) example: Measured distance LEFT: 516.25cm[0m
+[0;32mI (2104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (2104) example: Measured distance LEFT: 9.28cm[0m
+[0;32mI (2154) example: Measured distance LEFT: 345.44cm[0m
+[0;32mI (2204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (2224) example: Measured distance LEFT: 172.90cm[0m
+Distance: 138
+[0;32mI (2274) example: Measured distance LEFT: 171.93cm[0m
+[0;32mI (2304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (2324) example: Measured distance LEFT: 352.19cm[0m
+[0;32mI (2374) example: Measured distance LEFT: 169.55cm[0m
+[0;32mI (2404) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (2434) example: Measured distance LEFT: 143.42cm[0m
+[0;32mI (2504) example: RIGHT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (2514) example: Measured distance LEFT: 138.04cm[0m
+[0;32mI (2564) example: Measured distance LEFT: 344.45cm[0m
+[0;32mI (2604) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (2624) example: Measured distance LEFT: 157.76cm[0m
+[0;32mI (2674) example: Measured distance LEFT: 15.50cm[0m
+[0;32mI (2704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (2724) example: Measured distance LEFT: 349.52cm[0m
+Distance: 139
+[0;32mI (2804) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (2814) example: Measured distance LEFT: 149.91cm[0m
+[0;32mI (2894) example: Measured distance LEFT: 144.82cm[0m
+[0;32mI (2904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (2964) example: Measured distance LEFT: 0.39cm[0m
+[0;32mI (3004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (3014) example: Measured distance LEFT: 14.95cm[0m
+[0;32mI (3064) example: Measured distance LEFT: 5.22cm[0m
+[0;32mI (3104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (3114) example: Measured distance LEFT: 183.88cm[0m
+[0;32mI (3164) example: Measured distance LEFT: 517.99cm[0m
+[0;32mI (3204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (3234) example: Measured distance LEFT: 171.15cm[0m
+Distance: 139
+[0;32mI (3304) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3304) example: Measured distance LEFT: 154.24cm[0m
+[0;32mI (3374) example: Measured distance LEFT: 0.39cm[0m
+[0;32mI (3404) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (3424) example: Measured distance LEFT: 13.63cm[0m
+[0;32mI (3494) example: Measured distance LEFT: 0.40cm[0m
+[0;32mI (3504) example: LEFT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (3544) example: Measured distance LEFT: 3.95cm[0m
+[0;32mI (3604) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3644) example: Measured distance LEFT: 172.75cm[0m
+[0;32mI (3704) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3714) example: Measured distance LEFT: 146.61cm[0m
+Distance: 138
+[0;32mI (3764) example: Measured distance LEFT: 172.06cm[0m
+[0;32mI (3804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (3814) example: Measured distance LEFT: 532.63cm[0m
+[0;32mI (3904) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (3904) example: Measured distance LEFT: 148.20cm[0m
+[0;32mI (3954) example: Measured distance LEFT: 4.01cm[0m
+[0;32mI (4004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4004) example: Measured distance LEFT: 360.01cm[0m
+[0;32mI (4054) example: Measured distance LEFT: 499.45cm[0m
+[0;32mI (4104) example: Measured distance LEFT: 180.77cm[0m
+[0;32mI (4104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4154) example: Measured distance LEFT: 0.09cm[0m
+[0;32mI (4204) example: Measured distance LEFT: 351.94cm[0m
+[0;32mI (4204) example: LEFT IS CLOSER TO WALL[0m
+Distance: 140
+[0;32mI (4254) example: Measured distance LEFT: 0.09cm[0m
+[0;32mI (4304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4304) example: Measured distance LEFT: 4.07cm[0m
+[0;32mI (4354) example: Measured distance LEFT: 0.09cm[0m
+[0;32mI (4404) example: Measured distance LEFT: 526.57cm[0m
+[0;32mI (4404) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4454) example: Measured distance LEFT: 518.08cm[0m
+[0;32mI (4504) example: LEFT IS CLOSER TO WALL[0m
+Count: 6
+Speed is 0.4m/s
+[0;32mI (4514) example: Measured distance LEFT: 154.02cm[0m
+[0;32mI (4564) example: Measured distance LEFT: 172.96cm[0m
+[0;32mI (4604) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4614) example: Measured distance LEFT: 525.86cm[0m
+Distance: 138
+[0;32mI (4704) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (4704) example: Measured distance LEFT: 146.46cm[0m
+[0;32mI (4754) example: Measured distance LEFT: 516.11cm[0m
+[0;32mI (4804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4824) example: Measured distance LEFT: 173.17cm[0m
+[0;32mI (4894) example: Measured distance LEFT: 147.37cm[0m
+[0;32mI (4904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (4944) example: Measured distance LEFT: 3.46cm[0m
+[0;32mI (4994) example: Measured distance LEFT: 186.60cm[0m
+[0;32mI (5004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5084) example: Measured distance LEFT: 146.50cm[0m
+[0;32mI (5104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5134) example: Measured distance LEFT: 1.97cm[0m
+Distance: 139
+[0;32mI (5184) example: Measured distance LEFT: 360.34cm[0m
+[0;32mI (5204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5234) example: Measured distance LEFT: 172.01cm[0m
+[0;32mI (5284) example: Measured distance LEFT: 177.95cm[0m
+[0;32mI (5304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5334) example: Measured distance LEFT: 172.19cm[0m
+[0;32mI (5384) example: Measured distance LEFT: 177.51cm[0m
+[0;32mI (5404) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5434) example: Measured distance LEFT: 345.86cm[0m
+[0;32mI (5504) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (5504) example: Measured distance LEFT: 174.58cm[0m
+Count: 14
+Speed is 1.0m/s
+[0;32mI (5574) example: Measured distance LEFT: 152.44cm[0m
+[0;32mI (5604) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5624) example: Measured distance LEFT: 497.10cm[0m
+Distance: 139
+[0;32mI (5674) example: Measured distance LEFT: 526.87cm[0m
+[0;32mI (5704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5724) example: Measured distance LEFT: 424.23cm[0m
+[0;32mI (5774) example: Measured distance LEFT: 434.30cm[0m
+[0;32mI (5804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5824) example: Measured distance LEFT: 342.21cm[0m
+[0;32mI (5874) example: Measured distance LEFT: 8.95cm[0m
+[0;32mI (5904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (5924) example: Measured distance LEFT: 346.97cm[0m
+[0;32mI (5974) example: Measured distance LEFT: 179.94cm[0m
+[0;32mI (6004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6044) example: Measured distance LEFT: 0.40cm[0m
+[0;32mI (6094) example: Measured distance LEFT: 179.58cm[0m
+[0;32mI (6104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6144) example: Measured distance LEFT: 172.29cm[0m
+Distance: 140
+[0;32mI (6194) example: Measured distance LEFT: 184.32cm[0m
+[0;32mI (6204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6244) example: Measured distance LEFT: 517.77cm[0m
+[0;32mI (6294) example: Measured distance LEFT: 355.01cm[0m
+[0;32mI (6304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6344) example: Measured distance LEFT: 345.53cm[0m
+[0;32mI (6394) example: Measured distance LEFT: 521.62cm[0m
+[0;32mI (6404) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6444) example: Measured distance LEFT: 0.16cm[0m
+[0;32mI (6494) example: Measured distance LEFT: 523.26cm[0m
+[0;32mI (6504) example: LEFT IS CLOSER TO WALL[0m
+Count: 17
+Speed is 1.2m/s
+[0;32mI (6544) example: Measured distance LEFT: 172.80cm[0m
+[0;32mI (6594) example: Measured distance LEFT: 184.03cm[0m
+[0;32mI (6604) example: LEFT IS CLOSER TO WALL[0m
+Distance: 139
+[0;32mI (6684) example: Measured distance LEFT: 152.82cm[0m
+[0;32mI (6704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6734) example: Measured distance LEFT: 0.16cm[0m
+[0;32mI (6784) example: Measured distance LEFT: 352.63cm[0m
+[0;32mI (6804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6854) example: Measured distance LEFT: 0.27cm[0m
+[0;32mI (6904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (6904) example: Measured distance LEFT: 176.03cm[0m
+[0;32mI (6994) example: Measured distance LEFT: 145.51cm[0m
+[0;32mI (7004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7044) example: Measured distance LEFT: 172.25cm[0m
+[0;32mI (7104) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (7104) example: Measured distance LEFT: 163.59cm[0m
+Distance: 140
+[0;32mI (7174) example: Measured distance LEFT: 0.28cm[0m
+[0;32mI (7204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7224) example: Measured distance LEFT: 4.49cm[0m
+[0;32mI (7274) example: Measured distance LEFT: 171.34cm[0m
+[0;32mI (7304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7324) example: Measured distance LEFT: 178.15cm[0m
+[0;32mI (7404) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (7414) example: Measured distance LEFT: 152.41cm[0m
+[0;32mI (7464) example: Measured distance LEFT: 174.00cm[0m
+[0;32mI (7504) example: LEFT IS CLOSER TO WALL[0m
+Count: 17
+Speed is 1.2m/s
+[0;32mI (7514) example: Measured distance LEFT: 352.65cm[0m
+[0;32mI (7564) example: Measured distance LEFT: 502.35cm[0m
+[0;32mI (7604) example: LEFT IS CLOSER TO WALL[0m
+Distance: 139
+[0;32mI (7614) example: Measured distance LEFT: 176.61cm[0m
+[0;32mI (7664) example: Measured distance LEFT: 589.15cm[0m
+[0;32mI (7704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7724) example: Measured distance LEFT: 158.13cm[0m
+[0;32mI (7774) example: Measured distance LEFT: 345.15cm[0m
+[0;32mI (7804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7824) example: Measured distance LEFT: 177.06cm[0m
+[0;32mI (7874) example: Measured distance LEFT: 516.94cm[0m
+[0;32mI (7904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (7924) example: Measured distance LEFT: 352.10cm[0m
+[0;32mI (7974) example: Measured distance LEFT: 4.39cm[0m
+[0;32mI (8004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8024) example: Measured distance LEFT: 521.89cm[0m
+[0;32mI (8074) example: Measured distance LEFT: 515.55cm[0m
+Distance: 139
+[0;32mI (8104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8124) example: Measured distance LEFT: 181.90cm[0m
+[0;32mI (8174) example: Measured distance LEFT: 516.71cm[0m
+[0;32mI (8204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8244) example: Measured distance LEFT: 172.72cm[0m
+[0;32mI (8294) example: Measured distance LEFT: 517.44cm[0m
+[0;32mI (8304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8344) example: Measured distance LEFT: 6.10cm[0m
+[0;32mI (8394) example: Measured distance LEFT: 517.77cm[0m
+[0;32mI (8404) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8444) example: Measured distance LEFT: 179.72cm[0m
+[0;32mI (8504) example: RIGHT IS CLOSER TO WALL[0m
+Count: 22
+Speed is 1.6m/s
+[0;32mI (8504) example: Measured distance RIGHT: 268.90cm[0m
+[0;32mI (8534) example: Measured distance LEFT: 145.58cm[0m
+Distance: 139
+[0;32mI (8584) example: Measured distance LEFT: 172.69cm[0m
+[0;32mI (8604) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8634) example: Measured distance LEFT: 533.82cm[0m
+[0;32mI (8704) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (8724) example: Measured distance LEFT: 148.89cm[0m
+[0;32mI (8774) example: Measured distance LEFT: 344.86cm[0m
+[0;32mI (8804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (8834) example: Measured distance LEFT: 157.70cm[0m
+[0;32mI (8904) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (8924) example: Measured distance LEFT: 173.43cm[0m
+[0;32mI (8974) example: Measured distance LEFT: 518.04cm[0m
+[0;32mI (9004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9034) example: Measured distance LEFT: 152.47cm[0m
+Distance: 102
+[0;32mI (9084) example: Measured distance LEFT: 172.94cm[0m
+[0;32mI (9104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9134) example: Measured distance LEFT: 526.76cm[0m
+[0;32mI (9184) example: Measured distance LEFT: 517.31cm[0m
+[0;32mI (9204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9234) example: Measured distance LEFT: 524.23cm[0m
+[0;32mI (9284) example: Measured distance LEFT: 517.07cm[0m
+[0;32mI (9304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9334) example: Measured distance LEFT: 175.92cm[0m
+[0;32mI (9384) example: Measured distance LEFT: 345.29cm[0m
+[0;32mI (9404) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9434) example: Measured distance LEFT: 353.59cm[0m
+[0;32mI (9484) example: Measured distance LEFT: 496.20cm[0m
+[0;32mI (9504) example: LEFT IS CLOSER TO WALL[0m
+Count: 19
+Speed is 1.4m/s
+[0;32mI (9544) example: Measured distance LEFT: 150.93cm[0m
+Distance: 61
+[0;32mI (9594) example: Measured distance LEFT: 517.58cm[0m
+[0;32mI (9604) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9664) example: Measured distance LEFT: 173.27cm[0m
+[0;32mI (9704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9714) example: Measured distance LEFT: 174.87cm[0m
+[0;32mI (9764) example: Measured distance LEFT: 178.62cm[0m
+[0;32mI (9804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9814) example: Measured distance LEFT: 171.93cm[0m
+[0;32mI (9864) example: Measured distance LEFT: 525.64cm[0m
+[0;32mI (9904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (9914) example: Measured distance LEFT: 344.55cm[0m
+[0;32mI (9974) example: Measured distance LEFT: 157.44cm[0m
+[0;32mI (10004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10024) example: Measured distance LEFT: 517.85cm[0m
+Distance: 53
+[0;32mI (10084) example: Measured distance LEFT: 151.91cm[0m
+[0;32mI (10104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10134) example: Measured distance LEFT: 172.73cm[0m
+[0;32mI (10184) example: Measured distance LEFT: 10.85cm[0m
+[0;32mI (10204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10234) example: Measured distance LEFT: 172.09cm[0m
+[0;32mI (10284) example: Measured distance LEFT: 177.62cm[0m
+[0;32mI (10304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10334) example: Measured distance LEFT: 344.44cm[0m
+[0;32mI (10394) example: Measured distance LEFT: 151.99cm[0m
+[0;32mI (10404) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10474) example: Measured distance LEFT: 147.41cm[0m
+[0;32mI (10504) example: LEFT IS CLOSER TO WALL[0m
+Count: 19
+Speed is 1.4m/s
+Distance: 98
+[0;32mI (10554) example: Measured distance LEFT: 142.43cm[0m
+[0;32mI (10604) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10604) example: Measured distance LEFT: 171.79cm[0m
+[0;32mI (10664) example: Measured distance LEFT: 154.57cm[0m
+[0;32mI (10704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10714) example: Measured distance LEFT: 344.90cm[0m
+[0;32mI (10764) example: Measured distance LEFT: 7.95cm[0m
+[0;32mI (10804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10814) example: Measured distance LEFT: 167.73cm[0m
+[0;32mI (10874) example: Measured distance LEFT: 155.40cm[0m
+[0;32mI (10904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (10924) example: Measured distance LEFT: 344.83cm[0m
+[0;32mI (10984) example: Measured distance LEFT: 154.42cm[0m
+[0;32mI (11004) example: LEFT IS CLOSER TO WALL[0m
+Distance: 140
+[0;32mI (11074) example: Measured distance LEFT: 172.22cm[0m
+[0;32mI (11104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11144) example: Measured distance LEFT: 143.77cm[0m
+[0;32mI (11194) example: Measured distance LEFT: 171.98cm[0m
+[0;32mI (11204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11244) example: Measured distance LEFT: 535.73cm[0m
+[0;32mI (11294) example: Measured distance LEFT: 5.86cm[0m
+[0;32mI (11304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11344) example: Measured distance LEFT: 177.20cm[0m
+[0;32mI (11404) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (11434) example: Measured distance LEFT: 151.11cm[0m
+[0;32mI (11484) example: Measured distance LEFT: 345.16cm[0m
+Distance: 139
+[0;32mI (11504) example: LEFT IS CLOSER TO WALL[0m
+Count: 14
+Speed is 1.0m/s
+[0;32mI (11534) example: Measured distance LEFT: 183.51cm[0m
+[0;32mI (11604) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (11604) example: Measured distance LEFT: 0.64cm[0m
+[0;32mI (11654) example: Measured distance LEFT: 141.14cm[0m
+[0;32mI (11704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11704) example: Measured distance LEFT: 172.63cm[0m
+[0;32mI (11754) example: Measured distance LEFT: 350.68cm[0m
+[0;32mI (11804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11804) example: Measured distance LEFT: 171.55cm[0m
+[0;32mI (11854) example: Measured distance LEFT: 9.60cm[0m
+[0;32mI (11904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (11904) example: Measured distance LEFT: 171.77cm[0m
+[0;32mI (11954) example: Measured distance LEFT: 184.29cm[0m
+Distance: 140
+[0;32mI (12004) example: Measured distance LEFT: 172.16cm[0m
+[0;32mI (12004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12054) example: Measured distance LEFT: 522.79cm[0m
+[0;32mI (12104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12144) example: Measured distance LEFT: 147.26cm[0m
+[0;32mI (12194) example: Measured distance LEFT: 344.45cm[0m
+[0;32mI (12204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12244) example: Measured distance LEFT: 15.96cm[0m
+[0;32mI (12294) example: Measured distance LEFT: 344.18cm[0m
+[0;32mI (12304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12354) example: Measured distance LEFT: 151.31cm[0m
+[0;32mI (12404) example: Measured distance LEFT: 516.79cm[0m
+[0;32mI (12404) example: LEFT IS CLOSER TO WALL[0m
+Distance: 139
+[0;32mI (12464) example: Measured distance LEFT: 152.00cm[0m
+[0;32mI (12504) example: LEFT IS CLOSER TO WALL[0m
+Count: 21
+Speed is 1.5m/s
+[0;32mI (12514) example: Measured distance LEFT: 516.96cm[0m
+[0;32mI (12564) example: Measured distance LEFT: 10.02cm[0m
+[0;32mI (12604) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12664) example: Measured distance LEFT: 172.53cm[0m
+[0;32mI (12704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12714) example: Measured distance LEFT: 3.31cm[0m
+[0;32mI (12764) example: Measured distance LEFT: 189.10cm[0m
+[0;32mI (12804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12814) example: Measured distance LEFT: 518.74cm[0m
+[0;32mI (12864) example: Measured distance LEFT: 10.57cm[0m
+[0;32mI (12904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (12934) example: Measured distance LEFT: 0.24cm[0m
+Distance: 139
+[0;32mI (12984) example: Measured distance LEFT: 177.27cm[0m
+[0;32mI (13004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (13034) example: Measured distance LEFT: 172.46cm[0m
+[0;32mI (13094) example: Measured distance LEFT: 153.94cm[0m
+[0;32mI (13104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (13144) example: Measured distance LEFT: 173.46cm[0m
+[0;32mI (13194) example: Measured distance LEFT: 526.04cm[0m
+[0;32mI (13204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (13244) example: Measured distance LEFT: 172.97cm[0m
+[0;32mI (13294) example: Measured distance LEFT: 179.65cm[0m
+[0;32mI (13304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (13344) example: Measured distance LEFT: 128.69cm[0m
+[0;32mI (13394) example: Measured distance LEFT: 498.90cm[0m
+[0;32mI (13404) example: LEFT IS CLOSER TO WALL[0m
+Distance: 139
+[0;32mI (13444) example: Measured distance LEFT: 180.71cm[0m
+[0;32mI (13494) example: Measured distance LEFT: 126.56cm[0m
+[0;32mI (13504) example: LEFT IS CLOSER TO WALL[0m
+Count: 18
+Speed is 1.3m/s
+[0;32mI (13544) example: Measured distance LEFT: 6.02cm[0m
+[0;32mI (13594) example: Measured distance LEFT: 521.18cm[0m
+[0;32mI (13604) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (13644) example: Measured distance LEFT: 172.51cm[0m
+[0;32mI (13694) example: Measured distance LEFT: 353.91cm[0m
+[0;32mI (13704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (13744) example: Measured distance LEFT: 344.06cm[0m
+[0;32mI (13804) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (13804) example: Measured distance LEFT: 162.78cm[0m
+[0;32mI (13874) example: Measured distance LEFT: 0.49cm[0m
+[0;32mI (13904) example: LEFT IS CLOSER TO WALL[0m
+Distance: 139
+[0;32mI (13924) example: Measured distance LEFT: 3.92cm[0m
+[0;32mI (13974) example: Measured distance LEFT: 344.02cm[0m
+[0;32mI (14004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (14044) example: Measured distance LEFT: 173.63cm[0m
+[0;32mI (14104) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (14114) example: Measured distance LEFT: 143.47cm[0m
+[0;32mI (14194) example: Measured distance LEFT: 138.25cm[0m
+[0;32mI (14204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (14274) example: Measured distance LEFT: 134.27cm[0m
+[0;32mI (14304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (14324) example: Measured distance LEFT: 345.24cm[0m
+[0;32mI (14374) example: Measured distance LEFT: 200.92cm[0m
+[0;32mI (14404) example: LEFT IS CLOSER TO WALL[0m
+Distance: 139
+[0;32mI (14424) example: Measured distance LEFT: 345.08cm[0m
+[0;32mI (14474) example: Measured distance LEFT: 5.25cm[0m
+[0;32mI (14504) example: LEFT IS CLOSER TO WALL[0m
+Count: 16
+Speed is 1.2m/s
+[0;32mI (14524) example: Measured distance LEFT: 153.75cm[0m
+[0;32mI (14574) example: Measured distance LEFT: 524.55cm[0m
+[0;32mI (14604) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (14624) example: Measured distance LEFT: 167.75cm[0m
+[0;32mI (14674) example: Measured distance LEFT: 520.81cm[0m
+[0;32mI (14704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (14724) example: Measured distance LEFT: 173.54cm[0m
+[0;32mI (14784) example: Measured distance LEFT: 156.56cm[0m
+[0;32mI (14804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (14834) example: Measured distance LEFT: 164.96cm[0m
+[0;32mI (14884) example: Measured distance LEFT: 6.39cm[0m
+Distance: 139
+[0;32mI (14904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (14934) example: Measured distance LEFT: 344.23cm[0m
+[0;32mI (14994) example: Measured distance LEFT: 156.91cm[0m
+[0;32mI (15004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (15074) example: Measured distance LEFT: 151.56cm[0m
+[0;32mI (15104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (15144) example: Measured distance LEFT: 0.28cm[0m
+[0;32mI (15194) example: Measured distance LEFT: 8.46cm[0m
+[0;32mI (15204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (15284) example: Measured distance LEFT: 146.37cm[0m
+[0;32mI (15304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (15334) example: Measured distance LEFT: 173.90cm[0m
+Distance: 138
+[0;32mI (15394) example: Measured distance LEFT: 157.00cm[0m
+[0;32mI (15404) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (15444) example: Measured distance LEFT: 6.01cm[0m
+[0;32mI (15494) example: Measured distance LEFT: 348.87cm[0m
+[0;32mI (15504) example: LEFT IS CLOSER TO WALL[0m
+Count: 15
+Speed is 1.1m/s
+[0;32mI (15544) example: Measured distance LEFT: 172.75cm[0m
+[0;32mI (15594) example: Measured distance LEFT: 6.89cm[0m
+[0;32mI (15604) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (15644) example: Measured distance LEFT: 344.98cm[0m
+[0;32mI (15694) example: Measured distance LEFT: 8.78cm[0m
+[0;32mI (15704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (15744) example: Measured distance LEFT: 1.91cm[0m
+[0;32mI (15794) example: Measured distance LEFT: 521.14cm[0m
+[0;32mI (15804) example: LEFT IS CLOSER TO WALL[0m
+Distance: 79
+[0;32mI (15884) example: Measured distance LEFT: 147.79cm[0m
+[0;32mI (15904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (15934) example: Measured distance LEFT: 18.65cm[0m
+[0;32mI (15984) example: Measured distance LEFT: 359.90cm[0m
+[0;32mI (16004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (16034) example: Measured distance LEFT: 344.68cm[0m
+[0;32mI (16104) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (16104) example: Measured distance LEFT: 173.42cm[0m
+[0;32mI (16154) example: Measured distance LEFT: 172.27cm[0m
+[0;32mI (16204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (16204) example: Measured distance LEFT: 349.48cm[0m
+[0;32mI (16294) example: Measured distance LEFT: 150.82cm[0m
+[0;32mI (16304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (16344) example: WALL DETECTED[0m
+Distance: 3
+[0;32mI (16374) example: Measured distance LEFT: 146.91cm[0m
+[0;32mI (16404) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (16424) example: Measured distance LEFT: 172.81cm[0m
+[0;32mI (16474) example: Measured distance LEFT: 189.07cm[0m
+[0;32mI (16504) example: LEFT IS CLOSER TO WALL[0m
+Count: 22
+Speed is 1.6m/s
+[0;32mI (16524) example: Measured distance LEFT: 172.02cm[0m
+[0;32mI (16574) example: Measured distance LEFT: 5.68cm[0m
+[0;32mI (16604) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (16664) example: Measured distance LEFT: 148.67cm[0m
+[0;32mI (16704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (16744) example: Measured distance LEFT: 143.04cm[0m
+[0;32mI (16804) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (16824) example: Measured distance LEFT: 139.01cm[0m
+[0;32mI (16834) example: WALL DETECTED[0m
+Distance: 2
+[0;32mI (16904) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (16904) example: Measured distance LEFT: 139.90cm[0m
+[0;32mI (16954) example: Measured distance LEFT: 516.76cm[0m
+[0;32mI (17004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (17014) example: Measured distance LEFT: 151.86cm[0m
+[0;32mI (17064) example: Measured distance LEFT: 517.41cm[0m
+[0;32mI (17104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (17124) example: Measured distance LEFT: 157.16cm[0m
+[0;32mI (17204) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (17204) example: Measured distance LEFT: 159.56cm[0m
+[0;32mI (17254) example: Measured distance LEFT: 518.08cm[0m
+[0;32mI (17304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (17304) example: Measured distance LEFT: 353.30cm[0m
+[0;32mI (17314) example: WALL DETECTED[0m
+Distance: 5
+[0;32mI (17354) example: Measured distance LEFT: 1.28cm[0m
+[0;32mI (17404) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (17404) example: Measured distance LEFT: 10.38cm[0m
+[0;32mI (17494) example: Measured distance LEFT: 146.45cm[0m
+[0;32mI (17504) example: LEFT IS CLOSER TO WALL[0m
+Count: 6
+Speed is 0.4m/s
+[0;32mI (17544) example: Measured distance LEFT: 171.99cm[0m
+[0;32mI (17594) example: Measured distance LEFT: 532.33cm[0m
+[0;32mI (17604) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (17644) example: Measured distance LEFT: 345.34cm[0m
+[0;32mI (17694) example: Measured distance LEFT: 355.50cm[0m
+[0;32mI (17704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (17794) example: Measured distance LEFT: 171.83cm[0m
+[0;32mI (17794) example: WALL DETECTED[0m
+Distance: 8
+[0;32mI (17804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (17844) example: Measured distance LEFT: 171.90cm[0m
+[0;32mI (17894) example: Measured distance LEFT: 353.78cm[0m
+[0;32mI (17904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (17944) example: Measured distance LEFT: 514.59cm[0m
+[0;32mI (17994) example: Measured distance LEFT: 178.72cm[0m
+[0;32mI (18004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (18064) example: Measured distance LEFT: 0.24cm[0m
+[0;32mI (18104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (18114) example: Measured distance LEFT: 181.55cm[0m
+[0;32mI (18204) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (18204) example: Measured distance LEFT: 146.86cm[0m
+[0;32mI (18254) example: Measured distance LEFT: 27.37cm[0m
+[0;32mI (18284) example: WALL DETECTED[0m
+Distance: 7
+[0;32mI (18304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (18304) example: Measured distance LEFT: 188.53cm[0m
+[0;32mI (18394) example: Measured distance LEFT: 151.74cm[0m
+[0;32mI (18404) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (18444) example: Measured distance LEFT: 344.57cm[0m
+[0;32mI (18494) example: Measured distance LEFT: 9.13cm[0m
+[0;32mI (18504) example: LEFT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (18544) example: Measured distance LEFT: 172.62cm[0m
+[0;32mI (18604) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (18604) example: Measured distance LEFT: 162.53cm[0m
+[0;32mI (18684) example: Measured distance LEFT: 152.36cm[0m
+[0;32mI (18704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (18734) example: Measured distance LEFT: 172.73cm[0m
+[0;32mI (18764) example: WALL DETECTED[0m
+Distance: 7
+[0;32mI (18784) example: Measured distance LEFT: 354.98cm[0m
+[0;32mI (18804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (18834) example: Measured distance LEFT: 513.36cm[0m
+[0;32mI (18884) example: Measured distance LEFT: 4.73cm[0m
+[0;32mI (18904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (18934) example: Measured distance LEFT: 172.98cm[0m
+[0;32mI (18984) example: Measured distance LEFT: 4.62cm[0m
+[0;32mI (19004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (19074) example: Measured distance LEFT: 152.21cm[0m
+[0;32mI (19104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (19124) example: Measured distance LEFT: 343.63cm[0m
+[0;32mI (19194) example: Measured distance LEFT: 172.32cm[0m
+[0;32mI (19204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (19244) example: Measured distance LEFT: 4.32cm[0m
+[0;32mI (19254) example: WALL DETECTED[0m
+Distance: 6
+[0;32mI (19294) example: Measured distance LEFT: 178.11cm[0m
+[0;32mI (19304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (19384) example: Measured distance LEFT: 145.24cm[0m
+[0;32mI (19404) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (19464) example: Measured distance LEFT: 139.70cm[0m
+[0;32mI (19504) example: LEFT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (19544) example: Measured distance LEFT: 134.84cm[0m
+[0;32mI (19594) example: Measured distance LEFT: 516.94cm[0m
+[0;32mI (19604) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (19644) example: Measured distance LEFT: 199.75cm[0m
+[0;32mI (19704) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (19734) example: WALL DETECTED[0m
+Distance: 5
+[0;32mI (19744) example: Measured distance LEFT: 172.14cm[0m
+[0;32mI (19794) example: Measured distance LEFT: 516.39cm[0m
+[0;32mI (19804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (19874) example: Measured distance LEFT: 172.34cm[0m
+[0;32mI (19904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (19934) example: Measured distance LEFT: 147.52cm[0m
+[0;32mI (19984) example: Measured distance LEFT: 172.89cm[0m
+[0;32mI (20004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (20034) example: Measured distance LEFT: 532.13cm[0m
+[0;32mI (20084) example: Measured distance LEFT: 344.04cm[0m
+[0;32mI (20104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (20144) example: Measured distance LEFT: 155.46cm[0m
+[0;32mI (20194) example: Measured distance LEFT: 172.84cm[0m
+[0;32mI (20204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (20214) example: WALL DETECTED[0m
+Distance: 6
+[0;32mI (20244) example: Measured distance LEFT: 524.75cm[0m
+[0;32mI (20294) example: Measured distance LEFT: 516.95cm[0m
+[0;32mI (20304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (20354) example: Measured distance LEFT: 157.37cm[0m
+[0;32mI (20404) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (20444) example: Measured distance LEFT: 173.46cm[0m
+[0;32mI (20494) example: Measured distance LEFT: 344.95cm[0m
+[0;32mI (20504) example: LEFT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (20544) example: Measured distance LEFT: 527.52cm[0m
+[0;32mI (20604) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (20614) example: Measured distance LEFT: 0.27cm[0m
+[0;32mI (20664) example: Measured distance LEFT: 178.27cm[0m
+[0;32mI (20694) example: WALL DETECTED[0m
+Distance: 6
+[0;32mI (20704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (20754) example: Measured distance LEFT: 151.21cm[0m
+[0;32mI (20804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (20804) example: Measured distance LEFT: 516.61cm[0m
+[0;32mI (20864) example: Measured distance LEFT: 155.51cm[0m
+[0;32mI (20904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (20944) example: Measured distance LEFT: 151.37cm[0m
+[0;32mI (21004) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (21024) example: Measured distance LEFT: 146.41cm[0m
+[0;32mI (21074) example: Measured distance LEFT: 517.22cm[0m
+[0;32mI (21104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (21134) example: Measured distance LEFT: 149.83cm[0m
+Distance: 60
+[0;32mI (21204) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (21214) example: Measured distance LEFT: 145.82cm[0m
+[0;32mI (21294) example: Measured distance LEFT: 140.81cm[0m
+[0;32mI (21304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (21374) example: Measured distance LEFT: 135.68cm[0m
+[0;32mI (21404) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (21424) example: Measured distance LEFT: 171.62cm[0m
+[0;32mI (21484) example: Measured distance LEFT: 158.32cm[0m
+[0;32mI (21504) example: LEFT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (21534) example: Measured distance LEFT: 515.10cm[0m
+[0;32mI (21584) example: Measured distance LEFT: 177.19cm[0m
+[0;32mI (21604) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (21664) example: WALL DETECTED[0m
+Distance: 17
+[0;32mI (21674) example: Measured distance LEFT: 150.79cm[0m
+[0;32mI (21704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (21724) example: Measured distance LEFT: 172.81cm[0m
+[0;32mI (21774) example: Measured distance LEFT: 528.43cm[0m
+[0;32mI (21804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (21864) example: Measured distance LEFT: 153.23cm[0m
+[0;32mI (21904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (21944) example: Measured distance LEFT: 147.85cm[0m
+[0;32mI (21994) example: Measured distance LEFT: 171.18cm[0m
+[0;32mI (22004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (22044) example: Measured distance LEFT: 14.61cm[0m
+[0;32mI (22094) example: Measured distance LEFT: 344.34cm[0m
+[0;32mI (22104) example: LEFT IS CLOSER TO WALL[0m
+Distance: 138
+[0;32mI (22164) example: Measured distance LEFT: 172.74cm[0m
+[0;32mI (22204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (22214) example: Measured distance LEFT: 2.17cm[0m
+[0;32mI (22264) example: Measured distance LEFT: 185.06cm[0m
+[0;32mI (22304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (22354) example: Measured distance LEFT: 151.83cm[0m
+[0;32mI (22404) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (22404) example: Measured distance LEFT: 174.69cm[0m
+[0;32mI (22454) example: Measured distance LEFT: 350.10cm[0m
+[0;32mI (22504) example: LEFT IS CLOSER TO WALL[0m
+Count: 7
+Speed is 0.5m/s
+[0;32mI (22544) example: Measured distance LEFT: 144.18cm[0m
+[0;32mI (22604) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (22624) example: Measured distance LEFT: 139.94cm[0m
+Distance: 141
+[0;32mI (22674) example: Measured distance LEFT: 517.93cm[0m
+[0;32mI (22704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (22744) example: Measured distance LEFT: 172.10cm[0m
+[0;32mI (22794) example: Measured distance LEFT: 172.02cm[0m
+[0;32mI (22804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (22824) example: Measured distance RIGHT: 109.39cm[0m
+[0;32mI (22844) example: Measured distance LEFT: 354.19cm[0m
+[0;32mI (22874) example: Measured distance RIGHT: 109.18cm[0m
+[0;32mI (22904) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (22924) example: Measured distance RIGHT: 109.53cm[0m
+[0;32mI (22934) example: Measured distance LEFT: 146.70cm[0m
+[0;32mI (22984) example: Measured distance LEFT: 345.06cm[0m
+[0;32mI (23004) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (23044) example: Measured distance LEFT: 155.31cm[0m
+[0;32mI (23054) example: Measured distance RIGHT: 109.25cm[0m
+[0;32mI (23104) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (23124) example: Measured distance LEFT: 150.63cm[0m
+Distance: 139
+[0;32mI (23174) example: Measured distance LEFT: 6.93cm[0m
+[0;32mI (23194) example: Measured distance RIGHT: 109.11cm[0m
+[0;32mI (23204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (23224) example: Measured distance LEFT: 357.52cm[0m
+[0;32mI (23254) example: Measured distance RIGHT: 108.90cm[0m
+[0;32mI (23274) example: Measured distance LEFT: 500.42cm[0m
+[0;32mI (23304) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (23304) example: Measured distance RIGHT: 108.62cm[0m
+[0;32mI (23324) example: Measured distance LEFT: 524.74cm[0m
+[0;32mI (23374) example: Measured distance LEFT: 171.22cm[0m
+[0;32mI (23404) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (23434) example: Measured distance LEFT: 151.20cm[0m
+[0;32mI (23484) example: Measured distance LEFT: 345.04cm[0m
+[0;32mI (23504) example: LEFT IS CLOSER TO WALL[0m
+Count: 5
+Speed is 0.4m/s
+[0;32mI (23534) example: Measured distance LEFT: 10.30cm[0m
+[0;32mI (23604) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 139
+[0;32mI (23624) example: Measured distance LEFT: 148.22cm[0m
+[0;32mI (23674) example: Measured distance LEFT: 345.26cm[0m
+[0;32mI (23704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (23724) example: Measured distance LEFT: 531.73cm[0m
+[0;32mI (23774) example: Measured distance LEFT: 345.20cm[0m
+[0;32mI (23804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (23824) example: Measured distance LEFT: 178.52cm[0m
+[0;32mI (23874) example: Measured distance LEFT: 344.82cm[0m
+[0;32mI (23904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (23934) example: Measured distance LEFT: 153.80cm[0m
+[0;32mI (23984) example: Measured distance LEFT: 517.65cm[0m
+[0;32mI (24004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (24034) example: Measured distance LEFT: 2.83cm[0m
+[0;32mI (24104) example: RIGHT IS CLOSER TO WALL[0m
+Distance: 139
+[0;32mI (24124) example: Measured distance LEFT: 148.02cm[0m
+[0;32mI (24204) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (24204) example: Measured distance LEFT: 147.64cm[0m
+[0;32mI (24254) example: Measured distance LEFT: 345.45cm[0m
+[0;32mI (24304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (24314) example: Measured distance LEFT: 151.78cm[0m
+[0;32mI (24364) example: Measured distance LEFT: 516.36cm[0m
+[0;32mI (24404) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (24424) example: Measured distance LEFT: 152.10cm[0m
+[0;32mI (24474) example: Measured distance LEFT: 344.39cm[0m
+[0;32mI (24504) example: LEFT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (24524) example: Measured distance LEFT: 182.38cm[0m
+[0;32mI (24574) example: Measured distance LEFT: 344.11cm[0m
+Distance: 139
+[0;32mI (24604) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (24634) example: Measured distance LEFT: 154.18cm[0m
+[0;32mI (24684) example: Measured distance LEFT: 516.91cm[0m
+[0;32mI (24704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (24734) example: Measured distance LEFT: 1.29cm[0m
+[0;32mI (24804) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (24804) example: Measured distance LEFT: 0.57cm[0m
+[0;32mI (24854) example: Measured distance LEFT: 145.43cm[0m
+[0;32mI (24904) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (24904) example: Measured distance LEFT: 344.90cm[0m
+[0;32mI (24964) example: Measured distance LEFT: 157.74cm[0m
+[0;32mI (25004) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (25014) example: Measured distance LEFT: 3.89cm[0m
+[0;32mI (25064) example: Measured distance LEFT: 350.03cm[0m
+Distance: 139
+[0;32mI (25104) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (25114) example: Measured distance LEFT: 172.00cm[0m
+[0;32mI (25164) example: Measured distance LEFT: 525.30cm[0m
+[0;32mI (25204) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (25214) example: Measured distance LEFT: 166.22cm[0m
+[0;32mI (25284) example: Measured distance LEFT: 172.75cm[0m
+[0;32mI (25304) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (25354) example: Measured distance LEFT: 152.43cm[0m
+[0;32mI (25404) example: RIGHT IS CLOSER TO WALL[0m
+[0;32mI (25404) example: Measured distance LEFT: 172.80cm[0m
+[0;32mI (25454) example: Measured distance LEFT: 527.55cm[0m
+[0;32mI (25504) example: LEFT IS CLOSER TO WALL[0m
+Count: 0
+Speed is 0.0m/s
+[0;32mI (25544) example: Measured distance LEFT: 153.23cm[0m
+Distance: 139
+[0;32mI (25594) example: Measured distance LEFT: 216.64cm[0m
+[0;32mI (25604) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (25644) example: Measured distance LEFT: 215.68cm[0m
+[0;32mI (25694) example: Measured distance LEFT: 62.43cm[0m
+[0;32mI (25704) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (25744) example: Measured distance LEFT: 61.02cm[0m
+[0;32mI (25794) example: Measured distance LEFT: 215.20cm[0m
+[0;32mI (25804) example: LEFT IS CLOSER TO WALL[0m
+[0;32mI (25844) example: Measured distance LEFT: 214.92cm[0m
