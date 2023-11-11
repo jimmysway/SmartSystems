@@ -42,7 +42,8 @@ We incorporated various functionalities to control a buggy with ultrasonic and L
 
 4) Ultrasonic Sensors: Both left and right ultrasonic sensors are set up to measure distances independently. They use echo callbacks to calculate the time-of-flight and, consequently, the distance.
 
-5) Servo and Speed Control: The code controls a servo for steering and a motor for speed. It uses a PID (Proportional-Integral-Derivative) controller to maintain a target speed and adjusts the steering based on the readings from ultrasonic sensors.
+5) Servo and Speed Control: The code controls a servo for steering and a motor for speed. It uses a PID (Proportional-Integral-Derivative) controller to maintain a target speed and adjusts the steering based on the readings from ultrasonic sensors. We used a 'left dominant'/'right dominant' system whereby the sensor that was closer to the wall would dictate the target distance the buggy was to ride alongside that wall. If the sensor that wasn't closest read a distance that was greater than a predetermined value the code would simply assign a large number to allow the dominant sensor protocol to function.
+
 
 6) Alphanumeric Display: An I2C-based alphanumeric display is used, possibly for showing status information or measurements.
 
