@@ -1,9 +1,10 @@
 # Venus Rover
 
 Authors: Jake Lee, Jason Li , JiaLin Sui, Maxim Slobodchikov
-
 Date: 2023-11-10
+
 <img src="https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/93232189/3e460889-4c67-41df-a224-6295c5e39c36" width="300"/>
+
 
 ### Summary
 Our rover buggy is a robust platform for autonomous driving that makes the round trip between a spaceship and the hot springs of Venus. We implemented (1) "cruise control" (or maintaining a constant velocity under perturbations), (2) "turn-around" (reversing the direction of the vehicle), and (3) "collision avoidance" by detecting obstructions and driving around them.
