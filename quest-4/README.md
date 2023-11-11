@@ -77,8 +77,6 @@ When the UDP server receives a stop command, it activates an emergency brake (e_
 5) Process Flow: When a user interacts with the buttons on the web interface served from the public directory, an HTTP POST request is sent to the /control endpoint on your Node.js server.
 The server then extracts the command from the request body (req.body.command). This command is converted to a string (String(req.body.command)) and sent as a UDP message to the ESP32 device at the specified DDNS address and port.
 
-![IMG_2692](https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/93232189/706689b6-e2ac-4b14-af21-8a3591cc0aa6)
-
 ##### Network Configuration:
 For the ESP32 to receive these messages, it must be connected to a network that is accessible via the group7.ddns.net address.
 If the ESP32 is behind a router (which is usually the case), you'll need to set up port forwarding on your router to forward UDP traffic on port 8080 to the internal IP address of the ESP32 device.
