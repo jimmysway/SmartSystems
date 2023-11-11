@@ -94,6 +94,12 @@ Make sure to secure the communication and possibly authenticate the requests to 
 
 ### Supporting Artifacts
 
+[![Venus Rover Technical Video](<Screenshot 2023-11-10 at 11.43.07 PM.png>)](https://drive.google.com/file/d/1ygdHgHsksuhUOcTol5xLQLb8OmtoaOqF/view?usp=sharing)
+<p align="center">
+<i>Venus Rover Technical Video</i>
+</p>
+
+
 ### Modules, Tools, Source Used Including Attribution
 - [Recipe for Wiring ESP32 to Buggy](/docs/briefs/recipes/recipe-buggy-interfacing.md)
 - [Recipe for Calibrating ESC and Steering Servo -- Buggy](/docs/briefs/recipes/recipe-esc-buggy.md)
