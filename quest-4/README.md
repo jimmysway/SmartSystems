@@ -3,6 +3,7 @@
 Authors: Jake Lee, Jason Li , JiaLin Sui, Maxim Slobodchikov
 
 Date: 2023-11-10
+![IMG_2684_2](https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/93232189/b8480d39-b123-47d9-b2da-e26c9af43e55)
 
 ### Summary
 Our rover buggy is a robust platform for autonomous driving that makes the round trip between a spaceship and the hot springs of Venus. We implemented (1) "cruise control" (or maintaining a constant velocity under perturbations), (2) "turn-around" (reversing the direction of the vehicle), and (3) "collision avoidance" by detecting obstructions and driving around them.
@@ -77,6 +78,8 @@ When the UDP server receives a stop command, it activates an emergency brake (e_
 5) Process Flow: When a user interacts with the buttons on the web interface served from the public directory, an HTTP POST request is sent to the /control endpoint on your Node.js server.
 The server then extracts the command from the request body (req.body.command). This command is converted to a string (String(req.body.command)) and sent as a UDP message to the ESP32 device at the specified DDNS address and port.
 
+![IMG_2692](https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/93232189/706689b6-e2ac-4b14-af21-8a3591cc0aa6)
+
 ##### Network Configuration:
 For the ESP32 to receive these messages, it must be connected to a network that is accessible via the group7.ddns.net address.
 If the ESP32 is behind a router (which is usually the case), you'll need to set up port forwarding on your router to forward UDP traffic on port 8080 to the internal IP address of the ESP32 device.
@@ -86,6 +89,7 @@ Since your server sends commands to an ESP32 device over the internet, it's cruc
 Make sure to secure the communication and possibly authenticate the requests to prevent unauthorized access or control.
 
 ### Sketches/Diagrams
+![IMG_2770](https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/93232189/55a6a94e-2759-406c-8464-01b4a0494cd8)
 
 ### Supporting Artifacts
 
