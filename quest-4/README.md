@@ -31,6 +31,46 @@ The key features involved:
 | Successfully traverses B-A in one go, no hits or nudges | 1 |  1     | 
 | No collisions with obstructions | 1 |  1     | 
 
+#### Main Components
+We incorporated various functionalities to control a buggy with ultrasonic and LiDAR sensors for wall avoidance. Here's an overview of how the different parts of the code work together:
+
+##### Wi-Fi Setup: 
+The buggy connects to a Wi-Fi network using the specified SSID and password. This enables the ESP32 to communicate over the network, such as receiving commands via UDP.
+
+##### UDP Server:
+It listens for incoming UDP packets on a specific port (UDP_PORT). This is used to receive commands from an external source, like a web interface or another networked device.
+
+##### LiDAR Sensor:
+Configured for distance measurement, it continuously polls the LiDAR sensor to calculate distances. If the distance to an obstacle (like a wall) is less than a threshold (80 units in this case), it triggers a response (stops the buggy).
+
+##### Ultrasonic Sensors:
+Both left and right ultrasonic sensors are set up to measure distances independently. They use echo callbacks to calculate the time-of-flight and, consequently, the distance.
+
+##### Servo and Speed Control:
+The code controls a servo for steering and a motor for speed. It uses a PID (Proportional-Integral-Derivative) controller to maintain a target speed and adjusts the steering based on the readings from ultrasonic sensors.
+
+##### Alphanumeric Display:
+An I2C-based alphanumeric display is used, possibly for showing status information or measurements.
+
+##### Encoder for Wheel Speed:
+An encoder is implemented to calculate the wheel's rotation speed, which helps in speed regulation.
+
+#### Code Overview:
+Upon startup, the ESP32 initializes its Wi-Fi connection and starts the UDP server to listen for commands.
+The LiDAR sensor continuously measures the distance in front of the buggy. If an obstacle is detected within a predefined range, the buggy stops or takes necessary action.
+The ultrasonic sensors on both sides assist in navigating by constantly measuring the side distances. The steer_task uses these measurements to adjust the buggy's direction.
+Speed is regulated based on encoder readings, and the servo motor adjusts the steering angle as per the PID controller's output.
+Commands received via the UDP server (start, stop, turn) control the buggy's movements, allowing remote operation.
+The alphanumeric display can show relevant information like speed, distance, or elapsed time.
+
+#### Execution Flow:
+Initialization: Wi-Fi and peripherals (like I2C, LiDAR, ultrasonic sensors) are initialized.
+Task Creation: Multiple FreeRTOS tasks are created for handling different components (LiDAR, ultrasonic sensors, steering, speed control, display).
+Operation: The buggy operates based on sensor inputs and received UDP commands. The LiDAR and ultrasonic sensors play a key role in avoiding obstacles, while the servo and motor are controlled to navigate and maintain speed.
+
+#### UDP Commands and Responses:
+When the UDP server receives a stop command, it activates an emergency brake (e_brake). The start command deactivates the emergency brake. The turn command initiates a 360-degree turn maneuver. This ESP32-based system showcases a sophisticated approach to robotic control, integrating various sensors and communication protocols for efficient and responsive operation.
+
 #### Wireless Interface
 ##### Startup Instructions
 To start server, we can cd into the Website folder and run "node server.js" in console. The site interface can then seen on http://localhost:3000/. One must remember to npm install express and node-fetch and ESP32 device needs to have a UDP server listening on port 8080 to receive messages "start", "stop", "turn".
@@ -58,7 +98,6 @@ Since your server sends commands to an ESP32 device over the internet, it's cruc
 Make sure to secure the communication and possibly authenticate the requests to prevent unauthorized access or control.
 
 ### Sketches/Diagrams
-
 
 ### Supporting Artifacts
 
