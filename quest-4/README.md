@@ -68,6 +68,8 @@ Operation: The buggy operates based on sensor inputs and received UDP commands. 
 When the UDP server receives a stop command, it activates an emergency brake (e_brake). The start command deactivates the emergency brake. The turn command initiates a 360-degree turn maneuver. This ESP32-based system showcases a sophisticated approach to robotic control, integrating various sensors and communication protocols for efficient and responsive operation.
 
 #### Wireless Interface
+<img width="300" alt="Screenshot 2023-11-10 at 11 36 15 PM" src="https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/93232189/170f1176-9d51-4c3c-b5fa-e4673c709b1f">
+
 1) Startup Instructions: To start server, we can cd into the Website folder and run "node server.js" in console. The site interface can then seen on http://localhost:3000/. One must remember to npm install express and node-fetch and ESP32 device needs to have a UDP server listening on port 8080 to receive messages "start", "stop", "turn".
 
 2) Destination IP Address (ESP32_SERVER_IP): The messages are sent to the IP address specified by ESP32_SERVER_IP, which in your case is set to 'group7.ddns.net'. This is the dynamic DNS (DDNS) address that should resolve to the IP address of your network where the ESP32 device is located.
