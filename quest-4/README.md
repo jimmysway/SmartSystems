@@ -21,15 +21,15 @@ The key features involved:
 
 | Objective Criterion | Rating | Max Value  | 
 |---------------------------------------------|:-----------:|:---------:|
-| Uses PID for speed control holding a fixed speed setpoint after startup and before slowdown |  |  1     | 
-| Stops within 20 cm of end without collision |  |  1     | 
-| Start and stop instructions issued wirelessly from phone, laptop or ESP |  |  1     | 
-| Measures wheel speed |  |  1     | 
-| Uses alpha display to show elapsed time |  |  1     | 
-| Successfully traverses A-B in one go, no hits or nudges |  |  1     | 
-| Successfully reverses direction (auto or remote control), no hits or nudges |  |  1     | 
-| Successfully traverses B-A in one go, no hits or nudges |  |  1     | 
-| No collisions with obstructions |  |  1     | 
+| Uses PID for speed control holding a fixed speed setpoint after startup and before slowdown | 1 |  1     | 
+| Stops within 20 cm of end without collision | 1 |  1     | 
+| Start and stop instructions issued wirelessly from phone, laptop or ESP | 1 |  1     | 
+| Measures wheel speed | 1 |  1     | 
+| Uses alpha display to show elapsed time | 1 |  1     | 
+| Successfully traverses A-B in one go, no hits or nudges | 1 |  1     | 
+| Successfully reverses direction (auto or remote control), no hits or nudges | 1 |  1     | 
+| Successfully traverses B-A in one go, no hits or nudges | 1 |  1     | 
+| No collisions with obstructions | 1 |  1     | 
 
 #### Wireless Interface
 ##### Startup Instructions
