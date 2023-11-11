@@ -94,6 +94,11 @@ Make sure to secure the communication and possibly authenticate the requests to 
 
 ### Supporting Artifacts
 
+[![Venus Rover Demo Video](<Screenshot 2023-11-10 at 11.46.48 PM.png>)](https://drive.google.com/file/d/1-La48-6STNPk21RB2uKgJCKTvCfb1gtB/view?usp=sharing)
+<p align="center">
+<i>Venus Rover Demo Video</i>
+</p>
+
 [![Venus Rover Technical Video](<Screenshot 2023-11-10 at 11.43.07 PM.png>)](https://drive.google.com/file/d/1ygdHgHsksuhUOcTol5xLQLb8OmtoaOqF/view?usp=sharing)
 <p align="center">
 <i>Venus Rover Technical Video</i>
