@@ -34,26 +34,19 @@ The key features involved:
 #### Main Components
 We incorporated various functionalities to control a buggy with ultrasonic and LiDAR sensors for wall avoidance. Here's an overview of how the different parts of the code work together:
 
-##### Wi-Fi Setup: 
-The buggy connects to a Wi-Fi network using the specified SSID and password. This enables the ESP32 to communicate over the network, such as receiving commands via UDP.
+1) Wi-Fi Setup: The buggy connects to a Wi-Fi network using the specified SSID and password. This enables the ESP32 to communicate over the network, such as receiving commands via UDP.
 
-##### UDP Server:
-It listens for incoming UDP packets on a specific port (UDP_PORT). This is used to receive commands from an external source, like a web interface or another networked device.
+2) UDP Server: It listens for incoming UDP packets on a specific port (UDP_PORT). This is used to receive commands from an external source, like a web interface or another networked device.
 
-##### LiDAR Sensor:
-Configured for distance measurement, it continuously polls the LiDAR sensor to calculate distances. If the distance to an obstacle (like a wall) is less than a threshold (80 units in this case), it triggers a response (stops the buggy).
+3) LiDAR Sensor: Configured for distance measurement, it continuously polls the LiDAR sensor to calculate distances. If the distance to an obstacle (like a wall) is less than a threshold (80 units in this case), it triggers a response (stops the buggy).
 
-##### Ultrasonic Sensors:
-Both left and right ultrasonic sensors are set up to measure distances independently. They use echo callbacks to calculate the time-of-flight and, consequently, the distance.
+4) Ultrasonic Sensors: Both left and right ultrasonic sensors are set up to measure distances independently. They use echo callbacks to calculate the time-of-flight and, consequently, the distance.
 
-##### Servo and Speed Control:
-The code controls a servo for steering and a motor for speed. It uses a PID (Proportional-Integral-Derivative) controller to maintain a target speed and adjusts the steering based on the readings from ultrasonic sensors.
+5) Servo and Speed Control: The code controls a servo for steering and a motor for speed. It uses a PID (Proportional-Integral-Derivative) controller to maintain a target speed and adjusts the steering based on the readings from ultrasonic sensors.
 
-##### Alphanumeric Display:
-An I2C-based alphanumeric display is used, possibly for showing status information or measurements.
+6) Alphanumeric Display: An I2C-based alphanumeric display is used, possibly for showing status information or measurements.
 
-##### Encoder for Wheel Speed:
-An encoder is implemented to calculate the wheel's rotation speed, which helps in speed regulation.
+7) Encoder for Wheel Speed: An encoder is implemented to calculate the wheel's rotation speed, which helps in speed regulation.
 
 #### Code Overview:
 Upon startup, the ESP32 initializes its Wi-Fi connection and starts the UDP server to listen for commands.
