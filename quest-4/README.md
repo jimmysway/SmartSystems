@@ -65,6 +65,7 @@ Operation: The buggy operates based on sensor inputs and received UDP commands. 
 When the UDP server receives a stop command, it activates an emergency brake (e_brake). The start command deactivates the emergency brake. The turn command initiates a 360-degree turn maneuver. This ESP32-based system showcases a sophisticated approach to robotic control, integrating various sensors and communication protocols for efficient and responsive operation.
 
 #### Wireless Interface
+![image](https://github.com/jimmysway/SmartSystems/assets/83201025/be6f09f2-e0a1-41fb-8a83-d87c239a1d2f)
 
 1) Startup Instructions: To start server, we can cd into the Website folder and run "node server.js" in console. The site interface can then seen on http://localhost:3000/. One must remember to npm install express and node-fetch and ESP32 device needs to have a UDP server listening on port 8080 to receive messages "start", "stop", "turn".
 
@@ -86,7 +87,7 @@ Since your server sends commands to an ESP32 device over the internet, it's cruc
 Make sure to secure the communication and possibly authenticate the requests to prevent unauthorized access or control.
 
 ### Sketches/Diagrams
-![IMG_2770](https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/93232189/55a6a94e-2759-406c-8464-01b4a0494cd8)
+![image](https://github.com/jimmysway/SmartSystems/assets/83201025/ec1de475-d558-4c77-b9fc-6f0b74b73a05)
 
 ### Supporting Artifacts
 
