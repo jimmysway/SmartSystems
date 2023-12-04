@@ -3,9 +3,6 @@
 Authors: Jake Lee, Jason Li , JiaLin Sui, Maxim Slobodchikov
 Date: 2023-11-10
 
-<img src="https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/93232189/3e460889-4c67-41df-a224-6295c5e39c36" width="300"/>
-
-
 ### Summary
 Our rover buggy is a robust platform for autonomous driving that makes the round trip between a spaceship and the hot springs of Venus. We implemented (1) "cruise control" (or maintaining a constant velocity under perturbations), (2) "turn-around" (reversing the direction of the vehicle), and (3) "collision avoidance" by detecting obstructions and driving around them.
 
@@ -68,7 +65,6 @@ Operation: The buggy operates based on sensor inputs and received UDP commands. 
 When the UDP server receives a stop command, it activates an emergency brake (e_brake). The start command deactivates the emergency brake. The turn command initiates a 360-degree turn maneuver. This ESP32-based system showcases a sophisticated approach to robotic control, integrating various sensors and communication protocols for efficient and responsive operation.
 
 #### Wireless Interface
-<img width="500" alt="Screenshot 2023-11-10 at 11 40 41 PM" src="https://github.com/BU-EC444/Team7-Lee-Li-Slobodchikov-Sui/assets/93232189/5f12cc2a-654e-4c67-9bd8-08ca24c473d1">
 
 1) Startup Instructions: To start server, we can cd into the Website folder and run "node server.js" in console. The site interface can then seen on http://localhost:3000/. One must remember to npm install express and node-fetch and ESP32 device needs to have a UDP server listening on port 8080 to receive messages "start", "stop", "turn".
 
